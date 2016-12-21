@@ -1,0 +1,75 @@
+#pragma kernel CSMain
+#pragma kernel CSMain2
+
+RWTexture3D<float4> Result;
+Texture3D<float4> PrevResult;
+
+Texture3D<uint> RG0;
+Texture3D<uint> BA0;
+
+SamplerState _PointClamp;
+
+int Resolution;
+
+float4 VoxelOriginDelta;
+
+float2 IntToFloats(uint intval)
+{
+	float value1 = f16tof32(intval);
+	float value2 = f16tof32(intval / 0x0000FFFF);
+	return float2(value1, value2);
+}
+
+[numthreads(16,16,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    for (int i = 0; i < Resolution; i++)
+    {
+    	float4 result = float4(0,0,0,0);
+
+		result.rg = IntToFloats(RG0[uint3(id.x, id.y, i)]);
+		result.ba = IntToFloats(BA0[uint3(id.x, id.y, i)]);
+
+
+		float blockerValue = 0.0;
+
+		if (result.a > 20.0)
+		{
+			blockerValue = max(0.0, result.a - 20.0);
+		}
+
+		if (length(result.rgb) > 0.0001 && result.a > 2.5)
+		{
+			result.rgb *= result.a - 2.5;
+		}
+
+
+		result.rgb /= max(2.5, result.a + 0.0);
+
+		result.a = min(result.a, 2.5);
+
+		result.a += blockerValue;
+
+        int3 delta = int3((int)VoxelOriginDelta.x, (int)VoxelOriginDelta.y, (int)VoxelOriginDelta.z);
+
+        float4 previousResult = PrevResult[uint3(id.xy, i) + VoxelOriginDelta.xyz];
+
+        result = lerp(result, previousResult, 0.5);
+
+        Result[uint3(id.xy, i)] = result;
+    }
+}
+
+[numthreads(16,16,1)]
+void CSMain2 (uint3 id : SV_DispatchThreadID)
+{
+    for (int i = 0; i < Resolution; i++)
+    {
+    	float4 result = float4(0,0,0,0);
+
+		result.rg = IntToFloats(RG0[uint3(id.x, id.y, i)]);
+		result.ba = IntToFloats(BA0[uint3(id.x, id.y, i)]);
+
+        Result[uint3(id.xy, i)] = result;
+    }
+}
