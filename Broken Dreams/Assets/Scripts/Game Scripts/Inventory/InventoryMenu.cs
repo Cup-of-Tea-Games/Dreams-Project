@@ -11,12 +11,11 @@ public class InventoryMenu : MonoBehaviour {
     //Base Coloroation
     Color32 colorBase;
     //Objects to fade in
-    public int maxItems;
-    public GameObject[] itemsToFade;
 
     //Extra Objects
     public Selector selector;
     public ItemShack itemShack;
+    public GameObject Inventory_Menu;
 
     void FixedUpdate () {
         if (Input.GetKey(KeyCode.E) && inventroyIsUp && canTrigger)
@@ -60,13 +59,11 @@ public class InventoryMenu : MonoBehaviour {
 
     void objectsFadeIn()
     {
-       for (int i = 0; i < maxItems; i++)
-         itemsToFade[i].GetComponent<Image>().enabled = true;
+        Inventory_Menu.SetActive(true);
     }
 
     void objectsFadeOut()
     {
-      for (int i = 0; i < maxItems; i++)
-          itemsToFade[i].GetComponent<Image>().enabled = false;
+        Inventory_Menu.SetActive(false);
     }
 }
