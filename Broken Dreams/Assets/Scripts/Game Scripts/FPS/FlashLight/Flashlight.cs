@@ -35,14 +35,11 @@ public class Flashlight : MonoBehaviour
     {
         FlashControls();
         FlashLight_Health();
+        lightBarMonitor();
 
         if (isDead)
         {
             toggle = false;
-        }
-        else if  (isOn && !isDead)
-        {
-            lightBarMonitor();
         }
 
         if (health > 100)
@@ -155,6 +152,9 @@ public class Flashlight : MonoBehaviour
         fillerBar.GetComponent<Image>().color = currentColor;
         lightIcon.GetComponent<Image>().color = currentColor;
 
+        if (health > 0)
+            lightobj.GetComponent<Light>().intensity = 1;
+
         if (health >= 100)
         {
             currentColor = c[0];
@@ -183,43 +183,55 @@ public class Flashlight : MonoBehaviour
         else if (health < 50 && health >= 40)
         {
             currentColor = c[5];
-            tips.Show("Your Flashlight's battery is draining. Find Batteries.");
-            lightobj.GetComponent<Light>().intensity -= Time.deltaTime / 20;
+            if (isOn)
+            {
+                tips.Show("Your Flashlight's battery is draining. Find Batteries.");
+                lightobj.GetComponent<Light>().intensity = 0.8f;
+            }
         }
         else if (health < 40 && health >= 30)
         {
             currentColor = c[6];
-            lightobj.GetComponent<Light>().intensity -= Time.deltaTime / 20;
+            if (isOn)
+                lightobj.GetComponent<Light>().intensity = 0.7f;
         }
         else if (health < 30 && health >= 20)
         {
             currentColor = c[7];
-            lightobj.GetComponent<Light>().intensity -= Time.deltaTime / 20;
+            if (isOn)
+                lightobj.GetComponent<Light>().intensity = 0.6f;
         }
         else if (health < 20 && health >= 10)
         {
             currentColor = c[8];
-            tips.Show("Batteries are almost depleted, explore to find more batteries.");
-            lightobj.GetComponent<Light>().intensity -= Time.deltaTime / 20;
+            if (isOn)
+            {
+                tips.Show("Batteries are almost depleted, explore to find more batteries.");
+                lightobj.GetComponent<Light>().intensity = 0.5f;
+            }
 
         }
         else if (health < 10 && health > 0)
         {
             currentColor = c[9];
-            lightobj.GetComponent<Light>().intensity -= Time.deltaTime;
+            if(isOn)
+                lightobj.GetComponent<Light>().intensity = 0.4f;
         }
-        else if (health < 0 && health > -1)
+        else if (health <= 0)
         {
+            if (isOn)
+                lightobj.GetComponent<Light>().intensity -= Time.deltaTime;
+
+            if(!isDead)
+                tips.Show("Battery is dead. Find Batteries.");
+
             isDead = true;
-            tips.Show("Battery is dead. Find Batteries.");
+            Flashlight_On_Off();
             toggle = false;
-            lightobj.SetActive(false);
         }
-        if (health > 0)
+        if (health > 0 || lightobj.GetComponent<Light>().intensity <= 0)
             isDead = false;
 
-        if (lightobj.GetComponent<Light>().intensity <= 0)
-            isDead = true;
     }
 
 }
