@@ -61,12 +61,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Triangle">
-      <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ClassesLib\Triangle.dll</HintPath>
-    </Reference>
-    <Reference Include="pb_Stl">
-      <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ClassesLib\pb_Stl.dll</HintPath>
-    </Reference>
     <Reference Include="ProBuilderCore-Unity5">
       <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
@@ -75,6 +69,12 @@
     </Reference>
     <Reference Include="KDTree">
       <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ClassesLib\KDTree.dll</HintPath>
+    </Reference>
+    <Reference Include="pb_Stl">
+      <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ClassesLib\pb_Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Triangle">
+      <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ClassesLib\Triangle.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +191,7 @@
     <Compile Include="Assets\Scripts\Game Scripts\GUI\Effects\Fader.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GUI\Elements_HUD.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GUI\Main_Item.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\GUI\Map\Map_Navigation.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GUI\PerlinNoise.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GUI\Selector.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\GUI\TipsGenerator.cs" />
