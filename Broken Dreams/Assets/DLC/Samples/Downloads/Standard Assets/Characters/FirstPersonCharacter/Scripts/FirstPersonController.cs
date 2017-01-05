@@ -7,8 +7,8 @@ using System.Collections;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
-    [RequireComponent(typeof (CharacterController))]
-    [RequireComponent(typeof (AudioSource))]
+    [RequireComponent(typeof(CharacterController))]
+    [RequireComponent(typeof(AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
         [SerializeField] private bool m_IsWalking;
@@ -58,6 +58,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         //Misc
         public static float airTime = 0;
+        private bool isOnWater = false;
 
         void Awake()
         {
@@ -73,12 +74,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FovKick.Setup(m_Camera);
             m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
-            m_NextStep = m_StepCycle/2f;
+            m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-			m_MouseLook.Init(transform , m_Camera.transform);
+            m_MouseLook.Init(transform, m_Camera.transform);
         }
-
 
         // Update is called once per frame
         private void Update()
@@ -93,58 +93,85 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     airTime += Time.deltaTime;
                 }
-                
-                    RotateView();
-                    // the jump state needs to read here to make sure it is not missed
-                    if (!m_Jump)
-                    {
-                        m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-                    }
 
-                    if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-                    {
-                        StartCoroutine(m_JumpBob.DoBobCycle());
-                        PlayLandingSound();
-                        m_MoveDir.y = 0f;
-                        m_Jumping = false;
-                    }
-                    if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-                    {
-                        m_MoveDir.y = 0f;
-                    }
+                RotateView();
+                // the jump state needs to read here to make sure it is not missed
+                if (!m_Jump)
+                {
+                    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                }
 
-                    m_PreviouslyGrounded = m_CharacterController.isGrounded;
+                if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+                {
+                    StartCoroutine(m_JumpBob.DoBobCycle());
+                    PlayLandingSound();
+                    m_MoveDir.y = 0f;
+                    m_Jumping = false;
+                }
+                if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+                {
+                    m_MoveDir.y = 0f;
+                }
 
-                    //Handle Rotation
-                    if (Input.GetKey(KeyCode.R) && Raycast_Pickup.isGrabbing)
-                    {
-                        m_MouseLook.XSensitivity = 0;
-                        m_MouseLook.YSensitivity = 0;
-                    }
-                    else
-                    {
-                        if (m_MouseLook != null)
-                        {
-                            if (!isClimbing)
-                                m_MouseLook.XSensitivity = 3;
-                            m_MouseLook.YSensitivity = 3;
-                        }
-                    }
+                m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-                    //  Crouching
+                //Handle Rotation
+                if (Input.GetKey(KeyCode.R) && Raycast_Pickup.isGrabbing)
+                {
+                    m_MouseLook.XSensitivity = 0;
+                    m_MouseLook.YSensitivity = 0;
+                }
+                else
+                {
+                    if (m_MouseLook != null)
+                    {
+                        if (!isClimbing)
+                            m_MouseLook.XSensitivity = 3;
+                        m_MouseLook.YSensitivity = 3;
+                    }
+                }
+
+                // Water & Crouch
+                if (isOnWater)
+                {
+                    isCrouching = false;
+                    m_WalkSpeed = 3;
+                    m_RunSpeed = 5;
+                    m_JumpSpeed = 6;
+                }
+                else
+                {
                     CrouchAbility();
+                    m_JumpSpeed = 13;
+                }
 
-                    if (Input.GetKey(KeyCode.LeftShift))
-                        isCrouching = false;
+                if (Input.GetKey(KeyCode.LeftShift))
+                    isCrouching = false;
 
-                    //Climb Ladders
-                    LadderClimber();
-                
+                //Climb Ladders
+                LadderClimber();
+
 
             }// SUPER IF
         }
 
-       void CrouchAbility()
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Water")
+            {
+                isOnWater = true;
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.tag == "Water")
+            {
+                isOnWater = false;
+            }
+        }
+
+        private void CrouchAbility()
         {
             //Crouching Beneath Objects
             if (GetComponent<Collider>().gameObject.tag == "CrouchArea")
@@ -215,7 +242,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle + .5f;
         }
 
-
         private void FixedUpdate()
         {
             if(!InventoryMenu.inventroyIsUp)
@@ -260,13 +286,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
         }
 
-
         private void PlayJumpSound()
         {
             m_AudioSource.clip = m_JumpSound;
             m_AudioSource.Play();
         }
-
 
         private void ProgressStepCycle(float speed)
         {
@@ -286,7 +310,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             PlayFootStepAudio();
         }
 
-
         private void PlayFootStepAudio()
         {
             if (!m_CharacterController.isGrounded)
@@ -302,7 +325,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
-
 
         private void UpdateCameraPosition(float speed)
         {
@@ -326,7 +348,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             m_Camera.transform.localPosition = newCameraPosition;
         }
-
 
         private void GetInput(out float speed)
         {
@@ -360,13 +381,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-
         private void RotateView()
         {
             if(m_MouseLook != null)
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
-
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
