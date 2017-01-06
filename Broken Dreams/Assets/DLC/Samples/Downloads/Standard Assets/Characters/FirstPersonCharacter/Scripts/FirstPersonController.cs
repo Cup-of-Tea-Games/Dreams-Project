@@ -58,7 +58,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         //Misc
         public static float airTime = 0;
-        private bool isOnWater = false;
+        public static bool isGrounded;
+        public static bool isSwimming;
+        bool canSwim = true;
 
         void Awake()
         {
@@ -83,6 +85,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            //Grounded Checker
+            isGrounded = m_CharacterController.isGrounded;
+
             if (!InventoryMenu.inventroyIsUp)
             {
                 if (m_CharacterController.isGrounded || Input.GetKey(KeyCode.Space))
@@ -131,19 +136,66 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     }
                 }
 
-                // Water & Crouch
-                if (isOnWater)
+                // Swimming & Water Walking
+                if (WaterInteraction.isOnWater)
                 {
-                    isCrouching = false;
                     m_WalkSpeed = 3;
                     m_RunSpeed = 5;
                     m_JumpSpeed = 6;
+
+                    if (WaterInteraction.isOnDeepWater)
+                    {
+                        isSwimming = true;
+
+                        if (WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
+                        {
+                            m_Jump = false;
+                            m_JumpSpeed = 0;
+                            m_GravityMultiplier = 0.2f;
+                            if(canSwim)
+                            if (Input.GetKey(KeyCode.Space))
+                                m_MoveDir.y = 1.8f;
+                            else if (Input.GetKey(KeyCode.LeftControl))
+                                m_MoveDir.y = -1.8f;
+                        }
+                        else if(!WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
+                        {
+                            m_Jump = false;
+                            m_JumpSpeed = 0;
+                            m_GravityMultiplier = 0.3f;
+                            if(canSwim)
+                            if (Input.GetKey(KeyCode.Space))
+                                m_MoveDir.y = 1f;
+                            else if (Input.GetKey(KeyCode.LeftControl))
+                                m_MoveDir.y = -1f;
+
+                        }
+                        else if (!WaterInteraction.isUnderWater && !WaterInteraction.isSemiUnderWater)
+                        {
+                            if (canSwim)
+                            {
+                                canSwim = false;
+                                StartCoroutine(waterDelay());
+                            }
+                        }
+                    }
+                    else
+                        if(m_CharacterController.isGrounded)
+                        m_GravityMultiplier = 4;
+                        m_JumpSpeed = 6;
                 }
                 else
                 {
-                    CrouchAbility();
-                    m_JumpSpeed = 13;
+                    m_JumpSpeed = 11;
+                    if (m_CharacterController.isGrounded)
+                        m_GravityMultiplier = 4;
+                    isSwimming = false;
                 }
+
+
+                //Crouching
+                if (!WaterInteraction.isOnDeepWater)
+                CrouchAbility();
 
                 if (Input.GetKey(KeyCode.LeftShift))
                     isCrouching = false;
@@ -153,22 +205,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
             }// SUPER IF
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.tag == "Water")
-            {
-                isOnWater = true;
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.tag == "Water")
-            {
-                isOnWater = false;
-            }
         }
 
         private void CrouchAbility()
@@ -223,8 +259,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (GetComponent<CharacterController>().height > 3)
                     GetComponent<CharacterController>().height = 3f;
 
-                m_WalkSpeed = 6;
-                m_RunSpeed = 11;
+                if (!WaterInteraction.isOnWater)
+                {
+                    m_WalkSpeed = 6;
+                    m_RunSpeed = 11;
+                }
             }
         }
 
@@ -261,7 +300,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.z = desiredMove.z * speed;
 
 
-            if (m_CharacterController.isGrounded)
+            if (m_CharacterController.isGrounded && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater))
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
@@ -434,6 +473,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             yield return new WaitForSeconds(x);
             StopCoroutine(waitTime(x));
+        }
+
+
+        public IEnumerator waterDelay()
+        {
+            yield return new WaitForSeconds(4);
+            canSwim = true;
+            StopCoroutine(waterDelay());
         }
     }
 }

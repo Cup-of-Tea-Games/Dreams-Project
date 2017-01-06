@@ -199,6 +199,7 @@ public class PlayerHealth : MonoBehaviour {
        if (playerBody.GetComponent<Rigidbody>().velocity.y < - 7 && playerBody.GetComponent<CharacterController>().isGrounded && FirstPersonController.airTime > 0.65f )
        {
             playerBody.GetComponent<Rigidbody>().isKinematic = true;
+            if(!WaterInteraction.isOnWater)
             damageSystem.takeDamage(25);
        }
        else if (!playerBody.GetComponent<CharacterController>().isGrounded && !FirstPersonController.isClimbing)
@@ -210,7 +211,6 @@ public class PlayerHealth : MonoBehaviour {
             playerBody.GetComponent<Rigidbody>().isKinematic = true;
         }
 
-        Debug.Log(FirstPersonController.airTime);
     }
 
 }
