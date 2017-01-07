@@ -187,7 +187,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 else
                 {
                     m_JumpSpeed = 11;
-                    if (m_CharacterController.isGrounded)
                         m_GravityMultiplier = 4;
                     isSwimming = false;
                 }
@@ -447,7 +446,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (isClimbing)
             {
                 Destroy(m_MouseLook);
-                transform.position = Vector3.Lerp(transform.position, ladder.ClimbPosition.position, ladderDampening);
+                transform.position = Vector3.Lerp(transform.position, ladder.ClimbPosition.position, ladderDampening * Time.deltaTime);
+               // transform.position = ladder.ClimbPosition.position;
                 transform.rotation = Quaternion.Lerp(transform.rotation, ladder.ClimbPosition.rotation, 4 *Time.deltaTime);
                 if (Input.GetKey(KeyCode.W))
                 ladder.ClimbPosition.transform.position += new Vector3(0,ladderClimbSpeed,0);
@@ -464,7 +464,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (climbActivation)
                 {
                     climbActivation = false;
-                    Debug.Log("Destroyed MouseLook");
+                    Debug.Log("Destroyed MouseLook");                  
                 }
             }
         }

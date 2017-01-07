@@ -162,6 +162,15 @@ public class Raycast_Pickup : MonoBehaviour
                 active = true;
                 objectInstance = hit.collider.gameObject;
             }
+
+            if (hit.collider.gameObject.tag == "Ladder")
+            {
+                if (objectInstance.GetComponent<Ladder>() != null)
+                {
+                    FirstPersonController.ladder = objectInstance.GetComponent<Ladder>();
+                    FirstPersonController.ladder.enabled = true;
+                }
+            }
         }
         isLooking = active;
         return active;

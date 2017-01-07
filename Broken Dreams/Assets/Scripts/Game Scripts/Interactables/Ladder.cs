@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class Ladder : MonoBehaviour {
+public class Ladder : MonoBehaviour
+{
 
     public Transform ClimbPosition;
     Vector3 ClimbPositionVector;
@@ -19,10 +20,14 @@ public class Ladder : MonoBehaviour {
 
     void Update()
     {
+        if (FirstPersonController.isClimbing && FirstPersonController.ladder != this)
+            this.enabled = false;
+
+
 
         if (!FirstPersonController.isClimbing)
         {
-            if (player.transform.position.y <= topLimit.position.y -4f)
+            if (player.transform.position.y <= topLimit.position.y - 4f)
                 ClimbPositionVector.y = player.transform.position.y + 1.5f;
             ClimbPosition.position = ClimbPositionVector;
         }
@@ -30,9 +35,9 @@ public class Ladder : MonoBehaviour {
         {
             if (ClimbPosition.position.y >= topLimit.position.y)
             {
-                    FirstPersonController.isClimbing = false;
-                    ClimbPositionVector = topLimit.position;
-                    ClimbPositionVector.y = topLimit.position.y - 3;
+                FirstPersonController.isClimbing = false;
+                ClimbPositionVector = topLimit.position;
+                ClimbPositionVector.y = topLimit.position.y - 3;
             }
             else if (ClimbPosition.position.y <= bottomLimit.position.y)
             {

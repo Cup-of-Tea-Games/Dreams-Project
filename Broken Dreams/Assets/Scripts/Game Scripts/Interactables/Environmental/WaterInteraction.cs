@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.ImageEffects;
 
 public class WaterInteraction : MonoBehaviour
 {
@@ -40,8 +41,9 @@ public class WaterInteraction : MonoBehaviour
 
         if(isUnderWater)
         {
-            RenderSettings.fogDensity = 0.03f;
+            RenderSettings.fogDensity = 0.06f;
             RenderSettings.fogColor = underWaterColor;
+            playerHead.GetComponent<MotionBlur>().blurAmount = playerHead.GetComponent<MotionBlur>().blurAmount + 0.01f;
         }
         else
         {
