@@ -60,6 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static float airTime = 0;
         public static bool isGrounded;
         public static bool isSwimming;
+        public static bool isPeeking;
         bool canSwim = true;
 
         void Awake()
@@ -202,6 +203,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //Climb Ladders
                 LadderClimber();
 
+                //Peeking
+             //  Peeker();
+             //  PeekAdjust();
+
 
             }// SUPER IF
         }
@@ -299,7 +304,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.z = desiredMove.z * speed;
 
 
-            if (m_CharacterController.isGrounded && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater))
+            if ((m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater))
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
@@ -309,6 +314,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
+                    isClimbing = false;
                 }
             }
             else
@@ -468,6 +474,40 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
         }
+
+        /*
+        private void PeekAdjust()
+        {
+            if (m_MouseLook.isCentered())
+            {
+                Destroy(m_MouseLook);
+                StartCoroutine(waitTime(1f));
+                m_MouseLook = gameObject.AddComponent<MouseLook>();
+                m_MouseLook.Init(transform, m_Camera.transform);
+                Debug.Log("Center");
+            }
+        }
+
+        private void Peeker()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                m_MouseLook.LeanLeft();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                m_MouseLook.LeanRight();
+            }
+
+            else if (!Input.GetKey(KeyCode.Q) && !Input.GetKey(KeyCode.E))
+            {
+                m_MouseLook.LeanBack();
+            }
+
+        }
+        */
+
 
         public IEnumerator waitTime(float x)
         {

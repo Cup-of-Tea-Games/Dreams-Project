@@ -18,14 +18,14 @@ public class InventoryMenu : MonoBehaviour {
     public GameObject Inventory_Menu;
 
     void FixedUpdate () {
-        if (Input.GetKey(KeyCode.E) && inventroyIsUp && canTrigger)
+        if (Input.GetKey(KeyCode.Tab) && inventroyIsUp && canTrigger)
         {
             canTrigger = false;
             inventroyIsUp = false;
             LockMouse.lockMouse = true;
             StartCoroutine(waitTime());
         }
-        else if (Input.GetKey(KeyCode.E) && !inventroyIsUp && canTrigger)
+        else if (Input.GetKey(KeyCode.Tab) && !inventroyIsUp && canTrigger)
         {
             canTrigger = false;
             inventroyIsUp = true;
