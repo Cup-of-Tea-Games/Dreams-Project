@@ -9,7 +9,9 @@ public class Peeking : MonoBehaviour {
 	
 	void Update () {
 
-	  if(Input.GetKeyDown(KeyCode.Q) && isClear())
+        Debug.Log(isClear());
+
+	  if(Input.GetKeyDown(KeyCode.Q) && isClear2())
         {
             animator.Play("Lean Left");
             isNeutral = false;
@@ -19,7 +21,7 @@ public class Peeking : MonoBehaviour {
             animator.Play("Lean Back Left");
             isNeutral = false;
         }
-        else if (Input.GetKeyDown(KeyCode.E) && isClear())
+        else if (Input.GetKeyDown(KeyCode.E) && isClear2())
         {
             animator.Play("Lean Right");
             isNeutral = false;
@@ -55,7 +57,12 @@ public class Peeking : MonoBehaviour {
 
     bool isClear()
     {
-        return !(isPlaying("Lean Left") && isPlaying("Lean Back Left") && isPlaying("Lean Right") && isPlaying("Lean Back Right"));
+        return !(isPlaying("Lean Back Left") || isPlaying("Lean Back Right"));
+    }
+
+    bool isClear2()
+    {
+        return !(isPlaying("Lean Left") || isPlaying("Lean Right"));
     }
 
 }
