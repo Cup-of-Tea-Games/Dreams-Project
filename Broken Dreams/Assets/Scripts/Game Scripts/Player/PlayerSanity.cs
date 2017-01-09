@@ -16,6 +16,8 @@ public class PlayerSanity : MonoBehaviour {
 
     //Colors shining
     public Color32[] c;
+    public Color normalColor;
+    public Color depletingColor;
 
     //Condition of sanity
     public GameObject player;
@@ -70,6 +72,29 @@ public class PlayerSanity : MonoBehaviour {
         barFiller.GetComponent<Image>().color = currentColor;
         sanityIcon.GetComponent<Image>().color = currentColor;
 
+        if(isDraining && !WaterInteraction.isUnderWater)
+        {
+            if (RenderSettings.fogDensity < 0.08f)
+                RenderSettings.fogDensity += 0.0005f;
+            else if(RenderSettings.fogDensity > 0.08f)
+                RenderSettings.fogDensity = 0.08f;
+
+
+            RenderSettings.fogColor = depletingColor;
+            Debug.Log("Sanity is Bleh");
+        }
+        else
+        {
+            if (RenderSettings.fogDensity > 0.002f)
+                RenderSettings.fogDensity -= 0.0005f;
+            else if (RenderSettings.fogDensity < 0.002f)
+            {
+                RenderSettings.fogDensity = 0.002f;
+                RenderSettings.fogColor = normalColor;
+            }
+     
+        }
+
         if(sanity >= 100)
         {
             currentColor = c[0];
@@ -87,8 +112,8 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[0];
             SFX_voices.mute = true;
             filter.enabled = false;
-            retina.color += new Color32(0, 0, 0, 12);
-            shakeAmount = 0.01f;
+            retina.color += new Color32(0, 0, 0, 6);
+            shakeAmount = 0f;
             blurAmount = 0.1f;
             noiseIntensity = 0.1f;
 
@@ -100,8 +125,8 @@ public class PlayerSanity : MonoBehaviour {
             filter.enabled = false;
             if(isDraining)
             Tip.Show("Your sanity is draining, avoid scary things.");
-            retina.color += new Color32(0, 0, 0, 25);
-            shakeAmount = 0.02f;
+            retina.color += new Color32(0, 0, 0, 12);
+            shakeAmount = 0;
             blurAmount = 0.2f;
             noiseIntensity = 0.2f;
         }
@@ -110,9 +135,9 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[2];
             SFX_voices.mute = true;
             filter.enabled = false;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 18);
             shakeAmount = 0.021f;
-            blurAmount = 0.3f;
+            blurAmount = 0;
             noiseIntensity = 0.4f;
         }
         else if (sanity < 70 && sanity >= 60)
@@ -120,7 +145,7 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[3];
             SFX_voices.mute = true;
             filter.enabled = false;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 24);
             shakeAmount = 0.022f;
             blurAmount = 0.5f;
             noiseIntensity = 0.6f;
@@ -132,7 +157,7 @@ public class PlayerSanity : MonoBehaviour {
             filter.enabled = false;
             if(isDraining)
             Tip.Show("Your sanity is rapidly depleting, stay away from scary things.");
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 30);
             shakeAmount = 0.23f;
             blurAmount = 0.55f;
             noiseIntensity = 0.8f;
@@ -142,7 +167,7 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[5];
             SFX_voices.mute = false;
             filter.enabled = true;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 38);
             shakeAmount = 0.024f;
             blurAmount = 0.9f;
             noiseIntensity = 0.8f;
@@ -153,7 +178,7 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[6];
             SFX_voices.mute = false;
             filter.enabled = true;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 42);
             shakeAmount = 0.025f;
             blurAmount = 0.65f;
             noiseIntensity = 1f;
@@ -166,7 +191,7 @@ public class PlayerSanity : MonoBehaviour {
             filter.enabled = true;
             if(isDraining)
             Tip.Show("Your sanity is dangerously low. Stay calm to reduce agitation");
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 48);
             shakeAmount = 0.026f;
             blurAmount = 0.7f;
             noiseIntensity = 1f;
@@ -177,7 +202,7 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[8];
             SFX_voices.mute = false;
             filter.enabled = true;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 54);
             shakeAmount = 0.027f;
             blurAmount = 0.75f;
             noiseIntensity = 1f;
@@ -188,7 +213,7 @@ public class PlayerSanity : MonoBehaviour {
             currentColor = c[9];
             SFX_voices.mute = false;
             filter.enabled = true;
-            retina.color += new Color32(0, 0, 0, 25);
+            retina.color += new Color32(0, 0, 0, 60);
             shakeAmount = 0.028f;
             blurAmount = 0.8f;
             noiseIntensity = 1f;

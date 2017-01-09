@@ -44,11 +44,15 @@ public class WaterInteraction : MonoBehaviour
             RenderSettings.fogDensity = 0.06f;
             RenderSettings.fogColor = underWaterColor;
             playerHead.GetComponent<MotionBlur>().blurAmount = playerHead.GetComponent<MotionBlur>().blurAmount + 0.01f;
+
         }
         else
         {
-            RenderSettings.fogDensity = 0.002f;
-            RenderSettings.fogColor = normalColor;
+            if (!PlayerSanity.isDraining)
+            {
+                RenderSettings.fogDensity = 0.002f;
+                RenderSettings.fogColor = normalColor;
+            }
         }
 
 
