@@ -169,6 +169,12 @@ public class PlayerHealth : MonoBehaviour {
             isGettingHurt = true;
 
         }
+        else if (col.tag == "Progressive Danger")
+        {
+            damageSystem.enterProgressiveDamageArea();
+            isGettingHurt = true;
+
+        }
     }
 
     void OnTriggerExit(Collider col)
@@ -177,6 +183,11 @@ public class PlayerHealth : MonoBehaviour {
         {
             isGettingHurt = false;
 
+        }
+
+        else if (col.tag == "Progressive Danger")
+        {
+            damageSystem.exitProgressiveDamageArea();
         }
     }
 

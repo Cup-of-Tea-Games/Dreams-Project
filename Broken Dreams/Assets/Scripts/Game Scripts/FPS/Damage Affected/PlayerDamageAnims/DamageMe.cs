@@ -6,14 +6,16 @@ public class DamageMe : MonoBehaviour {
   
     bool canBeDamaged = true;
     Animator damageAnim;
+    public float drainRate;
     public AudioSource normalDamageSound;
+    public AudioSource progressiveDamageSound;
 
     void Awake()
     {
         damageAnim = GetComponent<Animator>();
     }
 
-    public void takeDamage(float x)
+    public void takeDamage(int x)
     {
         if (PlayerHealth.health > 0)
             if (canBeDamaged)
@@ -24,6 +26,26 @@ public class DamageMe : MonoBehaviour {
             normalDamageSound.Play();
             StartCoroutine(DamageDelay());
             PlayerHealth.InDanger = true;
+        }
+    }
+
+    public void enterProgressiveDamageArea()
+    {
+        if (PlayerHealth.health > 0)
+        {
+            damageAnim.Play("ProgressiveDamage");
+            PlayerHealth.health -= drainRate;
+            progressiveDamageSound.Play();
+            PlayerHealth.InDanger = true;
+        }
+    }
+
+    public void exitProgressiveDamageArea()
+    {
+        if (PlayerHealth.health > 0)
+        {
+            damageAnim.Play("ProgressiveDamage_Recover");
+            PlayerHealth.InDanger = false;
         }
     }
 
