@@ -9,8 +9,6 @@ public class Peeking : MonoBehaviour {
 	
 	void Update () {
 
-        Debug.Log(isClear());
-
 	  if(Input.GetKeyDown(KeyCode.Q) && isClear2())
         {
             animator.Play("Lean Left");

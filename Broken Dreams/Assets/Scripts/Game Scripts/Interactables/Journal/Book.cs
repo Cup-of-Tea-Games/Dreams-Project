@@ -27,7 +27,6 @@ public class Book : MonoBehaviour
             {
                 Pages[i].setImage(Page.getImage());
                 Pages[i].setImageComponent(Page.getImage());
-                Pages[i].setPageName(Page.getPageName());
                 Debug.Log("Page Added");
                 PageCount++;
                 break;

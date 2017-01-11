@@ -6,29 +6,29 @@ public class Page : MonoBehaviour
 {
     public Sprite emptyImage;
     protected Sprite image;
-    protected string PageName;
+    public bool startEmpty;
 
-    void Awake()
+    void OnDisable()
     {
-    //    GetComponent<Image>().sprite = emptyImage;
+        if (startEmpty)
+        {
+            this.delete();
+        }
     }
 
     public Page()
     {
-        PageName = "";
         image = emptyImage;
     }
 
-    public Page(Sprite aimage, string aName)
+    public Page(Sprite aimage)
     {
         image = aimage;
-        PageName = aName;
     }
 
     public Page(Page aPage)
     {
         image = aPage.image;
-        PageName = aPage.PageName;
     }
 
     public Sprite getImage()
@@ -46,25 +46,19 @@ public class Page : MonoBehaviour
         GetComponent<Image>().sprite = i;
     }
 
-    public string getPageName()
-    {
-        return PageName;
-    }
-
-    public void setPageName(string s)
-    {
-        PageName = s;
-    }
-
     public bool isEmpty()
     {
-        return (PageName == "" && image == emptyImage);
+        return (this.getImage() == emptyImage);
+    }
+
+    public void checkIfEmpty()
+    {
+        Debug.Log(isEmpty());
     }
 
     public void delete()
     {
         setImage(emptyImage);
-        PageName = "";
         setImageComponent(emptyImage);
     }
 
