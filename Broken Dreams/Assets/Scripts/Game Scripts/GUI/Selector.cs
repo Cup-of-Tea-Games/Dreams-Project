@@ -19,7 +19,7 @@ public class Selector : MonoBehaviour {
 
     void Update()
     {
-        if (!selectedItem.isEmpty())
+        if (!selectedItem.isEmpty() && selectedItem != null)
             showToolTip_ITEM();
     }
 

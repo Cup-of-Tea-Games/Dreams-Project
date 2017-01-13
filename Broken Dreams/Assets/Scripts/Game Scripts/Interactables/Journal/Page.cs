@@ -5,15 +5,18 @@ using UnityEngine.UI;
 public class Page : MonoBehaviour
 {
     public Sprite emptyImage;
-    protected Sprite image;
-    public bool startEmpty;
+    public Sprite image;
 
-    void OnDisable()
+    void Update()
     {
-        if (startEmpty)
-        {
-            this.delete();
-        }
+        if (gameObject.GetComponent<Image>() != null)
+            gameObject.GetComponent<Image>().sprite = image;
+    }
+
+    public void ReActivate()
+    {
+            if (gameObject.GetComponent<Image>() != null)
+                gameObject.GetComponent<Image>().sprite = image;      
     }
 
     public Page()

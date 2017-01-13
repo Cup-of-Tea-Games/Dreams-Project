@@ -45,7 +45,12 @@ public class InventoryMenu : MonoBehaviour {
             objectsFadeOut();
             itemShack.enabled = false;
             selector.enabled = false;
+            if(!PageViewer.PageViewerIsUp)
             LockMouse.lockMouse = true;
+        }
+        if (PageViewer.PageViewerIsUp)
+        {
+            LockMouse.lockMouse = false;
         }
 
     }

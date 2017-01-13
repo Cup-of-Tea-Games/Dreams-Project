@@ -4,63 +4,53 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Peeking : MonoBehaviour {
 
-    public Animator animator;
     bool isNeutral;
-	
-	void Update () {
+    public static bool isPeeking = false;
 
-	  if(Input.GetKeyDown(KeyCode.Q) && isClear2())
+    void Update () {
+
+	  if(Input.GetKeyDown(KeyCode.Q))
         {
-            animator.Play("Lean Left");
+            transform.localPosition += Vector3.left * 1.5f;
+            transform.Rotate(Vector3.forward, 30f);
+            isPeeking = true;
             isNeutral = false;
         }
-        else if (Input.GetKeyUp(KeyCode.Q) && isClear())
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
-            animator.Play("Lean Back Left");
+            transform.localPosition += Vector3.left * -1.5f;
+            transform.Rotate(Vector3.forward, -30f);
+            isPeeking = true;
+            StartCoroutine(letGoPeek());
             isNeutral = false;
         }
-        else if (Input.GetKeyDown(KeyCode.E) && isClear2())
+        else if (Input.GetKeyDown(KeyCode.E))
         {
-            animator.Play("Lean Right");
+            transform.localPosition += Vector3.left * -1.5f;
+            transform.Rotate(Vector3.forward, -30f);
+            isPeeking = true;
             isNeutral = false;
         }
-        else if (Input.GetKeyUp(KeyCode.E) && isClear())
+        else if (Input.GetKeyUp(KeyCode.E))
         {
-            animator.Play("Lean Back Right");
+            transform.localPosition += Vector3.left * 1.5f;
+            transform.Rotate(Vector3.forward, 30f);
+            isPeeking = true;
+            StartCoroutine(letGoPeek());
             isNeutral = false;
-        }
-        else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Neutral"))
-        {
-            isNeutral = true;
         }
 
       //Resetter
-        if (isNeutral)
-        {
-            animator.enabled = false;
-            FirstPersonController.isPeeking = false;
-        }
-        else
-        {
-            animator.enabled = true;
-            FirstPersonController.isPeeking = true;
-        }
+
 
     }
 
-    bool isPlaying(string s)
-    {
-        return (animator.GetCurrentAnimatorStateInfo(0).IsName(s));
-    }
 
-    bool isClear()
+    public IEnumerator letGoPeek()
     {
-        return !(isPlaying("Lean Back Left") || isPlaying("Lean Back Right"));
-    }
-
-    bool isClear2()
-    {
-        return !(isPlaying("Lean Left") || isPlaying("Lean Right"));
+        yield return new WaitForSeconds(0.1f);
+        isPeeking = false;
+        FirstPersonController.mouseLookResetter = true;
     }
 
 }

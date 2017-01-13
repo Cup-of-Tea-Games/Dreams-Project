@@ -41,8 +41,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
             xRot = CrossPlatformInputManager.GetAxis("Mouse Y") * YSensitivity;
             m_CharacterTargetRot.z = Mathf.Clamp(m_CharacterTargetRot.z, -0.25f, 0.25f);
-            m_CharacterTargetRot *= Quaternion.Euler(0f, yRot, 0f);
-            m_CameraTargetRot *= Quaternion.Euler(-xRot, 0f, 0f);
+            m_CharacterTargetRot *= Quaternion.Euler(0f, yRot, m_CameraTargetRot.z);
+            m_CameraTargetRot *= Quaternion.Euler(-xRot, 0f, m_CameraTargetRot.z);
 
             if (clampVerticalRotation)
                 m_CameraTargetRot = ClampRotationAroundXAxis(m_CameraTargetRot);
@@ -56,8 +56,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                character.localRotation = m_CharacterTargetRot;
-                camera.localRotation = m_CameraTargetRot;
+                if (!Peeking.isPeeking)
+                {
+                    camera.localRotation = m_CameraTargetRot;
+                    character.localRotation = m_CharacterTargetRot;
+                }
+                else
+                    m_CharacterTargetRot = character.localRotation;
+                    m_CameraTargetRot = camera.localRotation;
+
             }
 
          /*   if (m_CharacterTargetRot.z >= 0.25f)

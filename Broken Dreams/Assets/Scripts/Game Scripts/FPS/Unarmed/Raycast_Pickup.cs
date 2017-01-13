@@ -57,7 +57,7 @@ public class Raycast_Pickup : MonoBehaviour
             {
                 if (itemInMyHand.isEmpty())
                 {
-                    if (hit.collider.gameObject.tag == "Item" )
+                    if (hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Page")
                         pickUp.SetActive(true);
                     else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door")
                         hand.SetActive(true);
@@ -157,7 +157,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder")
+            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -206,6 +206,11 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Item")
         {
             objectInstance.GetComponent<PickItem>().pickUpItem();
+        }
+
+        else if (hit.collider.gameObject.tag == "Page")
+        {
+            objectInstance.GetComponent<PickPage>().viewPage();
         }
 
         else if (hit.collider.gameObject.tag == "Ladder")

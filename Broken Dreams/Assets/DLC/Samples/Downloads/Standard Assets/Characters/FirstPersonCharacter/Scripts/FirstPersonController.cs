@@ -63,6 +63,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool isPeeking;
         bool canSwim = true;
 
+        public static bool mouseLookResetter = false;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
@@ -89,7 +91,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //Grounded Checker
             isGrounded = m_CharacterController.isGrounded;
 
-            if (!InventoryMenu.inventroyIsUp)
+            if (!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
             {
                 if (m_CharacterController.isGrounded || Input.GetKey(KeyCode.Space))
                 {
@@ -204,8 +206,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 LadderClimber();
 
                 //Peeking
-             //  Peeker();
-             //  PeekAdjust();
+                //  Peeker();
+
+                if (mouseLookResetter)
+                {
+                    mouseLookResetter = false;
+                    Destroy(m_MouseLook);
+                    m_MouseLook = gameObject.AddComponent<MouseLook>();
+                    m_MouseLook.Init(transform, m_Camera.transform);
+                    Debug.Log("Resetted Mouse Look");
+                }
 
 
             }// SUPER IF
@@ -287,7 +297,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            if(!InventoryMenu.inventroyIsUp)
+            if(!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
             { 
             float speed;
             GetInput(out speed);
@@ -476,18 +486,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         /*
-        private void PeekAdjust()
-        {
-            if (m_MouseLook.isCentered())
-            {
-                Destroy(m_MouseLook);
-                StartCoroutine(waitTime(1f));
-                m_MouseLook = gameObject.AddComponent<MouseLook>();
-                m_MouseLook.Init(transform, m_Camera.transform);
-                Debug.Log("Center");
-            }
-        }
-
         private void Peeker()
         {
             if (Input.GetKeyDown(KeyCode.Q))
@@ -518,7 +516,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public IEnumerator waterDelay()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(0.8f);
             canSwim = true;
             StopCoroutine(waterDelay());
         }
