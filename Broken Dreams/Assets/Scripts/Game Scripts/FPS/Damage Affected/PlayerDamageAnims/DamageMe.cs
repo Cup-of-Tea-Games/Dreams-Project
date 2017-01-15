@@ -8,6 +8,7 @@ public class DamageMe : MonoBehaviour {
     Animator damageAnim;
     public AudioSource normalDamageSound;
     public AudioSource progressiveDamageSound;
+    public bool godMode;
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class DamageMe : MonoBehaviour {
 
     public void takeDamage(int x)
     {
-        if (PlayerHealth.health > 0)
+        if (PlayerHealth.health > 0 && !godMode)
             if (canBeDamaged)
         {
             canBeDamaged = false;

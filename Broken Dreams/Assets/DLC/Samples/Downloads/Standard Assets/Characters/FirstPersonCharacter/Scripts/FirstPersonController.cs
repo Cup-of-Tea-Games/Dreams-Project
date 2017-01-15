@@ -63,6 +63,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool isPeeking;
         bool canSwim = true;
 
+        //Vaulting
+        public Vaulter vaulter;
+        bool vaultUpActivator = true;
+        bool vaultForwardActivator = true;
+
         public static bool mouseLookResetter = false;
 
         void Awake()
@@ -208,6 +213,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //Peeking
                 //  Peeker();
 
+                VaultMechanic();
+
                 if (mouseLookResetter)
                 {
                     mouseLookResetter = false;
@@ -314,7 +321,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.z = desiredMove.z * speed;
 
 
-            if ((m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater))
+            if ((m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
@@ -329,7 +336,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                if (!isClimbing)
+                if (!isClimbing && !Vaulter.isVaulting)
                     m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
             }
             if (!isClimbing)
@@ -485,6 +492,44 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        private void VaultMechanic()
+        {
+            if (Vaulter.isVaulting)
+            {
+                m_Jump = false;
+                StartCoroutine(Vault());
+                // transform.position = ladder.ClimbPosition.position;
+                Debug.Log("Vaulting");
+            }
+
+            if (vaultForwardActivator)
+                Debug.Log("ForwardActivator");
+            else if (vaultUpActivator)
+                Debug.Log("UpActivator");
+            else
+                Debug.Log("NONE");
+        }
+
+        private IEnumerator Vault()
+        {
+            if(vaultUpActivator && Vaulter.isVaulting)
+            transform.position = Vector3.Lerp(transform.position, vaulter.Vertical_Destination.transform.position, ladderDampening * Time.deltaTime);
+            yield return new WaitForSeconds(0.4f);
+            vaultUpActivator = false;
+
+            if(vaultForwardActivator && Vaulter.isVaulting)
+            transform.position = Vector3.Lerp(transform.position, vaulter.Horizontal_Destination.transform.position, ladderDampening * Time.deltaTime);
+            yield return new WaitForSeconds(0.25f);
+            vaultForwardActivator = false;
+            Vaulter.isVaulting = false;
+            vaulter.recoverHook();
+
+            yield return new WaitForSeconds(0.2f);
+            vaultForwardActivator = true;
+            vaultUpActivator = true;
+            //StopCoroutine(Vault());
+        }
+
         /*
         private void Peeker()
         {
@@ -510,6 +555,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public IEnumerator waitTime(float x)
         {
             yield return new WaitForSeconds(x);
+            Debug.Log("Eh");
             StopCoroutine(waitTime(x));
         }
 
