@@ -56,7 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                if (!Peeking.isPeeking)
+                if (Peeking.isInMiddle && !Peeking.isPeeking)
                 {
                     camera.localRotation = m_CameraTargetRot;
                     character.localRotation = m_CharacterTargetRot;

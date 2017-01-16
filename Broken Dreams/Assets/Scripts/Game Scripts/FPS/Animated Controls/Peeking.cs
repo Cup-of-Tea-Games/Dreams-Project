@@ -6,38 +6,67 @@ public class Peeking : MonoBehaviour {
 
     bool isNeutral;
     public static bool isPeeking = false;
-    public Transform transformLookAt;
+    float rot = 0;
+    public static bool isInMiddle = true;
 
     void Update () {
 
-        transform.LookAt(transformLookAt);
+        Debug.Log(isInMiddle);
+
+        if (transform.localRotation.z <= -0.25f)
+            if (isPeeking)
+                rot = 0;
+        if (transform.localRotation.z >= 0.25f)
+            if (isPeeking)
+                rot = 0;
+
+        if (transform.localRotation.z <= 0.005f && transform.localRotation.z >= -0.005f)
+        {
+            isInMiddle = true;
+        }
+        else
+            isInMiddle = false;
+
+        transform.Rotate(Vector3.forward, rot);
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            //if (transform.localRotation.z <= 0.25f)
+           //     transform.localPosition = Vector3.left * 1.5f;
+            if (transform.localRotation.z <= 0.25f)
+                rot = 1;
+            isPeeking = true;
+            isNeutral = false;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+           //   transform.localPosition = Vector3.left * -1.5f;
+            if (transform.localRotation.z >= -0.25f)
+                rot = -1;
+            isPeeking = true;
+            isNeutral = false;
+        }
+        else if (Input.GetKeyUp(KeyCode.E) || Input.GetKeyUp(KeyCode.Q))
+        {
+            isPeeking = false;
+        }
 
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        else
         {
-            transformLookAt.localPosition += Vector3.left * 1.5f;
-            isPeeking = true;
-            isNeutral = false;
-        }
-        else if (Input.GetKeyUp(KeyCode.Q))
-        {
-            transformLookAt.localPosition += Vector3.left * -1.5f;
-            isPeeking = true;
-            StartCoroutine(letGoPeek());
-            isNeutral = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            transformLookAt.localPosition += Vector3.left * -1.5f;
-            isPeeking = true;
-            isNeutral = false;
-        }
-        else if (Input.GetKeyUp(KeyCode.E))
-        {
-            transformLookAt.localPosition += Vector3.left * 1.5f;
-            isPeeking = true;
-            StartCoroutine(letGoPeek());
-            isNeutral = false;
+            if (isInMiddle && !isPeeking)
+            {
+                rot = 0;
+            }
+
+            else if (transform.localRotation.z > 0.01f && !isInMiddle && !isPeeking)
+            {
+                rot = -1.1f;
+            }
+            else if (transform.localRotation.z < -0.01f && !isInMiddle && !isPeeking)
+            {
+                rot = 1.1f;
+            }
         }
 
       //Resetter
