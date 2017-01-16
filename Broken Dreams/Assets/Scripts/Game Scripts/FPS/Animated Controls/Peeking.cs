@@ -6,35 +6,35 @@ public class Peeking : MonoBehaviour {
 
     bool isNeutral;
     public static bool isPeeking = false;
+    public Transform transformLookAt;
 
     void Update () {
 
-	  if(Input.GetKeyDown(KeyCode.Q))
+        transform.LookAt(transformLookAt);
+
+
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            transform.localPosition += Vector3.left * 1.5f;
-            transform.Rotate(Vector3.forward, 30f);
+            transformLookAt.localPosition += Vector3.left * 1.5f;
             isPeeking = true;
             isNeutral = false;
         }
         else if (Input.GetKeyUp(KeyCode.Q))
         {
-            transform.localPosition += Vector3.left * -1.5f;
-            transform.Rotate(Vector3.forward, -30f);
+            transformLookAt.localPosition += Vector3.left * -1.5f;
             isPeeking = true;
             StartCoroutine(letGoPeek());
             isNeutral = false;
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            transform.localPosition += Vector3.left * -1.5f;
-            transform.Rotate(Vector3.forward, -30f);
+            transformLookAt.localPosition += Vector3.left * -1.5f;
             isPeeking = true;
             isNeutral = false;
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
-            transform.localPosition += Vector3.left * 1.5f;
-            transform.Rotate(Vector3.forward, 30f);
+            transformLookAt.localPosition += Vector3.left * 1.5f;
             isPeeking = true;
             StartCoroutine(letGoPeek());
             isNeutral = false;

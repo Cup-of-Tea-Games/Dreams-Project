@@ -307,6 +307,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
             { 
             float speed;
+
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
@@ -317,8 +318,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
                                m_CharacterController.height / 2f);
             desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
-            m_MoveDir.x = desiredMove.x * speed;
-            m_MoveDir.z = desiredMove.z * speed;
+                if (!Vaulter.isVaulting)
+                {
+                    m_MoveDir.x = desiredMove.x * speed;
+                    m_MoveDir.z = desiredMove.z * speed;
+                }
+                else
+                {
+                    m_MoveDir.x = 0;
+                    m_MoveDir.z = 0;
+                }
 
 
             if ((m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
@@ -502,24 +511,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Debug.Log("Vaulting");
             }
 
-            if (vaultForwardActivator)
-                Debug.Log("ForwardActivator");
-            else if (vaultUpActivator)
-                Debug.Log("UpActivator");
-            else
-                Debug.Log("NONE");
         }
 
         private IEnumerator Vault()
         {
             if(vaultUpActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Vertical_Destination.transform.position, ladderDampening * Time.deltaTime);
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.25f);
             vaultUpActivator = false;
 
             if(vaultForwardActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Horizontal_Destination.transform.position, ladderDampening * Time.deltaTime);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.2f);
             vaultForwardActivator = false;
             Vaulter.isVaulting = false;
             vaulter.recoverHook();
