@@ -157,6 +157,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                         if (WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
                         {
+                            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.z / 6, GetComponent<Rigidbody>().velocity.y / 6, GetComponent<Rigidbody>().velocity.z / 6);
+
+
                             m_Jump = false;
                             m_JumpSpeed = 0;
                             m_GravityMultiplier = 0.2f;
@@ -170,21 +173,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         {
                             m_Jump = false;
                             m_JumpSpeed = 0;
-                            m_GravityMultiplier = 0.3f;
-                            if(canSwim)
-                            if (Input.GetKey(KeyCode.Space))
-                                m_MoveDir.y = 1f;
-                            else if (Input.GetKey(KeyCode.LeftControl))
-                                m_MoveDir.y = -1f;
-
-                        }
-                        else if (!WaterInteraction.isUnderWater && !WaterInteraction.isSemiUnderWater)
-                        {
                             if (canSwim)
-                            {
-                                canSwim = false;
-                                StartCoroutine(waterDelay());
-                            }
+                                if (Input.GetKey(KeyCode.Space))
+                                {
+                                    if (transform.position.y + 3 < WaterInteraction.waterInstance.transform.position.y)
+                                        m_MoveDir.y = 1f;
+                                    else
+                                    {
+                                        m_MoveDir.y = 0;
+                                        m_GravityMultiplier = 0f;
+                                    }
+                                     //   transform.position = new Vector3(transform.position.x, WaterInteraction.waterInstance.transform.position.y + 3, transform.position.z);
+                                }
+                                else if (Input.GetKey(KeyCode.LeftControl))
+                                    m_MoveDir.y = -1f;
+                            else
+                                    m_GravityMultiplier = 0.03f;
+
                         }
                     }
                     else
@@ -508,7 +513,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jump = false;
                 StartCoroutine(Vault());
                 // transform.position = ladder.ClimbPosition.position;
-                Debug.Log("Vaulting");
             }
 
         }
@@ -565,9 +569,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public IEnumerator waterDelay()
         {
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(1.8f);
             canSwim = true;
-            StopCoroutine(waterDelay());
+           // StopCoroutine(waterDelay());
         }
     }
 }

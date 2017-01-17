@@ -11,8 +11,6 @@ public class Peeking : MonoBehaviour {
 
     void Update () {
 
-        Debug.Log(isInMiddle);
-
         if (transform.localRotation.z <= -0.25f)
             if (isPeeking)
                 rot = 0;

@@ -171,7 +171,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         else if (col.tag == "Progressive Danger")
         {
-            damageSystem.enterProgressiveDamageArea(2);
+            damageSystem.enterProgressiveDamageArea();
             isGettingHurt = true;
 
         }

@@ -31,7 +31,6 @@ public class WaterInteraction : MonoBehaviour
 
         if (isOnDeepWater)
         {
-
             if (gameObject.transform.position.y + 0.5f < waterInstance.transform.position.y)
                 isSemiUnderWater = true;
             else
