@@ -8,6 +8,7 @@ public class ObjectStabilizer : MonoBehaviour {
     public bool isAudioSeperated;
     public AudioClip normalImpact;
     public AudioClip heavyImpact;
+    bool isColliding = false;
 
     void Awake()
     {
@@ -37,6 +38,8 @@ public class ObjectStabilizer : MonoBehaviour {
     //Handles the noises in which shall be made during collision
     void OnCollisionEnter(Collision collision)
     {
+        isColliding = true;
+
         foreach (ContactPoint contact in collision.contacts)
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
@@ -70,6 +73,16 @@ public class ObjectStabilizer : MonoBehaviour {
 
     }
 
+    void OnCollisionExit(Collision collision)
+    {
+        isColliding = false;
 
+    }
+
+
+    public bool isOnCollision()
+    {
+        return isColliding;
+    }
 
 }

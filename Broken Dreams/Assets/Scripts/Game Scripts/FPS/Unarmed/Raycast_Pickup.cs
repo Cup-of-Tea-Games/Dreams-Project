@@ -183,8 +183,11 @@ public class Raycast_Pickup : MonoBehaviour
         {
             isGrabbing = true;
             objectInstance.GetComponent<Rigidbody>().useGravity = false;
-            objectInstance.transform.position = Vector3.MoveTowards(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime);
-        //    objectInstance.transform.rotation = new Quaternion(transformBall.transform.rotation.x, transformBall.transform.rotation.y, objectInstance.transform.rotation.z, objectInstance.transform.rotation.w);
+            if(!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
+                objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 2f);
+            else
+                objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 12f);
+            //    objectInstance.transform.rotation = new Quaternion(transformBall.transform.rotation.x, transformBall.transform.rotation.y, objectInstance.transform.rotation.z, objectInstance.transform.rotation.w);
             objectInstance.GetComponent<Rigidbody>().freezeRotation = true;
         }
         else if (hit.collider.gameObject.tag == "pickUpHeavyObject")
