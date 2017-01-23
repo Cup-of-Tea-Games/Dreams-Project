@@ -29,6 +29,7 @@ public class Raycast_Pickup : MonoBehaviour
     //Misc
     bool delayTime = true; //Creates Time Delays when necesary
     float defaultValue; //Saves saved value for speed
+    float rotateTimeSet = 2f; // This is specifically used for resetting object's rotation
 
 
     void Awake()
@@ -271,9 +272,17 @@ public class Raycast_Pickup : MonoBehaviour
     {
       //  transformBall.transform.rotation = objectInstance.transform.rotation;
         if (Input.GetKey(KeyCode.R))
+        {       
+            objectInstance.transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0, Space.Self);
+
+            if (rotateTimeSet <= rotateTimeSet - 1f)
+                objectInstance.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
         {
-            
-            objectInstance.transform.Rotate(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
+            rotateTimeSet = Time.time;
+            Debug.Log(rotateTimeSet);
         }
     }
 
