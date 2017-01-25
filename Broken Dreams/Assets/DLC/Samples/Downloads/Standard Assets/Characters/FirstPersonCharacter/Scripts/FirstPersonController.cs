@@ -70,6 +70,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public static bool mouseLookResetter = false;
 
+        //Apartment Exclusives
+        public bool isInHub = false;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
@@ -289,6 +292,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     m_WalkSpeed = 6;
                     m_RunSpeed = 11;
+
+                   if(isInHub)
+                    {
+                        m_WalkSpeed = 3;
+                        m_RunSpeed = 5;
+                    }
                 }
             }
         }
@@ -335,7 +344,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
 
 
-            if ((m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
+            if (!isInHub && (m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
