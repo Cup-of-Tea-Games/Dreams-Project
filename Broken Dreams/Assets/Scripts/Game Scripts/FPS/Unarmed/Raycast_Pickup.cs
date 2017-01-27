@@ -19,6 +19,7 @@ public class Raycast_Pickup : MonoBehaviour
     public float speed; //The speed the object shall travel
     public float pushForce; //Force of which the player can push items
     private float mouseWheelAmount; //Records the amount of scrolls in the mouse wheel
+    public static bool mouseClickToggle = false; //Toggles on or off on mouse click
 
 
     //GUI PROCESSING
@@ -40,6 +41,16 @@ public class Raycast_Pickup : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && itemInRange())
+        {
+            mouseClickToggle = !mouseClickToggle;
+        }
+        if (!itemInRange())
+            mouseClickToggle = false;
+
+        if(!isLooking && objectInstance != null)
+            LetGoItem();
+
         if (itemInMyHand.isEmpty())
         {
            ItemInHand.SetActive(false);
@@ -54,7 +65,7 @@ public class Raycast_Pickup : MonoBehaviour
         if (itemInRange()) {
 
             LetGoItem();
-            if (!Input.GetMouseButton(0))
+            if (!mouseClickToggle)
             {
                 if (itemInMyHand.isEmpty())
                 {
@@ -90,7 +101,7 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
         //Grabs Item
-        if (itemInRange() && Input.GetMouseButton(0))
+        if (itemInRange() && mouseClickToggle)
         {
             if(delayTime == true)
              PickUpItem();
@@ -104,12 +115,14 @@ public class Raycast_Pickup : MonoBehaviour
             ThrowItem();
             hand.SetActive(false);
             pickUp.SetActive(false);
+            mouseClickToggle = false;
         }
 
         //Throw Item
         if (itemInRange() && Input.GetMouseButton(0) && Input.GetMouseButtonDown(1))
         {
             ThrowItem();
+            mouseClickToggle = false;
         }
         //Makes sure your held item is not there when you mistakenly click on something irrelevant
         DoorKeyManager();
@@ -121,7 +134,7 @@ public class Raycast_Pickup : MonoBehaviour
         {
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
-            if (Input.GetMouseButton(0))
+            if (mouseClickToggle)
             {
                 if (itemInMyHand.isEmpty())
                 {
@@ -141,7 +154,7 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
 
-        else if (!itemInMyHand.isEmpty() && Input.GetMouseButton(0) && !itemInRange())
+        else if (!itemInMyHand.isEmpty() && mouseClickToggle && !itemInRange())
         {
             itemInMyHand = new Item();
         }
@@ -164,7 +177,7 @@ public class Raycast_Pickup : MonoBehaviour
                 objectInstance = hit.collider.gameObject;
             }
 
-            if (hit.collider.gameObject.tag == "Ladder")
+            else if (hit.collider.gameObject.tag == "Ladder")
             {
                 if (objectInstance.GetComponent<Ladder>() != null)
                 {
@@ -183,13 +196,13 @@ public class Raycast_Pickup : MonoBehaviour
         if (hit.collider.gameObject.tag == "pickUpObject")
         {
             isGrabbing = true;
-            objectInstance.GetComponent<Rigidbody>().useGravity = false;
             if(!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
-                objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 2f);
+                objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime);
             else
                 objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 12f);
             //    objectInstance.transform.rotation = new Quaternion(transformBall.transform.rotation.x, transformBall.transform.rotation.y, objectInstance.transform.rotation.z, objectInstance.transform.rotation.w);
             objectInstance.GetComponent<Rigidbody>().freezeRotation = true;
+            objectInstance.GetComponent<Rigidbody>().useGravity = false;
         }
         else if (hit.collider.gameObject.tag == "pickUpHeavyObject")
         {
@@ -261,10 +274,10 @@ public class Raycast_Pickup : MonoBehaviour
     {
         float originalBallPosition = 1.14531f;
         mouseWheelAmount += Input.GetAxis("Mouse ScrollWheel")*2;
-        mouseWheelAmount = Mathf.Clamp(mouseWheelAmount, -0.5f, 2);
+        mouseWheelAmount = Mathf.Clamp(mouseWheelAmount, -0.5f, 1.5f);
 
        if(isGrabbing)
-       transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition + mouseWheelAmount);
+       transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition + mouseWheelAmount + objectInstance.GetComponent<ObjectStabilizer>().grabOffset);
     
 }  
      

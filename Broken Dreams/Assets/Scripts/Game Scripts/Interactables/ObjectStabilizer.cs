@@ -9,6 +9,11 @@ public class ObjectStabilizer : MonoBehaviour {
     public AudioClip normalImpact;
     public AudioClip heavyImpact;
     bool isColliding = false;
+    public float grabOffset = 0;
+    public float radiusMultiplier = 3;
+
+    float increasedRadius;
+    float defaultRadius;
 
     void Awake()
     {
@@ -16,22 +21,30 @@ public class ObjectStabilizer : MonoBehaviour {
         if (DoesItHaveSound)
                 sound = GetComponent<AudioSource>();
 
+        defaultRadius = GetComponent<SphereCollider>().radius;
+        increasedRadius = defaultRadius * radiusMultiplier;
+
     }
 
     void Update()
     {
-
         //Stabilizing Object during pick up
         if (!Raycast_Pickup.isLooking)
         {
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
             gameObject.GetComponent<Rigidbody>().freezeRotation = false;
         }
 
         if (Raycast_Pickup.isGrabbing && gameObject == Raycast_Pickup.objectInstance)
+        {
             gameObject.GetComponent<SphereCollider>().enabled = true;
+            GetComponent<SphereCollider>().radius = increasedRadius;
+            GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+        }
         else
+        {
             gameObject.GetComponent<SphereCollider>().enabled = false;
+            GetComponent<SphereCollider>().radius = defaultRadius;
+        }
 
     }
 
@@ -69,7 +82,13 @@ public class ObjectStabilizer : MonoBehaviour {
                 sound.Play();
             }
         }
-        
+
+
+        if (collision.gameObject.tag == "Player")
+          {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>());
+          }
+
 
     }
 
