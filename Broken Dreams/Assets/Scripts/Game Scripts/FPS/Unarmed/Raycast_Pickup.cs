@@ -274,7 +274,7 @@ public class Raycast_Pickup : MonoBehaviour
     {
         float originalBallPosition = 1.14531f;
         mouseWheelAmount += Input.GetAxis("Mouse ScrollWheel")*2;
-        mouseWheelAmount = Mathf.Clamp(mouseWheelAmount, -0.5f, 1.5f);
+        mouseWheelAmount = Mathf.Clamp(mouseWheelAmount, -0.25f, 1.0f);
 
        if(isGrabbing)
        transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition + mouseWheelAmount + objectInstance.GetComponent<ObjectStabilizer>().grabOffset);

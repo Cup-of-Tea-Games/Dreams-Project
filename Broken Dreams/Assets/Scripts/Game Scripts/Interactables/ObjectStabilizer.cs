@@ -11,6 +11,10 @@ public class ObjectStabilizer : MonoBehaviour {
     bool isColliding = false;
     public float grabOffset = 0;
     public float radiusMultiplier = 3;
+  //  public bool canBreak = false;
+  //  public GameObject breakableItem;
+ //   public float cutPieces;
+   // public float piecesSize;
 
     float increasedRadius;
     float defaultRadius;
@@ -57,6 +61,15 @@ public class ObjectStabilizer : MonoBehaviour {
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
+
+
+      /*  if(collision.relativeVelocity.magnitude > 10 && canBreak)
+        {
+            breakableItem.AddComponent<MeshBreak>();
+            breakableItem.GetComponent<MeshBreak>().piecesSize = piecesSize;
+            breakableItem.GetComponent<MeshBreak>().cutRate = cutPieces;
+            StartCoroutine(breakableItem.GetComponent<MeshBreak>().SplitMesh(true));
+        } */
 
 
         if (collision.relativeVelocity.magnitude > 3 && collision.relativeVelocity.magnitude < 10 && DoesItHaveSound)
