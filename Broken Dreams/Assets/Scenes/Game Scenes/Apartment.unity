@@ -812,7 +812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &31490656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -828,7 +828,7 @@ RectTransform:
   - {fileID: 670079965}
   - {fileID: 1616428904}
   m_Father: {fileID: 41704318}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 41704318}
   m_Layer: 0
-  m_Name: Movies
+  m_Name: TV Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1229,6 +1229,7 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1781100475}
   - {fileID: 1747042903}
   - {fileID: 31490656}
   m_Father: {fileID: 298376121}
@@ -13571,7 +13572,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -16596,7 +16597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 407a09755d2161c4687ae2792da17c5a, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 407a09755d2161c4687ae2792da17c5a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17170,7 +17171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6c107ac1a5484df42ac23410deddb92f, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 6c107ac1a5484df42ac23410deddb92f, type: 3}
       propertyPath: m_LocalScale.x
@@ -20343,6 +20344,7 @@ GameObject:
   - 4: {fileID: 560448553}
   - 33: {fileID: 560448555}
   - 23: {fileID: 560448554}
+  - 114: {fileID: 560448556}
   m_Layer: 1
   m_Name: Screen_Display
   m_TagString: Untagged
@@ -20401,6 +20403,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 560448552}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &560448556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 560448552}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c05af43311d1848a804e12bfba702f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playOnAwake: 0
+  movTexture: {fileID: 15200000, guid: 686b2540f49dc89428778149639c7a91, type: 3}
 --- !u!1 &561520286
 GameObject:
   m_ObjectHideFlags: 0
@@ -39988,7 +40003,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108256489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -11}
+  m_LocalPosition: {x: 0, y: 0, z: -5.76}
   m_LocalScale: {x: 1, y: 0.76705927, z: 1.303684}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -40003,9 +40018,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9fca723192ce6fa46b231e21e61d2f4f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -49597,7 +49612,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -51826,7 +51841,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -55166,7 +55181,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -60872,7 +60887,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 1
+  m_SelectedWireframeHidden: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -61519,12 +61534,12 @@ GameObject:
   - 222: {fileID: 1747042905}
   - 114: {fileID: 1747042904}
   m_Layer: 0
-  m_Name: Movie_1
+  m_Name: Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1747042903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61537,7 +61552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 41704318}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -62987,6 +63002,91 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1058717868}
   m_RootOrder: 25
+--- !u!1 &1781100474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 407a09755d2161c4687ae2792da17c5a, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1781100475}
+  - 33: {fileID: 1781100478}
+  - 23: {fileID: 1781100477}
+  - 114: {fileID: 1781100476}
+  m_Layer: 1
+  m_Name: Commercials
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1781100475
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 407a09755d2161c4687ae2792da17c5a, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781100474}
+  m_LocalRotation: {x: -0.0004442958, y: 0.70710665, z: -0.70710665, w: -0.0004442958}
+  m_LocalPosition: {x: 11, y: 0, z: -243}
+  m_LocalScale: {x: 267.82974, y: 68.75702, z: 149.40028}
+  m_LocalEulerAnglesHint: {x: -270, y: 0, z: 179.92801}
+  m_Children: []
+  m_Father: {fileID: 41704318}
+  m_RootOrder: 0
+--- !u!114 &1781100476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781100474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0985baac9de1b224f82989ada2a01c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 15200000, guid: 497677e85a1a18b41a03b6aeda52e267, type: 3}
+  - {fileID: 15200000, guid: 566ab93c301cd814496a518fcc836a22, type: 3}
+  - {fileID: 15200000, guid: dfeff9fa500174548a63b006babc822a, type: 3}
+  TVSpeaker: {fileID: 1108256491}
+--- !u!23 &1781100477
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 407a09755d2161c4687ae2792da17c5a,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781100474}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e40d54afbe34f174a9502f2b57a16a8e, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1781100478
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 407a09755d2161c4687ae2792da17c5a,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781100474}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1785305147
 GameObject:
   m_ObjectHideFlags: 0

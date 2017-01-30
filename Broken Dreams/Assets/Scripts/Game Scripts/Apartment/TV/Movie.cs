@@ -3,23 +3,13 @@ using System.Collections;
 
 public class Movie : MonoBehaviour
 {
-
-    private MovieTexture mtex;
-
-    // Use this for initialization
+    public bool playOnAwake = false;
+    public MovieTexture movTexture;
     void Start()
     {
-        mtex = gameObject.GetComponent<Renderer>().material.mainTexture as MovieTexture;
-        mtex.Play();
+        GetComponent<Renderer>().material.mainTexture = movTexture;
+        if(playOnAwake)
+        movTexture.Play();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!mtex.isPlaying)
-        {
-            print("movie playing status: " + mtex.isPlaying + ".");
-            mtex.Play();
-        }
-    }
 }
