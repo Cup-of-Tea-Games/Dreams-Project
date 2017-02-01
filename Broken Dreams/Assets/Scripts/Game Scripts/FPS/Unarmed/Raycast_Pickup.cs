@@ -9,6 +9,8 @@ public class Raycast_Pickup : MonoBehaviour
     public int distanceToItem; //Distance from item to trigger grabbing
     RaycastHit hit; //The Raycast itself
     public GameObject hand; //Hand GUI 
+    public GameObject door; //Door GUI 
+    public GameObject sit; //Sit GUI 
     public GameObject pickUp; //Pick Up GUI 
     public GameObject ItemInHand; //Item GUI
     public GameObject ladder; //Ladder GUI
@@ -71,8 +73,12 @@ public class Raycast_Pickup : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Page")
                         pickUp.SetActive(true);
-                    else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door")
+                    else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
                         hand.SetActive(true);
+                    else if(hit.collider.gameObject.tag == "Door")
+                        door.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Sit Object" && SitDown.canSitDown)
+                        sit.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -84,6 +90,8 @@ public class Raycast_Pickup : MonoBehaviour
                         ladder.SetActive(false);
                         hand.SetActive(false);
                         pickUp.SetActive(false);
+                        door.SetActive(false);
+                        sit.SetActive(false);
                     }
                 }
 
@@ -171,7 +179,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page")
+            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object") 
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -237,6 +245,10 @@ public class Raycast_Pickup : MonoBehaviour
                 FirstPersonController.ladder = objectInstance.GetComponent<Ladder>();
                 FirstPersonController.isClimbing = true;
             }
+        }
+        else if (hit.collider.gameObject.tag == "Sit Object" && SitDown.canSitDown)
+        {
+            SitDown.sitDown = true;
         }
 
         ZoomAbility(); //Gives the Player the Ability to Zoom
