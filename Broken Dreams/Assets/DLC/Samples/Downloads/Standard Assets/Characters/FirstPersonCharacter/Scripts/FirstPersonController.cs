@@ -62,6 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool isSwimming;
         public static bool isPeeking;
         bool canSwim = true;
+        bool sitActivator = true;
 
         //Vaulting
         public Vaulter vaulter;
@@ -209,7 +210,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
                 //Crouching
-                if (!WaterInteraction.isOnDeepWater)
+                if (!WaterInteraction.isOnDeepWater && !SitDown.isSatDown)
                 CrouchAbility();
 
                 if (Input.GetKey(KeyCode.LeftShift))
@@ -222,6 +223,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //  Peeker();
 
                 VaultMechanic();
+                ChairSitter();
 
                 if (mouseLookResetter)
                 {
@@ -362,7 +364,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (!isClimbing && !Vaulter.isVaulting)
                     m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
             }
-            if (!isClimbing)
+            if (!isClimbing && !SitDown.isSatDown)
                 m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
@@ -546,6 +548,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //StopCoroutine(Vault());
         }
 
+        private void ChairSitter()
+        {
+
+            if (SitDown.sitDown)
+            {
+                m_WalkSpeed = 0;
+                m_RunSpeed = 0;
+                m_MoveDir.y = 0;
+            }
+            else if (!SitDown.isSatDown)
+            {
+                sitActivator = true;
+                m_MoveDir.y = 0;
+            }
+
+
+        }
+
         /*
         private void Peeker()
         {
@@ -581,6 +601,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             yield return new WaitForSeconds(1.8f);
             canSwim = true;
            // StopCoroutine(waterDelay());
+        }
+
+        public IEnumerator mouseLookReset()
+        {
+            if (sitActivator)
+            {
+                Destroy(m_MouseLook);
+                yield return new WaitForSeconds(0.1f);
+                m_MouseLook = gameObject.AddComponent<MouseLook>();
+                m_MouseLook.Init(transform, m_Camera.transform);
+                sitActivator = false;
+                StopCoroutine(mouseLookReset());
+            }
         }
     }
 }

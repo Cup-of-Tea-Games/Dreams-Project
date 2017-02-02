@@ -11,7 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool clampVerticalRotation = true;
         public float MinimumX = -90F;
         public float MaximumX = 90F;
-        public bool smooth;
+        public bool smooth = false;
         public float smoothTime = 14f;
         private bool freezeX;
         private bool freezeY;
@@ -49,10 +49,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (smooth)
             {
-                character.localRotation = Quaternion.Slerp(character.localRotation, m_CharacterTargetRot,
-                    smoothTime * Time.deltaTime);
-                camera.localRotation = Quaternion.Slerp(camera.localRotation, m_CameraTargetRot,
-                    smoothTime * Time.deltaTime);
+                if (SitDown.isSatDown || (Peeking.isInMiddle && !Peeking.isPeeking))
+                {
+                    character.localRotation = Quaternion.Slerp(character.localRotation, m_CharacterTargetRot, smoothTime * Time.deltaTime);
+                    camera.localRotation = Quaternion.Slerp(camera.localRotation, m_CameraTargetRot, smoothTime * Time.deltaTime);
+                }
+                else
+                {
+                    m_CharacterTargetRot = character.localRotation;
+                    m_CameraTargetRot = camera.localRotation;
+                }
             }
             else
             {
@@ -62,8 +68,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     character.localRotation = m_CharacterTargetRot;
                 }
                 else
+                {
                     m_CharacterTargetRot = character.localRotation;
                     m_CameraTargetRot = camera.localRotation;
+                }
 
             }
 
