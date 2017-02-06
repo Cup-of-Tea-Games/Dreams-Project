@@ -120,6 +120,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
                 {
+                    if(!SitDown.isSatDown)
                     StartCoroutine(m_JumpBob.DoBobCycle());
                     PlayLandingSound();
                     m_MoveDir.y = 0f;
@@ -223,6 +224,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //  Peeker();
 
                 VaultMechanic();
+
+                if(SitDown.canSitDown)
                 ChairSitter();
 
                 if (mouseLookResetter)
@@ -557,7 +560,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_RunSpeed = 0;
                 m_MoveDir.y = 0;
             }
-            else if (!SitDown.isSatDown)
+            if (!SitDown.isSatDown)
             {
                 sitActivator = true;
                 m_MoveDir.y = 0;

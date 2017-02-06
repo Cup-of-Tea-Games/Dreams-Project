@@ -11,7 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool clampVerticalRotation = true;
         public float MinimumX = -90F;
         public float MaximumX = 90F;
-        public bool smooth = false;
+        public bool smooth = true;
         public float smoothTime = 14f;
         private bool freezeX;
         private bool freezeY;
