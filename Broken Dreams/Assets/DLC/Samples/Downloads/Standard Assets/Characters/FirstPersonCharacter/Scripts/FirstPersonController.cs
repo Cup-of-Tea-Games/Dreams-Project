@@ -225,8 +225,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 VaultMechanic();
 
-                if(SitDown.canSitDown)
-                ChairSitter();
+                if (SitDown.canSitDown)
+                {
+                    ChairSitter();
+                }
+                if(SitDown.isSatDown)
+                    m_UseHeadBob = false;
+                else
+                    m_UseHeadBob = true;
 
                 if (mouseLookResetter)
                 {
