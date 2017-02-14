@@ -106,6 +106,48 @@
     <Reference Include="ProBuilderEditor-Unity5">
       <HintPath>Assets\DLC\ProCore\ProBuilder\Editor\ProBuilderEditor-Unity5.dll</HintPath>
     </Reference>
+    <Reference Include="ch.sycoforge.Unity.Editor">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\Editor\ch.sycoforge.Unity.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.TextureUtil">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Unity.TextureUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Decal">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\ch.sycoforge.Decal.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Util.Attributes">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Util.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Decal.Editor">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\Editor\ch.sycoforge.Decal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.Util">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\Editor\ch.sycoforge.Unity.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.Editor.Workspace">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\Editor\ch.sycoforge.Unity.Editor.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Imaging.Unity">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Imaging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Interop">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Device">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Logging">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Types">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Imaging">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.nu.sycoforge.Shared">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\Editor\ch.nu.sycoforge.Shared.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Broken Dreams.CSharp.csproj">
@@ -115,6 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DLC\Dynamic Color Curves\Scripts\Editor\ColorCurvesManagerEditor.cs" />
+    <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\Editor\DSSDShaderGUI.cs" />
+    <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\Editor\EDStandardShaderGUI.cs" />
     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Editor\CustomAction.cs" />
     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Editor\EditorCallbackViewer.cs" />
     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Editor\RenameNewObjects.cs" />
@@ -178,6 +222,43 @@
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\Canvas.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasChannels.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasOpaque.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasSelection.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasUtil.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\UnlitColorAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAdd.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\ch.sycoforge.Decal.XML" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDMultiply.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDSandardVACutoff.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandard.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandardSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandardSpecularVACutoff.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDVertexAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDVertexAlphaN.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaBumpSpec.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaEdgeBleed.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaEdgeBleed_Mul.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaSimple.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_ReflBumpSpec.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_ReflBumpSpec_Cut.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_SoftUnlit.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\DSSD.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdMetallic.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdMetallicCG.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdSpecularCG.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SSD-M.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoDSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoFSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Util.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\StandardSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Unlit\EDAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Unlit\EDMultiply.shader" />
     <None Include="Assets\DLC\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\DLC\ProCore\ProBuilder\About\Credits.txt" />
     <None Include="Assets\DLC\ProCore\ProBuilder\About\changelog.txt" />
