@@ -33,7 +33,7 @@ public class SitDown : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("SitDown : " + sitDown + " CanSitDown : " + canSitDown + " isSatDown : " + isSatDown );
+//        Debug.Log("SitDown : " + sitDown + " CanSitDown : " + canSitDown + " isSatDown : " + isSatDown );
 
         if (sitDown)
         {

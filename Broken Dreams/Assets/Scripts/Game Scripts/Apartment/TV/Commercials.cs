@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Commercials : MonoBehaviour {
+public class Commercials : MonoBehaviour
+{
 
     public MovieTexture[] clips;
     public AudioSource TVSpeaker;
@@ -33,7 +34,8 @@ public class Commercials : MonoBehaviour {
 
     void ChangeClip()
     {
-        int nextClip = Random.RandomRange(0,clips.Length);
+        clips[currentClipCount].Stop();
+        int nextClip = Random.RandomRange(0, clips.Length);
         if (currentClipCount != nextClip)
             currentClipCount = nextClip;
         else
