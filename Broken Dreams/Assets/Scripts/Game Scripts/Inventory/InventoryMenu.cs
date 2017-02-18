@@ -29,7 +29,7 @@ public class InventoryMenu : MonoBehaviour {
         {
             canTrigger = false;
             inventroyIsUp = true;
-            LockMouse.lockMouse = false;
+                LockMouse.lockMouse = false;
             StartCoroutine(waitTime());
         }
 
@@ -38,7 +38,7 @@ public class InventoryMenu : MonoBehaviour {
             objectsFadeIn();
             itemShack.enabled = true;
             selector.enabled = true;
-            LockMouse.lockMouse = false;
+                LockMouse.lockMouse = false;
         }
         else
         {
@@ -49,6 +49,10 @@ public class InventoryMenu : MonoBehaviour {
             LockMouse.lockMouse = true;
         }
         if (PageViewer.PageViewerIsUp)
+        {
+                LockMouse.lockMouse = false;
+        }
+        if (Computer.isOnPC)
         {
             LockMouse.lockMouse = false;
         }

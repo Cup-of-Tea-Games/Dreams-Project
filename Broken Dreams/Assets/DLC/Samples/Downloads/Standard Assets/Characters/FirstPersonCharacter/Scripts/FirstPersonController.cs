@@ -329,7 +329,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            if(!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
+            if(!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp && !Computer.isOnPC)
             { 
             float speed;
 
