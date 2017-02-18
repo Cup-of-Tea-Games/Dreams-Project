@@ -10,6 +10,7 @@ public class Raycast_Pickup : MonoBehaviour
     RaycastHit hit; //The Raycast itself
     public GameObject hand; //Hand GUI 
     public GameObject door; //Door GUI 
+    public GameObject pcIcon; //Door GUI 
     public GameObject sit; //Sit GUI 
     public GameObject pickUp; //Pick Up GUI 
     public GameObject ItemInHand; //Item GUI
@@ -35,6 +36,10 @@ public class Raycast_Pickup : MonoBehaviour
     float rotateTimeSet = 2f; // This is specifically used for resetting object's rotation
 
 
+    //Apartment
+    public static GameObject chairInstance;
+
+
     void Awake()
     {
         defaultValue = speed;
@@ -43,6 +48,7 @@ public class Raycast_Pickup : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0) && itemInRange())
         {
             mouseClickToggle = !mouseClickToggle;
@@ -77,8 +83,10 @@ public class Raycast_Pickup : MonoBehaviour
                         hand.SetActive(true);
                     else if(hit.collider.gameObject.tag == "Door")
                         door.SetActive(true);
-                    else if (hit.collider.gameObject.tag == "Sit Object" && SitDown.canSitDown)
+                    else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
                         sit.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "PC")
+                        pcIcon.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -92,6 +100,7 @@ public class Raycast_Pickup : MonoBehaviour
                         pickUp.SetActive(false);
                         door.SetActive(false);
                         sit.SetActive(false);
+                        pcIcon.SetActive(false);
                     }
                 }
 
@@ -179,10 +188,15 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object") 
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC") 
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
+
+                if(hit.collider.gameObject.tag == "Sit Object")
+                {
+                    chairInstance = hit.collider.gameObject;
+                }
             }
 
             else if (hit.collider.gameObject.tag == "Ladder")
@@ -228,6 +242,11 @@ public class Raycast_Pickup : MonoBehaviour
 
         }
 
+        else if (hit.collider.gameObject.tag == "PC")
+        {
+            Computer.isOnPC = true;
+        }
+
         else if (hit.collider.gameObject.tag == "Item")
         {
             objectInstance.GetComponent<PickItem>().pickUpItem();
@@ -246,7 +265,7 @@ public class Raycast_Pickup : MonoBehaviour
                 FirstPersonController.isClimbing = true;
             }
         }
-        else if (hit.collider.gameObject.tag == "Sit Object" && SitDown.canSitDown)
+        else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
         {
             SitDown.sitDown = true;
         }

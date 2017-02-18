@@ -2,50 +2,82 @@
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class SitDown : MonoBehaviour
+public class SitDownPC : MonoBehaviour
 {
+
     public GameObject player;
-    public bool canSitDown = false;
+    public GameObject playerCamera;
+    public static bool canSitDown = false;
     public static bool sitDown = false;
     public static bool isSatDown = false;
     bool getOut = false;
     bool resetActivator = true;
-    public int tag;
+    bool isOnScreen = false;
 
     public GameObject chair;
+    public GameObject Chair_Trigger;
     public GameObject chair_Position;
     public GameObject chair_ExitPosition;
+    public GameObject screen_Position;
 
-    void Update()
+    void OnTriggerEnter(Collider col)
     {
-       // Debug.Log("SitDown : " + sitDown + " CanSitDown : " + canSitDown + " isSatDown : " + isSatDown);
-    
-        if (Raycast_Pickup.chairInstance == chair)
+        if (col.tag == "Sit Area")
         {
             canSitDown = true;
         }
         else
         {
+            Chair_Trigger.SetActive(true);
             canSitDown = false;
         }
+    }
+
+    void Update()
+    {
+
+//        Debug.Log("SitDown : " + sitDown + " CanSitDown : " + canSitDown + " isSatDown : " + isSatDown );
 
         if (sitDown)
         {
-
-            if (Raycast_Pickup.chairInstance == chair)
+            if (Raycast_Pickup.objectInstance == chair)
             {
-                if (!isSatDown)
-                    StartCoroutine(enter());
+                if(!isSatDown)
+                StartCoroutine(enter());
+            
 
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    getOut = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Chair_Trigger.SetActive(true);
+                getOut = true;
                 }
+        }
+        }
+        if (isSatDown)
+        {
+          if(Input.GetKey(KeyCode.E) && !isOnScreen)
+            {
+                isOnScreen = true;
+                if (isOnScreen)
+                {
+                    playerCamera.transform.position = screen_Position.transform.position;
+                    player.GetComponent<FirstPersonController>().enabled = false;
+                }
+            }
+            if (Input.GetKey(KeyCode.Escape) && isOnScreen)
+            {
+                playerCamera.transform.position = screen_Position.transform.position;
+                isOnScreen = false;
+                if (!isOnScreen)
+                    player.GetComponent<FirstPersonController>().enabled = true;
             }
         }
 
         if (getOut)
             StartCoroutine(exit());
+
+            if(isSatDown)
+            Chair_Trigger.SetActive(false);
 
     }
 
@@ -58,13 +90,10 @@ public class SitDown : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         player.GetComponent<CharacterController>().detectCollisions = true;
         player.GetComponent<Rigidbody>().detectCollisions = true;
-        player.GetComponent<FirstPersonController>().enabled = true;
-        Raycast_Pickup.chairInstance = null;
         sitDown = false;
         isSatDown = false;
         resetActivator = true;
         getOut = false;
-        canSitDown = false;
     }
 
     private IEnumerator enter()

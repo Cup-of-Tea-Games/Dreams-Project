@@ -225,7 +225,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 VaultMechanic();
 
-                if (SitDown.canSitDown)
+                if (Raycast_Pickup.objectInstance.GetComponent<SitDown>().canSitDown)
                 {
                     ChairSitter();
                 }
@@ -566,7 +566,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_RunSpeed = 0;
                 m_MoveDir.y = 0;
             }
-            if (!SitDown.isSatDown)
+            if (SitDown.isSatDown)
             {
                 sitActivator = true;
                 m_MoveDir.y = 0;
