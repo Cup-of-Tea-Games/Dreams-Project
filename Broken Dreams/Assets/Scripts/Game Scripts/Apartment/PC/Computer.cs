@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Computer : MonoBehaviour {
 
+    public GameObject player;
     public GameObject pcDisplay;
     public static bool isOnPC = false;
     bool pcActivator = true;
@@ -17,6 +18,7 @@ public class Computer : MonoBehaviour {
             isOnPC = false;
             pcDisplay.SetActive(false);
             LockMouse.lockMouse = true;
+            player.GetComponent<FirstPersonController>().enabled = true;
         }
         if(!isOnPC)
         {
@@ -30,6 +32,7 @@ public class Computer : MonoBehaviour {
             if (isOnPC)
         {
                 pcDisplay.SetActive(true);
-        }
+                player.GetComponent<FirstPersonController>().enabled = false;
+            }
     }
 }
