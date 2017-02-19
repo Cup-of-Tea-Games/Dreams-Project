@@ -15,10 +15,7 @@ public class Computer : MonoBehaviour {
        // Debug.Log(isOnPC);
         if(isOnPC && Input.GetKey(KeyCode.Escape))
         {
-            isOnPC = false;
-            pcDisplay.SetActive(false);
-            LockMouse.lockMouse = true;
-            player.GetComponent<FirstPersonController>().enabled = true;
+            exitPC();
         }
         if(!isOnPC)
         {
@@ -34,5 +31,13 @@ public class Computer : MonoBehaviour {
                 pcDisplay.SetActive(true);
                 player.GetComponent<FirstPersonController>().enabled = false;
             }
+    }
+
+    public void exitPC()
+    {
+            isOnPC = false;
+            pcDisplay.SetActive(false);
+            LockMouse.lockMouse = true;
+            player.GetComponent<FirstPersonController>().enabled = true;
     }
 }
