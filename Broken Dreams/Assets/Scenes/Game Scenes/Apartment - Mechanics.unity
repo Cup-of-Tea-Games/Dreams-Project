@@ -21293,6 +21293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceToItem: 2
   hand: {fileID: 229979325}
+  toggle: {fileID: 0}
   door: {fileID: 229979325}
   pcIcon: {fileID: 229979325}
   sit: {fileID: 229979325}
@@ -86374,6 +86375,18 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 407a09755d2161c4687ae2792da17c5a, type: 3}
   m_PrefabInternal: {fileID: 457984209}
+--- !u!114 &2142999504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142999503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577a88f9889055043abb0e7bdfc42e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleObject: {fileID: 1166873754}
 --- !u!64 &2142999507
 MeshCollider:
   m_ObjectHideFlags: 0
