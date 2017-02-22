@@ -9,6 +9,16 @@ public class Radio : MonoBehaviour
     int currentClipCount = 0;
     public static bool isPlaying = false;
 
+    void OnEnable()
+    {
+        isPlaying = true;
+    }
+
+    void OnDisable()
+    {
+        isPlaying = false;
+    }
+
     void Awake()
     {
         ChangeClip();
@@ -27,8 +37,6 @@ public class Radio : MonoBehaviour
                 Speaker.Play();
             }
         }
-
-        isPlaying = Speaker.isPlaying;
     }
 
     void ChangeClip()

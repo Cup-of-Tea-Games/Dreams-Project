@@ -231,8 +231,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
                 if(SitDown.isSatDown)
                     m_UseHeadBob = false;
-                else
-                    m_UseHeadBob = true;
 
                 if (mouseLookResetter)
                 {
@@ -243,6 +241,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     Debug.Log("Resetted Mouse Look");
                 }
 
+                if (GetComponent<Rigidbody>().detectCollisions == true)
+                    m_UseHeadBob = true;
 
             }// SUPER IF
         }

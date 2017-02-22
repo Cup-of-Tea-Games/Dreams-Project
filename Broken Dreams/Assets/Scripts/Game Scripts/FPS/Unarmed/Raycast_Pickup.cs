@@ -249,6 +249,7 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "PC")
         {
             Computer.isOnPC = true;
+            mouseClickToggle = false;
         }
 
         else if (hit.collider.gameObject.tag == "Item")
@@ -259,6 +260,8 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Toggle")
         {
             objectInstance.GetComponent<Toggle>().toggle();
+            StartCoroutine(delaySeconds());
+            mouseClickToggle = false;
         }
 
         else if (hit.collider.gameObject.tag == "Page")
@@ -277,6 +280,7 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
         {
             SitDown.sitDown = true;
+            mouseClickToggle = false;
         }
 
         ZoomAbility(); //Gives the Player the Ability to Zoom

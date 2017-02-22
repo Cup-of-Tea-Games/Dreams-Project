@@ -59,7 +59,7 @@ public class SitDown : MonoBehaviour
         player.GetComponent<CharacterController>().detectCollisions = true;
         player.GetComponent<Rigidbody>().detectCollisions = true;
         player.GetComponent<FirstPersonController>().enabled = true;
-        Raycast_Pickup.chairInstance = null;
+        Raycast_Pickup.mouseClickToggle = false;
         sitDown = false;
         isSatDown = false;
         resetActivator = true;
