@@ -225,7 +225,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 VaultMechanic();
 
-                if (Raycast_Pickup.objectInstance.GetComponent<SitDown>().canSitDown)
+                if (Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
                 {
                     ChairSitter();
                 }
@@ -243,6 +243,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (GetComponent<Rigidbody>().detectCollisions == true)
                     m_UseHeadBob = true;
+
+                Debug.Log(GetComponent<Rigidbody>().detectCollisions);
 
             }// SUPER IF
         }
