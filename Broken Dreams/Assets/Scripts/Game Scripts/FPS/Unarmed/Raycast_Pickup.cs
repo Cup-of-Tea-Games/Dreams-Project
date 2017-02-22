@@ -9,8 +9,9 @@ public class Raycast_Pickup : MonoBehaviour
     public int distanceToItem; //Distance from item to trigger grabbing
     RaycastHit hit; //The Raycast itself
     public GameObject hand; //Hand GUI 
+    public GameObject toggle; //Toggle GUI 
     public GameObject door; //Door GUI 
-    public GameObject pcIcon; //Door GUI 
+    public GameObject pcIcon; //PC GUI 
     public GameObject sit; //Sit GUI 
     public GameObject pickUp; //Pick Up GUI 
     public GameObject ItemInHand; //Item GUI
@@ -87,6 +88,8 @@ public class Raycast_Pickup : MonoBehaviour
                         sit.SetActive(true);
                     else if (hit.collider.gameObject.tag == "PC")
                         pcIcon.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Toggle")
+                        toggle.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -101,6 +104,7 @@ public class Raycast_Pickup : MonoBehaviour
                         door.SetActive(false);
                         sit.SetActive(false);
                         pcIcon.SetActive(false);
+                        toggle.SetActive(false);
                     }
                 }
 
@@ -188,7 +192,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC") 
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle") 
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -245,11 +249,19 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "PC")
         {
             Computer.isOnPC = true;
+            mouseClickToggle = false;
         }
 
         else if (hit.collider.gameObject.tag == "Item")
         {
             objectInstance.GetComponent<PickItem>().pickUpItem();
+        }
+
+        else if (hit.collider.gameObject.tag == "Toggle")
+        {
+            objectInstance.GetComponent<Toggle>().toggle();
+            StartCoroutine(delaySeconds());
+            mouseClickToggle = false;
         }
 
         else if (hit.collider.gameObject.tag == "Page")
@@ -268,6 +280,7 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
         {
             SitDown.sitDown = true;
+            mouseClickToggle = false;
         }
 
         ZoomAbility(); //Gives the Player the Ability to Zoom

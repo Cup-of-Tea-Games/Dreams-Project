@@ -225,14 +225,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 VaultMechanic();
 
-                if (Raycast_Pickup.objectInstance.GetComponent<SitDown>().canSitDown)
+                if (Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
                 {
                     ChairSitter();
                 }
                 if(SitDown.isSatDown)
                     m_UseHeadBob = false;
-                else
-                    m_UseHeadBob = true;
 
                 if (mouseLookResetter)
                 {
@@ -243,6 +241,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     Debug.Log("Resetted Mouse Look");
                 }
 
+                if (GetComponent<Rigidbody>().detectCollisions == true)
+                    m_UseHeadBob = true;
+
+                Debug.Log(GetComponent<Rigidbody>().detectCollisions);
 
             }// SUPER IF
         }

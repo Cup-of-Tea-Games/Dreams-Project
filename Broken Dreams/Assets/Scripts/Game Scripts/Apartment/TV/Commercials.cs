@@ -7,6 +7,17 @@ public class Commercials : MonoBehaviour
     public MovieTexture[] clips;
     public AudioSource TVSpeaker;
     int currentClipCount = 0;
+    public static bool isPlaying;
+
+    void OnDisable()
+    {
+        TVSpeaker.mute = true;
+    }
+
+    void OnEnable()
+    {
+        TVSpeaker.mute = false;
+    }
 
     void Awake()
     {
@@ -30,6 +41,8 @@ public class Commercials : MonoBehaviour
                 TVSpeaker.Play();
             }
         }
+
+        isPlaying = clips[currentClipCount].isPlaying || !TVSpeaker.mute;
     }
 
     void ChangeClip()
