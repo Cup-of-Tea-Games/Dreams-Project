@@ -12,11 +12,13 @@ public class Commercials : MonoBehaviour
     void OnEnable()
     {
         isPlaying = true;
+        TVSpeaker.mute = false;
     }
 
     void OnDisable()
     {
         isPlaying = false;
+        TVSpeaker.mute = true;
     }
 
     void Awake()
