@@ -38,7 +38,7 @@ public class BackgroundMusic : MonoBehaviour
         }
         else
         {
-            Speaker.volume = originalValue;
+            StartCoroutine(setOriginal());
         }
     }
 
@@ -50,6 +50,13 @@ public class BackgroundMusic : MonoBehaviour
             currentClipCount = nextClip;
         else
             ChangeClip();
+    }
+
+    IEnumerator setOriginal()
+    {
+        yield return new WaitForSeconds(1f);
+        Speaker.volume = originalValue;
+        StopCoroutine(setOriginal());
     }
 
 }

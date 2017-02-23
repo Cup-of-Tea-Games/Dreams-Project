@@ -9,14 +9,14 @@ public class Commercials : MonoBehaviour
     int currentClipCount = 0;
     public static bool isPlaying;
 
-    void OnDisable()
-    {
-        TVSpeaker.mute = true;
-    }
-
     void OnEnable()
     {
-        TVSpeaker.mute = false;
+        isPlaying = true;
+    }
+
+    void OnDisable()
+    {
+        isPlaying = false;
     }
 
     void Awake()
@@ -41,8 +41,6 @@ public class Commercials : MonoBehaviour
                 TVSpeaker.Play();
             }
         }
-
-        isPlaying = clips[currentClipCount].isPlaying || !TVSpeaker.mute;
     }
 
     void ChangeClip()

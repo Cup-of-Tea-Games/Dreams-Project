@@ -242,7 +242,9 @@ public class Raycast_Pickup : MonoBehaviour
                 objectInstance.GetComponent<Door>().toggle();
                 delayTime = false;
             }
-            StartCoroutine(delaySeconds());
+            
+            StartCoroutine(delaySeconds(1f));
+            mouseClickToggle = false;
 
         }
 
@@ -260,7 +262,7 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Toggle")
         {
             objectInstance.GetComponent<Toggle>().toggle();
-            StartCoroutine(delaySeconds());
+            StartCoroutine(delaySeconds(1f));
             mouseClickToggle = false;
         }
 
@@ -311,7 +313,7 @@ public class Raycast_Pickup : MonoBehaviour
              else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
               objectInstance.GetComponent<Rigidbody>().AddForce(transformBall.transform.TransformDirection(Vector3.forward) * pushForce/2);
 
-        StartCoroutine(delaySeconds());
+        StartCoroutine(delaySeconds(1f));
     }
 
     void ZoomAbility()
@@ -350,11 +352,11 @@ public class Raycast_Pickup : MonoBehaviour
         transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition);
     }
 
-    public IEnumerator delaySeconds()
+    public IEnumerator delaySeconds(float x)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(x);
         delayTime = true;
-        StopCoroutine(delaySeconds());
+        StopCoroutine(delaySeconds(x));
     }
 }
 

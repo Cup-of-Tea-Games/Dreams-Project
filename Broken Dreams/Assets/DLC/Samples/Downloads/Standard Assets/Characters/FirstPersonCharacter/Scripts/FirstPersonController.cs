@@ -244,7 +244,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (GetComponent<Rigidbody>().detectCollisions == true)
                     m_UseHeadBob = true;
 
-                Debug.Log(GetComponent<Rigidbody>().detectCollisions);
 
             }// SUPER IF
         }

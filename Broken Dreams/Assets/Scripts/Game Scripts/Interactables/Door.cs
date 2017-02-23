@@ -55,8 +55,8 @@ public class Door : MonoBehaviour
             if (hinge.angle != 90 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 100;
-                motor.targetVelocity = 75;
+                motor.force = 50;
+                motor.targetVelocity = 80;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
@@ -72,8 +72,8 @@ public class Door : MonoBehaviour
             if (hinge.angle != 0 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 100;
-                motor.targetVelocity = -75;
+                motor.force = 50;
+                motor.targetVelocity = -80;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
