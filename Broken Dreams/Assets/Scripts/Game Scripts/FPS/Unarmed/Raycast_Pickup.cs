@@ -11,6 +11,7 @@ public class Raycast_Pickup : MonoBehaviour
     public GameObject hand; //Hand GUI 
     public GameObject toggle; //Toggle GUI 
     public GameObject door; //Door GUI 
+    public GameObject drawer; //Drawer GUI 
     public GameObject pcIcon; //PC GUI 
     public GameObject sit; //Sit GUI 
     public GameObject pickUp; //Pick Up GUI 
@@ -84,6 +85,8 @@ public class Raycast_Pickup : MonoBehaviour
                         hand.SetActive(true);
                     else if(hit.collider.gameObject.tag == "Door")
                         door.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Drawer")
+                        drawer.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
                         sit.SetActive(true);
                     else if (hit.collider.gameObject.tag == "PC")
@@ -105,6 +108,7 @@ public class Raycast_Pickup : MonoBehaviour
                         sit.SetActive(false);
                         pcIcon.SetActive(false);
                         toggle.SetActive(false);
+                        drawer.SetActive(false);
                     }
                 }
 
@@ -192,7 +196,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle") 
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer") 
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -262,6 +266,13 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Toggle")
         {
             objectInstance.GetComponent<Toggle>().toggle();
+            StartCoroutine(delaySeconds(1f));
+            mouseClickToggle = false;
+        }
+
+        else if (hit.collider.gameObject.tag == "Drawer")
+        {
+            objectInstance.GetComponent<Drawer>().move();
             StartCoroutine(delaySeconds(1f));
             mouseClickToggle = false;
         }

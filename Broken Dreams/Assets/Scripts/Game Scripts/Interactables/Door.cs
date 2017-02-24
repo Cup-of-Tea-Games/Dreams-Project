@@ -32,6 +32,7 @@ public class Door : MonoBehaviour
     {
         doorPhysics = GetComponent<Rigidbody>();
         hinge = GetComponent<HingeJoint>();
+        doorIsOpen = false;
     }
     public void unlockDoor()
     {
@@ -55,7 +56,7 @@ public class Door : MonoBehaviour
             if (hinge.angle != 90 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 50;
+                motor.force = 70;
                 motor.targetVelocity = 80;
                 motor.freeSpin = false;
                 hinge.motor = motor;
@@ -72,7 +73,7 @@ public class Door : MonoBehaviour
             if (hinge.angle != 0 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 50;
+                motor.force = 70;
                 motor.targetVelocity = -80;
                 motor.freeSpin = false;
                 hinge.motor = motor;
