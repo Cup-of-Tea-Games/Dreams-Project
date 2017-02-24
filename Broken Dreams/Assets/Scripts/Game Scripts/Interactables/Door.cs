@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     public bool isLocked;
     Rigidbody doorPhysics;
     HingeJoint hinge;
+    public float targetVelocity = 80;
+    public float force = 70;
 
     //Tools
     bool doorIsOpen = false;
@@ -56,8 +58,8 @@ public class Door : MonoBehaviour
             if (hinge.angle != 90 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 70;
-                motor.targetVelocity = 80;
+                motor.force = force;
+                motor.targetVelocity = targetVelocity;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
@@ -73,8 +75,8 @@ public class Door : MonoBehaviour
             if (hinge.angle != 0 && doorActivation)
             {
                 JointMotor motor = hinge.motor;
-                motor.force = 70;
-                motor.targetVelocity = -80;
+                motor.force = force;
+                motor.targetVelocity = -targetVelocity;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
