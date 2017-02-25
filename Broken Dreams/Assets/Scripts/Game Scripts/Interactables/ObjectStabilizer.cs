@@ -11,6 +11,8 @@ public class ObjectStabilizer : MonoBehaviour {
     bool isColliding = false;
     public float grabOffset = 0;
     public float radiusMultiplier = 3;
+    float pitchVar = 1;
+    public float pitchMultiplier = 1;
   //  public bool canBreak = false;
   //  public GameObject breakableItem;
  //   public float cutPieces;
@@ -27,7 +29,6 @@ public class ObjectStabilizer : MonoBehaviour {
 
         defaultRadius = GetComponent<SphereCollider>().radius;
         increasedRadius = defaultRadius * radiusMultiplier;
-
     }
 
     void Update()
@@ -75,8 +76,9 @@ public class ObjectStabilizer : MonoBehaviour {
         if (collision.relativeVelocity.magnitude > 3 && collision.relativeVelocity.magnitude < 10 && DoesItHaveSound)
         {
             sound.clip = normalImpact;
-            sound.pitch = 1.0f;
+            sound.pitch = 1.0f*pitchVar*pitchMultiplier;
             sound.Play();
+            changePitch();
         }
 
         else if (collision.relativeVelocity.magnitude > 10 && DoesItHaveSound)
@@ -86,13 +88,15 @@ public class ObjectStabilizer : MonoBehaviour {
                 sound.clip = heavyImpact;
                 sound.pitch = 1.0f;
                 sound.Play();
+                
             }
 
         else
             {
                 sound.clip = normalImpact;
-                sound.pitch = 0.75f;
+                sound.pitch = 0.75f*pitchVar*pitchMultiplier;
                 sound.Play();
+                changePitch();
             }
         }
 
@@ -115,6 +119,12 @@ public class ObjectStabilizer : MonoBehaviour {
     public bool isOnCollision()
     {
         return isColliding;
+    }
+
+    void changePitch()
+    {
+        float[] pitchValue = {1.0f,1.1f,0.9f,1.15f,0.95f};
+        pitchVar = pitchValue[Random.RandomRange(0,5)];
     }
 
 }

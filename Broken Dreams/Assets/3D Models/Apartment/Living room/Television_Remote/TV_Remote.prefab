@@ -23,6 +23,7 @@ GameObject:
   - 135: {fileID: 135000013682141088}
   - 54: {fileID: 54000010647363614}
   - 114: {fileID: 114000010624670744}
+  - 82: {fileID: 82000011137039198}
   m_Layer: 0
   m_Name: TV_Remote
   m_TagString: pickUpObject
@@ -137,6 +138,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.1051683, y: 1, z: 23.006922}
   m_Center: {x: -8.696617e-10, y: 0, z: -0.029181002}
+--- !u!82 &82000011137039198
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011241188068}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.9
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000010624670744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,12 +223,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbed5092fba06a5418ca6c3f4abdedbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoesItHaveSound: 0
+  DoesItHaveSound: 1
   isAudioSeperated: 0
-  normalImpact: {fileID: 0}
+  normalImpact: {fileID: 8300000, guid: ac36b48a135a2f94f9503c7c74038f26, type: 3}
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1.4
 --- !u!135 &135000013682141088
 SphereCollider:
   m_ObjectHideFlags: 1

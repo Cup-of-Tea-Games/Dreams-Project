@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000011243671220}
   - 135: {fileID: 135000011219639604}
   - 136: {fileID: 136000013911113252}
+  - 82: {fileID: 82000012252382410}
   m_Layer: 0
   m_Name: Strainer
   m_TagString: pickUpObject
@@ -151,6 +152,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.353899, y: -0.21342824, z: 1.3584251}
   m_Center: {x: -3.3504608, y: 1.7597209, z: -0.021426443}
+--- !u!82 &82000012252382410
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011102497662}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.9
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114000011243671220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,12 +237,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbed5092fba06a5418ca6c3f4abdedbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoesItHaveSound: 0
+  DoesItHaveSound: 1
   isAudioSeperated: 0
-  normalImpact: {fileID: 0}
+  normalImpact: {fileID: 8300000, guid: e286a8e93b6f51e4c8fc3ce4e41b03da, type: 3}
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 0.8
 --- !u!135 &135000011219639604
 SphereCollider:
   m_ObjectHideFlags: 1
