@@ -10,16 +10,30 @@ public class Door : MonoBehaviour
     HingeJoint hinge;
     public float targetVelocity = 80;
     public float force = 70;
+    public bool doesItHaveSound = false;
+    public float pitchMultiplier = 1;
+    public AudioClip clip;
+    AudioSource audio;
+    AudioSource audio2;
+    public bool hasCloseSounds = false;
+    public AudioClip closeClip;
 
     //Tools
     bool doorIsOpen = false;
     bool doorActivation;
+    bool closeActivaton = false;
 
     void Update()
     {
         lockHandeler();
 
-        stateHandeler();
+        if (doesItHaveSound && hasCloseSounds && hinge.angle == hinge.limits.min && closeActivaton)
+        {
+            closeActivaton = false;
+            audio2.clip = closeClip;
+            audio2.pitch = 1f * pitchMultiplier;
+            audio2.Play();
+        }
     }
 
     public void toggle()
@@ -27,7 +41,7 @@ public class Door : MonoBehaviour
         if (doorIsOpen || !doorIsOpen)
             doorIsOpen = !doorIsOpen;
         doorActivation = true;
-        Debug.Log(doorIsOpen);
+        stateHandeler();
     }
 
     void Awake()
@@ -35,6 +49,14 @@ public class Door : MonoBehaviour
         doorPhysics = GetComponent<Rigidbody>();
         hinge = GetComponent<HingeJoint>();
         doorIsOpen = false;
+        if (doesItHaveSound)
+            audio = GetComponent<AudioSource>();
+
+        if (hasCloseSounds)
+        {
+            audio2 = gameObject.AddComponent<AudioSource>();
+            audio2.spatialBlend = audio.spatialBlend;
+        }
     }
     public void unlockDoor()
     {
@@ -57,35 +79,46 @@ public class Door : MonoBehaviour
         {
             if (hinge.angle != 90 && doorActivation)
             {
-                JointMotor motor = hinge.motor;
+                    closeActivaton = true;
+                    JointMotor motor = hinge.motor;
                 motor.force = force;
                 motor.targetVelocity = targetVelocity;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
-            }
-            else if (hinge.useMotor && hinge.angle == 90)
-            {
-                hinge.useMotor = false;
-                doorActivation = false;
-            }
+                    if (doesItHaveSound)
+                    {
+                        audio.clip = clip;
+                        audio.pitch = 1.1f*pitchMultiplier;
+                        audio.Play();
+                    }
+
+                    if (doesItHaveSound && hasCloseSounds)
+                    {
+                        audio2.clip = closeClip;
+                        audio2.pitch = 1f * pitchMultiplier;
+                        audio2.Play();
+                    }
+                }
         }
         else if (hinge.angle != 0 && doorActivation)
         {
             if (hinge.angle != 0 && doorActivation)
             {
-                JointMotor motor = hinge.motor;
+                    closeActivaton = true;
+                    JointMotor motor = hinge.motor;
                 motor.force = force;
                 motor.targetVelocity = -targetVelocity;
                 motor.freeSpin = false;
                 hinge.motor = motor;
                 hinge.useMotor = true;
-            }
-            else if (hinge.useMotor && hinge.angle == 0)
-            {
-                hinge.useMotor = false;
-                doorActivation = false;
-            }
+                    if (doesItHaveSound)
+                    {
+                        audio.clip = clip;
+                        audio.pitch = 0.9f*pitchMultiplier;
+                        audio.Play();
+                    }
+                }
         }
     }
 }
