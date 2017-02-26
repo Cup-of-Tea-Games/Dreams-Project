@@ -34,11 +34,12 @@ public class BackgroundMusic : MonoBehaviour
 
         if(Radio.isPlaying || Commercials.isPlaying)
         {
-            Speaker.volume = 0;
+            Speaker.volume -= originalValue*Time.deltaTime;
         }
         else
         {
-            StartCoroutine(setOriginal());
+            if(Speaker.volume < originalValue)
+                Speaker.volume += originalValue * Time.deltaTime/5;
         }
     }
 
@@ -50,13 +51,6 @@ public class BackgroundMusic : MonoBehaviour
             currentClipCount = nextClip;
         else
             ChangeClip();
-    }
-
-    IEnumerator setOriginal()
-    {
-        yield return new WaitForSeconds(1f);
-        Speaker.volume = originalValue;
-        StopCoroutine(setOriginal());
     }
 
 }
