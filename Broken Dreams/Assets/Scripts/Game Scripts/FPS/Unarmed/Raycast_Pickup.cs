@@ -121,8 +121,29 @@ public class Raycast_Pickup : MonoBehaviour
             ladder.SetActive(false);
             hand.SetActive(false);
             pickUp.SetActive(false);
+            door.SetActive(false);
+            sit.SetActive(false);
+            pcIcon.SetActive(false);
+            toggle.SetActive(false);
+            drawer.SetActive(false);
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055); 
 
+        }
+
+        //Patch for Multiple Images Appearing at once
+
+        if (hand.active && ((hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject") || hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown))
+        {
+            ladder.SetActive(false);
+            pickUp.SetActive(false);
+            door.SetActive(false);
+            pcIcon.SetActive(false);
+            toggle.SetActive(false);
+            drawer.SetActive(false);
+        }
+        else
+        {
+            hand.SetActive(false);
         }
 
         //Grabs Item
@@ -365,6 +386,14 @@ public class Raycast_Pickup : MonoBehaviour
 
     public IEnumerator delaySeconds(float x)
     {
+        ladder.SetActive(false);
+        hand.SetActive(false);
+        pickUp.SetActive(false);
+        door.SetActive(false);
+        sit.SetActive(false);
+        pcIcon.SetActive(false);
+        toggle.SetActive(false);
+        drawer.SetActive(false);
         yield return new WaitForSeconds(x);
         delayTime = true;
         StopCoroutine(delaySeconds(x));
