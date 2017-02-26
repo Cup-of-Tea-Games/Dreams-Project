@@ -8,6 +8,7 @@ public class SitDown : MonoBehaviour
     public bool canSitDown = false;
     public static bool sitDown = false;
     public static bool isSatDown = false;
+    public bool satDown;
     bool getOut = false;
     bool resetActivator = true;
     public int tag;
@@ -18,6 +19,8 @@ public class SitDown : MonoBehaviour
 
     void Update()
     {
+
+        satDown = isSatDown;
        // Debug.Log("SitDown : " + sitDown + " CanSitDown : " + canSitDown + " isSatDown : " + isSatDown);
     
         if (Raycast_Pickup.chairInstance == chair)

@@ -42,7 +42,7 @@ public class Door : MonoBehaviour
 
             if (hasKnob)
             {
-                knobAnim.Play("DoorKnob");
+             //   knobAnim.Play("DoorKnob");
             }
         }
     }

@@ -89,7 +89,7 @@ public class Raycast_Pickup : MonoBehaviour
                         drawer.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
                         sit.SetActive(true);
-                    else if (hit.collider.gameObject.tag == "PC")
+                    else if (hit.collider.gameObject.tag == "PC" && chairInstance.GetComponent<SitDown>().satDown)
                         pcIcon.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Toggle")
                         toggle.SetActive(true);
@@ -273,7 +273,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         }
 
-        else if (hit.collider.gameObject.tag == "PC")
+        else if (hit.collider.gameObject.tag == "PC" && chairInstance.GetComponent<SitDown>().satDown)
         {
             Computer.isOnPC = true;
             mouseClickToggle = false;
