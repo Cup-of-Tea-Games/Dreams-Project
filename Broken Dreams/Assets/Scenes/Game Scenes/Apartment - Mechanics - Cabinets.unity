@@ -1271,6 +1271,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!136 &43351797
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4441,6 +4442,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &131706172
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6021,6 +6023,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!136 &176252540
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9288,6 +9291,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &227105402
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10248,6 +10252,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 3
+  pitchMultiplier: 1
 --- !u!65 &252197265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15016,6 +15021,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!1 &396918665
 GameObject:
   m_ObjectHideFlags: 0
@@ -17205,6 +17211,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &448543106
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21284,6 +21291,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &561520290
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21895,6 +21903,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &590827449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22581,6 +22590,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &602083593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22656,6 +22666,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &605182099
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23150,6 +23161,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 3
+  pitchMultiplier: 1
 --- !u!114 &627488618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25427,6 +25439,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 3
+  pitchMultiplier: 1
 --- !u!1001 &702736295
 Prefab:
   m_ObjectHideFlags: 0
@@ -26147,6 +26160,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &732160351
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29638,6 +29652,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &831299845
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29994,6 +30009,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &846587563
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30626,6 +30642,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &859953803
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31785,6 +31802,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &903305696
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33356,6 +33374,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &955302253
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34324,6 +34343,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &975799535
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35432,8 +35452,9 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &999180783 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-  m_PrefabInternal: {fileID: 1883839406}
+  m_PrefabParentObject: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55,
+    type: 2}
+  m_PrefabInternal: {fileID: 2101183156}
 --- !u!4 &1000313405 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f7b10e692d6f87e42970b1be4001c10d, type: 3}
@@ -35738,6 +35759,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1012530271
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37133,6 +37155,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1048451959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39209,6 +39232,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!4 &1096405335
 Transform:
   m_ObjectHideFlags: 0
@@ -40710,6 +40734,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1123652278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41654,6 +41679,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &1141186720
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -43298,6 +43324,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1176984855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44124,6 +44151,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1208201910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -44970,6 +44998,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &1234396302
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -46284,6 +46313,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &1281112204
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -48638,6 +48668,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1438372075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50681,6 +50712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1492955062}
   canSitDown: 0
+  satDown: 0
   tag: 0
   chair: {fileID: 560677579}
   chair_Position: {fileID: 189476243}
@@ -50699,6 +50731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1492955062}
   canSitDown: 0
+  satDown: 0
   tag: 0
   chair: {fileID: 1819496765}
   chair_Position: {fileID: 447362313}
@@ -52438,6 +52471,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!135 &1548837399
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52927,6 +52961,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1560498948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53141,6 +53176,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1572819989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53665,6 +53701,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1589927339
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54994,6 +55031,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!54 &1617985117
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55410,6 +55448,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.7
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!136 &1634219486
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -55954,6 +55993,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1642165922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56552,6 +56592,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -1.2
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!65 &1663794685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58411,6 +58452,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: 0
   radiusMultiplier: 3
+  pitchMultiplier: 1
 --- !u!136 &1705618516
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62911,6 +62953,13 @@ MonoBehaviour:
   isLocked: 0
   targetVelocity: 80
   force: 70
+  doesItHaveSound: 0
+  pitchMultiplier: 1
+  clip: {fileID: 0}
+  hasCloseSounds: 0
+  closeClip: {fileID: 0}
+  hasKnob: 0
+  Knob: {fileID: 0}
 --- !u!65 &1826940165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64205,6 +64254,7 @@ MonoBehaviour:
   heavyImpact: {fileID: 0}
   grabOffset: -0.5
   radiusMultiplier: 1
+  pitchMultiplier: 1
 --- !u!1 &1862409040
 GameObject:
   m_ObjectHideFlags: 0
@@ -64690,64 +64740,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1881075928}
   m_Mesh: {fileID: 4300026, guid: ca0eb5c554527af41adc795224a8f6d1, type: 3}
---- !u!1001 &1883839406
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1960237677}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 24.368225
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.313866
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -23.787659
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3490682
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.34906822
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.34906822
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 20c5bac5938e4ed4bba46555a40fcb82, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &1884116868
 GameObject:
   m_ObjectHideFlags: 0
@@ -71713,6 +71705,48 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &2101183156
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1960237677}
+    m_Modifications:
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 22.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 11.909
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -23.786
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012764895884, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d1e06b765c2eb6142814c8dd4d3bcf55, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2103271638
 GameObject:
   m_ObjectHideFlags: 0
