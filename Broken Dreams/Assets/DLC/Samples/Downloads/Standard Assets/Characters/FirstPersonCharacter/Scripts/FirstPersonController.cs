@@ -224,8 +224,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 //  Peeker();
 
                 VaultMechanic();
-
-                if (Raycast_Pickup.chairInstance.GetComponent<SitDown>() != null && Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
+                if(Raycast_Pickup.chairInstance != null)
+                if (Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
                 {
                     ChairSitter();
                 }

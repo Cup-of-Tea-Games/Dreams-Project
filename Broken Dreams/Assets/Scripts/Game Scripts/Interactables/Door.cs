@@ -17,6 +17,9 @@ public class Door : MonoBehaviour
     AudioSource audio2;
     public bool hasCloseSounds = false;
     public AudioClip closeClip;
+    public bool hasKnob = false;
+    public GameObject Knob;
+    Animator knobAnim;
 
     //Tools
     bool doorIsOpen = false;
@@ -27,12 +30,20 @@ public class Door : MonoBehaviour
     {
         lockHandeler();
 
-        if (doesItHaveSound && hasCloseSounds && hinge.angle == hinge.limits.min && closeActivaton)
+        if (hinge.angle == hinge.limits.min && closeActivaton)
         {
-            closeActivaton = false;
-            audio2.clip = closeClip;
-            audio2.pitch = 1f * pitchMultiplier;
-            audio2.Play();
+            if (doesItHaveSound && hasCloseSounds)
+            {
+                closeActivaton = false;
+                audio2.clip = closeClip;
+                audio2.pitch = 1f * pitchMultiplier;
+                audio2.Play();
+            }
+
+            if (hasKnob)
+            {
+                knobAnim.Play("DoorKnob");
+            }
         }
     }
 
@@ -56,6 +67,11 @@ public class Door : MonoBehaviour
         {
             audio2 = gameObject.AddComponent<AudioSource>();
             audio2.spatialBlend = audio.spatialBlend;
+        }
+
+        if (hasKnob)
+        {
+            knobAnim = Knob.GetComponent<Animator>();
         }
     }
     public void unlockDoor()
@@ -98,6 +114,10 @@ public class Door : MonoBehaviour
                         audio2.clip = closeClip;
                         audio2.pitch = 1f * pitchMultiplier;
                         audio2.Play();
+                    }
+                    if (hasKnob)
+                    {
+                        knobAnim.Play("DoorKnob");
                     }
                 }
         }
