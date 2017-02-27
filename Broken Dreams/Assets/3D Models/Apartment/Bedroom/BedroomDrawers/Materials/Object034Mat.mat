@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: bedroom_apartment_bedroom_door_bedroom_door_handle2_bedroom_door_handle2_main001Mat
+  m_Name: Object034Mat
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 1
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: 0249b97ef5d0fa849937cf37f1b675f3, type: 3}
+        m_Texture: {fileID: 2800000, guid: ced0ef11a4d0b7b43995c2ea869392d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -48,19 +48,19 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: bed8f2bbe9858404c9627696d16ba443, type: 3}
+        m_Texture: {fileID: 2800000, guid: 04f3259eafc8d3549a0eeb984e989092, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
-        m_Texture: {fileID: 2800000, guid: 3c7153bf45d0f05438e2f2fd05852b4c, type: 3}
+        m_Texture: {fileID: 2800000, guid: a8e84ca3417aef248bcd69cec48a1dc2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _OcclusionMap
       second:
-        m_Texture: {fileID: 2800000, guid: e8f3ad5ee5a8cd846b5a5b072b40da2e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 63036316a48a4a748b77864819409590, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -72,7 +72,7 @@ Material:
     m_Floats:
     - first:
         name: _BumpScale
-      second: 1
+      second: 2
     - first:
         name: _Cutoff
       second: 0.5
@@ -99,7 +99,7 @@ Material:
       second: 0
     - first:
         name: _OcclusionStrength
-      second: 1
+      second: 0.55
     - first:
         name: _Parallax
       second: 0.02
