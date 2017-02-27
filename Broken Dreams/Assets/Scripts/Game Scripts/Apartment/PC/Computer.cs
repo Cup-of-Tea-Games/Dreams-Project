@@ -21,6 +21,10 @@ public class Computer : MonoBehaviour {
         {
             LockMouse.lockMouse = true;
         }
+        else
+        {
+            LockMouse.lockMouse = false;
+        }
     }
 
     void FixedUpdate()
