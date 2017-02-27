@@ -13,6 +13,7 @@ public class Raycast_Pickup : MonoBehaviour
     public GameObject door; //Door GUI 
     public GameObject drawer; //Drawer GUI 
     public GameObject pcIcon; //PC GUI 
+    public GameObject journal; //Journal GUI 
     public GameObject sit; //Sit GUI 
     public GameObject pickUp; //Pick Up GUI 
     public GameObject ItemInHand; //Item GUI
@@ -93,6 +94,8 @@ public class Raycast_Pickup : MonoBehaviour
                         pcIcon.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Toggle")
                         toggle.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Journal")
+                        journal.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -109,6 +112,7 @@ public class Raycast_Pickup : MonoBehaviour
                         pcIcon.SetActive(false);
                         toggle.SetActive(false);
                         drawer.SetActive(false);
+                        journal.SetActive(false);
                     }
                 }
 
@@ -126,6 +130,7 @@ public class Raycast_Pickup : MonoBehaviour
             pcIcon.SetActive(false);
             toggle.SetActive(false);
             drawer.SetActive(false);
+            journal.SetActive(false);
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055); 
 
         }
@@ -140,6 +145,7 @@ public class Raycast_Pickup : MonoBehaviour
             pcIcon.SetActive(false);
             toggle.SetActive(false);
             drawer.SetActive(false);
+            journal.SetActive(false);
         }
         else
         {
@@ -217,7 +223,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer") 
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal") 
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -276,6 +282,12 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "PC" && chairInstance.GetComponent<SitDown>().satDown)
         {
             Computer.isOnPC = true;
+            mouseClickToggle = false;
+        }
+
+        else if (hit.collider.gameObject.tag == "Journal")
+        {
+            objectInstance.GetComponent<PhysicalJournal>().displayJournal();
             mouseClickToggle = false;
         }
 
