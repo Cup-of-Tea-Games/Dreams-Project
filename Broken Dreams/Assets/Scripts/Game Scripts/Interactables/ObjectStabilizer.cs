@@ -73,7 +73,7 @@ public class ObjectStabilizer : MonoBehaviour {
         } */
 
 
-        if (collision.relativeVelocity.magnitude > 1 && collision.relativeVelocity.magnitude < 10 && DoesItHaveSound)
+        if (collision.relativeVelocity.magnitude > 2 && collision.relativeVelocity.magnitude < 10 && DoesItHaveSound)
         {
             sound.clip = normalImpact;
             sound.pitch = 1.0f*pitchVar*pitchMultiplier;
