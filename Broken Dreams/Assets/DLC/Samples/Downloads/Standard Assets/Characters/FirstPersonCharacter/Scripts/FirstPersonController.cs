@@ -346,8 +346,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (!Vaulter.isVaulting)
                 {
-                    m_MoveDir.x = desiredMove.x * speed;
-                    m_MoveDir.z = desiredMove.z * speed;
+                    if (m_Input.magnitude > 0)
+                    {
+                        m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 6);
+                        m_UseHeadBob = true;
+                    }
+                    else
+                    {
+                        m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 12);
+                        m_UseHeadBob = false;
+                    }
                 }
                 else
                 {
