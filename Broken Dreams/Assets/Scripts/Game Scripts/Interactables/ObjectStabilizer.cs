@@ -29,6 +29,12 @@ public class ObjectStabilizer : MonoBehaviour {
 
         defaultRadius = GetComponent<SphereCollider>().radius;
         increasedRadius = defaultRadius * radiusMultiplier;
+
+        gameObject.layer = 13;
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.layer = 13;
+        }
     }
 
     void Update()
