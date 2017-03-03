@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: WoodFloor
+  m_Name: BathroomTileAlbedo
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
@@ -18,7 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: afaf3b859d30be94aa9617ced9526f4b, type: 3}
+        m_Texture: {fileID: 2800000, guid: ebd980b8690c593459cd8830f386324d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -44,13 +44,13 @@ Material:
       second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 0.5, y: 0.5}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0.13, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: e75992d1b0456234386f50a808d56d61, type: 3}
+        m_Texture: {fileID: 2800000, guid: 801b2450a7102a647ab06acdfda3dc3d, type: 3}
         m_Scale: {x: 0.5, y: 0.5}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0.13, y: 0}
     - first:
         name: _MetallicGlossMap
       second:
@@ -72,7 +72,7 @@ Material:
     m_Floats:
     - first:
         name: _BumpScale
-      second: 0.67
+      second: 0.96
     - first:
         name: _Cutoff
       second: 0.5
@@ -87,13 +87,13 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.701
+      second: 0.747
     - first:
         name: _GlossyReflections
       second: 1
     - first:
         name: _Metallic
-      second: 0
+      second: 0.546
     - first:
         name: _Mode
       second: 0
