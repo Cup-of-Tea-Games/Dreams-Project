@@ -11,6 +11,8 @@ public class Raycast_Pickup : MonoBehaviour
     public GameObject hand; //Hand GUI 
     public GameObject toggle; //Toggle GUI 
     public GameObject door; //Door GUI 
+    public GameObject exit; //Exit GUI 
+    public GameObject bed; //Bed GUI 
     public GameObject drawer; //Drawer GUI 
     public GameObject pcIcon; //PC GUI 
     public GameObject journal; //Journal GUI 
@@ -96,6 +98,10 @@ public class Raycast_Pickup : MonoBehaviour
                         toggle.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Journal")
                         journal.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Exit")
+                        exit.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Bed")
+                        bed.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -113,6 +119,8 @@ public class Raycast_Pickup : MonoBehaviour
                         toggle.SetActive(false);
                         drawer.SetActive(false);
                         journal.SetActive(false);
+                        exit.SetActive(false);
+                        bed.SetActive(false);
                     }
                 }
 
@@ -131,6 +139,8 @@ public class Raycast_Pickup : MonoBehaviour
             toggle.SetActive(false);
             drawer.SetActive(false);
             journal.SetActive(false);
+            exit.SetActive(false);
+            bed.SetActive(false);
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055); 
 
         }
@@ -223,12 +233,12 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal") 
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
 
-                if(hit.collider.gameObject.tag == "Sit Object")
+                if(hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "Bed")
                 {
                     chairInstance = hit.collider.gameObject;
                 }
@@ -291,6 +301,12 @@ public class Raycast_Pickup : MonoBehaviour
             mouseClickToggle = false;
         }
 
+        else if (hit.collider.gameObject.tag == "Exit")
+        {
+            objectInstance.GetComponent<Exit>().showMessage();
+            mouseClickToggle = false;
+        }
+
         else if (hit.collider.gameObject.tag == "Item")
         {
             objectInstance.GetComponent<PickItem>().pickUpItem();
@@ -326,6 +342,13 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
         {
             SitDown.sitDown = true;
+            mouseClickToggle = false;
+        }
+
+        else if (hit.collider.gameObject.tag == "Bed")
+        {
+            Bed.sitDown = true;
+            StartCoroutine(delaySeconds(4f));
             mouseClickToggle = false;
         }
 

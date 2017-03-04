@@ -17,7 +17,7 @@ public class Computer : MonoBehaviour {
         {
             exitPC();
         }
-        if(!isOnPC && !PhysicalJournal.isOnJournal)
+        if(!isOnPC && !PhysicalJournal.isOnJournal && !Exit.exitStatus)
         {
             LockMouse.lockMouse = true;
         }
