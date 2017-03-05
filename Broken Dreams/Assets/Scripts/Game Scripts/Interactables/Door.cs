@@ -25,6 +25,7 @@ public class Door : MonoBehaviour
     bool doorIsOpen = false;
     bool doorActivation;
     bool closeActivaton = false;
+    public bool initialState = false;
 
     void Update()
     {
@@ -57,6 +58,7 @@ public class Door : MonoBehaviour
 
     void Awake()
     {
+        doorIsOpen = initialState;
         doorPhysics = GetComponent<Rigidbody>();
         hinge = GetComponent<HingeJoint>();
         doorIsOpen = false;
