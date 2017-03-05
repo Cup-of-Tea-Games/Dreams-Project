@@ -58,7 +58,6 @@ public class Door : MonoBehaviour
 
     void Awake()
     {
-        doorIsOpen = initialState;
         doorPhysics = GetComponent<Rigidbody>();
         hinge = GetComponent<HingeJoint>();
         doorIsOpen = false;
@@ -75,6 +74,9 @@ public class Door : MonoBehaviour
         {
             knobAnim = Knob.GetComponent<Animator>();
         }
+
+        if(initialState)
+        toggle();
     }
     public void unlockDoor()
     {
@@ -97,8 +99,8 @@ public class Door : MonoBehaviour
         {
             if (hinge.angle != 90 && doorActivation)
             {
-                    closeActivaton = true;
-                    JointMotor motor = hinge.motor;
+                closeActivaton = true;
+                JointMotor motor = hinge.motor;
                 motor.force = force;
                 motor.targetVelocity = targetVelocity;
                 motor.freeSpin = false;
