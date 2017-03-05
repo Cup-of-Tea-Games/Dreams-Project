@@ -19,13 +19,14 @@ public class Toggle : MonoBehaviour
         audio = GetComponent<AudioSource>();
         togglebool = initialState;
         if(hasAnimation)
-        anim = GetComponent<Animator>();
+        anim = toggleObject.GetComponent<Animator>();
     }
 
     public void toggle()
     {
         togglebool = !togglebool;
         audio.Play();
+        if(!hasAnimation)
         toggleObject.SetActive(togglebool);
 
         if (hasAnimation)
