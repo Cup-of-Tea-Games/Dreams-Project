@@ -77,6 +77,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
+            AudioListener.volume = 1;
+            Time.timeScale = 1;
         }
 
         // Use this for initialization
@@ -346,15 +348,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (!Vaulter.isVaulting)
                 {
-                    if (m_Input.magnitude > 0)
+                    if (m_CharacterController.isGrounded)
                     {
-                        m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 6);
-                        m_UseHeadBob = true;
+                        if (m_Input.magnitude > 0)
+                        {
+                            m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 6);
+                            m_UseHeadBob = true;
+                        }
+                        else
+                        {
+                            m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 12);
+                            m_UseHeadBob = false;
+                        }
                     }
                     else
                     {
-                        m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, Time.deltaTime * 12);
-                        m_UseHeadBob = false;
+                        m_MoveDir = Vector3.Lerp(m_MoveDir, desiredMove * speed, 0);
                     }
                 }
                 else

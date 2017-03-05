@@ -18,14 +18,19 @@ public class Bed : MonoBehaviour {
 
     void Awake()
     {
+        exit = false;
+        canSitDown = false;
+        sitDown = false;
+        isSatDown = false;
+        anim.enabled = true;
         anim.Play("Get_Out");
     }
 
     void Update()
     {
-
         if (exit)
         {
+            exit = false;
             exitBed();
         }
 
@@ -74,6 +79,11 @@ public class Bed : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         anim.enabled = true;
         anim.Play("Lay_In_Bed");
+        yield return new WaitForSeconds(4f);
+        FaderGUI.FadeIn = true;
+        yield return new WaitForSeconds(8f);
+        anim.Stop();
+        SceneChanger.changeScene("Buildings Revival");
     }
 
 }
