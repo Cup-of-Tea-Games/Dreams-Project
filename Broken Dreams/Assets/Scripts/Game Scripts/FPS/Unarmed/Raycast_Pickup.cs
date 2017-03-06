@@ -44,6 +44,8 @@ public class Raycast_Pickup : MonoBehaviour
     //Apartment
     public static GameObject chairInstance;
 
+    int layerMask = ~(2 << 9);
+
 
     void Awake()
     {
@@ -222,9 +224,6 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
     }
-    
-
-        
 
     bool itemInRange()
     {
@@ -233,7 +232,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed")
+             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -241,6 +240,10 @@ public class Raycast_Pickup : MonoBehaviour
                 if(hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "Bed")
                 {
                     chairInstance = hit.collider.gameObject;
+                }
+                else if (hit.collider.gameObject.tag == "IgnoreRay")
+                {
+                    Physics.IgnoreCollision(hit.collider,hit.collider.gameObject.GetComponent<Collider>());
                 }
             }
 
@@ -258,7 +261,7 @@ public class Raycast_Pickup : MonoBehaviour
 
     }
 
-   void PickUpItem()
+    void PickUpItem()
     {
         if (hit.collider.gameObject.tag == "pickUpObject")
         {
