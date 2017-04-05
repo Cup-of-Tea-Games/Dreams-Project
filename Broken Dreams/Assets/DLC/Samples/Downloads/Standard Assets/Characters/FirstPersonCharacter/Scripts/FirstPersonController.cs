@@ -74,11 +74,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //Apartment Exclusives
         public bool isInHub = false;
 
+        public static Transform reference;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
             AudioListener.volume = 1;
             Time.timeScale = 1;
+            reference = this.transform;
         }
 
         // Use this for initialization

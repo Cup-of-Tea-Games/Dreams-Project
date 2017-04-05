@@ -142,7 +142,7 @@ public class Flashlight : MonoBehaviour
         if(health > 0)
         health -= 0.025f;
     //    healthBar.Value = health;
-        Debug.Log(health);
+     //   Debug.Log(health);
         yield return new WaitForSeconds(1f);
         StopCoroutine(healthDecrease());
     } //Rate of health decrease in the Flashlight
