@@ -35,12 +35,22 @@ public class ExampleAI : MonoBehaviour
 
     void Update()
     {
-        //  Debug.Log("IS on Waypoint: " + isOnWaypoint);
-        Debug.Log(lostValue);
-        if (outOfSight)
+         Debug.Log("IS on Waypoint: " + agent.destination);
+        float distance = Vector3.Distance(agent.transform.position, target.transform.position);
+  //      if(chase)
+       // Debug.Log(lostValue);
+        if (distance < 15)
             lostValue = 0;
         else
             lostValue += 0.01f;
+
+        if(lostValue > 7 && chase)
+        {
+            chase = false;
+            //   waypointCount += 1;
+            //  waypoints[waypointCount].position = agent.destination;
+            patrol = true;
+        }
 
         if (chase)
         {
@@ -55,34 +65,23 @@ public class ExampleAI : MonoBehaviour
             AIAttackRange.enabled = false;
         }
 
-        if (chase && !patrol && active)
+        if (chase && !patrol && active && lostValue < 7)
         {
+           // Debug.Log("IS CHASING");
             StartCoroutine(chaseTarget());
         }
 
         else if (patrol && !chase && active)
         {
+            //Debug.Log("IS PATROLING");
             StartCoroutine(patrolRoom());
         }
     }
 
     IEnumerator chaseTarget()
     {
-
-    /*    if (outOfSight)
-        {
-          //  Debug.Log("DONT SEE YOU");
-            agent.SetDestination(target.position);
-            yield return WaitForSecondsOrTap(0f);
-          //  Debug.Log("LOST YOU");
-            chase = false;
-            patrol = true;
-            StopCoroutine(chaseTarget());
-        }*/
-
-
         animator.Play("Run");
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.1f);
         agent.SetDestination(target.position);
        // active = true;
         StopCoroutine(chaseTarget());
@@ -121,7 +120,7 @@ public class ExampleAI : MonoBehaviour
 
     IEnumerator patrolRoom()
     {
-        float distance = Vector3.Distance(agent.transform.position, waypoints[currentWaypoint].position);
+        float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
        if (distance < 1f)
         {
@@ -133,7 +132,7 @@ public class ExampleAI : MonoBehaviour
                 active = true;
             }
         }
-        if (agent.transform.position != waypoints[currentWaypoint].position)
+        if (agent.transform.position != agent.destination)
         {
             if (!chase && active)
             {
@@ -142,17 +141,23 @@ public class ExampleAI : MonoBehaviour
         }
         else
         {
-          active = false;
-          agent.Stop();
-          changeWaypoint();
-          yield return new WaitForSeconds(6f);
-          agent.Resume();
-          active = true;
+           StartCoroutine(resetPath());
         }
 
 
 
         StopCoroutine(patrolRoom());
+    }
+
+    IEnumerator resetPath()
+    {
+            active = false;
+            agent.Stop();
+            changeWaypoint();
+            yield return new WaitForSeconds(6f);
+            agent.Resume();
+            active = true;
+            StopCoroutine(resetPath());
     }
 
     void changeWaypoint()
