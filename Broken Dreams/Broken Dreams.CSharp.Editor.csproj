@@ -162,6 +162,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Broken Dreams.CSharp.Plugins.csproj">
+      <Project>{C5EA5641-1D8C-F117-5767-C0A821B00E69}</Project>
+      <Name>Broken Dreams.CSharp.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="Broken Dreams.CSharp.csproj">
       <Project>{5EF049E6-B157-E584-1EB2-03CE08EC3219}</Project>
       <Name>Broken Dreams.CSharp</Name>
@@ -405,6 +409,7 @@
     <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
     <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\SampleScene\NewImageEffectShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

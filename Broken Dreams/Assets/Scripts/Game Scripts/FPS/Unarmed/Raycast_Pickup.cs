@@ -168,10 +168,17 @@ public class Raycast_Pickup : MonoBehaviour
         if (itemInRange() && mouseClickToggle)
         {
             if(delayTime == true)
-             PickUpItem();
+             PickUpItemToggle();
             hand.SetActive(false);
             pickUp.SetActive(false);
 
+        }
+        else if (itemInRange() && Input.GetMouseButton(0))
+        {
+            if (delayTime == true)
+                PickUpItemClick();
+            hand.SetActive(false);
+            pickUp.SetActive(false);
         }
 
         if (itemInRange() && Input.GetMouseButtonDown(1))
@@ -261,7 +268,7 @@ public class Raycast_Pickup : MonoBehaviour
 
     }
 
-    void PickUpItem()
+    void PickUpItemToggle()
     {
         if (hit.collider.gameObject.tag == "pickUpObject")
         {
@@ -279,14 +286,50 @@ public class Raycast_Pickup : MonoBehaviour
             objectInstance.transform.position = Vector3.MoveTowards(objectInstance.transform.position, transformBall.transform.position, (speed/30) * Time.deltaTime);
         }
 
-        else if (hit.collider.gameObject.tag == "Door")
+
+        else if (hit.collider.gameObject.tag == "Toggle")
+        {
+            objectInstance.GetComponent<Toggle>().toggle();
+            StartCoroutine(delaySeconds(1f));
+            mouseClickToggle = false;
+        } 
+
+        else if (hit.collider.gameObject.tag == "Drawer")
+        {
+            objectInstance.GetComponent<Drawer>().move();
+            StartCoroutine(delaySeconds(1f));
+            mouseClickToggle = false;
+        }
+
+
+        else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
+        {
+            SitDown.sitDown = true;
+            mouseClickToggle = false;
+        }
+
+
+        ZoomAbility(); //Gives the Player the Ability to Zoom
+        RotateAbility(); //Gives the Player the Ability to rotate
+
+        //Failsafe for object impact
+        if (objectInstance.GetComponent<Collider>().tag == "Untagged")
+            speed = 5;
+        else
+            speed = defaultValue;
+    }
+
+    void PickUpItemClick()
+    {
+
+         if (hit.collider.gameObject.tag == "Door")
         {
             if (objectInstance.GetComponent<Door>() != null && delayTime)
             {
                 objectInstance.GetComponent<Door>().toggle();
                 delayTime = false;
             }
-            
+
             StartCoroutine(delaySeconds(1f));
             mouseClickToggle = false;
 
@@ -315,19 +358,6 @@ public class Raycast_Pickup : MonoBehaviour
             objectInstance.GetComponent<PickItem>().pickUpItem();
         }
 
-        else if (hit.collider.gameObject.tag == "Toggle")
-        {
-            objectInstance.GetComponent<Toggle>().toggle();
-            StartCoroutine(delaySeconds(1f));
-            mouseClickToggle = false;
-        }
-
-        else if (hit.collider.gameObject.tag == "Drawer")
-        {
-            objectInstance.GetComponent<Drawer>().move();
-            StartCoroutine(delaySeconds(1f));
-            mouseClickToggle = false;
-        }
 
         else if (hit.collider.gameObject.tag == "Page")
         {
@@ -340,12 +370,8 @@ public class Raycast_Pickup : MonoBehaviour
             {
                 FirstPersonController.ladder = objectInstance.GetComponent<Ladder>();
                 FirstPersonController.isClimbing = true;
+                objectInstance = null;
             }
-        }
-        else if (hit.collider.gameObject.tag == "Sit Object" && hit.collider.gameObject.GetComponent<SitDown>().canSitDown)
-        {
-            SitDown.sitDown = true;
-            mouseClickToggle = false;
         }
 
         else if (hit.collider.gameObject.tag == "Bed")

@@ -61,6 +61,33 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="ch.sycoforge.Decal">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\ch.sycoforge.Decal.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Device">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Imaging">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Imaging.Unity">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Imaging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Interop">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Logging">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Types">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Unity.TextureUtil">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Unity.TextureUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Util.Attributes">
+      <HintPath>Assets\DLC\EASY DECAL\nu Assets\Shared\Scripts\ch.sycoforge.Util.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="ProBuilderCore-Unity5">
       <HintPath>Assets\DLC\ProCore\ProBuilder\Classes\ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
@@ -78,18 +105,61 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\FireLight.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\SmokeParticles.cs" />
-    <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
+    <Compile Include="Assets\Standard Assets\Utility\ForcedReset.cs" />
+    <Compile Include="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
+    <Compile Include="Assets\Standard Assets\Utility\TimedObjectActivator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\Canvas.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasChannels.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasOpaque.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasSelection.shader" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasUtil.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\UnlitColorAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAdd.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\Patricles\Shader\PriorityParticleAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Scripts\ch.sycoforge.Decal.XML" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDMultiply.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDSandardVACutoff.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandard.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandardSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDStandardSpecularVACutoff.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDVertexAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\EDVertexAlphaN.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaBumpSpec.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaEdgeBleed.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaEdgeBleed_Mul.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_AlphaSimple.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_ReflBumpSpec.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_ReflBumpSpec_Cut.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Legacy\ED_SoftUnlit.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\DSSD.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdMetallic.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdMetallicCG.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Masking\MaskStdSpecularCG.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SSD-M.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoDSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoFSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\SycoSSD.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\SSD\Util.cginc" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\StandardSpecular.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Unlit\EDAlpha.shader" />
+    <None Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Shader\Unlit\EDMultiply.shader" />
+    <None Include="Assets\DLC\JMO Assets\!JMO Assets Readme.txt" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
+    <None Include="Assets\DLC\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
     <None Include="Assets\DLC\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\DLC\ProCore\ProBuilder\About\Credits.txt" />
     <None Include="Assets\DLC\ProCore\ProBuilder\About\changelog.txt" />
@@ -207,10 +277,11 @@
     <None Include="Assets\DLC\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\DLC\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\DLC\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
-    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
-    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
-    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
-    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\DLC\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\SampleScene\NewImageEffectShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 
     public string keyTag;
     public bool isLocked;
+    public bool ignoreOnOpen = false;
     Rigidbody doorPhysics;
     HingeJoint hinge;
     public float targetVelocity = 80;
@@ -30,6 +31,14 @@ public class Door : MonoBehaviour
     void Update()
     {
         lockHandeler();
+
+        if (ignoreOnOpen)
+        {
+            if (audio.isPlaying || audio2.isPlaying)
+                GetComponent<Collider>().enabled = false;
+            else
+                GetComponent<Collider>().enabled = true;
+        }
 
         if (hinge.angle == hinge.limits.min && closeActivaton)
         {

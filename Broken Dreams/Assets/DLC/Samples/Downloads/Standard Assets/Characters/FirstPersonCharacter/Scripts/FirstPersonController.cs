@@ -621,7 +621,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public IEnumerator waitTime(float x)
         {
             yield return new WaitForSeconds(x);
-            Debug.Log("Eh");
+          //Debug.Log("Eh");
             StopCoroutine(waitTime(x));
         }
 

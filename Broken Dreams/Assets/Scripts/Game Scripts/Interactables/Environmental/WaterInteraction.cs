@@ -15,8 +15,20 @@ public class WaterInteraction : MonoBehaviour
     public static bool isSemiUnderWater = false;
     public Color normalColor;
     public Color underWaterColor;
+    private float fogDensity;
+    public bool normalSettings = true;
 
     public GameObject playerHead;
+
+    void Awake()
+    {
+        if (normalSettings)
+        {
+            normalColor = RenderSettings.fogColor;
+            fogDensity = RenderSettings.fogDensity;
+
+        }
+    }
 
     void Update()
     {
@@ -49,7 +61,10 @@ public class WaterInteraction : MonoBehaviour
         {
             if (!PlayerSanity.isDraining)
             {
-                RenderSettings.fogDensity = 0.002f;
+                if (!normalSettings)
+                    RenderSettings.fogDensity = 0.002f;
+                else
+                    RenderSettings.fogDensity = fogDensity;
                 RenderSettings.fogColor = normalColor;
             }
         }
