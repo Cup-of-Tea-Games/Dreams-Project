@@ -59,16 +59,17 @@ public class Raycast_Pickup : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && itemInRange())
         {
             mouseClickToggle = !mouseClickToggle;
+            PickUpItemClick();
         }
         if (!itemInRange())
             mouseClickToggle = false;
 
-        if(!isLooking && objectInstance != null)
+        if (!isLooking && objectInstance != null)
             LetGoItem();
 
         if (itemInMyHand.isEmpty())
         {
-           ItemInHand.SetActive(false);
+            ItemInHand.SetActive(false);
         }
         else
         {
@@ -77,7 +78,8 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
         //Checks if the Object is in Range to grab
-        if (itemInRange()) {
+        if (itemInRange())
+        {
 
             LetGoItem();
             if (!mouseClickToggle)
@@ -88,7 +90,7 @@ public class Raycast_Pickup : MonoBehaviour
                         pickUp.SetActive(true);
                     else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
                         hand.SetActive(true);
-                    else if(hit.collider.gameObject.tag == "Door")
+                    else if (hit.collider.gameObject.tag == "Door")
                         door.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Drawer")
                         drawer.SetActive(true);
@@ -107,8 +109,8 @@ public class Raycast_Pickup : MonoBehaviour
 
                     if (!FirstPersonController.isClimbing)
                     {
-                        if(hit.collider.gameObject.tag == "Ladder")
-                        ladder.SetActive(true);
+                        if (hit.collider.gameObject.tag == "Ladder")
+                            ladder.SetActive(true);
                     }
                     else
                     {
@@ -143,7 +145,7 @@ public class Raycast_Pickup : MonoBehaviour
             journal.SetActive(false);
             exit.SetActive(false);
             bed.SetActive(false);
-            ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055); 
+            ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055);
 
         }
 
@@ -167,8 +169,8 @@ public class Raycast_Pickup : MonoBehaviour
         //Grabs Item
         if (itemInRange() && mouseClickToggle)
         {
-            if(delayTime == true)
-             PickUpItemToggle();
+            if (delayTime == true)
+                PickUpItemToggle();
             hand.SetActive(false);
             pickUp.SetActive(false);
 
@@ -205,7 +207,7 @@ public class Raycast_Pickup : MonoBehaviour
         {
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
-            if (mouseClickToggle)
+            if (Input.GetMouseButton(0))
             {
                 if (itemInMyHand.isEmpty())
                 {
@@ -220,12 +222,17 @@ public class Raycast_Pickup : MonoBehaviour
                         tips.Show("Door is Now Open");
                         objectInstance.GetComponent<Door>().unlockDoor();
                     }
+                    else
+                    {
+                        itemInMyHand = new Item();
+                        tips.Show("Wrong Key");
+                    }
                 }
             }
         }
 
 
-        else if (!itemInMyHand.isEmpty() && mouseClickToggle && !itemInRange())
+        else if (!itemInMyHand.isEmpty() && Input.GetMouseButton(0) && !itemInRange())
         {
             itemInMyHand = new Item();
         }
@@ -239,18 +246,18 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay")
+            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
 
-                if(hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "Bed")
+                if (hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "Bed")
                 {
                     chairInstance = hit.collider.gameObject;
                 }
                 else if (hit.collider.gameObject.tag == "IgnoreRay")
                 {
-                    Physics.IgnoreCollision(hit.collider,hit.collider.gameObject.GetComponent<Collider>());
+                    Physics.IgnoreCollision(hit.collider, hit.collider.gameObject.GetComponent<Collider>());
                 }
             }
 
@@ -273,7 +280,7 @@ public class Raycast_Pickup : MonoBehaviour
         if (hit.collider.gameObject.tag == "pickUpObject")
         {
             isGrabbing = true;
-            if(!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
+            if (!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
                 objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime);
             else
                 objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 12f);
@@ -283,7 +290,7 @@ public class Raycast_Pickup : MonoBehaviour
         }
         else if (hit.collider.gameObject.tag == "pickUpHeavyObject")
         {
-            objectInstance.transform.position = Vector3.MoveTowards(objectInstance.transform.position, transformBall.transform.position, (speed/30) * Time.deltaTime);
+            objectInstance.transform.position = Vector3.MoveTowards(objectInstance.transform.position, transformBall.transform.position, (speed / 30) * Time.deltaTime);
         }
 
 
@@ -292,7 +299,7 @@ public class Raycast_Pickup : MonoBehaviour
             objectInstance.GetComponent<Toggle>().toggle();
             StartCoroutine(delaySeconds(1f));
             mouseClickToggle = false;
-        } 
+        }
 
         else if (hit.collider.gameObject.tag == "Drawer")
         {
@@ -322,7 +329,7 @@ public class Raycast_Pickup : MonoBehaviour
     void PickUpItemClick()
     {
 
-         if (hit.collider.gameObject.tag == "Door")
+        if (hit.collider.gameObject.tag == "Door")
         {
             if (objectInstance.GetComponent<Door>() != null && delayTime)
             {
@@ -357,7 +364,6 @@ public class Raycast_Pickup : MonoBehaviour
         {
             objectInstance.GetComponent<PickItem>().pickUpItem();
         }
-
 
         else if (hit.collider.gameObject.tag == "Page")
         {
@@ -404,10 +410,10 @@ public class Raycast_Pickup : MonoBehaviour
         delayTime = false;
         LetGoItem();
 
-             if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
-              objectInstance.GetComponent<Rigidbody>().AddForce(transformBall.transform.TransformDirection(Vector3.forward)*pushForce);
-             else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
-              objectInstance.GetComponent<Rigidbody>().AddForce(transformBall.transform.TransformDirection(Vector3.forward) * pushForce/2);
+        if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
+            objectInstance.GetComponent<Rigidbody>().AddForce(transformBall.transform.TransformDirection(Vector3.forward) * pushForce);
+        else if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject")
+            objectInstance.GetComponent<Rigidbody>().AddForce(transformBall.transform.TransformDirection(Vector3.forward) * pushForce / 2);
 
         StartCoroutine(delaySeconds(1f));
     }
@@ -415,19 +421,19 @@ public class Raycast_Pickup : MonoBehaviour
     void ZoomAbility()
     {
         float originalBallPosition = 1.14531f;
-        mouseWheelAmount += Input.GetAxis("Mouse ScrollWheel")*2;
+        mouseWheelAmount += Input.GetAxis("Mouse ScrollWheel") * 2;
         mouseWheelAmount = Mathf.Clamp(mouseWheelAmount, -0.25f, 1.0f);
 
-       if(isGrabbing)
-       transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition + mouseWheelAmount + objectInstance.GetComponent<ObjectStabilizer>().grabOffset);
-    
-}  
-     
+        if (isGrabbing)
+            transformBall.transform.localPosition = new Vector3(-0.6657115f, 0.35004f, originalBallPosition + mouseWheelAmount + objectInstance.GetComponent<ObjectStabilizer>().grabOffset);
+
+    }
+
     void RotateAbility()
     {
-      //  transformBall.transform.rotation = objectInstance.transform.rotation;
+        //  transformBall.transform.rotation = objectInstance.transform.rotation;
         if (Input.GetKey(KeyCode.R))
-        {       
+        {
             objectInstance.transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0, Space.Self);
 
             if (rotateTimeSet <= rotateTimeSet - 1f)
