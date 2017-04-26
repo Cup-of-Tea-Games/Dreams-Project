@@ -209,7 +209,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
                 else
                 {
-                    m_JumpSpeed = 11;
+                    m_JumpSpeed = 8;
                         m_GravityMultiplier = 4;
                     isSwimming = false;
                 }
@@ -308,7 +308,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (!WaterInteraction.isOnWater)
                 {
                     m_WalkSpeed = 6;
-                    m_RunSpeed = 11;
+                    m_RunSpeed = 10;
 
                    if(isInHub)
                     {

@@ -111,6 +111,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\3D Models\TheAbyss\DisableRenderTexture\DisablePortal.cs" />
+    <Compile Include="Assets\3D Models\TheAbyss\Test 1\MessengerScript.cs" />
+    <Compile Include="Assets\3D Models\TheAbyss\Test 1\RandomValueReceiver.cs" />
+    <Compile Include="Assets\3D Models\TheAbyss\Test\AreaParticle.cs" />
+    <Compile Include="Assets\3D Models\TheAbyss\Test\PlayParticle.cs" />
     <Compile Include="Assets\DLC\Dynamic Color Curves\Scripts\ColorCurvesManager.cs" />
     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\AdvancedBulletHoles.cs" />
     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\BasicBulletHoles.cs" />
@@ -314,7 +319,6 @@
     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerAmmo.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerSanity.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\TextureClipScript\TextureClipCode.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\AnimationTrigger.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\DestroyTrigger.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\IgnoreCol.cs" />
@@ -326,6 +330,7 @@
     <Compile Include="Assets\Scripts\Sample Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Sample Scripts\MouseLookX.cs" />
     <Compile Include="Assets\Scripts\Sample Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\ToolTextures\TextureClipCode.cs" />
     <Compile Include="Assets\Trash\Dani&apos;sTrashFolder\ExitApplication.cs" />
     <Compile Include="Assets\Trash\Dani&apos;sTrashFolder\RestartLevel.cs" />
   </ItemGroup>
@@ -503,6 +508,7 @@
     <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
     <None Include="Assets\DLC\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
     <None Include="Assets\SampleScene\NewImageEffectShader.shader" />
+    <None Include="Assets\Shaders\Standard.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
