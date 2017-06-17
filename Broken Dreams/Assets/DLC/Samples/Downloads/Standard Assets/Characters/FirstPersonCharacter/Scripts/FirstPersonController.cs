@@ -307,8 +307,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (!WaterInteraction.isOnWater)
                 {
-                    m_WalkSpeed = 6;
-                    m_RunSpeed = 10;
+                    m_WalkSpeed = 4;
+                    m_RunSpeed = 6;
 
                    if(isInHub)
                     {
