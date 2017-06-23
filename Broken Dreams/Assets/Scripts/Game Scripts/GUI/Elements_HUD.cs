@@ -6,11 +6,9 @@ public class Elements_HUD : MonoBehaviour {
 
     public GameObject Health_Icon;
     public GameObject Sanity_Icon;
-    public GameObject Light_Icon;
 
     Animator Health_Anim;
     Animator Sanity_Anim;
-    Animator Light_Anim;
 
     //Verifiers
     bool HUDisUp = false;
@@ -19,7 +17,6 @@ public class Elements_HUD : MonoBehaviour {
     {
        Health_Anim = Health_Icon.GetComponent<Animator>();
        Sanity_Anim = Sanity_Icon.GetComponent<Animator>();
-       Light_Anim = Light_Icon.GetComponent<Animator>();
     }
 
     void Update()
@@ -31,7 +28,6 @@ public class Elements_HUD : MonoBehaviour {
     {
         Health_Anim.Play("Appear");
         Sanity_Anim.Play("Appear");
-        Light_Anim.Play("Appear");
 
         HUDisUp = true;
     }
@@ -40,7 +36,6 @@ public class Elements_HUD : MonoBehaviour {
     {
         Health_Anim.Play("Disappear");
         Sanity_Anim.Play("Disappear");
-        Light_Anim.Play("Disappear");
 
         HUDisUp = false;
     }
@@ -63,14 +58,6 @@ public class Elements_HUD : MonoBehaviour {
         Health_Anim.Play("Hurting");
     }
 
-    void DecreaseLight_Slow()
-    {
-        Light_Anim.Play("Affected");
-    }
-    void DecreaseLight_Fast()
-    {
-        Light_Anim.Play("Hurting");
-    }
 
     void HUD_Handeler()
     {
@@ -104,16 +91,6 @@ public class Elements_HUD : MonoBehaviour {
         else if (PlayerHealth.health < 50 && HUDisUp && PlayerHealth.InDanger)
         {
             DecreaseHealth_Fast();
-        }
-
-        //Light
-        if (Flashlight.health >= 50 && HUDisUp && Flashlight.isOn)
-        {
-            DecreaseLight_Slow();
-        }
-        else if (Flashlight.health < 50 && HUDisUp && Flashlight.isOn)
-        {
-            DecreaseLight_Fast();
         }
     }
 }

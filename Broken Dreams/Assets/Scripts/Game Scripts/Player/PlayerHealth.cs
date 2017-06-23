@@ -10,6 +10,9 @@ public class PlayerHealth : MonoBehaviour {
     public ProgressRadialBehaviour healthBar;
     public GameObject barFiller;
     public GameObject healthIcon;
+    public ProgressRadialBehaviour healthBar2;
+    public GameObject barFiller2;
+    public GameObject healthIcon2;
     Color32 currentColor;
     public static float health;
     public bool constantDepletion;
@@ -56,6 +59,8 @@ public class PlayerHealth : MonoBehaviour {
     {
         barFiller.GetComponent<Image>().color = currentColor;
         healthIcon.GetComponent<Image>().color = currentColor;
+        barFiller2.GetComponent<Image>().color = currentColor;
+        healthIcon2.GetComponent<Image>().color = currentColor;
 
         if (health >= 100)
             isDead = false;
@@ -199,6 +204,7 @@ public class PlayerHealth : MonoBehaviour {
     void Update()
     {
         healthBar.Value = health;
+        healthBar2.Value = health;
         HealthBarMonitor();
 
         if (constantDepletion)

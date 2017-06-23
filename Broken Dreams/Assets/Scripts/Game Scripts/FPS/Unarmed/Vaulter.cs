@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Utility;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Vaulter : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class Vaulter : MonoBehaviour
     public void Vault()
     {
         HookSystem.GetComponent<FollowTarget>().enabled = false;
-   
+        StartCoroutine(crouchManager());
+
     }
 
     public void recoverHook()
@@ -56,5 +58,13 @@ public class Vaulter : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         CanParkour = true;
+    }
+
+    public IEnumerator crouchManager()
+    {
+        FirstPersonController.isCrouching = true;
+        yield return new WaitForSeconds(0.5f);
+        FirstPersonController.isCrouching = false;
+        StopCoroutine(crouchManager());
     }
 }

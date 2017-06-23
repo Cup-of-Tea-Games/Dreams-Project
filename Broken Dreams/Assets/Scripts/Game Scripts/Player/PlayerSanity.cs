@@ -10,6 +10,9 @@ public class PlayerSanity : MonoBehaviour {
     public ProgressRadialBehaviour sanityBar;
     public GameObject barFiller;
     public GameObject sanityIcon;
+    public ProgressRadialBehaviour sanityBar2;
+    public GameObject barFiller2;
+    public GameObject sanityIcon2;
     Color32 currentColor;
     public static float sanity;
     public bool constantDepletion;
@@ -71,8 +74,10 @@ public class PlayerSanity : MonoBehaviour {
     {
         barFiller.GetComponent<Image>().color = currentColor;
         sanityIcon.GetComponent<Image>().color = currentColor;
+        barFiller2.GetComponent<Image>().color = currentColor;
+        sanityIcon2.GetComponent<Image>().color = currentColor;
 
-        if(isDraining && !WaterInteraction.isUnderWater)
+        if (isDraining && !WaterInteraction.isUnderWater)
         {
             if (RenderSettings.fogDensity < 0.08f)
                 RenderSettings.fogDensity += 0.0005f;
@@ -335,6 +340,7 @@ public class PlayerSanity : MonoBehaviour {
     void Update()
     {
         sanityBar.Value = sanity;
+        sanityBar2.Value = sanity;
         sanityBarMonitor();
 
         if (isDraining || constantDepletion)
