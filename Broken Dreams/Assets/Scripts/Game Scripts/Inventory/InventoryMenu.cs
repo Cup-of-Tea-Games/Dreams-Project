@@ -47,8 +47,10 @@ public class InventoryMenu : MonoBehaviour {
             selector.enabled = false;
             if(!PageViewer.PageViewerIsUp)
             LockMouse.lockMouse = true;
+            if (!WeaponWheel.isShowing)
+                LockMouse.lockMouse = true;
         }
-        if (PageViewer.PageViewerIsUp)
+        if (PageViewer.PageViewerIsUp || WeaponWheel.isShowing)
         {
                 LockMouse.lockMouse = false;
         }

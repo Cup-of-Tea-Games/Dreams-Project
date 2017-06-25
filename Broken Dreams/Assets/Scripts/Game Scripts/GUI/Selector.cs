@@ -119,7 +119,6 @@ public class Selector : MonoBehaviour {
                 InventoryMenu.inventroyIsUp = false;
                 hideToolTip();
             }
-
         }
     }
 

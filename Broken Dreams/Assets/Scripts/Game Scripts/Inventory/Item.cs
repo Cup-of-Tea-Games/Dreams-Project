@@ -4,18 +4,22 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour {
     public Sprite emptyImage;
-    protected Sprite image;
-    protected string itemName;
-    protected string itemDesc;
-    protected string itemTag;
+    public Sprite image;
+    public string itemName;
+    public string itemDesc;
+    public string itemTag;
+    public bool initiateOnAwake = true;
 
     void Awake()
     {
-        itemName = "";
-        itemDesc = "";
-        itemTag = "";
-        image = emptyImage;
-        GetComponent<Image>().sprite = image;
+        if (initiateOnAwake)
+        {
+            itemName = "";
+            itemDesc = "";
+            itemTag = "";
+            image = emptyImage;
+            GetComponent<Image>().sprite = image;
+        }
     }
 
     public Item()
@@ -106,4 +110,10 @@ public class Item : MonoBehaviour {
         Selector.selectedItem = this;
     }
 
+    //For Weapons Only
+
+    public void selectThisWeapon()
+    {
+        SelectorWeapons.selectedItem = this;
+    }
 }

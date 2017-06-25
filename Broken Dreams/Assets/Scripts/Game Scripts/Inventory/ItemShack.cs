@@ -23,7 +23,7 @@ public class ItemShack : MonoBehaviour
     {
           for (int i = 0; i < SIZE; i++)
         {
-                  if (items[i].isEmpty())
+                  if (items[i] != null && items[i].isEmpty())
               {
             items[i].setImage(item.getImage());
             items[i].setImageComponent(item.getImage());
@@ -38,5 +38,10 @@ public class ItemShack : MonoBehaviour
             
         }
 
+    }
+
+    public Item get(int x)
+    {
+        return items[x];
     }
 }
