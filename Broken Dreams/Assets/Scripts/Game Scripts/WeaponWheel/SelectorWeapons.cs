@@ -47,6 +47,12 @@ public class SelectorWeapons : MonoBehaviour
                 WeaponWheel.selectItemExternal(0);
                 WeaponWheel.currentWeapon = selectedItem;
             }
+
+            else if (selectedItem.getTag() == "Pipe")
+            {
+                WeaponWheel.selectItemExternal(2);
+                WeaponWheel.currentWeapon = selectedItem;
+            }
         }
     
 

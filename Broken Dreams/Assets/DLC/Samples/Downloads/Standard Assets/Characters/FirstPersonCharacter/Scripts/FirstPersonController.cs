@@ -63,6 +63,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool isPeeking;
         bool canSwim = true;
         bool sitActivator = true;
+        public static float currentSpeed;
 
         //Vaulting
         public Vaulter vaulter;
@@ -480,6 +481,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            currentSpeed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:

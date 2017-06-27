@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class HeadBobber : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class HeadBobber : MonoBehaviour
     public  float bobbingSpeed = 0.18f;
     public  float bobbingAmount = 0.2f;
     public float midpoint = 2.0f;
+    public float smoothing = 50;
 
     void Update()
     {
+
+        Debug.Log(FirstPersonController.currentSpeed);
         float waveslice = 0.0f;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -23,7 +27,7 @@ public class HeadBobber : MonoBehaviour
         }
         else {
             waveslice = Mathf.Sin(timer);
-            timer = timer + bobbingSpeed;
+            timer = timer + bobbingSpeed*FirstPersonController.currentSpeed;
             if (timer > Mathf.PI * 2)
             {
                 timer = timer - (Mathf.PI * 2);
@@ -35,13 +39,15 @@ public class HeadBobber : MonoBehaviour
             float totalAxes = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
             totalAxes = Mathf.Clamp(totalAxes, 0.0f, 1.0f);
             translateChange = totalAxes * translateChange;
-            cSharpConversion.y = midpoint + translateChange;
+            cSharpConversion.y = midpoint + translateChange*2;
+            cSharpConversion.x = midpoint + translateChange;
         }
         else {
             cSharpConversion.y = midpoint;
+            cSharpConversion.x = midpoint;
         }
 
-        transform.localPosition = cSharpConversion;
+        transform.localPosition = Vector3.Lerp(transform.localPosition, cSharpConversion, Time.deltaTime*smoothing);
     }
 
 
