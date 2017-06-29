@@ -14,7 +14,7 @@ public class HeadBobber : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(FirstPersonController.currentSpeed);
+       // Debug.Log(FirstPersonController.currentSpeed);
         float waveslice = 0.0f;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
