@@ -4,7 +4,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.UI;
 public class InventoryMenu : MonoBehaviour {
 
-    public GameObject inventoryMenu;
+    //public GameObject inventoryMenu;
     public static bool inventroyIsUp;
     bool canTrigger = true;
 
@@ -15,7 +15,7 @@ public class InventoryMenu : MonoBehaviour {
     //Extra Objects
     public Selector selector;
     public ItemShack itemShack;
-    public GameObject Inventory_Menu;
+    public GameObject Inventory;
 
     void FixedUpdate () {
         if (Input.GetKey(KeyCode.Tab) && inventroyIsUp && canTrigger)
@@ -70,11 +70,11 @@ public class InventoryMenu : MonoBehaviour {
 
     void objectsFadeIn()
     {
-        Inventory_Menu.SetActive(true);
+        Inventory.SetActive(true);
     }
 
     void objectsFadeOut()
     {
-        Inventory_Menu.SetActive(false);
+        Inventory.SetActive(false);
     }
 }
