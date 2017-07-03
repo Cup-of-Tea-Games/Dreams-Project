@@ -89,14 +89,14 @@ public class ExampleAI : MonoBehaviour
 
     IEnumerator attack()
     {
-        agent.Stop();
+       // agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.1f);
         hitBox.enabled = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         hitBox.enabled = false;
-        agent.Resume();
+       // agent.Resume();
        // yield return new WaitForSeconds(1f);
         active = true;
         StopCoroutine(attack());
