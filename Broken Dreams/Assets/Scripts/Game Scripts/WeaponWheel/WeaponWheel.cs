@@ -44,7 +44,7 @@ public class WeaponWheel : MonoBehaviour {
     {
         for(int i = 0; i < weapons.Length; i++)
         {
-            if (weapons[i].activeSelf)
+            if (weapons[i].activeSelf && i != x)
                 weapons[i].SetActive(false);
         }
         weapons[x].SetActive(true);
@@ -61,7 +61,7 @@ public class WeaponWheel : MonoBehaviour {
         GameObject clone = new GameObject();
         clone = Instantiate(weaponPrefabs[numSwitch]);
         clone.transform.position = transformBall.transform.position;
-        clone.GetComponent<Rigidbody>().AddForce(transformBall.transform.forward * 10);
+        clone.GetComponent<Rigidbody>().AddForce(transformBall.transform.forward * 2000);
         if(currentWeapon.getTag() != "Hand")
         weaponShack.remove(currentWeapon);
 
