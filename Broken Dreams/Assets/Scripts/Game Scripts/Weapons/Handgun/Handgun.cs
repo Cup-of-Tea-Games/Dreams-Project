@@ -5,8 +5,6 @@ public class Handgun : MonoBehaviour {
 
     //Animation
     public Animator animator;
-    bool attackSwitch = true;
-    public bool isInHitArea = false;
 
     //Functionality
 
@@ -14,17 +12,13 @@ public class Handgun : MonoBehaviour {
     public float damage = 5;
     public float range = 5;
     public float force = 5;
+    bool canShoot = true;
 
     //VIsuals
 
     public GameObject impactEffect;
-
-    void Awake()
-    {
-        isInHitArea = false;
-    }
-
-
+   // public ParticleSystem muzzleFlash;
+   
     void Update()
     {
         //Animations
@@ -32,40 +26,28 @@ public class Handgun : MonoBehaviour {
         //Attack
         if (Input.GetMouseButtonDown(0) && !WeaponWheel.isShowing)
         {
-            StopCoroutine(ReturnAnimation(0f));
-            //Attack
-            StartCoroutine(AttackAnimation(0.13f));
-        }
-        else if (!Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(ReturnAnimation(2f));
+            if(canShoot)
+            StartCoroutine(Shoot(0.3f));
         }
 
     }
 
-    //Animations
-    IEnumerator ReturnAnimation(float x)
+    IEnumerator Shoot(float x)
     {
+        canShoot = false;
+        animator.Play("Shoot");
+        Fire();
         yield return new WaitForSeconds(x);
-        attackSwitch = false;
-        StopCoroutine(ReturnAnimation(x));
-    }
-
-    IEnumerator AttackAnimation(float x)
-    {
-        animator.Play("Attack1");
-        yield return new WaitForSeconds(0);
-        attackSwitch = true;
-        if (isInHitArea)
-            Attack();
-
-        StopCoroutine(AttackAnimation(x));
+        canShoot = true;
+        StopCoroutine(Shoot(x));
     }
 
     //Functionality
 
-    void Attack()
+    void Fire()
     {
+     //   muzzleFlash.Play();
+
         RaycastHit hit;
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
         {

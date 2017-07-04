@@ -53,6 +53,11 @@ public class SelectorWeapons : MonoBehaviour
                 WeaponWheel.selectItemExternal(2);
                 WeaponWheel.currentWeapon = selectedItem;
             }
+            else if (selectedItem.getTag() == "Handgun")
+            {
+                WeaponWheel.selectItemExternal(3);
+                WeaponWheel.currentWeapon = selectedItem;
+            }
         }
     
 
