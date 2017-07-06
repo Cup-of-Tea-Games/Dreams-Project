@@ -113,7 +113,7 @@ public class Selector : MonoBehaviour {
                 }
             }
 
-            else if (selectedItem.getTag() == "Key_1")
+            else if (selectedItem.getTag().Contains("Key"))
             {
                 Raycast_Pickup.itemInMyHand = selectedItem;
                 InventoryMenu.inventroyIsUp = false;

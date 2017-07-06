@@ -34,7 +34,8 @@ public class Door : MonoBehaviour
 
         if (ignoreOnOpen)
         {
-            if ((audio.isPlaying || audio2.isPlaying) && audio != null && audio2 != null)
+            if(audio != null && audio2 != null)
+            if ((audio.isPlaying || audio2.isPlaying))
                 GetComponent<Collider>().enabled = false;
             else
                 GetComponent<Collider>().enabled = true;

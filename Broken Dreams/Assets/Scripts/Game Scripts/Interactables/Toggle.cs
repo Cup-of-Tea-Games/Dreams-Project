@@ -8,6 +8,7 @@ public class Toggle : MonoBehaviour
     public GameObject toggleObject;
     AudioSource audio;
     public bool isSwitch = false;
+    public bool isVirtual = false;
     public GameObject ONobj;
     public GameObject OFFobj;
     public bool hasAnimation = false;
@@ -25,6 +26,7 @@ public class Toggle : MonoBehaviour
     public void toggle()
     {
         togglebool = !togglebool;
+        if(!isVirtual)
         audio.Play();
         if(!hasAnimation)
         toggleObject.SetActive(togglebool);
@@ -46,6 +48,11 @@ public class Toggle : MonoBehaviour
             }
 
         }
+    }
+
+    public bool currentState()
+    {
+        return togglebool;
     }
 
 }
