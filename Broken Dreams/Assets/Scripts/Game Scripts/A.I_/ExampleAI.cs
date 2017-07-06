@@ -35,7 +35,7 @@ public class ExampleAI : MonoBehaviour
 
     void Update()
     {
-         Debug.Log("IS on Waypoint: " + agent.destination);
+        //Debug.Log("IS on Waypoint: " + agent.destination);
         float distance = Vector3.Distance(agent.transform.position, target.transform.position);
   //      if(chase)
        // Debug.Log(lostValue);

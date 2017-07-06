@@ -20,6 +20,7 @@ public class Raycast_Pickup : MonoBehaviour
     public GameObject pickUp; //Pick Up GUI 
     public GameObject ItemInHand; //Item GUI
     public GameObject ladder; //Ladder GUI
+    public GameObject hint; //Hint GUI
     public static bool isLooking; //Determine if the player is looking at the object
     public static bool isGrabbing; //Determine if the player is grabbing the object
     public GameObject transformBall; //The imaginary ball in which the item picked up shall be in
@@ -106,6 +107,8 @@ public class Raycast_Pickup : MonoBehaviour
                         exit.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Bed")
                         bed.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "KeyReciever")
+                        hint.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -125,6 +128,7 @@ public class Raycast_Pickup : MonoBehaviour
                         journal.SetActive(false);
                         exit.SetActive(false);
                         bed.SetActive(false);
+                        hint.SetActive(false);
                     }
                 }
 
@@ -145,6 +149,7 @@ public class Raycast_Pickup : MonoBehaviour
             journal.SetActive(false);
             exit.SetActive(false);
             bed.SetActive(false);
+            hint.SetActive(false);
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055);
 
         }
@@ -160,6 +165,7 @@ public class Raycast_Pickup : MonoBehaviour
             toggle.SetActive(false);
             drawer.SetActive(false);
             journal.SetActive(false);
+            hint.SetActive(false);
         }
         else
         {
@@ -198,10 +204,10 @@ public class Raycast_Pickup : MonoBehaviour
             mouseClickToggle = false;
         }
         //Makes sure your held item is not there when you mistakenly click on something irrelevant
-        DoorKeyManager();
+        KeyManager();
     }
 
-    void DoorKeyManager()
+    void KeyManager()
     {
         if (itemInRange() && objectInstance.GetComponent<Door>() != null && hit.collider.gameObject.tag == "Door")
         {
@@ -231,6 +237,25 @@ public class Raycast_Pickup : MonoBehaviour
             }
         }
 
+        if (itemInRange() && objectInstance.GetComponent<KeyReciever>() != null)
+        {
+            ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+
+            if (Input.GetMouseButton(0))
+            {
+                if (itemInMyHand.isEmpty())
+                {
+                    objectInstance.GetComponent<KeyReciever>().investigate();
+                }
+                else
+                {
+                    objectInstance.GetComponent<KeyReciever>().insertKey(itemInMyHand.getTag());
+                    if(objectInstance.GetComponent<KeyReciever>().isRecieved())
+                    itemInMyHand.delete();
+                }
+            }
+        }
+
 
         else if (!itemInMyHand.isEmpty() && Input.GetMouseButton(0) && !itemInRange())
         {
@@ -246,7 +271,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay")
+            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay" || hit.collider.gameObject.tag == "KeyReciever")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -379,6 +404,12 @@ public class Raycast_Pickup : MonoBehaviour
                 objectInstance = null;
             }
         }
+
+        //Native Code ------------------------------------------------------------------------------------------------------------------------------
+
+
+
+        //Apartment Code
 
         else if (hit.collider.gameObject.tag == "Bed")
         {
