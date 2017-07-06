@@ -14,6 +14,7 @@ public class PickItem : MonoBehaviour {
    public string messageOnPickUp;
    public bool autoFindItemShack = false;
    public bool autoFindWeaponShack = false;
+   public bool destroyOnPickUp = true;
 
     void Awake()
     {
@@ -36,6 +37,9 @@ public class PickItem : MonoBehaviour {
     {
         itemShack.add(new Item(itemImage, itemTag, itemName, itemDesc));
         tips.Show(messageOnPickUp);
-        Destroy(gameObject);
+        if (destroyOnPickUp)
+            Destroy(gameObject);
+        else
+            gameObject.SetActive(false);
     }
 }

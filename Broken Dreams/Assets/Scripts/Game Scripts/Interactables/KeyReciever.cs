@@ -11,6 +11,12 @@ public class KeyReciever : MonoBehaviour {
     public string failedMessage;
     public string investigateMessage;
 
+    void Update()
+    {
+        active = spawnPlacementObject.activeSelf;
+        GetComponent<Collider>().enabled = !active;
+    }
+
     public void insertKey(string s)
     {
         if (s == tagName)
@@ -18,7 +24,22 @@ public class KeyReciever : MonoBehaviour {
             active = true;
             spawnPlacementObject.SetActive(true);
             tips.Show(successMessage);
-            Destroy(GetComponent<Collider>());
+          //  Destroy(GetComponent<Collider>());
+        }
+        else
+        {
+            tips.Show(failedMessage);
+        }
+    }
+
+    public void insertWeapon (string s)
+    {
+        if (s == tagName)
+        {
+            active = true;
+            spawnPlacementObject.SetActive(true);
+            tips.Show(successMessage);
+            GetComponent<Collider>().enabled = false;
         }
         else
         {
@@ -35,4 +56,6 @@ public class KeyReciever : MonoBehaviour {
     {
         tips.Show(investigateMessage);
     }
+
+   // IEnumerator 
 }
