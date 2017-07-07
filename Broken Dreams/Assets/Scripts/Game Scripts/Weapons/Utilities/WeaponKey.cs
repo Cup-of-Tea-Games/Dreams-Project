@@ -47,5 +47,10 @@ public class WeaponKey : MonoBehaviour {
                 crosshair.sprite = originalSprite;
             }
         }
+
+        else
+        {
+            crosshair.sprite = originalSprite;
+        }
     }
 }

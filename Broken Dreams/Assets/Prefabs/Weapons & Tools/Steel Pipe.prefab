@@ -21,10 +21,10 @@ GameObject:
   - 4: {fileID: 4000011365413718}
   - 33: {fileID: 33000010823377726}
   - 23: {fileID: 23000010011992548}
+  - 114: {fileID: 114000014080758340}
+  - 65: {fileID: 65000011649322146}
   - 54: {fileID: 54000013146662138}
   - 64: {fileID: 64000013395712052}
-  - 65: {fileID: 65000011649322146}
-  - 114: {fileID: 114000014080758340}
   m_Layer: 0
   m_Name: Steel Pipe
   m_TagString: Item
@@ -38,9 +38,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014214768548}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 887.0243, y: 78.25, z: 493.72293}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 885.0354, y: 78.36, z: 492.396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 56d61ab4ed67cfe4c8e0ddb9c91f50ab, type: 2}
+  - {fileID: 2100000, guid: a7577959077296946bbef279cecec846, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -80,7 +80,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014214768548}
-  m_Mesh: {fileID: 4300000, guid: 31b76f3a35161f542a1a00e21c1f6ed0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b4f7b2c78f51ffe419677d546103f274, type: 3}
 --- !u!54 &54000013146662138
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -107,7 +107,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
-  m_Mesh: {fileID: 4300000, guid: 31b76f3a35161f542a1a00e21c1f6ed0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b4f7b2c78f51ffe419677d546103f274, type: 3}
 --- !u!65 &65000011649322146
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -118,8 +118,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7850571, y: 27.019506, z: 10.947359}
-  m_Center: {x: -0.000001847744, y: 0, z: -0.00000071525574}
+  m_Size: {x: 0.05355171, y: 1.0257438, z: 0.4309793}
+  m_Center: {x: 0, y: -0.0012741089, z: 0.0033874512}
 --- !u!114 &114000014080758340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -139,3 +139,4 @@ MonoBehaviour:
   messageOnPickUp: Picked up Steel Pipe
   autoFindItemShack: 0
   autoFindWeaponShack: 1
+  destroyOnPickUp: 1
