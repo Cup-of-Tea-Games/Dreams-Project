@@ -8,6 +8,7 @@ public class Basement : MonoBehaviour {
     public GameObject leaker;
     public KeyReciever pipeReciever;
     public Engine engine;
+    bool active = false;
 
     void Awake()
     {
@@ -33,10 +34,21 @@ public class Basement : MonoBehaviour {
             waterSpawn.SetActive(true);
             //manages what happens with the leaking pipe
             if (!pipeReciever.isRecieved())
+            {
                 leaker.SetActive(true);
+                active = false;
+            }
             else
+            {
                 leaker.SetActive(false);
+                active = true;
+            }
         }
+    }
+
+    public bool isOnline()
+    {
+        return active;
     }
 
 }
