@@ -24,7 +24,6 @@ public class MeleeWeapon : MonoBehaviour {
         isInHitArea = false;
     }
 
-
     void Update()
     {
         //Animations

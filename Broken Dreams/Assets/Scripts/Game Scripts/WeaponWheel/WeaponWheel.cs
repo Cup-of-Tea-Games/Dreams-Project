@@ -69,4 +69,14 @@ public class WeaponWheel : MonoBehaviour {
        // currentWeapon = weaponShack.get(0);
 
     }
+
+    public void removeItem()
+    {
+        if (currentWeapon.getTag() != "Hand")
+            weaponShack.remove(currentWeapon);
+
+        selectItemExternal(0);
+        // currentWeapon = weaponShack.get(0);
+
+    }
 }

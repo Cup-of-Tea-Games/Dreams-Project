@@ -6,6 +6,7 @@ public class Engine : MonoBehaviour {
     public bool waterActive = false;
     public bool heatActive = false;
     public bool engineActive = false;
+    bool online = false;
 
     public Animator spinner;
     public Light pointlight;
@@ -13,7 +14,7 @@ public class Engine : MonoBehaviour {
     public TipsGenerator tips;
 
     public Valve waterValve;
-    public Valve heatValve;
+    public Valve heatValve;         
     public KeyReciever CoolantReciever;
 
     //Tools
@@ -69,6 +70,7 @@ public class Engine : MonoBehaviour {
             key[1] = false;
             pointlight.enabled = true;
             tips.Show("Engine is online");
+            online = true;
             for(int i = 0; i < hyperDoors.Length; i++)
             {
                 hyperDoors[i].move();
@@ -89,6 +91,11 @@ public class Engine : MonoBehaviour {
         pointlight.enabled = true;
         yield return new WaitForSeconds(x);
         StopCoroutine(flickerLight(x));
+    }
+
+    public bool isOnline()
+    {
+        return online;
     }
 
 }
