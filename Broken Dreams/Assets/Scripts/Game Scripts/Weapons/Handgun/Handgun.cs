@@ -58,6 +58,11 @@ public class Handgun : MonoBehaviour {
                 hit.transform.GetComponent<DestroyableObject>().takeDamage(damage);
             }
 
+            else if (hit.transform.GetComponent<DamagePoint>() != null)
+            {
+                hit.transform.GetComponent<DamagePoint>().takeDamage(damage);
+            }
+
             if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * 1000 * force);
