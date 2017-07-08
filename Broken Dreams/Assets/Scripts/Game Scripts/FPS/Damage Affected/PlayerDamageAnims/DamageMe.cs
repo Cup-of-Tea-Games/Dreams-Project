@@ -10,6 +10,7 @@ public class DamageMe : MonoBehaviour {
     public AudioSource progressiveDamageSound;
     public bool godMode;
     bool isInProgressiveDanagerArea = false;
+    float damageAmountRecieve = 1;
 
     void Awake()
     {
@@ -19,10 +20,11 @@ public class DamageMe : MonoBehaviour {
     void Update()
     {
         if(isInProgressiveDanagerArea)
-            PlayerHealth.health -= Time.deltaTime;
+            PlayerHealth.health -= Time.deltaTime*damageAmountRecieve;
+
     }
 
-    public void takeDamage(int x)
+    public void takeDamage(float x)
     {
         if (PlayerHealth.health > 0 && !godMode)
             if (canBeDamaged)
@@ -36,14 +38,15 @@ public class DamageMe : MonoBehaviour {
         }
     }
 
-    public void enterProgressiveDamageArea()
+    public void enterProgressiveDamageArea(float x)
     {
         if (PlayerHealth.health > 0 && !godMode)
         {
             damageAnim.Play("ProgressiveDamage");
             isInProgressiveDanagerArea = true;
             progressiveDamageSound.Play();
-            PlayerHealth.InDanger = true;      
+            PlayerHealth.InDanger = true;
+            damageAmountRecieve = x;
         }
     }
 
@@ -54,6 +57,7 @@ public class DamageMe : MonoBehaviour {
             damageAnim.Play("ProgressiveDamage_Recover");
             PlayerHealth.InDanger = false;
             isInProgressiveDanagerArea = false;
+            damageAmountRecieve = 1;
         }
     }
 

@@ -168,15 +168,15 @@ public class PlayerHealth : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Danger")
+        if (col.GetComponent<Damager>() != null && !col.GetComponent<Damager>().isProgressive)
         {
-            damageSystem.takeDamage(40);
+            damageSystem.takeDamage(col.GetComponent<Damager>().damageAmount);
             isGettingHurt = true;
 
         }
-        else if (col.tag == "Progressive Danger")
+        else if (col.GetComponent<Damager>() != null && col.GetComponent<Damager>().isProgressive)
         {
-            damageSystem.enterProgressiveDamageArea();
+            damageSystem.enterProgressiveDamageArea(col.GetComponent<Damager>().damageAmount);
             isGettingHurt = true;
 
         }
