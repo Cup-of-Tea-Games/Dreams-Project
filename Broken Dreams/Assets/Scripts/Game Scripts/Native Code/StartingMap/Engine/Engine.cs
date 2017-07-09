@@ -40,7 +40,6 @@ public class Engine : MonoBehaviour {
 
         if (CoolantReciever.isRecieved())
         {
-            Debug.Log("COOLANT OON");
             StartCoroutine(flickerLight(0.5f));
         }
 

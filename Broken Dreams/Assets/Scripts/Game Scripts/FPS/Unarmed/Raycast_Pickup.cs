@@ -21,6 +21,7 @@ public class Raycast_Pickup : MonoBehaviour
     public GameObject ItemInHand; //Item GUI
     public GameObject ladder; //Ladder GUI
     public GameObject hint; //Hint GUI
+    public GameObject toggleswitch; //Hint GUI
     public static bool isLooking; //Determine if the player is looking at the object
     public static bool isGrabbing; //Determine if the player is grabbing the object
     public GameObject transformBall; //The imaginary ball in which the item picked up shall be in
@@ -109,6 +110,8 @@ public class Raycast_Pickup : MonoBehaviour
                         bed.SetActive(true);
                     else if (hit.collider.gameObject.tag == "KeyReciever")
                         hint.SetActive(true);
+                    else if (hit.collider.gameObject.tag == "Switch")
+                        toggleswitch.SetActive(true);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -129,6 +132,7 @@ public class Raycast_Pickup : MonoBehaviour
                         exit.SetActive(false);
                         bed.SetActive(false);
                         hint.SetActive(false);
+                        toggleswitch.SetActive(false);
                     }
                 }
 
@@ -150,6 +154,7 @@ public class Raycast_Pickup : MonoBehaviour
             exit.SetActive(false);
             bed.SetActive(false);
             hint.SetActive(false);
+            toggleswitch.SetActive(false);
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 055);
 
         }
@@ -166,6 +171,7 @@ public class Raycast_Pickup : MonoBehaviour
             drawer.SetActive(false);
             journal.SetActive(false);
             hint.SetActive(false);
+            toggleswitch.SetActive(false);
         }
         else
         {
@@ -271,7 +277,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, distanceToItem))
         {
-            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay" || hit.collider.gameObject.tag == "KeyReciever")
+            if (hit.collider.gameObject.tag == "pickUpObject" || hit.collider.gameObject.tag == "pickUpHeavyObject" || hit.collider.gameObject.tag == "Door" || hit.collider.gameObject.tag == "Item" || hit.collider.gameObject.tag == "Ladder" || hit.collider.gameObject.tag == "Page" || hit.collider.gameObject.tag == "Sit Object" || hit.collider.gameObject.tag == "PC" || hit.collider.gameObject.tag == "Toggle" || hit.collider.gameObject.tag == "Drawer" || hit.collider.gameObject.tag == "Journal" || hit.collider.gameObject.tag == "Exit" || hit.collider.gameObject.tag == "Bed" || hit.collider.gameObject.tag == "IgnoreRay" || hit.collider.gameObject.tag == "KeyReciever" || hit.collider.gameObject.tag == "Switch")
             {
                 active = true;
                 objectInstance = hit.collider.gameObject;
@@ -393,6 +399,15 @@ public class Raycast_Pickup : MonoBehaviour
         else if (hit.collider.gameObject.tag == "Page")
         {
             objectInstance.GetComponent<PickPage>().viewPage();
+        }
+
+
+        else if (hit.collider.gameObject.tag == "Switch")
+        {
+            if(objectInstance.GetComponent<Lever>() != null)
+            {
+                objectInstance.GetComponent<Lever>().activate();
+            }
         }
 
         else if (hit.collider.gameObject.tag == "Ladder")
