@@ -62,7 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                if (Peeking.isInMiddle && !Peeking.isPeeking && !WeaponWheel.isShowing)
+                if (Peeking.isInMiddle && !Peeking.isPeeking && !WeaponWheel.isShowing && !PauseMenu.isShowing)
                 {
                     camera.localRotation = m_CameraTargetRot;
                     character.localRotation = m_CharacterTargetRot;
