@@ -10,11 +10,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2017
 		Month: 7
-		Day: 8
-		Hour: 17
-		Minute: 43
-		Second: 53
-		Millisecond: 166
+		Day: 25
+		Hour: 11
+		Minute: 8
+		Second: 13
+		Millisecond: 127
 	}
 	Creator: "FBX SDK/FBX Plugins version 2017.0.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -36,15 +36,15 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "Maya LT"
 			P: "Original|ApplicationVersion", "KString", "", "", "2017"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "08/07/2017 22:43:53.165"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "25/07/2017 16:08:13.125"
 			P: "Original|FileName", "KString", "", "", "D:\RBD_CTGBUILDS\IntroLvlBuilds\IntroLvlExports\DiningRoom\DiningRoomFlrs\DiningFlrCorner.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Maya LT"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2017"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "08/07/2017 22:43:53.165"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "25/07/2017 16:08:13.125"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "D:\RBD_CTGBUILDS\IntroLvlBuilds\IntroLvlExports\DiningRoom\DiningRoomFlrs"
-			P: "Original|ApplicationNativeFile", "KString", "", "", "D:\RBD_CTGBUILDS\IntroLvlBuilds\ExtractionMachineBuild.mlt"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "D:\RBD_CTGBUILDS\IntroLvlBuilds\DiningRoomBuild2.mlt"
 		}
 	}
 }
@@ -79,7 +79,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 2259996190112, "", "Scene" {
+	Document: 2833184569872, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", "Take 001"
@@ -257,15 +257,15 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 2259975504512, "Geometry::", "Mesh" {
+	Geometry: 2833283862192, "Geometry::", "Mesh" {
 		Vertices: *12 {
-			a: -499,-76.3551635742188,-183.999923706055,-183.999877929688,-76.3551635742188,-183.999923706055,-499,-76.3551635742188,-498.999877929688,-183.999877929688,-76.3551635742188,-498.999877929688
+			a: 919.9970703125,-76.3551635742188,867,1234.9970703125,-76.3551635742188,867,919.9970703125,-76.3551635742188,552,1234.9970703125,-76.3551635742188,552
 		} 
 		PolygonVertexIndex: *4 {
 			a: 0,1,3,-3
 		} 
 		Edges: *4 {
-			a: 0,2,3,1
+			a: 0,3,1,2
 		} 
 		GeometryVersion: 124
 		LayerElementNormal: 0 {
@@ -286,10 +286,10 @@ Objects:  {
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "IndexToDirect"
 			UV: *8 {
-				a: 0.375,0.25,0.625,0.25,0.375,0.5,0.625,0.5
+				a: 0.29259467124939,0.51008665561676,0.547462940216064,0.51008665561676,0.547462940216064,0.764954745769501,0.29259467124939,0.764954745769501
 			} 
 			UVIndex: *4 {
-				a: 0,1,3,2
+				a: 0,1,2,3
 			} 
 		}
 		LayerElementSmoothing: 0 {
@@ -330,11 +330,11 @@ Objects:  {
 			}
 		}
 	}
-	Model: 2259929396528, "Model::DiningFlrCorner", "Mesh" {
+	Model: 2833232865232, "Model::DiningFlrCorner", "Mesh" {
 		Version: 232
 		Properties70:  {
-			P: "RotationPivot", "Vector3D", "Vector", "",-341.499938964844,-76.3551788330078,-341.499900817871
-			P: "ScalingPivot", "Vector3D", "Vector", "",-341.499938964844,-76.3551788330078,-341.499900817871
+			P: "RotationPivot", "Vector3D", "Vector", "",1077.49707179683,-76.3551635742188,709.500011769408
+			P: "ScalingPivot", "Vector3D", "Vector", "",1077.49707179683,-76.3551635742188,709.500011769408
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
@@ -344,7 +344,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 2259927658384, "Material::DiningFlrMat", "" {
+	Material: 2832069583184, "Material::DiningPillarDetail_Mat", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -364,15 +364,15 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	AnimationStack: 2259995814464, "AnimStack::Take 001", "" {
+	AnimationStack: 2833279218704, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStart", "KTime", "Time", "",1539538600
-			P: "LocalStop", "KTime", "Time", "",46186158000
+			P: "LocalStop", "KTime", "Time", "",67739698400
 			P: "ReferenceStart", "KTime", "Time", "",1539538600
-			P: "ReferenceStop", "KTime", "Time", "",46186158000
+			P: "ReferenceStop", "KTime", "Time", "",67739698400
 		}
 	}
-	AnimationLayer: 2259738346848, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 2832044808768, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -382,16 +382,16 @@ Objects:  {
 Connections:  {
 	
 	;Model::DiningFlrCorner, Model::RootNode
-	C: "OO",2259929396528,0
+	C: "OO",2833232865232,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",2259738346848,2259995814464
+	C: "OO",2832044808768,2833279218704
 	
 	;Geometry::, Model::DiningFlrCorner
-	C: "OO",2259975504512,2259929396528
+	C: "OO",2833283862192,2833232865232
 	
-	;Material::DiningFlrMat, Model::DiningFlrCorner
-	C: "OO",2259927658384,2259929396528
+	;Material::DiningPillarDetail_Mat, Model::DiningFlrCorner
+	C: "OO",2832069583184,2833232865232
 }
 ;Takes section
 ;----------------------------------------------------
@@ -400,7 +400,7 @@ Takes:  {
 	Current: "Take 001"
 	Take: "Take 001" {
 		FileName: "Take_001.tak"
-		LocalTime: 1539538600,46186158000
-		ReferenceTime: 1539538600,46186158000
+		LocalTime: 1539538600,67739698400
+		ReferenceTime: 1539538600,67739698400
 	}
 }
