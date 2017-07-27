@@ -1,0 +1,2211 @@
+fileFormatVersion: 2
+guid: 48c90045b1772634c9e0e5cd93a80021
+timeCreated: 1500932345
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: Camera.005
+    100004: Cube
+    100006: elbowik.L
+    100008: elbowik.L_end
+    100010: elbowik.R
+    100012: elbowik.R_end
+    100014: fi1.L
+    100016: fi1.R
+    100018: fi2.L
+    100020: fi2.R
+    100022: fi3.L
+    100024: fi3.L_end
+    100026: fi3.R
+    100028: fi3.R_end
+    100030: fm1.L
+    100032: fm1.R
+    100034: fm2.L
+    100036: fm2.R
+    100038: fm3.L
+    100040: fm3.L_end
+    100042: fm3.R
+    100044: fm3.R_end
+    100046: forearm.L
+    100048: forearm.L.001
+    100050: forearm.R
+    100052: forearm.R.001
+    100054: fp1.L
+    100056: fp1.R
+    100058: fp2.L
+    100060: fp2.R
+    100062: fp3.L
+    100064: fp3.L_end
+    100066: fp3.R
+    100068: fp3.R_end
+    100070: fr1.L
+    100072: fr1.R
+    100074: fr2.L
+    100076: fr2.R
+    100078: fr3.L
+    100080: fr3.L_end
+    100082: fr3.R
+    100084: fr3.R_end
+    100086: G17_Body
+    100088: G17_Mag
+    100090: G17_Slide
+    100092: G17_Trigger
+    100094: hand.L
+    100096: hand.R
+    100098: //RootNode
+    100100: handik.L
+    100102: handik.L_end
+    100104: handik.R
+    100106: handik.R_end
+    100108: handsrig
+    100110: Mag
+    100112: Mag_end
+    100114: Slide
+    100116: Slide_end
+    100118: th1.L
+    100120: th1.R
+    100122: th2.L
+    100124: th2.R
+    100126: th3.L
+    100128: th3.L_end
+    100130: th3.R
+    100132: th3.R_end
+    100134: Trigger
+    100136: Trigger_end
+    400000: Body
+    400002: Camera.005
+    400004: Cube
+    400006: elbowik.L
+    400008: elbowik.L_end
+    400010: elbowik.R
+    400012: elbowik.R_end
+    400014: fi1.L
+    400016: fi1.R
+    400018: fi2.L
+    400020: fi2.R
+    400022: fi3.L
+    400024: fi3.L_end
+    400026: fi3.R
+    400028: fi3.R_end
+    400030: fm1.L
+    400032: fm1.R
+    400034: fm2.L
+    400036: fm2.R
+    400038: fm3.L
+    400040: fm3.L_end
+    400042: fm3.R
+    400044: fm3.R_end
+    400046: forearm.L
+    400048: forearm.L.001
+    400050: forearm.R
+    400052: forearm.R.001
+    400054: fp1.L
+    400056: fp1.R
+    400058: fp2.L
+    400060: fp2.R
+    400062: fp3.L
+    400064: fp3.L_end
+    400066: fp3.R
+    400068: fp3.R_end
+    400070: fr1.L
+    400072: fr1.R
+    400074: fr2.L
+    400076: fr2.R
+    400078: fr3.L
+    400080: fr3.L_end
+    400082: fr3.R
+    400084: fr3.R_end
+    400086: G17_Body
+    400088: G17_Mag
+    400090: G17_Slide
+    400092: G17_Trigger
+    400094: hand.L
+    400096: hand.R
+    400098: //RootNode
+    400100: handik.L
+    400102: handik.L_end
+    400104: handik.R
+    400106: handik.R_end
+    400108: handsrig
+    400110: Mag
+    400112: Mag_end
+    400114: Slide
+    400116: Slide_end
+    400118: th1.L
+    400120: th1.R
+    400122: th2.L
+    400124: th2.R
+    400126: th3.L
+    400128: th3.L_end
+    400130: th3.R
+    400132: th3.R_end
+    400134: Trigger
+    400136: Trigger_end
+    4300000: G17_Trigger
+    4300002: G17_Slide
+    4300004: G17_Body
+    4300006: G17_Mag
+    4300008: Cube
+    7400000: handsrig|Flashlight_BatteryAction
+    7400002: handsrig|Flashlight_BatterylidAction
+    7400004: handsrig|Flashlight_BodyAction
+    7400006: handsrig|Flashlight_RotateswitchAction
+    7400008: handsrig|G17_BodyAction
+    7400010: handsrig|G17_MagAction
+    7400012: handsrig|G17_SlideAction
+    7400014: handsrig|G17_TriggerAction
+    7400016: Pickup
+    7400018: handsrig|handsrigAction.003
+    7400020: Examine
+    7400022: Idle
+    7400024: Fire1
+    7400026: Fire2
+    7400028: Fire3
+    7400030: Reload
+    7400032: IdleEmpty
+    7400034: ExamineEmpty
+    7400036: FireEmpty
+    7400038: ReloadEmpty
+    7400040: Test
+    9500000: //RootNode
+    13700000: Cube
+    13700002: G17_Body
+    13700004: G17_Mag
+    13700006: G17_Slide
+    13700008: G17_Trigger
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Pickup
+      takeName: handsrig|handsrigAction
+      firstFrame: 60
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera.005
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Examine
+      takeName: handsrig|handsrigAction
+      firstFrame: 140
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: handsrig|handsrigAction
+      firstFrame: 90
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fire1
+      takeName: handsrig|handsrigAction
+      firstFrame: 220
+      lastFrame: 235
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fire2
+      takeName: handsrig|handsrigAction
+      firstFrame: 235
+      lastFrame: 247
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fire3
+      takeName: handsrig|handsrigAction
+      firstFrame: 247
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Reload
+      takeName: handsrig|handsrigAction
+      firstFrame: 260
+      lastFrame: 330
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: IdleEmpty
+      takeName: handsrig|handsrigAction
+      firstFrame: 331
+      lastFrame: 380
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ExamineEmpty
+      takeName: handsrig|handsrigAction
+      firstFrame: 380
+      lastFrame: 460
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FireEmpty
+      takeName: handsrig|handsrigAction
+      firstFrame: 460
+      lastFrame: 464
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ReloadEmpty
+      takeName: handsrig|handsrigAction
+      firstFrame: 465
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Test
+      takeName: handsrig|handsrigAction
+      firstFrame: 0
+      lastFrame: 540
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: G17_Body
+        weight: 1
+      - path: G17_Mag
+        weight: 1
+      - path: G17_Slide
+        weight: 1
+      - path: G17_Trigger
+        weight: 1
+      - path: handsrig
+        weight: 1
+      - path: handsrig/elbowik.L
+        weight: 1
+      - path: handsrig/elbowik.L/elbowik.L_end
+        weight: 1
+      - path: handsrig/elbowik.R
+        weight: 1
+      - path: handsrig/elbowik.R/elbowik.R_end
+        weight: 1
+      - path: handsrig/forearm.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Mag/Mag_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Slide/Slide_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/Body/Trigger/Trigger_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fi1.L/fi2.L/fi3.L/fi3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fm1.L/fm2.L/fm3.L/fm3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fp1.L/fp2.L/fp3.L/fp3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/fr1.L/fr2.L/fr3.L/fr3.L_end
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L
+        weight: 1
+      - path: handsrig/forearm.L/forearm.L.001/hand.L/th1.L/th2.L/th3.L/th3.L_end
+        weight: 1
+      - path: handsrig/forearm.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fi1.R/fi2.R/fi3.R/fi3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fm1.R/fm2.R/fm3.R/fm3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fp1.R/fp2.R/fp3.R/fp3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/fr1.R/fr2.R/fr3.R/fr3.R_end
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R
+        weight: 1
+      - path: handsrig/forearm.R/forearm.R.001/hand.R/th1.R/th2.R/th3.R/th3.R_end
+        weight: 1
+      - path: handsrig/handik.L
+        weight: 1
+      - path: handsrig/handik.L/handik.L_end
+        weight: 1
+      - path: handsrig/handik.R
+        weight: 1
+      - path: handsrig/handik.R/handik.R_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
