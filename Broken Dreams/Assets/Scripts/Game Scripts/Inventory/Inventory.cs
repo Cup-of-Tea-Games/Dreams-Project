@@ -126,7 +126,7 @@ public class Inventory : MonoBehaviour {
 
     void DisableItems() //Disables extras belonging to other items to ensure proper item switching
     {
-        Flashlight.isEnabled = true;
+       // Flashlight.isEnabled = true;
 
     }
 }
