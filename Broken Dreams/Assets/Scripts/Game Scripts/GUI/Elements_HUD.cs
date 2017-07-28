@@ -62,7 +62,7 @@ public class Elements_HUD : MonoBehaviour {
     void HUD_Handeler()
     {
         //General
-        if(PlayerSanity.isDraining || PlayerHealth.InDanger || Flashlight.isOn)
+        if(PlayerSanity.isDraining || PlayerHealth.InDanger)
         {
             if(!HUDisUp)
             ShowAll();

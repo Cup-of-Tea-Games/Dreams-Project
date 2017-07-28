@@ -27,7 +27,7 @@ public class Handgun : MonoBehaviour {
         if (Input.GetMouseButtonDown(0) && !WeaponWheel.isShowing)
         {
             if(canShoot)
-            StartCoroutine(Shoot(0.3f));
+            StartCoroutine(Shoot(0.35f));
         }
 
     }
@@ -35,7 +35,19 @@ public class Handgun : MonoBehaviour {
     IEnumerator Shoot(float x)
     {
         canShoot = false;
-        animator.Play("Shoot");
+        int rand = Random.RandomRange(1,4);
+        switch (rand)
+        {
+           case 1:
+           animator.Play("Shoot1");
+           break;
+           case 2:
+           animator.Play("Shoot2");
+           break;
+           case 3:
+           animator.Play("Shoot3");
+           break;
+        }
         Fire();
         yield return new WaitForSeconds(x);
         canShoot = true;

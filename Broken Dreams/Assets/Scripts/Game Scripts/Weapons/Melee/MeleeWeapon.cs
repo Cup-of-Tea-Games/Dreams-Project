@@ -52,7 +52,19 @@ public class MeleeWeapon : MonoBehaviour {
 
     IEnumerator AttackAnimation(float x)
     {
-        animator.Play("Attack1");
+        int rand = Random.RandomRange(1, 4);
+        switch (rand)
+        {
+            case 1:
+                animator.Play("Attack1");
+                break;
+            case 2:
+                animator.Play("Attack2");
+                break;
+            case 3:
+                animator.Play("Attack3");
+                break;
+        }
         yield return new WaitForSeconds(0);
                 attackSwitch = true;
         if(isInHitArea)
