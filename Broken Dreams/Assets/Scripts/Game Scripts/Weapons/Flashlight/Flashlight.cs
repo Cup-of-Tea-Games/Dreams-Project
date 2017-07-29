@@ -29,10 +29,17 @@ public class Flashlight : MonoBehaviour {
         //Animations
 
         //Attack
-        if (Input.GetMouseButtonDown(0) && !WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing)
         {
-            if (canSwitch)
-                StartCoroutine(Switch(1f));
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (canSwitch)
+                    StartCoroutine(Switch(1f));
+            }
+            if (Input.GetKey(KeyCode.R))
+            {
+                Reload();
+            }
         }
 
     }
@@ -46,6 +53,10 @@ public class Flashlight : MonoBehaviour {
         yield return new WaitForSeconds(x);
         canSwitch = true;
         StopCoroutine(Switch(x));
+    }
+    void Reload()
+    {
+        animator.Play("Reload");
     }
 
     //Functionality

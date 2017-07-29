@@ -12,6 +12,7 @@ public class Handgun : MonoBehaviour {
     public float damage = 5;
     public float range = 5;
     public float force = 5;
+    public float fireRateDelay = 0.35f;
     bool canShoot = true;
 
     //VIsuals
@@ -24,10 +25,15 @@ public class Handgun : MonoBehaviour {
         //Animations
 
         //Attack
-        if (Input.GetMouseButtonDown(0) && !WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing)
         {
-            if(canShoot)
-            StartCoroutine(Shoot(0.35f));
+            if (Input.GetMouseButton(0))
+            {
+                if (canShoot)
+                    StartCoroutine(Shoot(fireRateDelay));
+            }
+            if (Input.GetKey(KeyCode.R))
+                Reload();
         }
 
     }
@@ -35,24 +41,29 @@ public class Handgun : MonoBehaviour {
     IEnumerator Shoot(float x)
     {
         canShoot = false;
-        int rand = Random.RandomRange(1,4);
+        int rand = Random.RandomRange(1, 3);
         switch (rand)
         {
-           case 1:
-           animator.Play("Shoot1");
-           break;
-           case 2:
-           animator.Play("Shoot2");
-           break;
-           case 3:
-           animator.Play("Shoot3");
-           break;
+            case 1:
+                animator.Play("Shoot1");
+                break;
+            case 2:
+                animator.Play("Shoot2");
+                break;
         }
-        Fire();
+        if (!(this.animator.GetCurrentAnimatorStateInfo(1).IsName("Shoot1") && this.animator.GetCurrentAnimatorStateInfo(1).IsName("Shoot2")))
+            Fire();
         yield return new WaitForSeconds(x);
         canShoot = true;
         StopCoroutine(Shoot(x));
     }
+
+    void Reload()
+    {
+       animator.Play("Reload");
+    }
+
+
 
     //Functionality
 

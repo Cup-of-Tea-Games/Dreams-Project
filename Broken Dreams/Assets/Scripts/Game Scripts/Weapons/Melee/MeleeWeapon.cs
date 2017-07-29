@@ -6,6 +6,7 @@ public class MeleeWeapon : MonoBehaviour {
     //Animation
     public Animator animator;
     bool attackSwitch = true;
+    bool canAttack = true;
     public bool isInHitArea = false;
 
     //Functionality
@@ -14,6 +15,9 @@ public class MeleeWeapon : MonoBehaviour {
     public float damage = 5;
     public float range = 5;
     public float force = 5;
+    public float AttackRateDelay = 0.35f;
+    public bool isAnimationBased = false;
+    public HitPoint hitPoint;
 
     //VIsuals
 
@@ -29,15 +33,23 @@ public class MeleeWeapon : MonoBehaviour {
         //Animations
 
         //Attack
-        if (Input.GetMouseButtonDown(0) && !WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing)
         {
-            StopCoroutine(ReturnAnimation(0f));
-            //Attack
-            StartCoroutine(AttackAnimation(0.13f));
-        }
-        else if (!Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(ReturnAnimation(2f));
+            if (Input.GetMouseButton(0))
+            {
+                StopCoroutine(ReturnAnimation(0f));
+                //Attack
+                if(canAttack)
+                StartCoroutine(AttackAnimation(AttackRateDelay));
+            }
+            if (Input.GetKey(KeyCode.R))
+            {
+                Reload();
+            }
+
+            if (isAnimationBased)
+                if (hitPoint.acitve)
+                    Attack();
         }
 
     }
@@ -52,25 +64,32 @@ public class MeleeWeapon : MonoBehaviour {
 
     IEnumerator AttackAnimation(float x)
     {
-        int rand = Random.RandomRange(1, 4);
+        canAttack = false;
+        int rand = Random.RandomRange(1, 3);
         switch (rand)
         {
             case 1:
-                animator.Play("Attack1");
+                animator.CrossFade("Attack1",0f);
                 break;
             case 2:
-                animator.Play("Attack2");
-                break;
-            case 3:
-                animator.Play("Attack3");
+                animator.CrossFade("Attack2",0f);
                 break;
         }
-        yield return new WaitForSeconds(0);
-                attackSwitch = true;
-        if(isInHitArea)
-        Attack();
+        yield return new WaitForSeconds(x);
+        canAttack = true;
+        if (!isAnimationBased)
+        {
+            attackSwitch = true;
+            Attack();
+        }
 
         StopCoroutine(AttackAnimation(x));
+
+    }
+
+    void Reload()
+    {
+        animator.Play("Reload");
     }
 
     //Functionality
