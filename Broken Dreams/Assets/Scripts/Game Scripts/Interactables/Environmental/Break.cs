@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Break : MonoBehaviour 
 {
-	public Transform brokenObject;
+	public GameObject brokenObject;
 	public float magnitudeCol, radius, power, upwards;
 
 	void OnCollisionEnter(Collision collision)
@@ -12,7 +12,7 @@ public class Break : MonoBehaviour
 		{
 			Destroy(gameObject);
 			Instantiate(brokenObject, transform.position, transform.rotation);
-			brokenObject.localScale = transform.localScale;
+			brokenObject.transform.localScale = transform.localScale;
 			Vector3 explosionPos = transform.position;
 			Collider[] colliders = Physics.OverlapSphere (explosionPos, radius);
 
