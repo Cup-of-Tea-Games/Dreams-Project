@@ -4,6 +4,7 @@ using System.Collections;
 public class DestroyableObject : MonoBehaviour {
 
     public float health = 50f;
+    public GameObject destoryedVersion;
 
     public void takeDamage(float amount)
     {
@@ -17,6 +18,9 @@ public class DestroyableObject : MonoBehaviour {
 
     void Destroy()
     {
-        Destroy(gameObject);
+        GameObject brokenObject = Instantiate(destoryedVersion,transform) as GameObject;
+        brokenObject.transform.position = this.transform.position;
+        transform.DetachChildren();
+        Destroy(gameObject,0f);
     }
 }
