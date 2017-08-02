@@ -336,14 +336,16 @@
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\IgnoreCol.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\ProxyActivator.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Triggers\SpawnerTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Utilities\HitPoint.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Utilities\WeaponInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Utilities\WeaponKey.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\WeaponWheel\SelectorWeapons.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\WeaponWheel\WeaponWheel.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Flashlight\Flashlight.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Flashlight\FlashlightSimple.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Handgun\Handgun.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Melee\MeleeWeapon.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\Weapons\Utilities\HitPoint.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\Weapons\Utilities\WeaponKey.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\Weapons\Unarmed\Unarmed.cs" />
     <Compile Include="Assets\Scripts\PORTAL\PortalCamera.cs" />
     <Compile Include="Assets\Scripts\PORTAL\Sender.cs" />
     <Compile Include="Assets\Scripts\PORTAL\TextureSetup.cs" />
@@ -355,6 +357,7 @@
     <Compile Include="Assets\Trash\Dani&apos;sTrashFolder\RestartLevel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3D Models\OBJs\FlashLightOBJ\lol.txt" />
     <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\Canvas.shader" />
     <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasChannels.shader" />
     <None Include="Assets\DLC\EASY DECAL\Editor Default Resources\nu Assets\Shared\Shaders\CanvasOpaque.shader" />

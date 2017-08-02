@@ -7,6 +7,7 @@ public class WeaponWheel : MonoBehaviour {
     public GameObject weaponSelector;
     public ItemShack weaponShack;
     public GameObject transformBall;
+    public Unarmed handsAnimation;
     public static bool isShowing = false;
     public GameObject[] weapons;
     public GameObject[] weaponPrefabs;
@@ -64,8 +65,8 @@ public class WeaponWheel : MonoBehaviour {
         clone.GetComponent<Rigidbody>().AddForce(transformBall.transform.forward * 2000);
         if(currentWeapon.getTag() != "Hand")
         weaponShack.remove(currentWeapon);
-
         selectItemExternal(0);
+        handsAnimation.tossItem();
        // currentWeapon = weaponShack.get(0);
 
     }

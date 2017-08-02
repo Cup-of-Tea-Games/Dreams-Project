@@ -6,7 +6,7 @@ public class MeleeWeapon : MonoBehaviour {
     //Animation
     public Animator animator;
     bool attackSwitch = true;
-    bool canAttack = true;
+    public bool canAttack = true;
     public bool isInHitArea = false;
 
     //Functionality

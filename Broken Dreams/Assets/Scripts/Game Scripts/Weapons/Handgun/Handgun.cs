@@ -13,7 +13,7 @@ public class Handgun : MonoBehaviour {
     public float range = 5;
     public float force = 5;
     public float fireRateDelay = 0.35f;
-    bool canShoot = true;
+    public bool canShoot = true;
 
     //VIsuals
 
