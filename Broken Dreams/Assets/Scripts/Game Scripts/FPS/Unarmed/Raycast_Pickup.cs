@@ -408,6 +408,10 @@ public class Raycast_Pickup : MonoBehaviour
             {
                 objectInstance.GetComponent<Lever>().activate();
             }
+            if (objectInstance.GetComponent<Button>() != null)
+            {
+                objectInstance.GetComponent<Button>().activate();
+            }
         }
 
         else if (hit.collider.gameObject.tag == "Ladder")

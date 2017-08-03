@@ -24,34 +24,45 @@ public class WeaponInteraction : MonoBehaviour
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
         {
             //  Debug.Log(tag + " " + hit.transform.GetComponent<KeyReciever>().tag);
-            
-                if (hit.transform.GetComponent<Door>() != null)
+
+            if (hit.transform.GetComponent<Door>() != null)
+            {
+                holdAttack();
+                animator.Play("Lower");
+                crosshair.sprite = door;
+                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
                 {
-                    holdAttack();
-                    animator.Play("Lower");
-                    crosshair.sprite = door;
-                    if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
-                    {
                     hit.transform.GetComponent<Door>().toggle();
                     animator.Play("Door");
                     releaseAttack();
                 }
 
-                }
-                else if (hit.transform.GetComponent<Toggle>() != null)
+            }
+            else if (hit.transform.GetComponent<Toggle>() != null)
+            {
+                holdAttack();
+                animator.Play("Lower");
+                crosshair.sprite = toggle;
+                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
                 {
-                    holdAttack();
-                    animator.Play("Lower");
-                    crosshair.sprite = toggle;
-                    if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
-                    {
                     hit.transform.GetComponent<Toggle>().toggle();
                     animator.Play("Toggle");
                     releaseAttack();
                 }
-
+            }
+            else if (hit.transform.GetComponent<Button>() != null)
+            {
+                holdAttack();
+                animator.Play("Lower");
+                crosshair.sprite = toggle;
+                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+                {
+                    hit.transform.GetComponent<Button>().activate();
+                    animator.Play("Toggle");
+                    releaseAttack();
                 }
-            
+            }
+
             else
             {
                 if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Lower"))
