@@ -96,13 +96,12 @@ public class Handgun : MonoBehaviour {
 
     void Fire()
     {
-     //   muzzleFlash.Play();
-
+        //   muzzleFlash.Play();
+        ammo--;
         RaycastHit hit;
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
         {
             Debug.Log(hit.transform.name);
-            ammo--;
 
             if (hit.transform.GetComponent<DestroyableObject>() != null)
             {
