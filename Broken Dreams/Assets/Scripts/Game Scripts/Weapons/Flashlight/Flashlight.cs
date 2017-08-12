@@ -4,7 +4,8 @@ using System.Collections;
 public class Flashlight : MonoBehaviour {
 
     //Health
-    public static float health;
+    protected float batteries;
+    protected float health;
     public Light spotlight;
     bool toggleSwitch = false;
 
@@ -13,32 +14,50 @@ public class Flashlight : MonoBehaviour {
 
     //Functionality
 
-  //  public Camera player;
-  //  public float damage = 5;
-  //  public float range = 5;
-  //  public float force = 5;
-    bool canSwitch = true;
+    public float startingBatteryHealth;
+    public float startingBatteries;
+    public bool canSwitch = true;
 
     //VIsuals
 
  //   public GameObject flashEffect;
     // public ParticleSystem muzzleFlash;
 
+    void Awake()
+    {
+        health = startingBatteryHealth;
+        batteries = startingBatteries;
+    }
+
     void Update()
     {
-        //Animations
-
-        //Attack
         if (!WeaponWheel.isShowing)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (canSwitch)
+                if (canSwitch && health > 0)
                     StartCoroutine(Switch(1f));
             }
             if (Input.GetKey(KeyCode.R))
             {
-                Reload();
+                if(batteries > 0)
+                StartCoroutine(Reload());
+            }
+        }
+
+        if (toggleSwitch)
+        {
+            health = Mathf.Clamp(health - 0.05f, 0, 100);
+
+            if (health <= 40 && health >= 39)
+                StartCoroutine(BangFlashlight());
+
+            else if (health <= 20 && health >= 19)
+                StartCoroutine(BangFlashlight());
+
+            if (health <= 0)
+            {
+                Toggle();
             }
         }
 
@@ -54,9 +73,29 @@ public class Flashlight : MonoBehaviour {
         canSwitch = true;
         StopCoroutine(Switch(x));
     }
-    void Reload()
+
+    IEnumerator Reload()
     {
         animator.Play("Reload");
+        yield return new WaitForSeconds(0.9f);
+        if (toggleSwitch)
+            Toggle();
+        yield return new WaitForSeconds(1.8f);
+        if (!toggleSwitch)
+        {
+            Toggle();
+            ReloadBatteries();
+        }
+
+        StopCoroutine(Reload());
+    }
+
+    IEnumerator BangFlashlight()
+    {
+        Flicker();
+        yield return new WaitForSeconds(1f);
+        animator.Play("Bang");
+        StopCoroutine(BangFlashlight());
     }
 
     //Functionality
@@ -65,6 +104,39 @@ public class Flashlight : MonoBehaviour {
     {
         toggleSwitch = !toggleSwitch;
         spotlight.enabled = toggleSwitch;
+    }
+
+    void Flicker()
+    {
+        for (int i = 0;i<50;i++)
+        {
+            spotlight.enabled = !spotlight.enabled;
+        }
+        spotlight.enabled = true;
+    }
+
+    void ReloadBatteries()
+    {
+        health = 100;
+        batteries -= 1;
+    }
+
+    //Getters
+
+    public float getHealth()
+    {
+        return health;
+    }
+
+    public float getBatteries()
+    {
+        return batteries;
+    }
+
+    //Setters
+    public void addBatteries(int x)
+    {
+        batteries += x;
     }
 
 

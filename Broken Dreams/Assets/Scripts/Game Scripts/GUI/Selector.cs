@@ -53,12 +53,6 @@ public class Selector : MonoBehaviour {
             tipDesc.text =  "Vital Level " + PlayerHealth.health + "%";
             tipName.text = "Health";
         }
-
-        else if (selectedMain.getTag() == "Light_MAIN")
-        {
-            tipDesc.text = "Battery Power " + Flashlight.health.ToString() + "%";
-            tipName.text =  "Light";
-        }
         else
         {
             Debug.Log(selectedMain.getTag());
@@ -105,11 +99,11 @@ public class Selector : MonoBehaviour {
 
             else if (selectedItem.getitemName() == "Battery")
             {
-                if (Flashlight.health < 100)
+           //     if (Flashlight.health < 100)
                 {
-                    itemShack.remove(selectedItem);
-                    hideToolTip();
-                    Flashlight.health += 50;
+               //     itemShack.remove(selectedItem);
+                //    hideToolTip();
+                //    Flashlight.health += 50;
                 }
             }
 

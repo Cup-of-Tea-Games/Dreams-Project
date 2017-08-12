@@ -92,6 +92,8 @@ public class WeaponInteraction : MonoBehaviour
         GetComponent<Handgun>().canShoot = false;
         if (GetComponent<MeleeWeapon>() != null)
             GetComponent<MeleeWeapon>().canAttack = false;
+        if (GetComponent<Flashlight>() != null)
+            GetComponent<Flashlight>().canSwitch = false;
     }
 
     void releaseAttack()
@@ -100,5 +102,7 @@ public class WeaponInteraction : MonoBehaviour
             GetComponent<Handgun>().canShoot = true;
         if (GetComponent<MeleeWeapon>() != null)
             GetComponent<MeleeWeapon>().canAttack = true;
+        if (GetComponent<Flashlight>() != null)
+            GetComponent<Flashlight>().canSwitch = true;
     }
 }

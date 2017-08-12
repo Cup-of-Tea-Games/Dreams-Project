@@ -6,7 +6,7 @@ public class PlayerAmmo : MonoBehaviour {
     void Awake()
     {
         Shotgun.ammo = 20;
-        Flashlight.health = 100;
+       // Flashlight.health = 100;
     }
 
     void OnTriggerEnter(Collider col)
