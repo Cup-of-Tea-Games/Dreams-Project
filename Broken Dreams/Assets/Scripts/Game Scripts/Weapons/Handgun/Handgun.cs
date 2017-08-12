@@ -141,7 +141,7 @@ public class Handgun : MonoBehaviour {
 
     public void addAmmo(int x)
     {
-        reserveAmmo += x;
+        reserveAmmo += x*magazineSize;
     }
 
     public int getAmmo()

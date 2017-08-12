@@ -17,6 +17,12 @@ public class Selector : MonoBehaviour {
     public Color32 sanityItemColor;
     public Color32 lightItemColor;
 
+    //Items to Replenish
+    public MeleeWeapon Pipe;
+    public Flashlight BlackFlashlight;
+    public Handgun G17;
+
+
     void Update()
     {
         if (!selectedItem.isEmpty() && selectedItem != null)
@@ -73,8 +79,6 @@ public class Selector : MonoBehaviour {
 
     public void useItem()
     {
-
-
         if (!selectedItem.isEmpty())
         {
             if (selectedItem.getitemName() == "Candy Bars")
@@ -97,22 +101,29 @@ public class Selector : MonoBehaviour {
                 }
             }
 
-            else if (selectedItem.getitemName() == "Battery")
-            {
-           //     if (Flashlight.health < 100)
-                {
-               //     itemShack.remove(selectedItem);
-                //    hideToolTip();
-                //    Flashlight.health += 50;
-                }
-            }
-
             else if (selectedItem.getTag().Contains("Key"))
             {
                 Raycast_Pickup.itemInMyHand = selectedItem;
                 InventoryMenu.inventroyIsUp = false;
                 hideToolTip();
             }
+
+            else if (selectedItem.getTag().Contains("Replenish"))
+            {
+                    if (selectedItem.getTag().Contains("G17"))
+                    {
+                    itemShack.remove(selectedItem);
+                    G17.addAmmo(1);
+                    }
+                    else if (selectedItem.getTag().Contains("Flashlight"))
+                    {
+                    itemShack.remove(selectedItem);
+                    BlackFlashlight.addBatteries(1);
+                    }
+            }
+
+
+            //End of Statement
         }
     }
 
