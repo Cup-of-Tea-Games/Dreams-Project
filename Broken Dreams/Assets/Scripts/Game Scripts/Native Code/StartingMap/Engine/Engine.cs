@@ -10,7 +10,7 @@ public class Engine : MonoBehaviour {
 
     public Animator spinner;
     public Light pointlight;
-    public Drawer[] hyperDoors;
+    public Button[] hyperDoorButtons;
     public TipsGenerator tips;
 
     public Valve waterValve;
@@ -70,9 +70,9 @@ public class Engine : MonoBehaviour {
             pointlight.enabled = true;
             tips.Show("Engine is online");
             online = true;
-            for(int i = 0; i < hyperDoors.Length; i++)
+            for(int i = 0; i < hyperDoorButtons.Length; i++)
             {
-                hyperDoors[i].move();
+                hyperDoorButtons[i].hasPower = true;
             }
 
             if (key[2])

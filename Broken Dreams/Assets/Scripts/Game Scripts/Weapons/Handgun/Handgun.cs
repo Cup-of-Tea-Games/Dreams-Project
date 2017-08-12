@@ -14,26 +14,46 @@ public class Handgun : MonoBehaviour {
     public float force = 5;
     public float fireRateDelay = 0.35f;
     public bool canShoot = true;
+    public int startingAmmo = 0;
+    public int magazineSize = 7;
+
+    protected int ammo = 0;
+    protected int reserveAmmo = 0;
 
     //VIsuals
 
     public GameObject impactEffect;
    // public ParticleSystem muzzleFlash;
+
+    void Awake()
+    {
+        if (startingAmmo > 0)
+        {
+            reserveAmmo += startingAmmo;
+            if (reserveAmmo >= magazineSize)
+            {
+                ammo += magazineSize;
+                reserveAmmo -= magazineSize;
+            }
+            else
+            {
+                ammo += reserveAmmo;
+                reserveAmmo = 0;
+            }
+        }
+    }
    
     void Update()
     {
-        //Animations
-
-        //Attack
         if (!WeaponWheel.isShowing)
         {
             if (Input.GetMouseButton(0))
             {
-                if (canShoot)
+                if (canShoot && ammo > 0)
                     StartCoroutine(Shoot(fireRateDelay));
             }
-            if (Input.GetKey(KeyCode.R))
-                Reload();
+            if (Input.GetKeyDown(KeyCode.R))
+                StartCoroutine(Reload(2f));
         }
 
     }
@@ -58,12 +78,19 @@ public class Handgun : MonoBehaviour {
         StopCoroutine(Shoot(x));
     }
 
-    void Reload()
+    IEnumerator Reload(float x)
     {
-       animator.Play("Reload");
+        if (reserveAmmo > 0 && ammo < magazineSize)
+        {
+            canShoot = false;
+            animator.Play("Reload");
+            yield return new WaitForSeconds(x);
+            Reload();
+            canShoot = true;
+        }
+
+        StopCoroutine(Reload(x));
     }
-
-
 
     //Functionality
 
@@ -75,6 +102,7 @@ public class Handgun : MonoBehaviour {
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
         {
             Debug.Log(hit.transform.name);
+            ammo--;
 
             if (hit.transform.GetComponent<DestroyableObject>() != null)
             {
@@ -86,13 +114,44 @@ public class Handgun : MonoBehaviour {
                 hit.transform.GetComponent<DamagePoint>().takeDamage(damage);
             }
 
-            if (hit.rigidbody != null)
+            if(hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * 1000 * force);
             }
 
+            //Particle Effect
             GameObject effectParticle = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
             Destroy(effectParticle, 2f);
         }
+    }
+
+    void Reload()
+    {
+        int ammoValue;
+        if (reserveAmmo > 0)
+        {
+            while (ammo < magazineSize && reserveAmmo > 0)
+            {
+                ammo++;
+                reserveAmmo--;
+            }
+        }
+    }
+   
+    //Outisde Access Functions
+
+    public void addAmmo(int x)
+    {
+        reserveAmmo += x;
+    }
+
+    public int getAmmo()
+    {
+        return ammo;
+    }
+
+    public int getReserveAmmo()
+    {
+        return reserveAmmo;
     }
 }
