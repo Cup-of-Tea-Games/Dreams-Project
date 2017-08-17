@@ -18,11 +18,14 @@ public class Antagonist : MonoBehaviour
         private float lostValue;
 
         public Animator animator;
-        public Transform[] waypoints;
+        public WaypontGroup waypoints;
         public float destinationResetTime = 1.0f;
     //    public Collider hitBox;
     //    public Collider AIAttackRange;
         private float originalSpeed;
+        private WaypontGroup originalWaypoints;
+
+        public Camera eyes;
 
 
         private void Start()
@@ -35,11 +38,11 @@ public class Antagonist : MonoBehaviour
             agent.updatePosition = true;
 
             agent = GetComponent<NavMeshAgent>();
-            waypointCount = waypoints.Length;
+            waypointCount = waypoints.getLength();
             changeWaypoint();
             originalSpeed = agent.speed;
+            originalWaypoints = waypoints;
     }
-
 
         private void Update()
         {
@@ -83,9 +86,13 @@ public class Antagonist : MonoBehaviour
                 character.Move(agent.desiredVelocity, false, false);
             else
                 character.Move(Vector3.zero, false, false);
+
+        //Sees the Player
+        eyesManager();
+
         }
 
-    IEnumerator chaseTarget()
+        IEnumerator chaseTarget()
     {
         yield return new WaitForSeconds(0.1f);
         agent.SetDestination(target.position);
@@ -93,7 +100,7 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(chaseTarget());
     }
 
-    IEnumerator attack()
+        IEnumerator attack()
     {
         // agent.Stop();
         active = false;
@@ -108,7 +115,7 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(attack());
     }
 
-    IEnumerator patrolArea()
+        IEnumerator patrolArea()
     {
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
@@ -118,7 +125,7 @@ public class Antagonist : MonoBehaviour
             active = false;
             agent.Stop();
             int newWaypoint = Random.RandomRange(0, waypointCount);
-            agent.SetDestination(waypoints[newWaypoint].position);
+            agent.SetDestination(waypoints.waypoints[newWaypoint].position);
             yield return new WaitForSeconds(2f);
             agent.Resume();
             yield return new WaitForSeconds(4f);
@@ -130,7 +137,7 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(patrolArea());
     }
 
-    IEnumerator patrolRoom()
+        IEnumerator patrolRoom()
     {
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
@@ -161,7 +168,7 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(patrolRoom());
     }
 
-    IEnumerator resetPath()
+        IEnumerator resetPath()
     {
         active = false;
         agent.Stop();
@@ -172,16 +179,38 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(resetPath());
     }
 
-    void changeWaypoint()
+        void changeWaypoint()
     {
         int newWaypoint = Random.RandomRange(0, waypointCount);
-        agent.SetDestination(waypoints[newWaypoint].position);
+        agent.SetDestination(waypoints.waypoints[newWaypoint].position);
         currentWaypoint = newWaypoint;
     }
 
-    public void SetTarget(Transform target)
+        void eyesManager()
+    {
+        RaycastHit hit;
+        Vector3 screenPoint = eyes.WorldToViewportPoint(target.position);
+        if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1)
+        {
+            if (Physics.Linecast(eyes.transform.position, target.GetComponentInChildren<Renderer>().bounds.center, out hit))
+            {
+                if (hit.transform.tag == "Player")
+                {
+                    chase = true;
+                    patrol = false;
+                }
+                Debug.Log("FOUND YOU");
+            }
+        }
+        else
+        {
+            Debug.Log("I DID NOT FIND YOU");
+        }
+    }
+
+        public void SetTarget(Transform target)
         {
             this.target = target;
         }
-
+    
     }
