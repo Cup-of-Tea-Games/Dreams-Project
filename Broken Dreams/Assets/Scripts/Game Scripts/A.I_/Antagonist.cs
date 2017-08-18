@@ -8,6 +8,7 @@ public class Antagonist : MonoBehaviour
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
         public Transform target;                                    // target to aim for
 
+        private float distance;
         private bool chase = false;
         private bool patrol = true;
         private bool active = true;
@@ -16,16 +17,19 @@ public class Antagonist : MonoBehaviour
         private int waypointCount = 0;
         private int currentWaypoint = 0;
         private float lostValue;
+        private bool lostPlayer = true;
 
         public Animator animator;
-        public WaypontGroup waypoints;
+        public WaypointGroup waypoints;
         public float destinationResetTime = 1.0f;
     //    public Collider hitBox;
     //    public Collider AIAttackRange;
         private float originalSpeed;
-        private WaypontGroup originalWaypoints;
+        private WaypointGroup originalWaypoints;
 
         public Camera eyes;
+        public DamageSystem damageSystem;
+        public float health;
 
 
         private void Start()
@@ -46,58 +50,31 @@ public class Antagonist : MonoBehaviour
 
         private void Update()
         {
-        float distance = Vector3.Distance(agent.transform.position, target.transform.position);
-
-        if (distance < 15)
-            lostValue = 0;
-        else
-            lostValue += 0.01f;
-
-        if (lostValue > 7 && chase)
-        {
-            chase = false;
-            patrol = true;
-        }
-
-        if (chase)
-        {
-            agent.speed = originalSpeed * 2;
-        }
-        else
-        {
-            agent.speed = originalSpeed;
-        }
-
-        if (chase && !patrol && active && lostValue < 7)
-        {
-            // Debug.Log("IS CHASING");
-            StartCoroutine(chaseTarget());
-        }
-
-        else if (patrol && !chase && active)
-        {
-            StartCoroutine(patrolArea());
-        }
-
-        Debug.Log("Active : " + active);
-
-        //Sets the A.I.
-        if (agent.remainingDistance > agent.stoppingDistance)
-                character.Move(agent.desiredVelocity, false, false);
-            else
-                character.Move(Vector3.zero, false, false);
-
-        //Sees the Player
-        eyesManager();
-
+        AINavigationManager();
+        AIHealthManager();
         }
 
         IEnumerator chaseTarget()
     {
         yield return new WaitForSeconds(0.1f);
-        agent.SetDestination(target.position);
+        if (distance > 2)
+            agent.SetDestination(target.position);
+        else
+            agent.SetDestination(agent.transform.position);
         // active = true;
         StopCoroutine(chaseTarget());
+    }
+
+        IEnumerator chaseLastLocationTarget()
+    {
+        if (agent.transform.position == agent.destination)
+        {
+            yield return new WaitForSeconds(2f);
+            patrol = true;
+        }
+        yield return new WaitForSeconds(0.1f);
+        // active = true;
+        StopCoroutine(chaseLastLocationTarget());
     }
 
         IEnumerator attack()
@@ -198,14 +175,94 @@ public class Antagonist : MonoBehaviour
                 {
                     chase = true;
                     patrol = false;
+                    lostPlayer = false;
+                    lostValue = 0;
+                    Debug.Log("FOUND YOU");
                 }
-                Debug.Log("FOUND YOU");
+                else
+                {
+                    if (lostValue > 1)
+                    {
+                        lostPlayer = true;
+                        //Debug.Log("LOST YOU");
+                    }
+                }
             }
+        }
+    }
+
+        void AINavigationManager()
+    {
+
+        distance = Vector3.Distance(agent.transform.position, target.transform.position);
+
+        if (distance < 2)
+            lostValue = 0;
+        else
+            lostValue += 0.05f;
+
+        if (lostPlayer && chase)
+        {
+            chase = false;
+            patrol = false;
+        }
+
+        if (!patrol)
+        {
+            agent.speed = originalSpeed * 1.5f;
         }
         else
         {
-            Debug.Log("I DID NOT FIND YOU");
+            agent.speed = originalSpeed;
         }
+
+        if (chase && !patrol && active)
+        {
+            // Debug.Log("IS CHASING");
+            StartCoroutine(chaseTarget());
+        }
+
+        else if (patrol && !chase && active)
+        {
+            StartCoroutine(patrolArea());
+        }
+
+        else if (!patrol && !chase && active)
+        {
+            StartCoroutine(chaseLastLocationTarget());
+        }
+
+        // Debug.Log("Active : " + active);
+
+        //Sets the A.I.
+        if (agent.remainingDistance > agent.stoppingDistance)
+            character.Move(agent.desiredVelocity, false, false);
+        else
+            character.Move(Vector3.zero, false, false);
+
+        //Sees the Player
+        eyesManager();
+
+    }
+
+        void AIHealthManager()
+    {
+        if (damageSystem.isHit())
+        {
+            health -= damageSystem.damageTaken();
+            chase = true;
+            patrol = false;
+            agent.SetDestination(target.transform.position);
+        }
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+  
+        void die()
+    {
+        Destroy(gameObject);
     }
 
         public void SetTarget(Transform target)
