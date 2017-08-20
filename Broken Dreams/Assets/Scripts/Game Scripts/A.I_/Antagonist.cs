@@ -19,6 +19,8 @@ public class Antagonist : MonoBehaviour
         private float lostValue;
         private bool lostPlayer = true;
 
+        public GameObject AntagonistDummy;
+
         public Animator animator;
         public WaypointGroup waypoints;
         public float destinationResetTime = 1.0f;
@@ -177,7 +179,7 @@ public class Antagonist : MonoBehaviour
                     patrol = false;
                     lostPlayer = false;
                     lostValue = 0;
-                    Debug.Log("FOUND YOU");
+                    //Debug.Log("FOUND YOU");
                 }
                 else
                 {
@@ -253,6 +255,7 @@ public class Antagonist : MonoBehaviour
             chase = true;
             patrol = false;
             agent.SetDestination(target.transform.position);
+            Debug.Log("DAMAGE HIT : " + health);
         }
         if (health <= 0)
         {
@@ -262,7 +265,20 @@ public class Antagonist : MonoBehaviour
   
         void die()
     {
-        Destroy(gameObject);
+        if (GetComponent<CharacterController>() != null)
+        GetComponent<CharacterController>().enabled = false;
+        if (GetComponent<NavMeshAgent>() != null)
+            GetComponent<NavMeshAgent>().enabled = false;
+        if (GetComponent<ThirdPersonCharacter>() != null)
+            GetComponent<ThirdPersonCharacter>().enabled = false;
+
+        foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>())
+            if(GetComponentsInChildren<Rigidbody>() != null)
+            rb.isKinematic = false;
+
+        animator.enabled = false;
+        transform.DetachChildren();
+        Destroy(gameObject,0.2f);
     }
 
         public void SetTarget(Transform target)

@@ -101,7 +101,7 @@ public class Handgun : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             if (hit.transform.GetComponent<DestroyableObject>() != null)
             {
