@@ -12,6 +12,9 @@ public class Selector : MonoBehaviour {
     public Image tipBase;
     public Text tipName;
     public Text tipDesc;
+    public GameObject tipButtonUse;
+    public GameObject tipButtonDiscard;
+    public ToolTipMover toolTip;
 
     public Color32 healthItemColor;
     public Color32 sanityItemColor;
@@ -22,6 +25,15 @@ public class Selector : MonoBehaviour {
     public Flashlight BlackFlashlight;
     public Handgun G17;
 
+    //Tools & Activators
+    bool hasItemSelected = false;
+
+    void Awake()
+    {
+        tipButtonDiscard.SetActive(false);
+        tipButtonUse.SetActive(false);
+        toolTip.enabled = true;
+    }
 
     void Update()
     {
@@ -69,12 +81,17 @@ public class Selector : MonoBehaviour {
 
     public void hideToolTip()
     {
+        if (!hasItemSelected)
+        {
             tipBase.enabled = false;
             tipName.enabled = false;
             tipDesc.enabled = false;
             tipName.text = "";
             tipDesc.text = "";
             selectedItem = new Item();
+            tipButtonDiscard.SetActive(false);
+            tipButtonUse.SetActive(false);
+        }
     }
 
     public void useItem()
@@ -120,10 +137,50 @@ public class Selector : MonoBehaviour {
                     itemShack.remove(selectedItem);
                     BlackFlashlight.addBatteries(1);
                     }
+
+                hideToolTip();
             }
 
-
+            //Resets Buttons
+            resetSelection();
             //End of Statement
+        }
+    }
+
+    public void discardItem()
+    {
+        if (!selectedItem.isEmpty())
+        {
+
+            itemShack.remove(selectedItem);
+            resetSelection();
+            //End of Statement
+        }
+    }
+
+    public void resetSelection()
+    {
+        if (hasItemSelected)
+        {
+            hideToolTip();
+            hasItemSelected = false;
+            toolTip.enabled = true;
+            tipButtonDiscard.SetActive(false);
+            tipButtonUse.SetActive(false);
+        }
+    }
+
+    public void selectItem()
+    {
+        if (!selectedItem.isEmpty() && selectedItem != null)
+        {
+            if(!selectedItem.getTag().Contains("Key"))
+            tipButtonDiscard.SetActive(true);
+
+            tipButtonUse.SetActive(true);
+            toolTip.enabled = false;
+            hasItemSelected = true;
+            Input.mousePosition.Set(tipButtonUse.transform.position.x, tipButtonUse.transform.position.y , tipButtonUse.transform.position.z);
         }
     }
 
