@@ -19,8 +19,6 @@ public class Antagonist : MonoBehaviour
         private float lostValue;
         private bool lostPlayer = true;
 
-        public GameObject AntagonistDummy;
-
         public Animator animator;
         public WaypointGroup waypoints;
         public float destinationResetTime = 1.0f;
@@ -191,6 +189,19 @@ public class Antagonist : MonoBehaviour
                 }
             }
         }
+        //Look at Player
+        if (eyes.GetComponent<Looker>() != null)
+        {
+            if (chase)
+            {
+                eyes.GetComponent<Looker>().enabled = true;
+            }
+            else
+            {
+                eyes.GetComponent<Looker>().enabled = false;
+            }
+        }
+
     }
 
         void AINavigationManager()
@@ -201,7 +212,7 @@ public class Antagonist : MonoBehaviour
         if (distance < 2)
             lostValue = 0;
         else
-            lostValue += 0.05f;
+            lostValue += 0.04f;
 
         if (lostPlayer && chase)
         {
