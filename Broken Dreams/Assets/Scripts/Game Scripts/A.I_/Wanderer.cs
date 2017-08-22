@@ -48,7 +48,7 @@ public class Wanderer : MonoBehaviour
 
     IEnumerator chaseTarget()
     {
-        animator.Play("Run");
+        animator.Play("Walk");
         yield return new WaitForSeconds(0.1f);
         agent.SetDestination(target.position);
         // active = true;
@@ -86,8 +86,6 @@ public class Wanderer : MonoBehaviour
 
     IEnumerator patrolArea()
     {
-
-        float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
         if (distance < 0.02f)
         {
@@ -172,10 +170,6 @@ public class Wanderer : MonoBehaviour
                     lostValue = 0;
                     Debug.Log("FOUND YOU");
 
-                if(distance < 2)
-                    {
-                        StartCoroutine(attack());
-                    }
                 }
                 else
                 {
@@ -207,7 +201,7 @@ public class Wanderer : MonoBehaviour
 
         distance = Vector3.Distance(agent.transform.position, target.transform.position);
 
-        if (distance < 2)
+        if (distance < 4)
             lostValue = 0;
         else
             lostValue += 0.05f;
@@ -230,7 +224,10 @@ public class Wanderer : MonoBehaviour
         if (chase && !patrol && active)
         {
             // Debug.Log("IS CHASING");
+            if(distance > 2)
             StartCoroutine(chaseTarget());
+            else
+                StartCoroutine(attack());
         }
 
         else if (patrol && !chase && active)
