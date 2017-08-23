@@ -27,39 +27,39 @@ public class WeaponInteraction : MonoBehaviour
 
             if (hit.transform.GetComponent<Door>() != null)
             {
-                holdAttack();
+                disableComponents();
                 animator.Play("Lower");
                 crosshair.sprite = door;
                 if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
                 {
                     hit.transform.GetComponent<Door>().toggle();
                     animator.Play("Door");
-                    releaseAttack();
+                    enableComponents();
                 }
 
             }
             else if (hit.transform.GetComponent<Toggle>() != null)
             {
-                holdAttack();
+                disableComponents();
                 animator.Play("Lower");
                 crosshair.sprite = toggle;
                 if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
                 {
                     hit.transform.GetComponent<Toggle>().toggle();
                     animator.Play("Toggle");
-                    releaseAttack();
+                    enableComponents();
                 }
             }
             else if (hit.transform.GetComponent<Button>() != null)
             {
-                holdAttack();
+                disableComponents();
                 animator.Play("Lower");
                 crosshair.sprite = toggle;
                 if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
                 {
                     hit.transform.GetComponent<Button>().activate();
                     animator.Play("Toggle");
-                    releaseAttack();
+                    enableComponents();
                 }
             }
 
@@ -67,9 +67,10 @@ public class WeaponInteraction : MonoBehaviour
             {
                 if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Lower"))
                 {
-                    releaseAttack();
+                    enableComponents();
                     animator.Play("Idle");
                 }
+                if(GetComponent<WeaponKey>() != null)
                 crosshair.sprite = originalSprite;
             }
         }
@@ -78,7 +79,7 @@ public class WeaponInteraction : MonoBehaviour
         {
             if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Lower"))
             {
-                releaseAttack();
+                enableComponents();
                 animator.Play("Idle");
 
             }
@@ -86,23 +87,27 @@ public class WeaponInteraction : MonoBehaviour
         }
     }
 
-    void holdAttack()
-    {
-        if(GetComponent<Handgun>() != null)
-        GetComponent<Handgun>().canShoot = false;
-        if (GetComponent<MeleeWeapon>() != null)
-            GetComponent<MeleeWeapon>().canAttack = false;
-        if (GetComponent<Flashlight>() != null)
-            GetComponent<Flashlight>().canSwitch = false;
-    }
-
-    void releaseAttack()
+    void disableComponents()
     {
         if (GetComponent<Handgun>() != null)
-            GetComponent<Handgun>().canShoot = true;
+        {
+            GetComponent<Handgun>().enabled = false;
+        }
         if (GetComponent<MeleeWeapon>() != null)
-            GetComponent<MeleeWeapon>().canAttack = true;
-        if (GetComponent<Flashlight>() != null)
-            GetComponent<Flashlight>().canSwitch = true;
+        {
+            GetComponent<MeleeWeapon>().enabled = false;
+        }
+    }
+
+    void enableComponents()
+    {
+        if (GetComponent<Handgun>() != null)
+        {
+            GetComponent<Handgun>().enabled = true;
+        }
+        if (GetComponent<MeleeWeapon>() != null)
+        {
+            GetComponent<MeleeWeapon>().enabled = true;
+        }
     }
 }
