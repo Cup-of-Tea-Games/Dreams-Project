@@ -74,7 +74,7 @@ public class Wanderer : MonoBehaviour
         agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
         hitBox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         hitBox.enabled = false;
