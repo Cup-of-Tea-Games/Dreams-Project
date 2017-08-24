@@ -97,6 +97,10 @@ public class WeaponInteraction : MonoBehaviour
         {
             GetComponent<MeleeWeapon>().enabled = false;
         }
+        if (GetComponent<Flashlight>() != null)
+        {
+            GetComponent<Flashlight>().enabled = false;
+        }
     }
 
     void enableComponents()
@@ -108,6 +112,10 @@ public class WeaponInteraction : MonoBehaviour
         if (GetComponent<MeleeWeapon>() != null)
         {
             GetComponent<MeleeWeapon>().enabled = true;
+        }
+        if (GetComponent<Flashlight>() != null)
+        {
+            GetComponent<Flashlight>().enabled = true;
         }
     }
 }
