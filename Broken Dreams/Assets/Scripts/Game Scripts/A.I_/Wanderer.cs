@@ -1,59 +1,72 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Wanderer : MonoBehaviour
 {
+    public NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
+    public Transform target;                                    // target to aim for
 
-    //Worst Case Scenario, the inclusion of the aypoints may require the Navigation Mesh to be rebaked.
-
+    private float distance;
     private bool chase = false;
     private bool patrol = true;
     private bool active = true;
-    private bool outOfSight = true;
     private bool isOnWaypoint = false;
     private int waypointCount = 0;
     private int currentWaypoint = 0;
-    private NavMeshAgent agent;
     private float lostValue;
+    private bool lostPlayer = true;
 
-    public Transform target;
-    public Collider AIFOV;
     public Animator animator;
-    public Transform[] waypoints;
+    public WaypointGroup waypoints;
     public float destinationResetTime = 1.0f;
     public Collider hitBox;
-    public Collider AIAttackRange;
+    private float originalSpeed;
+    private WaypointGroup originalWaypoints;
 
-    //Health
-
+    public Camera eyes;
+    public DamageSystem damageSystem;
     public float health;
-    public DamagePoint head;
-    public DamagePoint ribs;
 
 
-    void Awake()
+    private void Start()
     {
+        agent = GetComponentInChildren<NavMeshAgent>();
+
         agent = GetComponent<NavMeshAgent>();
-        waypointCount = waypoints.Length;
+        waypointCount = waypoints.getLength();
         changeWaypoint();
+        originalSpeed = agent.speed;
+        originalWaypoints = waypoints;
     }
 
-    void Update()
+    private void Update()
     {
-        AINavigator();
+        AINavigationManager();
         AIHealthManager();
     }
-
-    //IENumerators
 
     IEnumerator chaseTarget()
     {
         animator.Play("Walk");
         yield return new WaitForSeconds(0.1f);
         agent.SetDestination(target.position);
-       // active = true;
+        // active = true;
         StopCoroutine(chaseTarget());
+      // active = true;
+        StopCoroutine(chaseTarget());
+    }
+
+    IEnumerator chaseLastLocationTarget()
+    {
+        if (agent.transform.position == agent.destination)
+        {
+            yield return new WaitForSeconds(2f);
+            patrol = true;
+        }
+        yield return new WaitForSeconds(0.1f);
+        // active = true;
+        StopCoroutine(chaseLastLocationTarget());
     }
 
     IEnumerator attack()
@@ -61,28 +74,33 @@ public class Wanderer : MonoBehaviour
         agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
         hitBox.enabled = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.1f);
         hitBox.enabled = false;
         agent.Resume();
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(1f);
         active = true;
         StopCoroutine(attack());
     }
 
     IEnumerator patrolArea()
     {
-        //animator.CrossFade("Walk");
-        yield return new WaitForSeconds(2f);
-        agent.Stop();
-     //   Debug.Log("Patrol Stopped");
-        //animator.CrossFade("Idle");
-        int newWaypoint = Random.RandomRange(0, waypointCount);
-        agent.SetDestination(waypoints[newWaypoint].position);
-        agent.Resume();
-        yield return new WaitForSeconds(2f);
-        active = true;
+
+        if (distance < 0.02f)
+        {
+            active = false;
+            agent.Stop();
+            int newWaypoint = Random.RandomRange(0, waypointCount);
+            agent.SetDestination(waypoints.waypoints[newWaypoint].position);
+            yield return new WaitForSeconds(2f);
+            agent.Resume();
+            animator.CrossFade("Walk", 0.3f);
+            yield return new WaitForSeconds(4f);
+            active = true;
+
+        }
+
         //Debug.Log("Patrol Continued");
         StopCoroutine(patrolArea());
     }
@@ -91,7 +109,7 @@ public class Wanderer : MonoBehaviour
     {
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
-       if (distance < 1f)
+        if (distance < 1f)
         {
             if (!chase)
             {
@@ -110,7 +128,7 @@ public class Wanderer : MonoBehaviour
         }
         else
         {
-           StartCoroutine(resetPath());
+            StartCoroutine(resetPath());
         }
 
 
@@ -120,118 +138,126 @@ public class Wanderer : MonoBehaviour
 
     IEnumerator resetPath()
     {
-            active = false;
-            agent.Stop();
-            changeWaypoint();
-            yield return new WaitForSeconds(6f);
-            agent.Resume();
-            active = true;
-            StopCoroutine(resetPath());
+        active = false;
+        agent.Stop();
+        changeWaypoint();
+        yield return new WaitForSeconds(3f);
+        agent.Resume();
+        active = true;
+        StopCoroutine(resetPath());
     }
-
-    //Waypoints & Collisions
 
     void changeWaypoint()
     {
         int newWaypoint = Random.RandomRange(0, waypointCount);
-        agent.SetDestination(waypoints[newWaypoint].position);
+        agent.SetDestination(waypoints.waypoints[newWaypoint].position);
         currentWaypoint = newWaypoint;
     }
 
-    void OnTriggerEnter(Collider col)
+    void eyesManager()
     {
-        if (col.gameObject.tag == "Player")
+        RaycastHit hit;
+        Vector3 screenPoint = eyes.WorldToViewportPoint(target.position);
+        if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1)
+        {
+            if (Physics.Linecast(eyes.transform.position, target.GetComponentInChildren<Renderer>().bounds.center, out hit))
+            {
+                if (hit.transform.tag == "Player")
+                {
+                    chase = true;
+                    patrol = false;
+                    lostPlayer = false;
+                    lostValue = 0;
+                    Debug.Log("FOUND YOU");
+
+                }
+                else
+                {
+                    if (lostValue > 1)
+                    {
+                        lostPlayer = true;
+                        Debug.Log("LOST YOU");
+                    }
+                }
+            }
+        }
+
+        //Look at Player
+        if(eyes.GetComponent<Looker>() != null)
         {
             if (chase)
             {
-                outOfSight = false;
-                lostValue = 0;
+                eyes.GetComponent<Looker>().enabled = true;
             }
-            chase = true;
-            patrol = false;
-            //  tappedWaitForSecondsOrTap(); 
-            //Debug.Log("FOUND YOU");
-
-            if (chase && !AIFOV.enabled)
+            else
             {
-                StartCoroutine(attack());
+                eyes.GetComponent<Looker>().enabled = false;
             }
         }
     }
 
-    void OnTriggerExit(Collider col)
+    void AINavigationManager()
     {
-        if (col.gameObject.tag == "Player")
-        {
-            if (chase)
-            {
-                outOfSight = true;
-            }
-           // StartCoroutine(patrolRoom());
-        }
-    }
 
-    //Subroutines
+        distance = Vector3.Distance(agent.transform.position, target.transform.position);
 
-    void AINavigator()
-    {
-        //Debug.Log("IS on Waypoint: " + agent.destination);
-        float distance = Vector3.Distance(agent.transform.position, target.transform.position);
-        //      if(chase)
-        // Debug.Log(lostValue);
-        if (distance < 15)
+        if (distance < 4)
             lostValue = 0;
         else
-            lostValue += 0.01f;
+            lostValue += 0.05f;
 
-        if (lostValue > 7 && chase)
+        if (lostPlayer && chase)
         {
             chase = false;
-            //   waypointCount += 1;
-            //  waypoints[waypointCount].position = agent.destination;
-            patrol = true;
+            patrol = false;
         }
 
-        if (chase)
+        if (!patrol)
         {
-            agent.speed = 1.5f;
-            AIFOV.enabled = false;
-            AIAttackRange.enabled = true;
+            agent.speed = originalSpeed * 1f;
         }
         else
         {
-            agent.speed = 1.5f;
-            AIFOV.enabled = true;
-            AIAttackRange.enabled = false;
+            agent.speed = originalSpeed;
         }
 
-        if (chase && !patrol && active && lostValue < 7)
+        if (chase && !patrol && active)
         {
             // Debug.Log("IS CHASING");
+            if(distance > 2)
             StartCoroutine(chaseTarget());
+            else
+                StartCoroutine(attack());
         }
 
         else if (patrol && !chase && active)
         {
-            //Debug.Log("IS PATROLING");
             StartCoroutine(patrolRoom());
         }
+
+        else if (!patrol && !chase && active)
+        {
+            StartCoroutine(chaseLastLocationTarget());
+        }
+
+        // Debug.Log("Active : " + active);
+
+        //Sees the Player
+        eyesManager();
+
     }
 
     void AIHealthManager()
     {
-        if (head.isHit())
+        if (damageSystem.isHit())
         {
-            health -= head.damageTaken();
-            head.resetValues();
+            health -= damageSystem.damageTaken();
+            chase = true;
+            patrol = false;
+            agent.SetDestination(target.transform.position);
+            Debug.Log("DAMAGE HIT : " + health);
         }
-        else if (ribs.isHit())
-        {
-            health -= ribs.damageTaken();
-            ribs.resetValues();
-        }
-
-        if(health <= 0)
+        if (health <= 0)
         {
             die();
         }
@@ -239,10 +265,25 @@ public class Wanderer : MonoBehaviour
 
     void die()
     {
-        Destroy(gameObject);
+        if (GetComponent<CharacterController>() != null)
+            GetComponent<CharacterController>().enabled = false;
+        if (GetComponent<NavMeshAgent>() != null)
+            GetComponent<NavMeshAgent>().enabled = false;
+        if (GetComponent<ThirdPersonCharacter>() != null)
+            GetComponent<ThirdPersonCharacter>().enabled = false;
+
+        foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>())
+            if (GetComponentsInChildren<Rigidbody>() != null)
+                rb.isKinematic = false;
+
+        animator.enabled = false;
+        transform.DetachChildren();
+        Destroy(gameObject, 0.2f);
     }
 
-
-
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
 
 }

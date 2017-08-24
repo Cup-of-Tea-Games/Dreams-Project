@@ -19,8 +19,6 @@ public class Antagonist : MonoBehaviour
         private float lostValue;
         private bool lostPlayer = true;
 
-        public GameObject AntagonistDummy;
-
         public Animator animator;
         public WaypointGroup waypoints;
         public float destinationResetTime = 1.0f;
@@ -28,6 +26,7 @@ public class Antagonist : MonoBehaviour
     //    public Collider AIAttackRange;
         private float originalSpeed;
         private WaypointGroup originalWaypoints;
+        public Collider hitBox;
 
         public Camera eyes;
         public DamageSystem damageSystem;
@@ -79,22 +78,22 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(chaseLastLocationTarget());
     }
 
-        IEnumerator attack()
+    IEnumerator attack()
     {
-        // agent.Stop();
+        agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
         yield return new WaitForSeconds(0.1f);
-        //hitBox.enabled = true;
+        hitBox.enabled = true;
         yield return new WaitForSeconds(0.1f);
-        //hitBox.enabled = false;
-        // agent.Resume();
-        // yield return new WaitForSeconds(1f);
+        hitBox.enabled = false;
+        agent.Resume();
+        yield return new WaitForSeconds(1f);
         active = true;
         StopCoroutine(attack());
     }
 
-        IEnumerator patrolArea()
+    IEnumerator patrolArea()
     {
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
@@ -191,6 +190,19 @@ public class Antagonist : MonoBehaviour
                 }
             }
         }
+        //Look at Player
+        if (eyes.GetComponent<Looker>() != null)
+        {
+            if (chase)
+            {
+                eyes.GetComponent<Looker>().enabled = true;
+            }
+            else
+            {
+                eyes.GetComponent<Looker>().enabled = false;
+            }
+        }
+
     }
 
         void AINavigationManager()
@@ -201,7 +213,7 @@ public class Antagonist : MonoBehaviour
         if (distance < 2)
             lostValue = 0;
         else
-            lostValue += 0.05f;
+            lostValue += 0.04f;
 
         if (lostPlayer && chase)
         {
@@ -221,7 +233,10 @@ public class Antagonist : MonoBehaviour
         if (chase && !patrol && active)
         {
             // Debug.Log("IS CHASING");
-            StartCoroutine(chaseTarget());
+            if (distance > 2)
+                StartCoroutine(chaseTarget());
+            else
+                StartCoroutine(attack());
         }
 
         else if (patrol && !chase && active)
