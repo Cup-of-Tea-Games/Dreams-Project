@@ -168,7 +168,7 @@ public class Wanderer : MonoBehaviour
                     patrol = false;
                     lostPlayer = false;
                     lostValue = 0;
-                    Debug.Log("FOUND YOU");
+                    //Debug.Log("FOUND YOU");
 
                 }
                 else
@@ -176,7 +176,7 @@ public class Wanderer : MonoBehaviour
                     if (lostValue > 1)
                     {
                         lostPlayer = true;
-                        Debug.Log("LOST YOU");
+                        //Debug.Log("LOST YOU");
                     }
                 }
             }
@@ -255,7 +255,7 @@ public class Wanderer : MonoBehaviour
             chase = true;
             patrol = false;
             agent.SetDestination(target.transform.position);
-            Debug.Log("DAMAGE HIT : " + health);
+            //Debug.Log("DAMAGE HIT : " + health);
         }
         if (health <= 0)
         {

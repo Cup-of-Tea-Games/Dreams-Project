@@ -47,7 +47,7 @@ public class HeadBobber : MonoBehaviour
             cSharpConversion.x = midpoint;
         }
 
-        transform.localPosition = Vector3.Lerp(transform.localPosition, cSharpConversion, Time.deltaTime*smoothing);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, cSharpConversion, Time.unscaledDeltaTime*smoothing);
     }
 
 

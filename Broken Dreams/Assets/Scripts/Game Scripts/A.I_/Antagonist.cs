@@ -270,7 +270,7 @@ public class Antagonist : MonoBehaviour
             chase = true;
             patrol = false;
             agent.SetDestination(target.transform.position);
-            Debug.Log("DAMAGE HIT : " + health);
+            //Debug.Log("DAMAGE HIT : " + health);
         }
         if (health <= 0)
         {
