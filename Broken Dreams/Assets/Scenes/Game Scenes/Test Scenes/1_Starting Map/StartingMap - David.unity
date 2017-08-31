@@ -55,7 +55,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 4
     m_Resolution: 1
-    m_BakeResolution: 20
+    m_BakeResolution: 1
     m_TextureWidth: 512
     m_TextureHeight: 1024
     m_AO: 0
@@ -71,8 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 8
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 112000151, guid: 98f3f618dd43613418eb7d8bc8006cd7,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_RuntimeCPUUsage: 100
 --- !u!196 &4
 NavMeshSettings:
@@ -128,11 +127,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 110
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -412,11 +419,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 69
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -1045,7 +1060,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -1116,11 +1131,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 75
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -1182,11 +1205,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 66
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -1545,11 +1576,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 94
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -1688,7 +1727,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 101
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -1704,6 +1743,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1875,7 +1922,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -3587,7 +3634,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -3962,7 +4009,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -4506,7 +4553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 106
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -4522,6 +4569,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4629,6 +4684,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
   m_IsPrefabParent: 0
@@ -4636,6 +4699,69 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
   m_PrefabInternal: {fileID: 181738790}
+--- !u!1 &182631676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 182631677}
+  - 108: {fileID: 182631678}
+  m_Layer: 0
+  m_Name: Spotlight (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &182631677
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182631676}
+  m_LocalRotation: {x: -0.70584625, y: 0.042202607, z: -0.042202607, w: 0.70584625}
+  m_LocalPosition: {x: -10.719971, y: -9.175, z: 4.8779907}
+  m_LocalScale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+  m_LocalEulerAnglesHint: {x: -96.866, y: -90, z: 89.99999}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 30
+--- !u!108 &182631678
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182631676}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 8.48
+  m_SpotAngle: 136.17558
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &182805182
 Prefab:
   m_ObjectHideFlags: 0
@@ -4728,11 +4854,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 111
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -4856,7 +4990,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -5301,6 +5435,67 @@ Light:
   m_BounceIntensity: 0.74
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &214211223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 214211225}
+  - 215: {fileID: 214211224}
+  m_Layer: 0
+  m_Name: Reflection Probe (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &214211224
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214211223}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 6, y: 7.5, z: 3.8}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &214211225
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214211223}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -1.6699829, y: -2.0100021, z: -7.571991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 27
 --- !u!1 &217186289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,11 +5596,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 112
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -5514,11 +5717,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -5761,6 +5972,14 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
   m_IsPrefabParent: 0
@@ -5856,6 +6075,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -6271,7 +6498,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -6334,7 +6561,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -6710,6 +6937,69 @@ Prefab:
     - {fileID: 9500000, guid: f45045ab59b392b4b8eb00e5779ade7c, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: f45045ab59b392b4b8eb00e5779ade7c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &260658416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 260658417}
+  - 108: {fileID: 260658418}
+  m_Layer: 0
+  m_Name: Spotlight (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260658417
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260658416}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0.59002686, y: -7.87, z: 0.588}
+  m_LocalScale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 28
+--- !u!108 &260658418
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260658416}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 7.52
+  m_SpotAngle: 116.1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &263007981
 Prefab:
   m_ObjectHideFlags: 0
@@ -6878,7 +7168,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -6887,6 +7177,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -7005,11 +7303,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 133
+      value: 132
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -7064,6 +7370,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
@@ -7180,7 +7494,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 137
+      value: 136
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -7189,6 +7503,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -7685,11 +8007,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 86
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -8049,7 +8379,7 @@ Transform:
   - {fileID: 2012665591}
   - {fileID: 697197696}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
 --- !u!1 &300796025 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1e6a4a5ae5a7fc34dabfa8276a8c089c, type: 3}
@@ -8678,6 +9008,14 @@ Prefab:
       propertyPath: m_Name
       value: BasementHallFloor (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
   m_IsPrefabParent: 0
@@ -8722,11 +9060,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 84
+      value: 83
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -8862,7 +9208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -8878,6 +9224,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8962,6 +9316,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9190,6 +9552,67 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
+--- !u!1 &347728686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 347728688}
+  - 215: {fileID: 347728687}
+  m_Layer: 0
+  m_Name: Reflection Probe (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &347728687
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347728686}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 15, y: 9, z: 18.5}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &347728688
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347728686}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 9.390015, y: -6.6900024, z: -0.25198364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 26
 --- !u!1 &347865354
 GameObject:
   m_ObjectHideFlags: 0
@@ -9446,6 +9869,14 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
   m_IsPrefabParent: 0
@@ -9586,6 +10017,14 @@ Prefab:
     - target: {fileID: 400000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
@@ -9768,11 +10207,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 79
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -9877,7 +10324,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -10105,11 +10552,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 103
+      value: 102
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -10168,6 +10623,14 @@ Transform:
   - {fileID: 475914175}
   - {fileID: 402838882}
   - {fileID: 924624292}
+  - {fileID: 2068011748}
+  - {fileID: 1845429713}
+  - {fileID: 347728688}
+  - {fileID: 214211225}
+  - {fileID: 260658417}
+  - {fileID: 1323629854}
+  - {fileID: 182631677}
+  - {fileID: 1036551929}
   m_Father: {fileID: 1459185630}
   m_RootOrder: 1
 --- !u!1 &381520234
@@ -10839,7 +11302,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -10894,11 +11357,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 82
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -10944,7 +11415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -10952,6 +11423,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11528,6 +12007,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
   m_IsPrefabParent: 0
@@ -12102,6 +12589,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -12704,7 +13199,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -12764,6 +13259,14 @@ Prefab:
     - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
       propertyPath: m_Name
       value: BasementHallFloor (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
@@ -13368,6 +13871,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
@@ -14236,11 +14747,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 70
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -14589,6 +15108,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
   m_IsPrefabParent: 0
@@ -14776,11 +15303,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 132
+      value: 131
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -14842,11 +15377,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 88
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -14892,11 +15435,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 113
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -15916,6 +16467,14 @@ Prefab:
     - target: {fileID: 400000, guid: 6c7f1872dd66e2849b93fedb413b1dd4, type: 3}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6c7f1872dd66e2849b93fedb413b1dd4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6c7f1872dd66e2849b93fedb413b1dd4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c7f1872dd66e2849b93fedb413b1dd4, type: 3}
@@ -17094,11 +17653,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 122
+      value: 121
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -17650,11 +18217,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 136
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -17709,6 +18284,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -17814,6 +18397,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -17956,6 +18547,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
   m_IsPrefabParent: 0
@@ -18051,7 +18650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -18064,6 +18663,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -18109,11 +18716,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 126
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -18829,11 +19444,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 89
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -19083,6 +19706,14 @@ Prefab:
       propertyPath: m_Name
       value: BasementHallFloor (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
   m_IsPrefabParent: 0
@@ -19272,7 +19903,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_RootOrder
-      value: 64
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_Name
@@ -19281,6 +19912,14 @@ Prefab:
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
@@ -19335,6 +19974,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
@@ -19759,11 +20406,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 121
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -19809,7 +20464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_RootOrder
-      value: 63
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_Name
@@ -19822,6 +20477,14 @@ Prefab:
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
@@ -20257,7 +20920,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
       propertyPath: m_RootOrder
-      value: 65
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
       propertyPath: m_Name
@@ -20266,6 +20929,14 @@ Prefab:
     - target: {fileID: 400000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
@@ -20638,6 +21309,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
   m_IsPrefabParent: 0
@@ -20690,7 +21369,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -21468,11 +22147,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 92
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -21741,7 +22428,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 792045760}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 12.49, y: 6.1, z: 17.06}
+  m_LocalPosition: {x: 5.51, y: 7.32, z: 61.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -180, y: 90, z: -180}
   m_Children:
@@ -22030,11 +22717,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -22163,11 +22858,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 87
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -22213,7 +22916,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_Name
@@ -22226,6 +22929,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
@@ -22691,7 +23402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -22707,6 +23418,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22754,6 +23473,14 @@ Prefab:
     - target: {fileID: 400000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
@@ -22938,7 +23665,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -22954,6 +23681,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -23000,7 +23735,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -23016,6 +23751,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -23142,7 +23885,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -23957,6 +24700,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
   m_IsPrefabParent: 0
@@ -24593,6 +25344,14 @@ Prefab:
       propertyPath: m_Name
       value: BasementMidroomCeiledge (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
   m_IsPrefabParent: 0
@@ -24708,7 +25467,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -25050,7 +25809,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_RootOrder
-      value: 41
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_Name
@@ -25059,6 +25818,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
@@ -25198,11 +25965,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 107
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -25450,6 +26225,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25931,6 +26714,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
@@ -26455,6 +27246,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
   m_IsPrefabParent: 0
@@ -26500,6 +27299,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -27286,7 +28093,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -27357,11 +28164,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 81
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -28051,6 +28866,69 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+--- !u!1 &1036551928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1036551929}
+  - 108: {fileID: 1036551930}
+  m_Layer: 0
+  m_Name: Spotlight (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036551929
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036551928}
+  m_LocalRotation: {x: -0.70584625, y: 0.042202607, z: -0.042202607, w: 0.70584625}
+  m_LocalPosition: {x: -10.719971, y: -9.175, z: -2.2420044}
+  m_LocalScale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+  m_LocalEulerAnglesHint: {x: -96.866, y: -90, z: 89.99999}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 31
+--- !u!108 &1036551930
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1036551928}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 8.48
+  m_SpotAngle: 136.17558
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1044121028
 GameObject:
   m_ObjectHideFlags: 0
@@ -28226,11 +29104,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 119
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -28276,11 +29162,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 128
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -28484,7 +29378,7 @@ Transform:
   - {fileID: 769014288}
   - {fileID: 909713925}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &1054346333
 GameObject:
   m_ObjectHideFlags: 0
@@ -28837,7 +29731,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 97
+      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -28850,6 +29744,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -28895,11 +29797,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 104
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -29787,11 +30697,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 71
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -29853,6 +30771,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -30021,7 +30947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
       propertyPath: m_RootOrder
-      value: 95
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
       propertyPath: m_Name
@@ -30030,6 +30956,14 @@ Prefab:
     - target: {fileID: 400000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a13bd5e25297004b91c33ba80c1476e, type: 3}
@@ -30075,11 +31009,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 129
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -30218,7 +31160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 60
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -30227,6 +31169,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -30890,11 +31840,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 108
+      value: 107
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -31046,11 +32004,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -31096,7 +32062,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_RootOrder
-      value: 62
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_Name
@@ -31105,6 +32071,14 @@ Prefab:
     - target: {fileID: 400000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 425a11e83731b83498e81bc00dfe2be9, type: 3}
@@ -31434,9 +32408,9 @@ Transform:
   - {fileID: 1981509494}
   - {fileID: 1585466459}
   - {fileID: 641761733}
-  - {fileID: 2046611336}
   - {fileID: 268321819}
   - {fileID: 1789583548}
+  - {fileID: 2046611336}
   - {fileID: 181738791}
   - {fileID: 947191100}
   - {fileID: 1391913213}
@@ -31860,7 +32834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_Name
@@ -31868,6 +32842,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
       propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1b4eecf1462bcc5479e2d7455e44b252, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -32136,7 +33118,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
       propertyPath: m_Name
@@ -32145,6 +33127,14 @@ Prefab:
     - target: {fileID: 400000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
@@ -32925,11 +33915,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -33034,11 +34032,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 80
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -34107,6 +35113,69 @@ Light:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7760a6691a7aa864889548f8148363f4, type: 3}
   m_PrefabInternal: {fileID: 1400285030}
+--- !u!1 &1323629853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1323629854}
+  - 108: {fileID: 1323629855}
+  m_Layer: 0
+  m_Name: Spotlight (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1323629854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323629853}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 9.91, y: -7.8700027, z: 0.026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 29
+--- !u!108 &1323629855
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1323629853}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 7.52
+  m_SpotAngle: 116.1
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1001 &1336689364
 Prefab:
   m_ObjectHideFlags: 0
@@ -34145,6 +35214,14 @@ Prefab:
     - target: {fileID: 400000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
@@ -34345,6 +35422,14 @@ Prefab:
     - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
       propertyPath: m_Name
       value: BasementHallFloor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
@@ -34654,6 +35739,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6f42fca80575dfa4a89f628c401aa11d, type: 3}
   m_IsPrefabParent: 0
@@ -34698,11 +35791,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 78
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -35068,7 +36169,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -35123,11 +36224,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 116
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -35173,7 +36282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 61
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -35182,6 +36291,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -36383,6 +37500,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
   m_IsPrefabParent: 0
@@ -36427,7 +37552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -36443,6 +37568,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37068,7 +38201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 59
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -37077,6 +38210,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -37690,11 +38831,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 127
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -37868,11 +39017,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 77
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -38098,11 +39255,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -38367,7 +39532,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -38975,7 +40140,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -39316,6 +40481,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
   m_IsPrefabParent: 0
@@ -39396,11 +40569,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 131
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -39446,11 +40627,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 83
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -39797,6 +40986,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dbaa9582fe224fd4d82a216a7b8d1926, type: 3}
   m_IsPrefabParent: 0
@@ -39849,7 +41046,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -39983,7 +41180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 96
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -39996,6 +41193,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -40041,11 +41246,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 123
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -40528,11 +41741,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 93
+      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -41016,11 +42237,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 76
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -41114,11 +42343,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 135
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -41323,11 +42560,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 115
+      value: 114
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -41739,7 +42984,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -43782,7 +45027,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -45044,11 +46289,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 109
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -45126,7 +46379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -45139,6 +46392,14 @@ Prefab:
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
@@ -45494,11 +46755,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 117
+      value: 116
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -45851,7 +47120,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -46136,7 +47405,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -46192,6 +47461,14 @@ Prefab:
     - target: {fileID: 400000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c249d13ec5d9ba458c87a782670bf62, type: 3}
@@ -46388,6 +47665,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
   m_IsPrefabParent: 0
@@ -46578,11 +47863,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 68
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -46797,7 +48090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -46810,6 +48103,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -46905,7 +48206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 138
+      value: 137
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -46914,6 +48215,14 @@ Prefab:
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -47323,6 +48632,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e80bcecfbea321749b8587c5e15d0afb, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -48114,11 +49431,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 105
+      value: 104
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -48481,6 +49806,67 @@ MeshCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ec3778a90969f13438adc1e747870366, type: 3}
   m_PrefabInternal: {fileID: 1843388540}
+--- !u!1 &1845429711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1845429713}
+  - 215: {fileID: 1845429712}
+  m_Layer: 0
+  m_Name: Reflection Probe (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &1845429712
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1845429711}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 15, y: 9, z: 18.5}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &1845429713
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1845429711}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -1.2199707, y: -6.6900024, z: -0.25198364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 25
 --- !u!1001 &1846868028
 Prefab:
   m_ObjectHideFlags: 0
@@ -48518,11 +49904,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 67
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -48822,11 +50216,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 120
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -49162,6 +50564,14 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37559b1f235fcf64a890c814a09e0623, type: 3}
   m_IsPrefabParent: 0
@@ -49477,7 +50887,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010197450644, guid: 9a9e58657199a5947aab7ae5c3e281b4, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a9e58657199a5947aab7ae5c3e281b4, type: 2}
@@ -49891,11 +51301,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 74
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -50099,6 +51517,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -50614,11 +52040,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 90
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -50682,6 +52116,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 694d3cf979dcf1f4b8561ebffea7db78, type: 3}
   m_IsPrefabParent: 0
@@ -50726,11 +52168,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 114
+      value: 113
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -50918,7 +52368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_RootOrder
-      value: 98
+      value: 97
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_Name
@@ -50927,6 +52377,14 @@ Prefab:
     - target: {fileID: 400000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_LocalScale.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
@@ -51993,11 +53451,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 134
+      value: 133
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -52185,11 +53651,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 85
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -52243,7 +53717,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -52676,6 +54150,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9326b4a420939429cb541cc8359a41, type: 3}
   m_IsPrefabParent: 0
@@ -52720,11 +54202,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 124
+      value: 123
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -52829,11 +54319,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 102
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -52879,7 +54377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_Name
@@ -52888,6 +54386,14 @@ Prefab:
     - target: {fileID: 400000, guid: b0acc3e14fada554487572551c82f889, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0acc3e14fada554487572551c82f889, type: 3}
@@ -52933,11 +54439,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 99
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
       value: BasementHallWall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b81767105447e2c498acb45849164b79, type: 3}
@@ -53042,11 +54556,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 118
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -53463,11 +54985,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 130
+      value: 129
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -53529,7 +55059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_RootOrder
-      value: 136
+      value: 138
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_Name
@@ -53538,6 +55068,14 @@ Prefab:
     - target: {fileID: 400000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d65112aefeba9f47ba76b5f542b80a7, type: 3}
@@ -53599,7 +55137,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_Name
@@ -53615,6 +55153,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b81767105447e2c498acb45849164b79, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b81767105447e2c498acb45849164b79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -53975,6 +55521,67 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fcc9075dd95be4f49bab4875f2707e74, type: 3}
   m_PrefabInternal: {fileID: 2065585220}
+--- !u!1 &2068011746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2068011748}
+  - 215: {fileID: 2068011747}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &2068011747
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068011746}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 15, y: 9, z: 18.5}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &2068011748
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068011746}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -8.689941, y: -6.6900024, z: -0.25198364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 381413820}
+  m_RootOrder: 24
 --- !u!1 &2068892522
 GameObject:
   m_ObjectHideFlags: 0
@@ -54199,7 +55806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -54208,6 +55815,14 @@ Prefab:
     - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
       propertyPath: m_Name
       value: BasementTallWallC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb1cf32fdb2e452459aaec1c3f344ae9, type: 3}
@@ -55053,11 +56668,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_RootOrder
-      value: 125
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
       propertyPath: m_Name
       value: BasementCeilHall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -55104,6 +56727,14 @@ Prefab:
     - target: {fileID: 400000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a541d743b30ee247a14f0bda68837cf, type: 3}
@@ -56244,7 +57875,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ShadowRadius: 0
@@ -56299,11 +57930,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_RootOrder
-      value: 91
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
       propertyPath: m_Name
       value: BasementFloor (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
