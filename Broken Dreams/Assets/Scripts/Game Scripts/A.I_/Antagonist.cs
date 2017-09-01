@@ -19,6 +19,10 @@ public class Antagonist : MonoBehaviour
         private float lostValue;
         private bool lostPlayer = true;
 
+        private bool isInRoom = false;
+        WaypointGroup roomWaypoints;
+        private int roomWaypointDestinationCount = 0;
+
         public Animator animator;
         public WaypointGroup waypoints;
         public float destinationResetTime = 1.0f;
@@ -57,6 +61,9 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator chaseTarget()
     {
+        agent.speed = originalSpeed * 1.5f;
+
+
         yield return new WaitForSeconds(0.1f);
         if (distance > 2)
             agent.SetDestination(target.position);
@@ -68,6 +75,10 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator chaseLastLocationTarget()
     {
+
+        agent.speed = originalSpeed * 1.5f;
+
+
         if (agent.transform.position == agent.destination)
         {
             yield return new WaitForSeconds(2f);
@@ -78,7 +89,7 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(chaseLastLocationTarget());
     }
 
-    IEnumerator attack()
+        IEnumerator attack()
     {
         agent.Stop();
         active = false;
@@ -93,8 +104,10 @@ public class Antagonist : MonoBehaviour
         StopCoroutine(attack());
     }
 
-    IEnumerator patrolArea()
+        IEnumerator patrolArea()
     {
+
+        agent.speed = originalSpeed;
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
@@ -117,32 +130,28 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator patrolRoom()
     {
+        agent.speed = originalSpeed;
+
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
-        if (distance < 1f)
+        if (distance < 0.02f)
         {
-            if (!chase)
-            {
-                active = false;
-                //animator.CrossFade("Idle", 1f);
-                yield return new WaitForSeconds(2f);
-                active = true;
-            }
-        }
-        if (agent.transform.position != agent.destination)
-        {
-            if (!chase && active)
-            {
-                agent.Resume();
-            }
-        }
-        else
-        {
-            StartCoroutine(resetPath());
+            active = false;
+            agent.Stop();
+            agent.SetDestination(roomWaypoints.waypoints[roomWaypointDestinationCount].position);
+            yield return new WaitForSeconds(2f);
+            agent.Resume();
+            yield return new WaitForSeconds(4f);
+            active = true;
+            roomWaypointDestinationCount++;
         }
 
-
-
+        if(roomWaypointDestinationCount >= roomWaypoints.waypoints.Length)
+        {
+            roomWaypointDestinationCount = 0;
+            isInRoom = false;
+            patrol = true;
+        }
         StopCoroutine(patrolRoom());
     }
 
@@ -207,9 +216,8 @@ public class Antagonist : MonoBehaviour
 
         void AINavigationManager()
     {
-
         distance = Vector3.Distance(agent.transform.position, target.transform.position);
-
+        Debug.Log(roomWaypointDestinationCount);
         if (distance < 2)
             lostValue = 0;
         else
@@ -221,19 +229,10 @@ public class Antagonist : MonoBehaviour
             patrol = false;
         }
 
-        if (!patrol)
-        {
-            agent.speed = originalSpeed * 1.5f;
-        }
-        else
-        {
-            agent.speed = originalSpeed;
-        }
-
         if (chase && !patrol && active)
         {
             // Debug.Log("IS CHASING");
-            if (distance > 2)
+            if (distance > 3f)
                 StartCoroutine(chaseTarget());
             else
                 StartCoroutine(attack());
@@ -244,9 +243,14 @@ public class Antagonist : MonoBehaviour
             StartCoroutine(patrolArea());
         }
 
-        else if (!patrol && !chase && active)
+        else if (!patrol && !chase && active && !isInRoom)
         {
             StartCoroutine(chaseLastLocationTarget());
+        }
+
+        else if (!patrol && !chase && active && isInRoom)
+        {
+            StartCoroutine(patrolRoom());
         }
 
         // Debug.Log("Active : " + active);
@@ -300,5 +304,23 @@ public class Antagonist : MonoBehaviour
         {
             this.target = target;
         }
-    
+
+        private void OnTriggerEnter(Collider other)
+        {
+        if (other.GetComponent<Room>() != null)
+        {
+            isInRoom = true;
+            roomWaypoints = other.GetComponent<Room>().waypoints;
+        }
+        }
+
+        private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<Room>() != null)
+        {
+            isInRoom = false;
+            roomWaypoints = null;
+        }
     }
+
+}
