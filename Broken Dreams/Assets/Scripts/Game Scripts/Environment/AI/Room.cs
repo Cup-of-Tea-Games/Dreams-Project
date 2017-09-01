@@ -3,6 +3,6 @@ using System.Collections;
 
 public class Room : MonoBehaviour {
 
-    WaypointGroup waypoints;
-    Collider area;
+    public WaypointGroup waypoints;
+    public Collider area;
 }
