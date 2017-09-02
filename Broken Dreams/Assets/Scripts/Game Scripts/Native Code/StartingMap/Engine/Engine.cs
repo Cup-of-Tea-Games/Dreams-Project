@@ -17,12 +17,19 @@ public class Engine : MonoBehaviour {
     public Valve heatValve;         
     public KeyReciever CoolantReciever;
 
+    //Visuals 
+    public Material[] floorLights;
+    
+
+
     //Tools
 
     bool[] key = { true , true , true };
 
     void Awake()
     {
+        for(int i = 0; i < floorLights.Length;i++)
+        floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         pointlight.enabled = false;
         spinner.Play("Idle");
     }
@@ -68,6 +75,8 @@ public class Engine : MonoBehaviour {
             Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
             key[1] = false;
             pointlight.enabled = true;
+            for (int i = 0; i < floorLights.Length; i++)
+                floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 1));
             tips.Show("Engine is online");
             online = true;
             for(int i = 0; i < hyperDoorButtons.Length; i++)
@@ -86,7 +95,11 @@ public class Engine : MonoBehaviour {
     IEnumerator flickerLight(float x)
     {
         pointlight.enabled = false;
+        for (int i = 0; i < floorLights.Length; i++)
+            floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         yield return new WaitForSeconds(x);
+        for (int i = 0; i < floorLights.Length; i++)
+            floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 1));
         pointlight.enabled = true;
         yield return new WaitForSeconds(x);
         StopCoroutine(flickerLight(x));
