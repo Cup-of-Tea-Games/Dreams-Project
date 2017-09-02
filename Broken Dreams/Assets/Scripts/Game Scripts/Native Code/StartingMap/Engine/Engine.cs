@@ -70,13 +70,11 @@ public class Engine : MonoBehaviour {
             Debug.Log("TURN THE WHEEEL");
             StartCoroutine(flickerLight(0.5f));
         }
-        else if (engineActive && heatActive && waterActive && CoolantReciever.isRecieved() && key[1])
+        else if (isAssembled())
         {
-            Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
+            //Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
             key[1] = false;
             pointlight.enabled = true;
-            for (int i = 0; i < floorLights.Length; i++)
-                floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 1));
             tips.Show("Engine is online");
             online = true;
             for(int i = 0; i < hyperDoorButtons.Length; i++)
@@ -88,6 +86,8 @@ public class Engine : MonoBehaviour {
             {
                 key[2] = false;
                 spinner.Play("Fast");
+                for (int i = 0; i < floorLights.Length; i++)
+                    floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 10));
             }
         }
     }
@@ -99,7 +99,7 @@ public class Engine : MonoBehaviour {
             floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         yield return new WaitForSeconds(x);
         for (int i = 0; i < floorLights.Length; i++)
-            floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 1));
+            floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 5));
         pointlight.enabled = true;
         yield return new WaitForSeconds(x);
         StopCoroutine(flickerLight(x));
@@ -108,6 +108,11 @@ public class Engine : MonoBehaviour {
     public bool isOnline()
     {
         return online;
+    }
+
+    public bool isAssembled()
+    {
+        return (engineActive && heatActive && waterActive && CoolantReciever.isRecieved() && key[1]) || (key[1] && GameCheater.isGeneratorOnline());
     }
 
 }
