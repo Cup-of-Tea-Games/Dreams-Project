@@ -284,12 +284,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (isCrouching)
             {
                 //Adjust Camera Center
-                if (GetComponent<CharacterController>().center.y < 1)
+                if (GetComponent<CharacterController>().center.y < 0.5f)
                     GetComponent<CharacterController>().center += new Vector3(0, 0.1f, 0);
                  else if (GetComponent<CharacterController>().center.y > 2)
                     GetComponent<CharacterController>().center = new Vector3(0, 1.0f, 0);
                 //Adjust Height
-                GetComponent<CharacterController>().height = 1f;
+                GetComponent<CharacterController>().height = 1.5f;
                 m_WalkSpeed = 3;
             }
             else
@@ -300,11 +300,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 else if (GetComponent<CharacterController>().center.y < 0)
                     GetComponent<CharacterController>().center = new Vector3(0, 0f, 0);
                 //Adjust Height
-                if (GetComponent<CharacterController>().height < 3)
+                if (GetComponent<CharacterController>().height < 3.5f)
                     GetComponent<CharacterController>().height += 0.2f;
 
-                if (GetComponent<CharacterController>().height > 3)
-                    GetComponent<CharacterController>().height = 3f;
+                if (GetComponent<CharacterController>().height > 3.5f)
+                    GetComponent<CharacterController>().height = 3.5f;
 
                 if (!WaterInteraction.isOnWater)
                 {

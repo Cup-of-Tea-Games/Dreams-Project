@@ -17,12 +17,19 @@ public class Engine : MonoBehaviour {
     public Valve heatValve;         
     public KeyReciever CoolantReciever;
 
+    //Visuals 
+    public Material[] floorLights;
+    
+
+
     //Tools
 
     bool[] key = { true , true , true };
 
     void Awake()
     {
+        for(int i = 0; i < floorLights.Length;i++)
+        floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         pointlight.enabled = false;
         spinner.Play("Idle");
     }
@@ -63,9 +70,9 @@ public class Engine : MonoBehaviour {
             Debug.Log("TURN THE WHEEEL");
             StartCoroutine(flickerLight(0.5f));
         }
-        else if (engineActive && heatActive && waterActive && CoolantReciever.isRecieved() && key[1])
+        else if (isAssembled())
         {
-            Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
+            //Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
             key[1] = false;
             pointlight.enabled = true;
             tips.Show("Engine is online");
@@ -79,6 +86,8 @@ public class Engine : MonoBehaviour {
             {
                 key[2] = false;
                 spinner.Play("Fast");
+                for (int i = 0; i < floorLights.Length; i++)
+                    floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 10));
             }
         }
     }
@@ -86,7 +95,11 @@ public class Engine : MonoBehaviour {
     IEnumerator flickerLight(float x)
     {
         pointlight.enabled = false;
+        for (int i = 0; i < floorLights.Length; i++)
+            floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         yield return new WaitForSeconds(x);
+        for (int i = 0; i < floorLights.Length; i++)
+            floorLights[i].SetColor("_EmissionColor", new Color(1, 1, 1, 5));
         pointlight.enabled = true;
         yield return new WaitForSeconds(x);
         StopCoroutine(flickerLight(x));
@@ -95,6 +108,11 @@ public class Engine : MonoBehaviour {
     public bool isOnline()
     {
         return online;
+    }
+
+    public bool isAssembled()
+    {
+        return (engineActive && heatActive && waterActive && CoolantReciever.isRecieved() && key[1]) || (key[1] && GameCheater.isGeneratorOnline());
     }
 
 }
