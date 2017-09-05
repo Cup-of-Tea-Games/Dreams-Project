@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: commented out 'float4x4 _WorldToCamera', a built-in variable
 
 Shader "Hidden/SEGIRenderSunDepth" {
@@ -39,7 +41,7 @@ SubShader
 			{
 				v2f o;
 				
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				
 				float3 pos = o.pos;
 				

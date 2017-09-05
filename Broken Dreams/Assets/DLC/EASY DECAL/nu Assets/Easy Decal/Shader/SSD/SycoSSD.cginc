@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: commented out 'float4x4 _CameraToWorld', a built-in variable
 // Upgrade NOTE: replaced '_CameraToWorld' with 'unity_CameraToWorld'
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
@@ -76,7 +78,7 @@ struct FragmentInputFSSD
 #define SETUP_BASIC_SSD(input,o) \
 	fixed ortho = unity_OrthoParams.w; \
 	float4 pp = float4(input.vertex.xyz, 1.0f); \
-	float4 p = mul (UNITY_MATRIX_MVP, pp); \
+	float4 p = UnityObjectToClipPos (pp); \
 	float4x4 mi = ortho ? inverseMat(UNITY_MATRIX_MVP) : mul(unity_WorldToObject, unity_CameraToWorld); \
 	o.position = p; \
 	o.normal = input.normal; \

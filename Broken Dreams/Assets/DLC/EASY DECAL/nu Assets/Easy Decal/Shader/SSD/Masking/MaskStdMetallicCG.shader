@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Easy Decal SSD masking shader using Unity's standard pbs workflow. v1.0
@@ -157,7 +159,7 @@ float4 _MainTex_ST;
 v2f_surf vert_surf (appdata_full v) {
   v2f_surf o;
   UNITY_INITIALIZE_OUTPUT(v2f_surf,o);
-  o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+  o.pos = UnityObjectToClipPos (v.vertex);
   o.pack0.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
   float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
   fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);
@@ -391,7 +393,7 @@ float4 _MainTex_ST;
 v2f_surf vert_surf (appdata_full v) {
   v2f_surf o;
   UNITY_INITIALIZE_OUTPUT(v2f_surf,o);
-  o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+  o.pos = UnityObjectToClipPos (v.vertex);
   o.pack0.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
   float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
   fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);
@@ -582,7 +584,7 @@ float4 _MainTex_ST;
 v2f_surf vert_surf (appdata_full v) {
   v2f_surf o;
   UNITY_INITIALIZE_OUTPUT(v2f_surf,o);
-  o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+  o.pos = UnityObjectToClipPos (v.vertex);
   o.pack0.xy = TRANSFORM_TEX(v.texcoord, _MainTex);
   float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
   fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);

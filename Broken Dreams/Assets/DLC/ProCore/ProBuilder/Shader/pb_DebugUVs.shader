@@ -1,4 +1,6 @@
-﻿Shader "Unlit/pb_DebugUVs"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/pb_DebugUVs"
 {
 	Properties
 	{
@@ -45,7 +47,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				uint c = ((uint)_UVChannel) % 4;
 				float2 uv = c == 0 ? v.uv : (c == 1) ? v.uv1 : (c == 2) ? v.uv2 : v.uv3;

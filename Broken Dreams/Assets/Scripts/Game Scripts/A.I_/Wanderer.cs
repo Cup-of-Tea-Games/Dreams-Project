@@ -4,7 +4,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Wanderer : MonoBehaviour
 {
-    public NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
+    public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
     public Transform target;                                    // target to aim for
 
     private float distance;
@@ -31,9 +31,9 @@ public class Wanderer : MonoBehaviour
 
     private void Start()
     {
-        agent = GetComponentInChildren<NavMeshAgent>();
+        agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
 
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         waypointCount = waypoints.getLength();
         changeWaypoint();
         originalSpeed = agent.speed;
@@ -267,8 +267,8 @@ public class Wanderer : MonoBehaviour
     {
         if (GetComponent<CharacterController>() != null)
             GetComponent<CharacterController>().enabled = false;
-        if (GetComponent<NavMeshAgent>() != null)
-            GetComponent<NavMeshAgent>().enabled = false;
+        if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
+            GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         if (GetComponent<ThirdPersonCharacter>() != null)
             GetComponent<ThirdPersonCharacter>().enabled = false;
 

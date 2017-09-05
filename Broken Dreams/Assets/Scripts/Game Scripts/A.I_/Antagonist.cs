@@ -4,7 +4,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Antagonist : MonoBehaviour
     {
-        public NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
+        public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
         public Transform target;                                    // target to aim for
 
@@ -40,13 +40,13 @@ public class Antagonist : MonoBehaviour
         private void Start()
         {
             // get the components on the object we need ( should not be null due to require component so no need to check )
-            agent = GetComponentInChildren<NavMeshAgent>();
+            agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
             character = GetComponent<ThirdPersonCharacter>();
 
             agent.updateRotation = false;
             agent.updatePosition = true;
 
-            agent = GetComponent<NavMeshAgent>();
+            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
             waypointCount = waypoints.getLength();
             changeWaypoint();
             originalSpeed = agent.speed;
@@ -286,8 +286,8 @@ public class Antagonist : MonoBehaviour
     {
         if (GetComponent<CharacterController>() != null)
         GetComponent<CharacterController>().enabled = false;
-        if (GetComponent<NavMeshAgent>() != null)
-            GetComponent<NavMeshAgent>().enabled = false;
+        if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
+            GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         if (GetComponent<ThirdPersonCharacter>() != null)
             GetComponent<ThirdPersonCharacter>().enabled = false;
 

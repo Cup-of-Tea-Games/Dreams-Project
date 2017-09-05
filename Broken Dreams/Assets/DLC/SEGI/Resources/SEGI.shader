@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: commented out 'float4x4 _CameraToWorld', a built-in variable
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: commented out 'float4x4 _CameraToWorld', a built-in variable
 // Upgrade NOTE: commented out 'float4x4 _WorldToCamera', a built-in variable
 
 Shader "Hidden/SEGI" {
@@ -26,7 +28,7 @@ CGINCLUDE
 	{
 		v2f o;
 		
-		o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos (v.vertex);
 		o.uv = float4(v.texcoord.xy, 1, 1);		
 		
 		#if UNITY_UV_STARTS_AT_TOP

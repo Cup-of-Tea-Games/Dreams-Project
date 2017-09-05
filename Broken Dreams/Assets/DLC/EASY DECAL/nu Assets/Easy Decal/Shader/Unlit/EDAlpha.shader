@@ -1,4 +1,6 @@
-﻿// Easy Decal unlit alpha shader. version 1.0
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Easy Decal unlit alpha shader. version 1.0
 Shader "Easy Decal/Unlit/ED Alpha"
 {
 	Properties
@@ -46,7 +48,7 @@ Shader "Easy Decal/Unlit/ED Alpha"
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				o.color = v.color;
 

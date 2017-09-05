@@ -9,7 +9,7 @@ using UnityEngine.AI;
 
 namespace ch.sycoforge.Decal.Demo
 {
-    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
     [RequireComponent(typeof(LineRenderer))]
     public class PathAgent : MonoBehaviour
     {
@@ -37,7 +37,7 @@ namespace ch.sycoforge.Decal.Demo
         // Fields
         //------------------------------------
         private List<Vector3> path = new List<Vector3>();
-        private NavMeshAgent agent;
+        private UnityEngine.AI.NavMeshAgent agent;
         private LineRenderer lineRenderer;
         private Vector3 decalOffset = Vector3.up * 0.5f;
 
@@ -51,7 +51,7 @@ namespace ch.sycoforge.Decal.Demo
         {
             TargetAimDecal.gameObject.SetActive(false);
 
-            agent = GetComponent<NavMeshAgent>();
+            agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
             lineRenderer = GetComponent<LineRenderer>();
         }
 
@@ -91,10 +91,10 @@ namespace ch.sycoforge.Decal.Demo
 
                 this.path.Clear();
 
-                NavMeshPath path = new NavMeshPath();
-                if (NavMesh.CalculatePath(start, end, NavMesh.AllAreas, path))
+                UnityEngine.AI.NavMeshPath path = new UnityEngine.AI.NavMeshPath();
+                if (UnityEngine.AI.NavMesh.CalculatePath(start, end, UnityEngine.AI.NavMesh.AllAreas, path))
                 {
-                    if (path.status == NavMeshPathStatus.PathComplete)
+                    if (path.status == UnityEngine.AI.NavMeshPathStatus.PathComplete)
                     {
                         int length = path.corners.Length;
 

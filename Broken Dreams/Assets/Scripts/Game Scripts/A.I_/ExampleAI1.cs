@@ -14,7 +14,7 @@ public class ExampleAI : MonoBehaviour
     private bool isOnWaypoint = false;
     private int waypointCount = 0;
     private int currentWaypoint = 0;
-    private NavMeshAgent agent;
+    private UnityEngine.AI.NavMeshAgent agent;
     private float lostValue;
 
     public Transform target;
@@ -28,7 +28,7 @@ public class ExampleAI : MonoBehaviour
 
     void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         waypointCount = waypoints.Length;
         changeWaypoint();
     }

@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Easy Decal/Legacy/Alpha Edge Bleed" 
 {
 	Properties 
@@ -51,7 +53,7 @@ Shader "Easy Decal/Legacy/Alpha Edge Bleed"
 				 {
 					vertexOutput output;
  
-					output.pos =  mul(UNITY_MATRIX_MVP, input.vertex);
+					output.pos =  UnityObjectToClipPos(input.vertex);
 					output.posInObjectCoords = input.vertex; 
 					output.uv = TRANSFORM_TEX(input.uv, _MainTex);
 					output.color = input.color;

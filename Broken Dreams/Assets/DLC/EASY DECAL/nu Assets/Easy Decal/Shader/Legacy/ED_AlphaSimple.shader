@@ -1,4 +1,6 @@
-﻿Shader "Easy Decal/Legacy/Transparent Simple" 
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Easy Decal/Legacy/Transparent Simple" 
 {
 	Properties 
 	{
@@ -51,7 +53,7 @@
 				 {
 					vertexOutput output;
  
-					output.pos =  mul(UNITY_MATRIX_MVP, input.vertex);
+					output.pos =  UnityObjectToClipPos(input.vertex);
 					output.posInObjectCoords = input.vertex; 
 					output.uv = TRANSFORM_TEX(input.uv, _MainTex);//input.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw;//input.uv;
 					output.color = input.color;

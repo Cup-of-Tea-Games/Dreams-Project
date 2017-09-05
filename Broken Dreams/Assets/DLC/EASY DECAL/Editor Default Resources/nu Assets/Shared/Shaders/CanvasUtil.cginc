@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Canvas shader utils. Version 1.3
 // Copyright (c) by Sycoforge
 
@@ -35,7 +37,7 @@ float4 _SeamColor;
 v2f vert (appdata_t v)
 {
 	v2f o;
-	o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+	o.vertex = UnityObjectToClipPos(v.vertex);
 	o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
 	return o;
 }

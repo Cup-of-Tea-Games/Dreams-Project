@@ -82,7 +82,7 @@ public class Bed : MonoBehaviour {
         yield return new WaitForSeconds(4f);
         FaderGUI.FadeIn = true;
         yield return new WaitForSeconds(8f);
-        anim.Stop();
+        anim.enabled = false;
         SceneChanger.changeScene("Buildings Revival");
     }
 
