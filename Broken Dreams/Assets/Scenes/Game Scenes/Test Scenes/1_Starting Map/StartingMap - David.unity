@@ -33,12 +33,12 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 1024
+  m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -47,16 +47,16 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 1
-    m_AlbedoBoost: 1.6
+    m_IndirectOutputScale: 0
+    m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 9
     m_Resolution: 1
-    m_BakeResolution: 20
+    m_BakeResolution: 60
     m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AO: 0
@@ -66,7 +66,7 @@ LightmapSettings:
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 0
+    m_TextureCompression: 1
     m_FinalGather: 1
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 8
@@ -86,7 +86,8 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 91192166b1492964da51e24da2c3a6fb,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -392,7 +393,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -449,8 +450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc32b16e63090f40af7a9ce06bae2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health_Icon: {fileID: 1482922777}
-  Sanity_Icon: {fileID: 1079885162}
 --- !u!1 &18109193 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -579,12 +578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &37982070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,18 +803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94acf977a1631b74c97c0e8fbed008a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 42647138}
-  canAttack: 1
-  isInHitArea: 0
-  player: {fileID: 95532325}
-  damage: 5
-  range: 2
-  force: 3
-  AttackRateDelay: 0.35
-  isAnimationBased: 0
-  hitPoint: {fileID: 0}
-  impactEffect: {fileID: 1000013967985634, guid: 39bd677d91b20be428f3c346f39f053c,
-    type: 2}
 --- !u!95 &42647138
 Animator:
   serializedVersion: 3
@@ -1813,14 +1794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &83552951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,24 +2135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd70d448b18cfbc46af26466f752332c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visualizeFocus: 0
-  focalLength: 1.31
-  focalSize: 0.48
-  aperture: 0.5
-  focalTransform: {fileID: 0}
-  maxBlurSize: 2
-  highResolution: 0
-  blurType: 0
-  blurSampleCount: 2
-  nearBlur: 0
-  foregroundOverlap: 1
-  dofHdrShader: {fileID: 4800000, guid: acd613035ff3e455e8abf23fdc8c8c24, type: 3}
-  dx11BokehShader: {fileID: 4800000, guid: d8e82664aa8686642a424c88ab10164a, type: 3}
-  dx11BokehThreshold: 0.5
-  dx11SpawnHeuristic: 0.0875
-  dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
-  dx11BokehScale: 1.2
-  dx11BokehIntensity: 2.5
 --- !u!45 &95532327
 Skybox:
   m_ObjectHideFlags: 0
@@ -2258,9 +2213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478a2083ad114a07d000fbfb8d76c639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
-  blurAmount: 0.5
-  extraBlur: 1
 --- !u!169 &95532334
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
@@ -2295,145 +2247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd999d1b2cf94a45a5b0a47ce074bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0.82438016
-      outSlope: 0.82438016
-      tangentMode: 34
-    - serializedVersion: 2
-      time: 1.0083333
-      value: 0.83125
-      inSlope: 0.82438016
-      outSlope: 0.82438016
-      tangentMode: 34
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  greenChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 1.0084034
-      outSlope: 1.0084034
-      tangentMode: 34
-    - serializedVersion: 2
-      time: 0.9916666
-      value: 1
-      inSlope: 1.0084034
-      outSlope: 1.0084034
-      tangentMode: 34
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  blueChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 1.2229027
-      outSlope: 1.2229027
-      tangentMode: 34
-    - serializedVersion: 2
-      time: 0.7313542
-      value: 0.89437497
-      inSlope: 1.2229027
-      outSlope: 1.2229027
-      tangentMode: 34
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  useDepthCorrection: 0
-  zCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthRedChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthGreenChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  depthBlueChannel:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  saturation: 1.5
-  selectiveCc: 0
-  selectiveFromColor: {r: 1, g: 1, b: 1, a: 1}
-  selectiveToColor: {r: 1, g: 1, b: 1, a: 1}
-  mode: 0
-  updateTextures: 1
-  colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
-    type: 3}
-  simpleColorCorrectionCurvesShader: {fileID: 4800000, guid: 438ddd58d82c84d9eb1fdc56111702e1,
-    type: 3}
-  colorCorrectionSelectiveShader: {fileID: 4800000, guid: e515e0f94cefc4c0db54b45cba621544,
-    type: 3}
 --- !u!65 &95532336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2536,7 +2349,7 @@ MonoBehaviour:
     reflectionSettings:
       blendType: 0
       reflectionQuality: 0
-      maxDistance: 3
+      maxDistance: 10
       iterationCount: 1024
       stepSize: 3
       widthModifier: 0.01
@@ -3019,7 +2832,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -3090,18 +2903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22c9e541b66bf046b13ecc32d184c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon:
-  - {fileID: 1800717005}
-  - {fileID: 635674327}
-  - {fileID: 42647136}
-  crosshair:
-  - {fileID: 836187409}
-  - {fileID: 764799299}
-  - {fileID: 897355791}
-  HUD:
-  - {fileID: 836187409}
-  - {fileID: 764799299}
-  - {fileID: 897355791}
 --- !u!1 &121543628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,7 +3667,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -4074,8 +3875,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7248dcec035a4586d8188e6ec3d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  page1: {fileID: 1865913942}
-  page2: {fileID: 558454744}
 --- !u!1 &159025367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,14 +4063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &165278379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,12 +4913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &205617436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5409,7 +5194,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -5555,12 +5340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &230424579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5931,7 +5710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 3
 --- !u!114 &241243770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6470,25 +6248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f575be401ba204bad13b83d82bde56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemShack: {fileID: 347865356}
-  tipBase: {fileID: 1488831774}
-  tipName: {fileID: 1053161475}
-  tipDesc: {fileID: 564954008}
-  tipButtonUse: {fileID: 0}
-  tipButtonDiscard: {fileID: 0}
-  toolTip: {fileID: 0}
-  healthItemColor:
-    serializedVersion: 2
-    rgba: 9605887
-  sanityItemColor:
-    serializedVersion: 2
-    rgba: 16736377
-  lightItemColor:
-    serializedVersion: 2
-    rgba: 10878463
-  Pipe: {fileID: 0}
-  BlackFlashlight: {fileID: 0}
-  G17: {fileID: 0}
 --- !u!1 &256303074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,9 +6491,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fdf16d01217eba46ad4c4df8e7ab3ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrelEnd: {fileID: 263067291}
-  projectile: {fileID: 176860, guid: 655a734f858a4004f9015df6c277c10c, type: 2}
-  speed: 40000
+--- !u!1 &263767211
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 263767213}
+  - component: {fileID: 263767212}
+  m_Layer: 0
+  m_Name: UBER_PresetReference
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &263767212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 263767211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5249da21ddf7f4409184c7dbd8f0d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &263767213
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 263767211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &264932565
 Prefab:
   m_ObjectHideFlags: 0
@@ -7173,14 +6969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &270407569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7313,14 +7101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &275160506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8317,7 +8097,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -8358,12 +8138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &322566168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9095,12 +8869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &335008619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9337,25 +9105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae571191fa23ee46a7a230693221d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 1656696181}
-  - {fileID: 2126783079}
-  - {fileID: 2037853016}
-  - {fileID: 2121864236}
-  - {fileID: 1813913406}
-  - {fileID: 770005550}
-  - {fileID: 205617435}
-  - {fileID: 1693369191}
-  - {fileID: 602692295}
-  - {fileID: 1312683785}
-  - {fileID: 868966785}
-  - {fileID: 1816485910}
-  - {fileID: 230424578}
-  - {fileID: 2068892523}
-  - {fileID: 557833665}
-  - {fileID: 1356216779}
-  - {fileID: 388769504}
-  - {fileID: 965502779}
 --- !u!114 &347865357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9454,9 +9203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a0e9b3ec4a93e349bac1480829797b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0.1
-  maxAmount: 0.2
-  smoothAmount: 2
 --- !u!23 &351114429
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9960,7 +9706,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -10457,7 +10203,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -10498,12 +10244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &388769505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11052,7 +10792,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -11324,12 +11064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &416971065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11886,7 +11620,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -12150,12 +11884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &437020574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12379,7 +12107,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -12536,7 +12264,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -12982,10 +12710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5540db8f23a4d554aa7bcdc57482adc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1130426535}
-  anim: {fileID: 468042559}
-  gunShotSound: {fileID: 1524934088}
-  ammoNumber: {fileID: 891491784}
 --- !u!95 &468042559
 Animator:
   serializedVersion: 3
@@ -13388,7 +13112,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -13773,12 +13497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &506973467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14092,7 +13810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 1
 --- !u!114 &511416070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14162,12 +13879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &514289871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14368,12 +14079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &515304125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14601,7 +14306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9db61b2236efc48b6d40a199ff8d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 1531885580}
 --- !u!1 &515596771 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 8e0656378f5d0b84cb78a7dc0ed8743b, type: 3}
@@ -14723,7 +14427,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -15732,12 +15436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 21300000, guid: 3b86339fff4030349ae5cb14e39e8a83, type: 3}
-  itemName: Hands Free
-  itemDesc: Hands Free
-  itemTag: Hand
-  initiateOnAwake: 0
 --- !u!114 &546455110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15973,12 +15671,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &557833666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16225,8 +15917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
 --- !u!114 &558454745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16320,7 +16010,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -17077,7 +16767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 1
 --- !u!114 &583035133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17145,8 +16834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e5716b3797fdf41ae5e25df582231c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 584635877}
-  TipCooldownTime: 10
 --- !u!114 &584635877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17506,12 +17193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &602692296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18038,14 +17719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &625235422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18182,25 +17855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f575be401ba204bad13b83d82bde56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemShack: {fileID: 1167814750}
-  tipBase: {fileID: 484933130}
-  tipName: {fileID: 2030487608}
-  tipDesc: {fileID: 866204866}
-  tipButtonUse: {fileID: 0}
-  tipButtonDiscard: {fileID: 0}
-  toolTip: {fileID: 0}
-  healthItemColor:
-    serializedVersion: 2
-    rgba: 9605887
-  sanityItemColor:
-    serializedVersion: 2
-    rgba: 16736377
-  lightItemColor:
-    serializedVersion: 2
-    rgba: 10878463
-  Pipe: {fileID: 0}
-  BlackFlashlight: {fileID: 0}
-  G17: {fileID: 0}
 --- !u!1 &637422320
 GameObject:
   m_ObjectHideFlags: 0
@@ -18469,7 +18123,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -19559,12 +19213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &688435684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19998,7 +19646,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -20184,6 +19832,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c94886715ca98d440b82b100e1d2d136, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b05dc48193106c4394d79632c73b30a, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: c94886715ca98d440b82b100e1d2d136, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: c94886715ca98d440b82b100e1d2d136, type: 3}
@@ -21571,7 +21223,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -21937,7 +21589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540b2487773199149bad2bbdd32ba4f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  follower: {fileID: 764831725}
 --- !u!114 &764831725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21950,11 +21601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76806479d916a64aa03f8e3eba7912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1130426536}
-  distance: 10
-  height: 5
-  rotationDamping: 0
-  heightDamping: 0
 --- !u!20 &764831726
 Camera:
   m_ObjectHideFlags: 0
@@ -22079,12 +21725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &770005551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22755,12 +22395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae571191fa23ee46a7a230693221d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 546455109}
-  - {fileID: 1643169008}
-  - {fileID: 688435683}
-  - {fileID: 416971064}
-  - {fileID: 1665795536}
 --- !u!114 &794482407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22773,18 +22407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8f09d85db8d1744b5b770dff71414d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSelector: {fileID: 1916519492}
-  weaponShack: {fileID: 794482406}
-  transformBall: {fileID: 333763417}
-  handsAnimation: {fileID: 0}
-  weapons:
-  - {fileID: 1800717005}
-  - {fileID: 635674327}
-  - {fileID: 42647136}
-  weaponPrefabs:
-  - {fileID: 1000014174710876, guid: 4fd6a43d63f38ec4d80cdff5954ac23e, type: 2}
-  - {fileID: 1000013091805238, guid: c6878f2dfaa60fa45b54f963c1c9c7d8, type: 2}
-  - {fileID: 1000014214768548, guid: ea51ff5b3328eaf4f9dbfb0d62960929, type: 2}
 --- !u!1 &795851477 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -23363,7 +22985,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -23433,7 +23055,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -24043,41 +23665,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f10bbc3a6d315d4e876359af6825299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1542883969}
-  barFiller: {fileID: 1542883967}
-  healthIcon: {fileID: 1562570200}
-  healthBar2: {fileID: 1979244067}
-  barFiller2: {fileID: 1979244065}
-  healthIcon2: {fileID: 1482922777}
-  constantDepletion: 0
-  c:
-  - serializedVersion: 2
-    rgba: 4294967295
-  - serializedVersion: 2
-    rgba: 4292993535
-  - serializedVersion: 2
-    rgba: 4291348735
-  - serializedVersion: 2
-    rgba: 4289703935
-  - serializedVersion: 2
-    rgba: 4288059135
-  - serializedVersion: 2
-    rgba: 4286414335
-  - serializedVersion: 2
-    rgba: 4284769535
-  - serializedVersion: 2
-    rgba: 4283124735
-  - serializedVersion: 2
-    rgba: 4281479935
-  - serializedVersion: 2
-    rgba: 4278190335
-  player: {fileID: 95532324}
-  Tip: {fileID: 584635876}
-  damageSystem: {fileID: 961972045}
-  playerBody: {fileID: 1130426535}
-  playerCamera: {fileID: 95532324}
-  SFX_heartBeatSound: {fileID: 1167447267}
-  SFX_deathSound: {fileID: 1054346335}
 --- !u!1 &848621356 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 4bd3a4e2f634cbe42adf265baf4bd338, type: 3}
@@ -24294,7 +23881,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -24441,14 +24028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &862390344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24648,12 +24227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &868966786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25026,7 +24599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 2
 --- !u!114 &882797168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25702,8 +25274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: 73346dd8bc4e50745a6ef59cfe28a856, type: 3}
 --- !u!114 &907402677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26651,8 +26221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e5716b3797fdf41ae5e25df582231c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: {fileID: 947157625}
-  TipCooldownTime: 1
 --- !u!114 &947157625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27327,10 +26895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be80cbb72889c774b9d211bad75a6297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camTransform: {fileID: 95532339}
-  shake: 10
-  shakeAmount: 0.5
-  decreaseFactor: 1
 --- !u!114 &961972045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27343,9 +26907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4a062665d3b0c4d94b69d081310159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalDamageSound: {fileID: 139898653}
-  progressiveDamageSound: {fileID: 0}
-  godMode: 0
 --- !u!95 &961972046
 Animator:
   serializedVersion: 3
@@ -27398,12 +26959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &965502780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27858,12 +27413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &989015747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28162,7 +27711,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -28508,12 +28057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1009938116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28772,7 +28315,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -28864,14 +28407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1026067092
 Prefab:
   m_ObjectHideFlags: 0
@@ -29069,12 +28604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1034833687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30457,7 +29986,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -30535,7 +30064,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 3
 --- !u!114 &1082567934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31646,7 +31174,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -31724,7 +31252,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -31880,10 +31408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe66a0e958a2d74093f4e75e0a1d3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
-  underWaterColor: {r: 0, g: 0.2205882, b: 0.12018257, a: 0}
-  normalSettings: 1
-  playerHead: {fileID: 95532324}
 --- !u!114 &1130426539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31896,13 +31420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e60a97f2c87ae41b6cdc1055d78cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSensitivity: 3
-  YSensitivity: 3
-  clampVerticalRotation: 1
-  MinimumX: -90
-  MaximumX: 90
-  smooth: 0
-  smoothTime: 14
 --- !u!23 &1130426540
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32053,92 +31570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 13
-  m_RunstepLenghten: 1
-  m_JumpSpeed: 0
-  m_StickToGroundForce: 10
-  m_GravityMultiplier: 4
-  m_UseFovKick: 0
-  m_FovKick:
-    Camera: {fileID: 95532325}
-    originalFov: 0
-    FOVIncrease: 3
-    TimeToIncrease: 1
-    TimeToDecrease: 1
-    IncreaseCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-  m_UseHeadBob: 1
-  m_HeadBob:
-    HorizontalBobRange: 0.16
-    VerticalBobRange: 0.16
-    Bobcurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.5
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1.5
-        value: -1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    VerticaltoHorizontalRatio: 2
-  m_JumpBob:
-    BobDuration: 0.25
-    BobAmount: 0.5
-  m_StepInterval: 5
-  m_FootstepSounds:
-  - {fileID: 8300000, guid: aeb464dd8ef1ad54ebc3bb097e31b864, type: 3}
-  - {fileID: 8300000, guid: e228aadc7f65e8a479ccae91386f9dc9, type: 3}
-  m_JumpSound: {fileID: 8300000, guid: 0093584b3cb05e64bad0c23396efd7ea, type: 3}
-  m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  ladderClimbSpeed: 0.1
-  ladderDampening: 8
-  vaulter: {fileID: 1860063679}
-  isInHub: 0
 --- !u!1 &1131425101
 GameObject:
   m_ObjectHideFlags: 0
@@ -32251,7 +31682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 1
 --- !u!114 &1131425105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33017,25 +32447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae571191fa23ee46a7a230693221d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 322566167}
-  - {fileID: 989015746}
-  - {fileID: 437020573}
-  - {fileID: 1009938115}
-  - {fileID: 515304124}
-  - {fileID: 506973466}
-  - {fileID: 1370420959}
-  - {fileID: 1957347743}
-  - {fileID: 1500196162}
-  - {fileID: 1034833686}
-  - {fileID: 514289870}
-  - {fileID: 335008618}
-  - {fileID: 1195666598}
-  - {fileID: 1964688923}
-  - {fileID: 1799146535}
-  - {fileID: 1398857957}
-  - {fileID: 1705703621}
-  - {fileID: 37982069}
 --- !u!114 &1167814751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33181,7 +32592,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -33430,12 +32841,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1195666599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33963,8 +33368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: d4d8cd70a430e6641912c414a17c5772, type: 3}
 --- !u!114 &1223461000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35457,12 +34860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1312683786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35752,7 +35149,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -35893,7 +35290,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -36289,8 +35686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
 --- !u!1 &1342632193
 GameObject:
   m_ObjectHideFlags: 0
@@ -36533,8 +35928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7248dcec035a4586d8188e6ec3d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  page1: {fileID: 1223460999}
-  page2: {fileID: 1535604051}
 --- !u!1 &1351471324 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 60008c73c0de5ae439f7b5e30695facb, type: 3}
@@ -36587,12 +35980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1356216780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37060,9 +36447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19aba4d3f97e3944693757e4a2588fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selector: {fileID: 636728062}
-  itemShack: {fileID: 1167814750}
-  Inventory: {fileID: 1820549691}
 --- !u!1 &1368645316 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: a9fd055ff360cce4ebda29c5bf4631fb, type: 3}
@@ -37169,12 +36553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1370420960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37731,14 +37109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1378857719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38260,12 +37630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1398857958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39598,7 +38962,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -39663,7 +39027,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -39728,7 +39092,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -40191,7 +39555,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -40623,7 +39987,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -40695,12 +40059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1500196163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40998,7 +40356,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1502990576}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.49230957, y: -10.800003, z: -2.640503}
+  m_LocalPosition: {x: 0.49230957, y: -9.784, z: -2.640503}
   m_LocalScale: {x: 0.6998127, y: 1, z: 1.8228697}
   m_Children: []
   m_Father: {fileID: 1459185630}
@@ -41432,14 +40790,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1522074961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41533,7 +40883,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -41966,8 +41316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: 8100a240ae0a8544dbef220e5f6e6a54, type: 3}
 --- !u!114 &1535604052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42146,14 +41494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1542883970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42547,7 +41887,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -42832,7 +42172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 2
 --- !u!114 &1562570204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43043,8 +42382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: f13b87dbc4a45ed43a74b4523c5b4bdb, type: 3}
 --- !u!114 &1569316398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43481,10 +42818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3708b8b0248d14d982901e09bf2252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bobbingSpeed: 0.04
-  bobbingAmount: 0.01
-  midpoint: -0.000001087986
-  smoothing: 30
 --- !u!1001 &1585466458
 Prefab:
   m_ObjectHideFlags: 0
@@ -44528,25 +43861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f575be401ba204bad13b83d82bde56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemShack: {fileID: 0}
-  tipBase: {fileID: 1595886615}
-  tipName: {fileID: 713809101}
-  tipDesc: {fileID: 750936514}
-  tipButtonUse: {fileID: 0}
-  tipButtonDiscard: {fileID: 0}
-  toolTip: {fileID: 0}
-  healthItemColor:
-    serializedVersion: 2
-    rgba: 9605887
-  sanityItemColor:
-    serializedVersion: 2
-    rgba: 16736377
-  lightItemColor:
-    serializedVersion: 2
-    rgba: 10878463
-  Pipe: {fileID: 0}
-  BlackFlashlight: {fileID: 0}
-  G17: {fileID: 0}
 --- !u!224 &1617748577
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44745,7 +44059,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -44814,9 +44128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084ea6eac2985854ab8eb4fde0d54ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PageMenu: {fileID: 1700579857}
-  PageDisplay: {fileID: 1581930520}
-  journal: {fileID: 2136188280}
 --- !u!1 &1625897236
 GameObject:
   m_ObjectHideFlags: 0
@@ -45263,12 +44574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1643169009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45762,12 +45067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1656696182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45996,7 +45295,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -46198,12 +45497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1665795537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46379,8 +45672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7248dcec035a4586d8188e6ec3d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  page1: {fileID: 1341917494}
-  page2: {fileID: 1921276312}
 --- !u!224 &1668808932
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46945,12 +46236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1693369192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47184,8 +46469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7248dcec035a4586d8188e6ec3d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  page1: {fileID: 907402676}
-  page2: {fileID: 1569316397}
 --- !u!1 &1698956577 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 33fdc02f347024840afe96ea93f8f513, type: 3}
@@ -47421,12 +46704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1705703622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48284,7 +47561,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -48553,7 +47830,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -48902,7 +48179,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -49571,7 +48848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9db61b2236efc48b6d40a199ff8d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 1342632193}
 --- !u!1001 &1789583547
 Prefab:
   m_ObjectHideFlags: 0
@@ -49838,12 +49114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1799146536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50090,8 +49360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4d2b01a47fe2646a2987246ee2abf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemShack: {fileID: 794482406}
-  tipName: {fileID: 287578343}
 --- !u!224 &1800075426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50256,12 +49524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1813913407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50534,7 +49796,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -50575,12 +49837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1816485911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51112,7 +50368,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -51662,15 +50918,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685e996518812aa43bbe9974942ca756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 95532324}
-  Player: {fileID: 1130426535}
-  charCont: {fileID: 1130426537}
-  CheckRayHead: {fileID: 256303074}
-  CheckRayBody: {fileID: 92857368}
-  HookSystem: {fileID: 0}
-  Vertical_Destination: {fileID: 0}
-  Horizontal_Destination: {fileID: 0}
-  range: 0.1
 --- !u!1001 &1860895899
 Prefab:
   m_ObjectHideFlags: 0
@@ -51984,8 +51231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: 2255eb6bb86ab3543975f5e02e6ecf15, type: 3}
 --- !u!114 &1865913943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52284,7 +51529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 2
 --- !u!114 &1873016715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53267,8 +52511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97caf41aa46050a48bb75facbb01c990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
-  image: {fileID: 21300000, guid: be8d0283be33f6545af1484884116a0d, type: 3}
 --- !u!114 &1921276313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53734,13 +52976,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a506bdfbc33cda742b177a134c417547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pages:
-  - {fileID: 1223460999}
-  - {fileID: 1535604051}
-  - {fileID: 907402676}
-  - {fileID: 1569316397}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1939205081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53834,7 +53069,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -53991,12 +53226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1957347744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54233,12 +53462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &1964688924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54715,14 +53938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b20fbabe568f754c8adbc45c81ee1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AttachedText: {fileID: 11410726, guid: 64db8aba51cd01a47b5dd43a05785951, type: 2}
-  ProgressSpeed: 30
-  TriggerOnComplete: 0
-  OnCompleteMethods:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: ProgressBar.Utils.OnCompleteEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1979244068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54802,46 +54017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27274fd7c09ef6745b6245f60400cab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sanityBar: {fileID: 275160505}
-  barFiller: {fileID: 275160503}
-  sanityIcon: {fileID: 241243767}
-  sanityBar2: {fileID: 625235421}
-  barFiller2: {fileID: 625235419}
-  sanityIcon2: {fileID: 1079885162}
-  constantDepletion: 0
-  c:
-  - serializedVersion: 2
-    rgba: 4294967295
-  - serializedVersion: 2
-    rgba: 4292993535
-  - serializedVersion: 2
-    rgba: 4291348735
-  - serializedVersion: 2
-    rgba: 4289703935
-  - serializedVersion: 2
-    rgba: 4288059135
-  - serializedVersion: 2
-    rgba: 4286414335
-  - serializedVersion: 2
-    rgba: 4284769535
-  - serializedVersion: 2
-    rgba: 4283124735
-  - serializedVersion: 2
-    rgba: 4281479935
-  - serializedVersion: 2
-    rgba: 4278190335
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
-  depletingColor: {r: 0.080476746, g: 0, b: 0.50735295, a: 0}
-  player: {fileID: 95532324}
-  filter: {fileID: 95532332}
-  blur: {fileID: 95532333}
-  retina: {fileID: 1428758922}
-  Tip: {fileID: 584635876}
-  playerBody: {fileID: 1130426535}
-  playerCamera: {fileID: 95532324}
-  SFX_sanityEmpty: {fileID: 1558712955}
-  SFX_voices: {fileID: 581716119}
-  SFX_cracklingSound: {fileID: 1755109817}
 --- !u!136 &1979819755
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -56225,12 +55400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &2037853017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56721,7 +55890,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -57060,12 +56229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &2068892524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57531,7 +56694,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -57924,7 +57087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201103edeeb054d4c8cf2b1f39ec59c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeItem: 3
 --- !u!114 &2098796235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58189,7 +57351,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -58480,25 +57642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53444488a3971d429c44ae0b794b9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceToItem: 6
-  hand: {fileID: 1515260912}
-  toggle: {fileID: 1386660616}
-  door: {fileID: 1386660616}
-  exit: {fileID: 1386660616}
-  bed: {fileID: 1386660616}
-  drawer: {fileID: 1386660616}
-  pcIcon: {fileID: 1386660616}
-  journal: {fileID: 1386660616}
-  sit: {fileID: 1386660616}
-  pickUp: {fileID: 1216385638}
-  ItemInHand: {fileID: 1404894628}
-  ladder: {fileID: 1603839114}
-  hint: {fileID: 0}
-  toggleswitch: {fileID: 0}
-  transformBall: {fileID: 333763417}
-  speed: 50
-  pushForce: 2500
-  tips: {fileID: 947157624}
 --- !u!1001 &2118770807
 Prefab:
   m_ObjectHideFlags: 0
@@ -58637,12 +57780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &2121864237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58905,12 +58042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7e1c9bd3cdf542bed7d9857f7406d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyImage: {fileID: 21300000, guid: 18ed8ed2c12243b429a409ff706afe79, type: 3}
-  image: {fileID: 0}
-  itemName: 
-  itemDesc: 
-  itemTag: 
-  initiateOnAwake: 1
 --- !u!114 &2126783080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59366,15 +58497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf1a21e022eb5f74ea9c770d88f5772f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BookFront: {fileID: 1552929044}
-  BookPages: {fileID: 1939205078}
-  BookBack: {fileID: 1378232116}
-  totalFaces: 4
-  faces:
-  - {fileID: 1351363711}
-  - {fileID: 1698910256}
-  - {fileID: 153545623}
-  - {fileID: 1668808931}
 --- !u!224 &2136188281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59614,7 +58736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9db61b2236efc48b6d40a199ff8d09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributes: {fileID: 1246302314}
 --- !u!1 &2139463587 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 37155e6353757af4aaeebc6910427d83, type: 3}
