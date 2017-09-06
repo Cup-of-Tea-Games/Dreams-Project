@@ -384,7 +384,7 @@ public class SEGI : MonoBehaviour
 			volumeTextures[i].volumeDepth = resolution;
 			volumeTextures[i].enableRandomWrite = true;
 			volumeTextures[i].filterMode = FilterMode.Bilinear;
-			volumeTextures[i].generateMips = false;
+			volumeTextures[i].autoGenerateMips = false;
 			volumeTextures[i].useMipMap = false;
 			volumeTextures[i].Create();
 			volumeTextures[i].hideFlags = HideFlags.HideAndDontSave;
@@ -401,7 +401,7 @@ public class SEGI : MonoBehaviour
 		volumeTextureB.volumeDepth = (int)voxelResolution;
 		volumeTextureB.enableRandomWrite = true;
 		volumeTextureB.filterMode = FilterMode.Bilinear;
-		volumeTextureB.generateMips = false;
+		volumeTextureB.autoGenerateMips = false;
 		volumeTextureB.useMipMap = false;
 		volumeTextureB.Create();
 		volumeTextureB.hideFlags = HideFlags.HideAndDontSave;
@@ -417,7 +417,7 @@ public class SEGI : MonoBehaviour
 		volumeTexture1.volumeDepth = (int)voxelResolution;
 		volumeTexture1.enableRandomWrite = true;
 		volumeTexture1.filterMode = FilterMode.Point;
-		volumeTexture1.generateMips = false;
+		volumeTexture1.autoGenerateMips = false;
 		volumeTexture1.useMipMap = false;
 		volumeTexture1.antiAliasing = 1;
 		volumeTexture1.Create();
