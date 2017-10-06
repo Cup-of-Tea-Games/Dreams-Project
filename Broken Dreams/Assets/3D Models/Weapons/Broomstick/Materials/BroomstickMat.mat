@@ -6,11 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FurnaceRoomFlrMat
+  m_Name: BroomstickMat
   m_Shader: {fileID: 4800000, guid: fd1b0c2328cad6942aa89eb15af421f0, type: 3}
-  m_ShaderKeywords: _DETAIL_TEXTURED_WITH_SPEC_GLOSS _EMISSION _METALLICGLOSSMAP _NORMALMAP
-    _PARALLAXMAP _WETNESS_NONE
-  m_LightmapFlags: 5
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _WETNESS_NONE
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c63e21977e4180b408484a6c6c758a2c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 528c8ef54f4ab5446a352211d2244b55, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
@@ -48,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5a7d748d2dc97664da25061e6b63d291, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9095e08f8d7f21b45b0fc4213962fde7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex2:
@@ -56,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 26538e57fd1a87c4fa6d4751229a9dcc, type: 3}
+        m_Texture: {fileID: 2800000, guid: cc6a24e811db88243a24de0ad31fe0d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap2:
@@ -64,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMapDetail:
-        m_Texture: {fileID: 2800000, guid: 26538e57fd1a87c4fa6d4751229a9dcc, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ObjectNormalsTex:
@@ -80,7 +79,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: c63e21977e4180b408484a6c6c758a2c, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap2:
@@ -137,7 +136,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DetailSpecLerp: 1
     - _DetailUVMult: 1
-    - _DiffuseScatter: 0
+    - _DiffuseScatter: 1
     - _DiffuseScatteringExponent: 8
     - _DiffuseScatteringOffset: 0
     - _DistSteps: 64
@@ -147,20 +146,20 @@ Material:
     - _DstBlend: 0
     - _EmissionPulsateSpeed: 0
     - _FlowCycleScale: 2
-    - _Frost: 0.247
+    - _Frost: 0
     - _FrostFromGlobal: 0
     - _Glitter: 0
     - _GlitterAnimationFrequency: 0.02
-    - _GlitterColorization: 0.158
-    - _GlitterDensity: 0
-    - _GlitterFilter: -0.85
+    - _GlitterColorization: 0.2
+    - _GlitterDensity: 0.2
+    - _GlitterFilter: -1
     - _GlitterMask: 0
     - _GlitterShown: 1
-    - _GlitterTiling: 5
+    - _GlitterTiling: 1
     - _GlossMapScale: 1
-    - _GlossMax: 0.864
-    - _GlossMin: 0.37
-    - _Glossiness: 0.527
+    - _GlossMax: 1
+    - _GlossMin: 0.244
+    - _Glossiness: 1
     - _Glossiness2: 1
     - _GlossyReflections: 1
     - _MainShown: 1
@@ -182,11 +181,11 @@ Material:
     - _PanEmissionMask: 0
     - _PanUSpeed: 0
     - _PanVSpeed: 0
-    - _Parallax: 0.006
+    - _Parallax: 0.02
     - _Parallax2: 0.04
     - _Phong: 0
     - _Pierceable: 0
-    - _PresetsShown: 1
+    - _PresetsShown: 0
     - _PulsateEmission: 0
     - _RainIntensity: 1
     - _RainIntensityFromGlobal: 0
@@ -194,10 +193,10 @@ Material:
     - _RefractionBumpScale: 0.5
     - _RefractionChromaticAberration: 0
     - _ReliefMIPbias: 0
-    - _RippleAnimSpeed: 1
-    - _RippleRefraction: 0.682
-    - _RippleSpecFilter: 0
-    - _RippleStrength: 0.047
+    - _RippleAnimSpeed: 0.5
+    - _RippleRefraction: 0.3
+    - _RippleSpecFilter: 0.02
+    - _RippleStrength: 0.5
     - _RippleStrengthFromGlobal: 0
     - _RippleTiling: 1
     - _SecOcclusionStrength: 0
@@ -207,13 +206,13 @@ Material:
     - _ShadowStrength: 1
     - _SmoothnessTextureChannel: 0
     - _Snow: 0
-    - _SnowBumpMacro: 0.158
-    - _SnowBumpMicro: 0.0957
+    - _SnowBumpMacro: 0.1
+    - _SnowBumpMicro: 0.08
     - _SnowBumpMicroFromGlobal: 0
-    - _SnowDeepSmoothen: 3.79
-    - _SnowDiffuseScatteringExponent: 6.88
+    - _SnowDeepSmoothen: 4
+    - _SnowDiffuseScatteringExponent: 6
     - _SnowDiffuseScatteringOffset: 0.4
-    - _SnowDissolve: 1.96
+    - _SnowDissolve: 2
     - _SnowDissolveFromGlobal: 0
     - _SnowDissolveMaskOcclusion: 0
     - _SnowGlitterColorFromGlobal: 0
@@ -223,7 +222,7 @@ Material:
     - _SnowMacroTiling: 1
     - _SnowMicroTiling: 4
     - _SnowShown: 1
-    - _SnowSlopeDamp: 1.57
+    - _SnowSlopeDamp: 2
     - _SnowSpecGlossFromGlobal: 0
     - _SnowWorldMapping: 0
     - _Softness: 2
@@ -253,21 +252,21 @@ Material:
     - _UVSecOcclusion: 0
     - _UVSecOcclusionLightmapPacked: 0
     - _UV_Clip: 0
-    - _WetDroplets: 1
-    - _WetRipples: 1
+    - _WetDroplets: 0
+    - _WetRipples: 0
     - _Wetness: 0
     - _WetnessConst: 0
     - _WetnessConstFromGlobal: 0
-    - _WetnessDarkening: 2.18
+    - _WetnessDarkening: 2
     - _WetnessEmissiveness: 0
     - _WetnessEmissivenessWrap: 0
     - _WetnessFlowGlobalTime: 1
-    - _WetnessLevel: 1.25
+    - _WetnessLevel: 1
     - _WetnessLevelFromGlobal: 0
     - _WetnessMergeWithSnowPerMaterial: 0
-    - _WetnessNormMIP: 4.95
-    - _WetnessNormStrength: 2.07
-    - _WetnessNormalInfluence: 0.717
+    - _WetnessNormMIP: 5
+    - _WetnessNormStrength: 2
+    - _WetnessNormalInfluence: 0.5
     - _WetnessShown: 1
     - _WetnessUVMult: 1
     - _ZWrite: 1
@@ -285,7 +284,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlitterColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.2}
     - _GlitterColor2: {r: 0.8, g: 0.8, b: 0.8, a: 0.2}
-    - _SnowColorAndCoverage: {r: 1, g: 1, b: 1, a: 0}
+    - _SnowColorAndCoverage: {r: 1, g: 1, b: 1, a: 1}
     - _SnowDiffuseScatteringColor: {r: 1, g: 1, b: 1, a: 0}
     - _SnowEmissionTransparency: {r: 0.09999997, g: 0.09999997, b: 0.09999997, a: 1}
     - _SnowGlitterColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.2}
@@ -299,4 +298,4 @@ Material:
     - _WetnessSpecGloss: {r: 0.049999982, g: 0.049999982, b: 0.049999982, a: 0.7}
     - bumpMap2TexelSize: {r: 1, g: 1, b: 1, a: 1}
     - bumpMapTexelSize: {r: 0.00048828125, g: 0.00048828125, b: 2048, a: 2048}
-    - heightMapTexelSize: {r: 0.00048828125, g: 0.00048828125, b: 2048, a: 2048}
+    - heightMapTexelSize: {r: 1, g: 1, b: 1, a: 1}
