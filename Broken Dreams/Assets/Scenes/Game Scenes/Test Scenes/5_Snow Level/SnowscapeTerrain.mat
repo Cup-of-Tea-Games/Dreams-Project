@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SnowscapeTerrain
+  m_Shader: {fileID: 4800000, guid: 3b16378f6c81eef449b6383e3c2a84c0, type: 3}
+  m_ShaderKeywords: _ALPHAHOLE _DISTANCENOISE _DISTANCERESAMPLE _FLOW _NORMALMAP _PERTEXAOSTRENGTH
+    _PERTEXDISPLACEPARAMS _PERTEXGLITTER _PERTEXMATPARAMS _PERTEXNORMALSTRENGTH _PERTEXUV
+    _TERRAIN _TESSDAMPENING _TESSDISTANCE _TESSSHADOWS _TWOLAYER _WETNESS
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaArray:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 18700000, guid: 1c67e0238e16e034682f3d919692416e, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistanceNoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 18700000, guid: 205791fb648e18d45aeabb691d5cfba5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PropertyTex:
+        m_Texture: {fileID: 2800000, guid: 8a3defd086e261e458f9c0c492928695, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatControl:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatParams:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaHoleIdx: 0
+    - _BumpScale: 1
+    - _Contrast: 0.307
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _FlowAlpha: 1
+    - _FlowIntensity: 1
+    - _FlowRefraction: 0.04
+    - _FlowSpeed: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _MaxWetness: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailNoiseScaleStrengthFade: {r: 1, g: 5, b: 50, a: 0}
+    - _DistanceFades: {r: 500, g: 2000, b: 1.0000118, a: 1.0000144}
+    - _DistanceFadesCached: {r: 500, g: 2000, b: 1.0000118, a: 1.0000144}
+    - _DistanceNoiseScaleStrengthFade: {r: 0.1, g: 0.5, b: 100, a: 150}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GlitterParams: {r: 80, g: 80, b: 0.21, a: 5}
+    - _GlitterSurfaces: {r: 1, g: 8, b: 1, a: 8}
+    - _GlobalPorosityWetness: {r: 0.4, g: 0, b: 0, a: 0}
+    - _Parallax: {r: 0.08, g: 20, b: 0, a: 0}
+    - _PerTexScaleRange: {r: 1, g: 10, b: 0, a: 0}
+    - _ResampleDistanceParams: {r: 0.01, g: 50, b: 100, a: 0}
+    - _TessData1: {r: 32, g: 3, b: 3, a: 15}
+    - _TessData2: {r: 1, g: 25, b: 1, a: 0}
+    - _TexScales: {r: 100, g: 100, b: 100, a: 100}

@@ -1,0 +1,226 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MegaSplat_TessMesh
+  m_Shader: {fileID: 4800000, guid: a6c11d8f31e714595917c1391ceb8796, type: 3}
+  m_ShaderKeywords: _FLOWREFRACTION _NORMALMAP _TESSDISTANCE _TESSPHONG _TESSSHADOWS
+    _TWOLAYER
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaArray:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNoise:
+        m_Texture: {fileID: 2800000, guid: 891b020570b214b749f38d4857e26e46, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNoiseDiffuse:
+        m_Texture: {fileID: 2800000, guid: 6ce48f1b219df4317b65215ab4706583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNoiseNormal:
+        m_Texture: {fileID: 2800000, guid: d5ea188f2c03a4cb6912fd8031f60c59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 18700000, guid: c5ff8398c5afd4e72be1b6f0d40c91bc, type: 2}
+        m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emissive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Gloss:
+        m_Texture: {fileID: 18700000, guid: f1c430e0d78844d2babf51c7fcdfa47f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MacroAlpha:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MacroBump:
+        m_Texture: {fileID: 2800000, guid: f8ab3f92f8b504768a9c423fef37366f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MacroDiff:
+        m_Texture: {fileID: 2800000, guid: 6d4963b9a845c482e9fcceaf49373589, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 18700000, guid: acc90230b9e094b4584fd21f3a0448ba, type: 2}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PropertyTex:
+        m_Texture: {fileID: 2800000, guid: 98c6c15961fce4fa9b3cd29611ef724b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PuddleNormal:
+        m_Texture: {fileID: 2800000, guid: 9c191cc30656d492b9f025cfcd623722, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RainDropTexture:
+        m_Texture: {fileID: 2800000, guid: 3aa01b67349274b40929ec1eb13fc170, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowDiff:
+        m_Texture: {fileID: 2800000, guid: 06e842b12a17d4c51af3c7345e2399d5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowNormal:
+        m_Texture: {fileID: 2800000, guid: 673d48a0f6c1642cdb33a6e95d37d36e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatControl:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatParams:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Contrast: 0.001
+    - _ControlSize: 512
+    - _Cutoff: 0.5
+    - _DetailBlendMode: 0
+    - _DetailNormalMapScale: 1
+    - _DetailTextureStrength: 1
+    - _DisableSplatsAtDistance: 0
+    - _Displacement: 3.38
+    - _DstBlend: 0
+    - _EdgeLength: 11.1
+    - _FlowAlpha: 0.45
+    - _FlowIntensity: 0.3
+    - _FlowRefraction: 0.135
+    - _FlowSpeed: 0.3
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _MacroTexNormalStrength: 1
+    - _MacroTexScale: 1
+    - _MacroTextureStrength: 1
+    - _MaxPuddles: 1
+    - _MaxWetness: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0
+    - _PuddleBlend: 5.2
+    - _PuddleFlowIntensity: 0.1
+    - _PuddleFlowSpeed: 0.1
+    - _PuddleNormalScale: 120
+    - _PuddlePorosity: 0.442
+    - _RainIntensity: 1
+    - _RainUVScale: 1
+    - _SmoothnessTextureChannel: 0
+    - _SnowAmount: 0
+    - _SnowUVScale: 100
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Tess: 4
+    - _TessLOD: 0
+    - _TessMaxDist: 25
+    - _TessMinDist: 10
+    - _TexScale: 71
+    - _TexScale2: 80
+    - _TriplanarContrast: 1.94
+    - _TriplanarTexScale: 0.001
+    - _UVSec: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DetailNoiseScaleStrength: {r: 8, g: 1, b: 0, a: 0}
+    - _DetailNoiseScaleStrengthFade: {r: 10, g: 1, b: 8, a: 0}
+    - _DistanceFades: {r: 50, g: 200, b: 1, a: 1}
+    - _DistanceFadesCached: {r: 50, g: 200, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GlitterParams: {r: 80, g: 80, b: 0.21, a: 5}
+    - _GlitterSurfaces: {r: 1, g: 8, b: 1, a: 8}
+    - _GlobalPorosityWetness: {r: 0.4, g: 0, b: 0, a: 0}
+    - _MacroTexNormAOScales: {r: 1, g: 0.5, b: 0, a: 0}
+    - _MacroTexScale: {r: 1, g: 1, b: 0, a: 0}
+    - _Parallax: {r: 0.08, g: 20, b: 0, a: 0}
+    - _PerTexScaleRange: {r: 1, g: 2, b: 0, a: 0}
+    - _PuddleFlowParams: {r: 0.173, g: 0.3, b: 0.1, a: 1}
+    - _PuddleNormalFoam: {r: 0.752, g: 1.03, b: 0, a: 0}
+    - _PuddleTint: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 0}
+    - _PuddleUVScales: {r: 120, g: 120, b: 0, a: 0}
+    - _SnowHeightRange: {r: 10, g: 20, b: 0, a: 0}
+    - _SnowParams: {r: 1, g: 0.5, b: 0, a: 0}
+    - _SnowParams1: {r: 0, g: 80, b: 20, a: 10}
+    - _SnowParams2: {r: 0, g: 0, b: 0.94, a: 0.23}
+    - _SnowUVScales: {r: 120, g: 120, b: 0, a: 0}
+    - _SnowUpVector: {r: 0, g: 1, b: 0, a: 0}
+    - _TessData1: {r: 20, g: 2, b: 5, a: 30}
+    - _TessData2: {r: 20, g: 45, b: 1, a: 1}
+    - _TexScales: {r: 61, g: 61, b: 70.333, a: 70.333}
+    - _TriplanarOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _UVProjectOffsetScale: {r: 0, g: 0, b: 0.001, a: 0.001}
+    - _UVProjectOffsetScale2: {r: 0, g: 0, b: 0.3, a: 0.3}
