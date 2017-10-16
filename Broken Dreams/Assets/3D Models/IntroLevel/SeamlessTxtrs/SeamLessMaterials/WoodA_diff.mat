@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: WoodA_diff
   m_Shader: {fileID: 4800000, guid: fd1b0c2328cad6942aa89eb15af421f0, type: 3}
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _WETNESS_NONE
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP _WETNESS_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -79,7 +79,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9ea23c32c1cc9f84099c27ee400239c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap2:
@@ -117,7 +117,7 @@ Material:
     m_Floats:
     - _BendNormalsFreq: 4
     - _BendNormalsStrength: 0.05
-    - _BumpScale: 0.4
+    - _BumpScale: 2
     - _BumpScale2: 1
     - _CurvatureCustomU: 0
     - _CurvatureCustomV: 0
@@ -137,8 +137,8 @@ Material:
     - _DetailSpecLerp: 1
     - _DetailUVMult: 1
     - _DiffuseScatter: 1
-    - _DiffuseScatteringExponent: 6.23
-    - _DiffuseScatteringOffset: -0.258
+    - _DiffuseScatteringExponent: 12.17
+    - _DiffuseScatteringOffset: -0.5
     - _DistSteps: 64
     - _DistStepsShadows: 64
     - _DropletsAnimSpeed: 10
@@ -157,9 +157,9 @@ Material:
     - _GlitterShown: 1
     - _GlitterTiling: 1
     - _GlossMapScale: 1
-    - _GlossMax: 1
-    - _GlossMin: 0
-    - _Glossiness: 0.607
+    - _GlossMax: 0.596
+    - _GlossMin: 0.411
+    - _Glossiness: 1
     - _Glossiness2: 1
     - _GlossyReflections: 1
     - _MainShown: 1
@@ -181,7 +181,7 @@ Material:
     - _PanEmissionMask: 0
     - _PanUSpeed: 0
     - _PanVSpeed: 0
-    - _Parallax: 0
+    - _Parallax: 0.0494
     - _Parallax2: 0.04
     - _Phong: 0
     - _Pierceable: 0
@@ -297,5 +297,5 @@ Material:
     - _WetnessColor: {r: 0, g: 0, b: 0, a: 0}
     - _WetnessSpecGloss: {r: 0.049999982, g: 0.049999982, b: 0.049999982, a: 0.7}
     - bumpMap2TexelSize: {r: 1, g: 1, b: 1, a: 1}
-    - bumpMapTexelSize: {r: 0.00048828125, g: 0.00048828125, b: 2048, a: 2048}
-    - heightMapTexelSize: {r: 1, g: 1, b: 1, a: 1}
+    - bumpMapTexelSize: {r: 0.001953125, g: 0.001953125, b: 512, a: 512}
+    - heightMapTexelSize: {r: 0.001953125, g: 0.001953125, b: 512, a: 512}

@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: cb3907874bc4de741a337103287c287a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 87a0a174c3e580f4e94b70df03db1744, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap2:
@@ -157,13 +157,13 @@ Material:
     - _GlitterShown: 1
     - _GlitterTiling: 1
     - _GlossMapScale: 1
-    - _GlossMax: 1
-    - _GlossMin: 0
-    - _Glossiness: 0.175
+    - _GlossMax: 0.725
+    - _GlossMin: 0.434
+    - _Glossiness: 0.675
     - _Glossiness2: 1
     - _GlossyReflections: 1
     - _MainShown: 1
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metallic2: 1
     - _MinPulseBrightness: 0
     - _Mode: 0
@@ -181,7 +181,7 @@ Material:
     - _PanEmissionMask: 0
     - _PanUSpeed: 0
     - _PanVSpeed: 0
-    - _Parallax: 0.0032
+    - _Parallax: 0.0544
     - _Parallax2: 0.04
     - _Phong: 0
     - _Pierceable: 0
@@ -297,5 +297,5 @@ Material:
     - _WetnessColor: {r: 0, g: 0, b: 0, a: 0}
     - _WetnessSpecGloss: {r: 0.049999982, g: 0.049999982, b: 0.049999982, a: 0.7}
     - bumpMap2TexelSize: {r: 1, g: 1, b: 1, a: 1}
-    - bumpMapTexelSize: {r: 0.00048828125, g: 0.00048828125, b: 2048, a: 2048}
-    - heightMapTexelSize: {r: 0.00048828125, g: 0.00048828125, b: 2048, a: 2048}
+    - bumpMapTexelSize: {r: 0.001953125, g: 0.001953125, b: 512, a: 512}
+    - heightMapTexelSize: {r: 0.001953125, g: 0.001953125, b: 512, a: 512}
