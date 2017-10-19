@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Terrain
+  m_Shader: {fileID: 4800000, guid: f333547e229fe5a4f863f18887672579, type: 3}
+  m_ShaderKeywords: _NORMALMAP _PERTEXAOSTRENGTH _PERTEXCONTRAST _PERTEXDISPLACEPARAMS
+    _PERTEXGLITTER _PERTEXMATPARAMS _PERTEXNORMALSTRENGTH _PERTEXUV _PUDDLEGLITTER
+    _PUDDLES _PUDDLESPUSHTERRAIN _TERRAIN _TESSCENTERBIAS _TESSDAMPENING _TESSDISTANCE
+    _TESSFALLBACK _TWOLAYER _WETNESS
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaArray:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 18700000, guid: 198275f8fd52a154d9189296c3ae56d7, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlitterTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 18700000, guid: 619834f7ebf21e642b22b5c7534822d3, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PropertyTex:
+        m_Texture: {fileID: 2800000, guid: 1616da547f630eb4c8fdc8b9c9490f70, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatControl:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SplatParams:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Contrast: 0.436
+    - _Cutoff: 0.5
+    - _Glossiness: 0
+    - _MaxPuddles: 1
+    - _MaxWetness: 1
+    - _Metallic: 0
+    - _PuddleBlend: 6
+    m_Colors:
+    - _DistanceFades: {r: 500, g: 2000, b: 1.0000118, a: 1.0000144}
+    - _DistanceFadesCached: {r: 500, g: 2000, b: 1.0000118, a: 1.0000144}
+    - _GlitterParams: {r: 80, g: 80, b: 0.21, a: 5}
+    - _GlitterSurfaces: {r: 1, g: 8, b: 1, a: 8}
+    - _GlobalPorosityWetness: {r: 0.4, g: 0, b: 0, a: 0}
+    - _Parallax: {r: 0.08, g: 20, b: 0, a: 0}
+    - _PerTexScaleRange: {r: 1, g: 5, b: 0, a: 0}
+    - _PuddleFlowParams: {r: 1, g: 1, b: 0.1, a: 0.5}
+    - _PuddleNormalFoam: {r: 0.6, g: 2, b: 0, a: 0}
+    - _PuddleTint: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _TessData1: {r: 8.2, g: 0.62, b: 2, a: 15}
+    - _TessData2: {r: 1, g: 25, b: 0.3, a: 0.5}
+    - _TexScales: {r: 10, g: 10, b: 10, a: 10}

@@ -392,7 +392,7 @@ public class FogVolumeCamera : MonoBehaviour
 
                 if (SceneCamera.stereoTargetEye == StereoTargetEyeMask.Both || SceneCamera.stereoTargetEye == StereoTargetEyeMask.Left)
                 {
-                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(InputTracking.GetLocalPosition(VRNode.LeftEye));
+                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.LeftEye));
                     Quaternion eyeRot = SceneCamera.transform.rotation;
                     Matrix4x4 projectionMatrix = SceneCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left);
 
@@ -406,7 +406,7 @@ public class FogVolumeCamera : MonoBehaviour
 
                 if (SceneCamera.stereoTargetEye == StereoTargetEyeMask.Both || SceneCamera.stereoTargetEye == StereoTargetEyeMask.Right)
                 {
-                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(InputTracking.GetLocalPosition(VRNode.RightEye));
+                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.RightEye));
                     Quaternion eyeRot = SceneCamera.transform.rotation;
                     Matrix4x4 projectionMatrix = SceneCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
 
@@ -462,7 +462,7 @@ public class FogVolumeCamera : MonoBehaviour
 
                 if (SceneCamera.stereoTargetEye == StereoTargetEyeMask.Both || SceneCamera.stereoTargetEye == StereoTargetEyeMask.Left)
                 {
-                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(InputTracking.GetLocalPosition(VRNode.LeftEye));
+                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.LeftEye));
                     Quaternion eyeRot = SceneCamera.transform.rotation;
                     Matrix4x4 projectionMatrix = SceneCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left);
 
@@ -475,7 +475,7 @@ public class FogVolumeCamera : MonoBehaviour
 
                 if (SceneCamera.stereoTargetEye == StereoTargetEyeMask.Both || SceneCamera.stereoTargetEye == StereoTargetEyeMask.Right)
                 {
-                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(InputTracking.GetLocalPosition(VRNode.RightEye));
+                    Vector3 eyePos = SceneCamera.transform.parent.TransformPoint(UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.RightEye));
                     Quaternion eyeRot = SceneCamera.transform.rotation;
 
                     Matrix4x4 projectionMatrix = SceneCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
