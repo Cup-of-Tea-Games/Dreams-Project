@@ -1,0 +1,280 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1849679930475698}
+  m_IsPrefabParent: 1
+--- !u!1 &1849679930475698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4575252225177360}
+  - component: {fileID: 23447618598477500}
+  - component: {fileID: 114061161035479446}
+  - component: {fileID: 33013386324470134}
+  - component: {fileID: 114861514068731186}
+  m_Layer: 16
+  m_Name: Fog VolumeSC
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 228d0518a8dc08f47847b61368a37c5f, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 64
+  m_IsActive: 1
+--- !u!4 &4575252225177360
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849679930475698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1171, y: 13.5, z: 974}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23447618598477500
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849679930475698}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 1
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33013386324470134
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849679930475698}
+  m_Mesh: {fileID: 0}
+--- !u!114 &114061161035479446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849679930475698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7a52d786954b246ab3797052502655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showLighting: 1
+  OtherTAB: 0
+  showGradient: 1
+  showPointLights: 1
+  showNoiseProperties: 1
+  showVolumeProperties: 1
+  showColorTab: 1
+  tempShadowCaster: 0
+  showCustomizationOptions: 0
+  showDebugOptions: 0
+  showOtherOptions: 0
+  generalInfo: 0
+  TexturesGroup: 0
+  BackgroundImagesPath: D:/CTG_PROJECTDREAMS/Broken Dreams/Assets/DLC/FogVolume/Scripts/Editor/Themes/png
+  _FogType: 1
+  RenderableInSceneView: 1
+  ShadowCaster: {fileID: 0}
+  _PerformanceLUT: {fileID: 2800000, guid: f651c771afb96204b85e925622f5e2b9, type: 3}
+  fogVolumeScale: {x: 2500, y: 500, z: 2500}
+  FogMainColor: {r: 0.09264706, g: 0.09907007, b: 0.13235295, a: 1}
+  _FogColor: {r: 0.22629309, g: 0.50186974, b: 0.625, a: 1}
+  _AmbientAffectsFogColor: 1
+  Exposure: 2.5
+  Offset: 0
+  Gamma: 0.88
+  Tonemap: 0
+  Visibility: 17.51
+  ColorAdjust: 1
+  _SelfShadowSteps: 3
+  ShadowCameraSkippedFrames: 0
+  _SelfShadowColor: {r: 0, g: 0, b: 0, a: 1}
+  VolumeFogInscatteringAnisotropy: -1
+  VolumeFogInscatteringIntensity: 0.244
+  VolumeFogInscatteringStartDistance: 11.5
+  VolumeFogInscatteringTransitionWideness: -0.05
+  VolumeFogInscatteringColor: {r: 1, g: 1, b: 1, a: 1}
+  VolumeFogInscattering: 0
+  HeightAbsorption: 0
+  HeightAbsorptionMin: -1
+  HeightAbsorptionMax: -1
+  SunAttached: 0
+  Sun: {fileID: 0}
+  _ShadeNoise: 0
+  _DirectionalLighting: 0
+  _DirectionalLightingDistance: 0.01
+  DirectLightingShadowDensity: 1
+  LightExtinctionColor: {r: 0.31764707, g: 0.1764706, b: 0.101960786, a: 0}
+  DirectLightingShadowSteps: 1
+  bAbsorption: 1
+  Absorption: 0.506
+  _LightExposure: 1
+  Lambert: 0
+  LambertianBias: 1
+  NormalDistance: 0.01
+  DirectLightingAmount: 1
+  DirectLightingDistance: 10
+  ShadowBrightness: 1
+  _AmbientColor: {r: 0.73448277, g: 0.918002, b: 1, a: 1}
+  ShadowShift: 0.0094
+  PointLightsIntensity: 1
+  PointLightingDistance: 1000
+  PointLightingDistance2Camera: 50
+  PointLightCullSizeMultiplier: 1
+  PointLightsActive: 0
+  EnableInscattering: 0
+  InscatteringColor: {r: 1, g: 1, b: 1, a: 1}
+  _LightHaloTexture: {fileID: 2800000, guid: fa2064f3c8dffc04f93f4f74eae0d72f, type: 3}
+  CoverageTex: {fileID: 0}
+  LightHalo: 0
+  _HaloWidth: 0.75
+  _HaloOpticalDispersion: 1
+  _HaloRadius: 1
+  _HaloIntensity: 1
+  _HaloAbsorption: 0.5
+  InscatteringShape: -0.1
+  InscatteringIntensity: 0.293
+  InscatteringStartDistance: 3
+  InscatteringTransitionWideness: 1
+  EnableNoise: 0
+  Octaves: 2
+  _DetailMaskingThreshold: 18
+  bSphericalFade: 0
+  SphericalFadeDistance: 10
+  DetailDistance: 500
+  DetailTiling: -0.23
+  _DetailRelativeSpeed: 9.1
+  _BaseRelativeSpeed: 1.12
+  _NoiseDetailRange: 0.472
+  _Curl: 1
+  BaseTiling: 0.1
+  Coverage: 2.3
+  NoiseDensity: 1
+  _3DNoiseScale: 68.12
+  Iterations: 40
+  _BlendMode: 5
+  IterationStep: 250
+  _OptimizationFactor: 0.000001
+  _SamplingMethod: 0
+  _VisibleByReflectionProbeStatic: 1
+  GameCameraGO: {fileID: 0}
+  _DebugMode: 0
+  useHeightGradient: 0
+  GradMin: 1
+  GradMax: -1
+  GradMin2: -1
+  GradMax2: -1
+  _NoiseVolume2: {fileID: 11700000, guid: ce515a5a715cb574eb40037cfb1ab766, type: 2}
+  _NoiseVolume: {fileID: 11700000, guid: ce515a5a715cb574eb40037cfb1ab766, type: 2}
+  NoiseIntensity: 0.001
+  NoiseContrast: 12.6
+  FadeDistance: 5000
+  Vortex: 0
+  _VortexAxis: 2
+  bVolumeFog: 1
+  VolumeFogInscatterColorAffectedWithFogColor: 1
+  _LightScatterMethod: 1
+  rotation: 0
+  RotationSpeed: 0
+  Speed: {x: 0, y: 0.1, z: 0.5, w: 0}
+  Stretch: {x: 0, y: 0, z: 0, w: 0}
+  SceneCollision: 1
+  ShowPrimitives: 0
+  EnableDistanceFields: 0
+  PrimitivesList: []
+  _PrimitiveEdgeSoftener: 1
+  _PrimitiveCutout: 0
+  Constrain: 0
+  _SceneIntersectionSoftness: 0.01
+  _jitter: 0.0045
+  FogRenderer: {fileID: 23447618598477500}
+  _InspectorBackground:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _InspectorBackgroundIndex: 0
+  Description: 
+  EnableGradient: 1
+  Gradient: {fileID: 2800000, guid: 132bd45e1d3746f4ba36d53d9e19b1c9, type: 3}
+  HideWireframe: 1
+  DrawOrder: 0
+  ShowDebugGizmos: 0
+  RT_Opacity: {fileID: 0}
+  RT_OpacityBlur: {fileID: 0}
+  ShadowCutoff: 1
+  CastShadows: 0
+  ShadowCameraGO: {fileID: 0}
+  shadowCameraPosition: 20
+  _ShadowCamera: {fileID: 0}
+  _PushAlpha: 1
+  FogVolumeShader: {fileID: 4800000, guid: 6040e6c91df9d9d47b7e5426d41a7471, type: 3}
+  ShadowProjector: {fileID: 0}
+  ShadowProjectorMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  ShadowColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.25}
+  _ztest: 0
+  ExcludeFromLowRes: 0
+  PointLightCPUMaxDistance: 1
+  PointLightScreenMargin: 1
+  PointLightsRealTimeUpdate: 1
+  PointLightBoxCheck: 1
+  PrimitivesRealTimeUpdate: 1
+  Primitives: []
+  IsVisible: 1
+  CreateSurrogate: 1
+  InjectCustomDepthBuffer: 0
+  UseConvolvedLightshafts: 0
+--- !u!114 &114861514068731186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1849679930475698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ead9d9608fc8d43827ac46c26c6dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
