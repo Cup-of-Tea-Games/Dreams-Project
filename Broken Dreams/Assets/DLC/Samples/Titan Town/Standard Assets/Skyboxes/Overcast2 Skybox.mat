@@ -10,67 +10,48 @@ Material:
   m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _BackTex
-      second:
+    - _BackTex:
         m_Texture: {fileID: 2800000, guid: e228581791012c144900f8d7ccda2491, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DownTex
-      second:
+    - _DownTex:
         m_Texture: {fileID: 2800000, guid: c76b3032d5d1c9e47a4f64134730c565, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _FrontTex
-      second:
+    - _FrontTex:
         m_Texture: {fileID: 2800000, guid: 6eef515e7c40d3244ad62dcdf6e8096a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LeftTex
-      second:
+    - _LeftTex:
         m_Texture: {fileID: 2800000, guid: cc2e0695659497144afe5a45ed3227ea, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _RightTex
-      second:
+    - _RightTex:
         m_Texture: {fileID: 2800000, guid: 5f75ef29233ec634facc1ba1e1f64725, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _UpTex
-      second:
+    - _UpTex:
         m_Texture: {fileID: 2800000, guid: bbba6214b1838a64ebc939ac9a08726d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _Exposure
-      second: 1
-    - first:
-        name: _Rotation
-      second: 0
+    - _Exposure: 1.44
+    - _Rotation: 0
     m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _Tint
-      second: {r: 0.3897059, g: 0.3897059, b: 0.3897059, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Tint: {r: 0.5586072, g: 0.5902075, b: 0.60294116, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

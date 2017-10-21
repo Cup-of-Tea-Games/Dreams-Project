@@ -4,7 +4,7 @@
 //
 // Auto-generated shader code, don't hand edit!
 //   Compiled with MegaSplat 1.51
-//   Unity : 2017.1.1f1
+//   Unity : 2017.2.0f3
 //   Platform : WindowsEditor
 //////////////////////////////////////////////////////
 
@@ -13,11 +13,6 @@ Shader "MegaSplat/SnowscapeDetail" {
       // terrain
       [NoScaleOffset]_SplatControl("Splat Control", 2D) = "black" {}
       [NoScaleOffset]_SplatParams("Splat Params", 2D) = "black" {}
-      // distance resampling
-      // uv scale, near, fast
-      _ResampleDistanceParams("Puddle Flow Params", Vector) = (0.25, 80, 200, 0)
-
-
       // glitter
       [NoScaleOffset]_GlitterTexture("Glitter Texture", 2D) = "grey" {}
       _GlitterParams("Glitter Params", Vector) = (80, 80, .21, 5) // uv scale, scale, flutterspeed, flutterscale
@@ -99,7 +94,6 @@ Shader "MegaSplat/SnowscapeDetail" {
 
       #define _ALPHAHOLE 1
       #define _DISTANCENOISE 1
-      #define _DISTANCERESAMPLE 1
       #define _FLOW 1
       #define _NORMALMAP 1
       #define _PERTEXAOSTRENGTH 1
@@ -3280,7 +3274,6 @@ Shader "MegaSplat/SnowscapeDetail" {
 
       #define _ALPHAHOLE 1
       #define _DISTANCENOISE 1
-      #define _DISTANCERESAMPLE 1
       #define _FLOW 1
       #define _NORMALMAP 1
       #define _PERTEXAOSTRENGTH 1
@@ -6458,7 +6451,6 @@ Shader "MegaSplat/SnowscapeDetail" {
 
       #define _ALPHAHOLE 1
       #define _DISTANCENOISE 1
-      #define _DISTANCERESAMPLE 1
       #define _FLOW 1
       #define _NORMALMAP 1
       #define _PERTEXAOSTRENGTH 1
@@ -9637,7 +9629,6 @@ Shader "MegaSplat/SnowscapeDetail" {
 
       #define _ALPHAHOLE 1
       #define _DISTANCENOISE 1
-      #define _DISTANCERESAMPLE 1
       #define _FLOW 1
       #define _NORMALMAP 1
       #define _PERTEXAOSTRENGTH 1
