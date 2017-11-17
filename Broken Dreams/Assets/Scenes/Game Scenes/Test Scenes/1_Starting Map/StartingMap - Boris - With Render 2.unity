@@ -1776,13 +1776,18 @@ Prefab:
     - target: {fileID: 224131676786289276, guid: b919e1d861a09024495c63898f251382,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1233.915
+      value: -1229.915
       objectReference: {fileID: 0}
     - target: {fileID: 224131676786289276, guid: b919e1d861a09024495c63898f251382,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 160.29211
+      value: 162.29211
       objectReference: {fileID: 0}
+    - target: {fileID: 114014580996727250, guid: b919e1d861a09024495c63898f251382,
+        type: 2}
+      propertyPath: cameraHolder
+      value: 
+      objectReference: {fileID: 1255073383}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b919e1d861a09024495c63898f251382, type: 2}
   m_IsPrefabParent: 0
@@ -6386,6 +6391,11 @@ Mesh:
 --- !u!1 &1255073367 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1965653266684200, guid: b919e1d861a09024495c63898f251382,
+    type: 2}
+  m_PrefabInternal: {fileID: 259981407}
+--- !u!4 &1255073383 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4769107162010290, guid: b919e1d861a09024495c63898f251382,
     type: 2}
   m_PrefabInternal: {fileID: 259981407}
 --- !u!43 &1272704857

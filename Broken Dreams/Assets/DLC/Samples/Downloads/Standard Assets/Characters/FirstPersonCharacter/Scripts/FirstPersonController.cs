@@ -77,6 +77,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public static Transform reference;
 
+        //Camera Axis Holder
+        public Transform cameraHolder;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
@@ -97,7 +100,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
-            m_MouseLook.Init(transform, m_Camera.transform);
+            m_MouseLook.Init(transform, cameraHolder);
         }
 
         // Update is called once per frame
@@ -243,7 +246,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     mouseLookResetter = false;
                     Destroy(m_MouseLook);
                     m_MouseLook = gameObject.AddComponent<MouseLook>();
-                    m_MouseLook.Init(transform, m_Camera.transform);
+                    m_MouseLook.Init(transform, cameraHolder);
                     Debug.Log("Resetted Mouse Look");
                 }
 
@@ -502,7 +505,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void RotateView()
         {
             if(m_MouseLook != null)
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            m_MouseLook.LookRotation (transform, cameraHolder);
         }
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -535,7 +538,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 ladder.ClimbPosition.transform.position -= new Vector3(0, ladderClimbSpeed, 0);
                 StartCoroutine(waitTime(1f));
                 m_MouseLook = gameObject.AddComponent<MouseLook>();
-                m_MouseLook.Init(transform, m_Camera.transform);
+                m_MouseLook.Init(transform, cameraHolder);
                 climbActivation = true;
                 Debug.Log("Climbing Ladder");
             }
@@ -642,7 +645,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Destroy(m_MouseLook);
                 yield return new WaitForSeconds(0.1f);
                 m_MouseLook = gameObject.AddComponent<MouseLook>();
-                m_MouseLook.Init(transform, m_Camera.transform);
+                m_MouseLook.Init(transform, cameraHolder);
                 sitActivator = false;
                 StopCoroutine(mouseLookReset());
             }
