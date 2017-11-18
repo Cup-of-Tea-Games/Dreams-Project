@@ -18,7 +18,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 47.988003, y: -56.796, z: 46.448}
+        value: {x: 40.246002, y: -37.569, z: 58.963}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -31,7 +31,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -1.034, y: -2.608, z: -61.055004}
+        value: {x: 0.149, y: 2.2540002, z: -63.408005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -200,7 +200,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -0.43600002, y: 6.3500004, z: 30.024002}
+        value: {x: 2.375, y: -6.6250005, z: 35.812}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -317,7 +317,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 5.386, y: 3.0500002, z: -56.796}
+        value: {x: 26.648, y: -13.784, z: -82.352005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -382,7 +382,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -4.053, y: 15.738001, z: 21.401001}
+        value: {x: -11.307, y: 35.095, z: 25.355001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -416,13 +416,39 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: LShoulderJoint/joint17/joint20/LWristJoint/joint24
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -18.554, y: 21.776, z: 18.115}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0, y: -0.892, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 0.101, y: 0.197, z: 0.124}
+        value: {x: 0.1531, y: 0.2896, z: 0.032}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -448,7 +474,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 0.074, y: 0.044, z: -0.065}
+        value: {x: 0.011, y: 0.01, z: -0.1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -547,6 +573,32 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: LShoulderJoint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.291, y: -0.008, z: -0.009}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.0041, y: -0.0132, z: 0.0145}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -600,7 +652,23 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: LShoulderJoint/joint17/joint20/LWristJoint/joint24
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: RShoulderJoint/joint18/joint19/RWristJoint/G17 Handgun
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -609,6 +677,13 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
+    - serializedVersion: 2
+      path: 3473497412
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
     - serializedVersion: 2
       path: 1997692692
       attribute: 1
@@ -674,6 +749,20 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 404866327
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1423592240
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 171651397
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -897,6 +986,20 @@ AnimationClip:
       customType: 14
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 171651397
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3081403360
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 14
+      isPPtrCurve: 0
+    - serializedVersion: 2
       path: 3473497412
       attribute: 3
       script: {fileID: 0}
@@ -951,7 +1054,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 47.988003
+        value: 40.246002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -967,7 +1070,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -56.796
+        value: -37.569
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -983,7 +1086,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 46.448
+        value: 58.963
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -999,7 +1102,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.101
+        value: 0.1531
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1015,7 +1118,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.197
+        value: 0.2896
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1031,7 +1134,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.124
+        value: 0.032
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1047,7 +1150,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -1.034
+        value: 0.149
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1063,7 +1166,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -2.608
+        value: 2.2540002
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1079,7 +1182,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -61.055004
+        value: -63.408005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1767,7 +1870,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -0.43600002
+        value: 2.375
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1783,7 +1886,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 6.3500004
+        value: -6.6250005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1799,7 +1902,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 30.024002
+        value: 35.812
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1815,7 +1918,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.074
+        value: 0.011
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1831,7 +1934,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0.044
+        value: 0.01
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1847,7 +1950,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -0.065
+        value: -0.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2247,7 +2350,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 5.386
+        value: 26.648
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2263,7 +2366,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 3.0500002
+        value: -13.784
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2279,7 +2382,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -56.796
+        value: -82.352005
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2583,7 +2686,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: -4.053
+        value: -11.307
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2599,7 +2702,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 15.738001
+        value: 35.095
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2615,7 +2718,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 21.401001
+        value: 25.355001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3106,6 +3209,214 @@ AnimationClip:
     path: LShoulderJoint
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.291
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.008
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.009
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -18.554
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 21.776
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 18.115
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.0041
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.0132
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0.0145
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: -0.892
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: localEulerAnglesRaw.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: RShoulderJoint/joint18/joint19/RWristJoint/G17 Handgun
+    classID: 1
+    script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2
@@ -3474,7 +3785,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: LShoulderJoint/joint17
+    path: LShoulderJoint/joint17/joint20/LWristJoint
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3484,7 +3795,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: LShoulderJoint/joint17
+    path: LShoulderJoint/joint17/joint20/LWristJoint
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3494,7 +3805,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: LShoulderJoint/joint17
+    path: LShoulderJoint/joint17/joint20/LWristJoint
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3594,7 +3905,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: LShoulderJoint/joint17/joint20
+    path: LShoulderJoint/joint17
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3604,7 +3915,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: LShoulderJoint/joint17/joint20
+    path: LShoulderJoint/joint17
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3614,7 +3925,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: LShoulderJoint/joint17/joint20
+    path: LShoulderJoint/joint17
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3803,36 +4114,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: LShoulderJoint/joint17/joint20/LWristJoint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: LShoulderJoint/joint17/joint20/LWristJoint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: LShoulderJoint/joint17/joint20/LWristJoint
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: RShoulderJoint/joint18
     classID: 4
@@ -3855,6 +4136,36 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
     path: RShoulderJoint/joint18
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4013,8 +4324,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: RShoulderJoint/joint18/joint19/RWristJoint
+    attribute: m_LocalEulerAngles.z
+    path: LShoulderJoint/joint17/joint20
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4024,7 +4335,17 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: RShoulderJoint/joint18/joint19/RWristJoint
+    path: LShoulderJoint/joint17/joint20
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: LShoulderJoint/joint17/joint20
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4034,7 +4355,57 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: RShoulderJoint/joint18/joint19/RWristJoint
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: RShoulderJoint/joint18/joint19/RWristJoint/joint23/joint27/joint41/joint42
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
