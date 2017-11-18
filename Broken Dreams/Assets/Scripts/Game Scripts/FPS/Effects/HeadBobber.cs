@@ -6,10 +6,13 @@ public class HeadBobber : MonoBehaviour
 {
 
     private float timer = 0.0f;
-    public  float bobbingSpeed = 0.18f;
-    public  float bobbingAmount = 0.2f;
+    public float bobbingSpeed = 0.18f;
+    public float bobbingAmount = 0.2f;
+    public float Xmultiplier = 1f;
+    public float Ymultiplier = 1f;
     public float midpoint = 2.0f;
     public float smoothing = 50;
+    public bool additiveMovement = false;
 
     void Update()
     {
@@ -39,15 +42,17 @@ public class HeadBobber : MonoBehaviour
             float totalAxes = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
             totalAxes = Mathf.Clamp(totalAxes, 0.0f, 1.0f);
             translateChange = totalAxes * translateChange;
-            cSharpConversion.y = midpoint + translateChange*2;
-            cSharpConversion.x = midpoint + translateChange;
+            cSharpConversion.y = midpoint + translateChange*Ymultiplier;
+            cSharpConversion.x = midpoint + translateChange*Xmultiplier;
         }
         else {
             cSharpConversion.y = midpoint;
             cSharpConversion.x = midpoint;
         }
-
+        if(!additiveMovement)
         transform.localPosition = Vector3.Lerp(transform.localPosition, cSharpConversion, Time.unscaledDeltaTime*smoothing);
+        else
+            transform.localPosition += Vector3.Lerp(transform.localPosition, cSharpConversion, Time.unscaledDeltaTime * smoothing);
     }
 
 

@@ -36,7 +36,7 @@ public class PickItem : MonoBehaviour {
     public void pickUpItem()
     {
         itemShack.add(new Item(itemImage, itemTag, itemName, itemDesc));
-        tips.Show(messageOnPickUp);
+        //tips.Show(messageOnPickUp);
         if (destroyOnPickUp)
             Destroy(gameObject);
         else

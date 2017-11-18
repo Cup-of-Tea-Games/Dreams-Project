@@ -393,6 +393,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         else if (hit.collider.gameObject.tag == "Item")
         {
+            Debug.Log("APAPAPAPAPAPAP");
             objectInstance.GetComponent<PickItem>().pickUpItem();
         }
 
