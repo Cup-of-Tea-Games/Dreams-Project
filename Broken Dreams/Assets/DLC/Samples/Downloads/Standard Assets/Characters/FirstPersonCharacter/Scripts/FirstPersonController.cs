@@ -80,6 +80,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //Camera Axis Holder
         public Transform cameraHolder;
 
+        //ANIMATION
+        public Animator m_Animator;
+        Rigidbody m_Rigidbody;
+        float m_GroundCheckDistance = 0.1f;
+        bool m_IsGrounded;
+        float m_OrigGroundCheckDistance;
+        float m_ForwardAmount;
+        float m_SideAmount;
+        Vector3 m_GroundNormal;
+        float m_AnimSpeedMultiplier = 1f;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
@@ -101,11 +112,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
             m_MouseLook.Init(transform, cameraHolder);
+
+            m_OrigGroundCheckDistance = m_GroundCheckDistance;
+            m_Rigidbody = GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
         private void Update()
         {
+            //Animation Handler
+            performAnimation();
+
             //Grounded Checker
             isGrounded = m_CharacterController.isGrounded;
 
@@ -287,10 +304,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (isCrouching)
             {
                 //Adjust Camera Center
-                if (GetComponent<CharacterController>().center.y < 0.5f)
+                if (GetComponent<CharacterController>().center.y < -1f)
                     GetComponent<CharacterController>().center += new Vector3(0, 0.1f, 0);
-                 else if (GetComponent<CharacterController>().center.y > 2)
-                    GetComponent<CharacterController>().center = new Vector3(0, 1.0f, 0);
+                 else if (GetComponent<CharacterController>().center.y > -1F)
+                    GetComponent<CharacterController>().center = new Vector3(0, -1.0f, 0);
                 //Adjust Height
                 GetComponent<CharacterController>().height = 1.5f;
                 m_WalkSpeed = 3;
@@ -651,33 +668,63 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        /*		void UpdateAnimator(Vector3 move)
+        //ANIMATION RELATED
+
+        void HandleAirborneMovement()
+        {
+            m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+        }
+
+        void CheckGroundStatus()
+        {
+            RaycastHit hitInfo;
+#if UNITY_EDITOR
+            // helper to visualise the ground check ray in the scene view
+            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
+#endif
+            // 0.1f is a small offset to start the ray from inside the character
+            // it is also good to note that the transform position in the sample assets is at the base of the character
+            if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
+            {
+                m_GroundNormal = hitInfo.normal;
+                m_IsGrounded = true;
+                m_Animator.applyRootMotion = true;
+            }
+            else
+            {
+                m_IsGrounded = false;
+                m_GroundNormal = Vector3.up;
+                m_Animator.applyRootMotion = false;
+            }
+        }
+
+        void monitorMovement()
+        {
+         //   move = transform.InverseTransformDirection(move);
+            CheckGroundStatus();
+            m_ForwardAmount = transform.InverseTransformDirection(gameObject.transform.position).z;
+        }
+
+        void UpdateAnimator()
 		{
-			// update the animator parameters
-			m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
-			m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
-			m_Animator.SetBool("Crouch", m_Crouching);
-			m_Animator.SetBool("OnGround", m_IsGrounded);
+            Vector3 localVelocity = transform.InverseTransformDirection(m_CharacterController.velocity);
+            float forwardSpeed = localVelocity.z;
+            float sideSpeed = localVelocity.x;
+            Debug.Log(localVelocity + ":" + GetComponent<Rigidbody>().velocity);
+
+            // update the animator parameters
+            m_Animator.SetFloat("Forward",forwardSpeed, 0.1f, Time.deltaTime);
+			m_Animator.SetFloat("Side",sideSpeed, 0.1f, Time.deltaTime);
+			m_Animator.SetBool("Crouch", isCrouching);
+			m_Animator.SetBool("OnGround", isGrounded);
 			if (!m_IsGrounded)
 			{
 				m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
 			}
 
-			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
-			// (This code is reliant on the specific run cycle offset in our animations,
-			// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
-			float runCycle =
-				Mathf.Repeat(
-					m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
-			float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
-			if (m_IsGrounded)
-			{
-				m_Animator.SetFloat("JumpLeg", jumpLeg);
-			}
-
 			// the anim speed multiplier allows the overall speed of walking/running to be tweaked in the inspector,
 			// which affects the movement speed because of the root motion.
-			if (m_IsGrounded && move.magnitude > 0)
+			if (m_IsGrounded && transform.GetComponent<Rigidbody>().velocity.magnitude > 0)
 			{
 				m_Animator.speed = m_AnimSpeedMultiplier;
 			}
@@ -686,6 +733,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				// don't use that while airborne
 				m_Animator.speed = 1;
 			}
-		}*/
+		}
+
+        void performAnimation()
+        {
+            UpdateAnimator();
+            monitorMovement();
+            CheckGroundStatus();
+            HandleAirborneMovement();
+        }
     }
 }
