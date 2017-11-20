@@ -8,9 +8,11 @@ public class WeaponWheel : MonoBehaviour {
     public ItemShack weaponShack;
     public GameObject transformBall;
     public Unarmed handsAnimation;
+    public Animator handsAnimator;
     public static bool isShowing = false;
     public GameObject[] weapons;
     public GameObject[] weaponPrefabs;
+    public RuntimeAnimatorController[] weaponAnimationControllers;
     public static int numSwitch = 0;
     public static bool activeExternal = false;
     public static Item currentWeapon;
@@ -46,9 +48,12 @@ public class WeaponWheel : MonoBehaviour {
         for(int i = 0; i < weapons.Length; i++)
         {
             if (weapons[i].activeSelf && i != x)
+            {
                 weapons[i].SetActive(false);
+            }
         }
         weapons[x].SetActive(true);
+        handsAnimator.runtimeAnimatorController = weaponAnimationControllers[x];
     }
 
     public static void selectItemExternal(int x)

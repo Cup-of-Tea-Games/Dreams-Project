@@ -710,7 +710,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector3 localVelocity = transform.InverseTransformDirection(m_CharacterController.velocity);
             float forwardSpeed = localVelocity.z;
             float sideSpeed = localVelocity.x;
-            Debug.Log(localVelocity + ":" + GetComponent<Rigidbody>().velocity);
+          //  Debug.Log(localVelocity + ":" + GetComponent<Rigidbody>().velocity);
 
             // update the animator parameters
             m_Animator.SetFloat("Forward",forwardSpeed, 0.1f, Time.deltaTime);
