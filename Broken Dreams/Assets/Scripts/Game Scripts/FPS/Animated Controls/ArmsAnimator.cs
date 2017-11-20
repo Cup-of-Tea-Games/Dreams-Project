@@ -30,6 +30,15 @@ public class ArmsAnimator : MonoBehaviour {
         else
             rightShoulder.GetComponent<FollowTarget>().enabled = true;
 
-                Debug.Log(rightShoulder.GetComponent<FollowTarget>());
+        if (WeaponWheel.numSwitch > 2)
+        {
+            leftShoulder.GetComponent<FollowTarget>().enabled = false;
+        }
+        else
+        {
+            leftShoulder.GetComponent<FollowTarget>().enabled = true;
+        }
+
+        //Debug.Log(weaponWheel.);
     }
 }
