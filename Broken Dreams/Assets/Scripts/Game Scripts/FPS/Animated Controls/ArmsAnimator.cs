@@ -30,7 +30,7 @@ public class ArmsAnimator : MonoBehaviour {
         else
             rightShoulder.GetComponent<FollowTarget>().enabled = true;
 
-        if (WeaponWheel.numSwitch > 2)
+        if (WeaponWheel.numSwitch == 3 || WeaponWheel.numSwitch == 1)
         {
             leftShoulder.GetComponent<FollowTarget>().enabled = false;
         }

@@ -12,7 +12,7 @@ public class PickItem : MonoBehaviour {
    GameObject tipsGen;
    TipsGenerator tips;
    public string messageOnPickUp;
-   public bool autoFindItemShack = false;
+   public bool autoFindItemShack = true;
    public bool autoFindWeaponShack = false;
    public bool destroyOnPickUp = true;
 
@@ -26,10 +26,14 @@ public class PickItem : MonoBehaviour {
     void Update()
     {
         if (autoFindItemShack)
+        {
             itemShack = GameObject.Find("ItemShack").GetComponent<ItemShack>();
-        if (autoFindWeaponShack)
+            autoFindWeaponShack = false;
+        }
+        else if (autoFindWeaponShack)
         {
             itemShack = GameObject.Find("Weapon Wheel").GetComponent<ItemShack>();
+            autoFindItemShack = false;
         }
     }
 
