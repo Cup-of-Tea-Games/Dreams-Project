@@ -7,8 +7,13 @@ public class ExtractionMachine : MonoBehaviour {
     public KeyReciever gear;
     public Engine engine;
     public Basement basement;
-    public TipsGenerator tips;
+    TipsGenerator tips;
     bool key1 = true;
+
+    void Awake()
+    {
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+    }
 
     void Update()
     {

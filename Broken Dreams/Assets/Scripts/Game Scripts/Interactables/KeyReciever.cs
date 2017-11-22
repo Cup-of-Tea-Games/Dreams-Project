@@ -6,10 +6,15 @@ public class KeyReciever : MonoBehaviour {
     public GameObject spawnPlacementObject;
     public string tagName;
     bool active = false;
-    public TipsGenerator tips;
+    TipsGenerator tips;
     public string successMessage;
     public string failedMessage;
     public string investigateMessage;
+
+    void Awake()
+    {
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+    }
 
     void Update()
     {

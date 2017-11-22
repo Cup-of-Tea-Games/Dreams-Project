@@ -8,8 +8,7 @@ public class PickItem : MonoBehaviour {
    public string itemTag;
    public  string itemName;
    public  string itemDesc;
-   public ItemShack itemShack;
-   GameObject tipsGen;
+   ItemShack itemShack;
    TipsGenerator tips;
    public string messageOnPickUp;
    public bool autoFindItemShack = true;
@@ -18,13 +17,8 @@ public class PickItem : MonoBehaviour {
 
     void Awake()
     {
-        tipsGen = GameObject.Find("ItemTips");
-        tips = tipsGen.GetComponent<TipsGenerator>();
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
 
-    }
-
-    void Update()
-    {
         if (autoFindItemShack)
         {
             itemShack = GameObject.Find("ItemShack").GetComponent<ItemShack>();

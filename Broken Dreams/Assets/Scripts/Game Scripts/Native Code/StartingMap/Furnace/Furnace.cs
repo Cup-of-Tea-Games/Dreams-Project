@@ -6,13 +6,18 @@ public class Furnace : MonoBehaviour {
     public Collider hitBox;
     public int maxFuelLoad;
     public Engine engine;
-    public TipsGenerator tips;
+    TipsGenerator tips;
     public string nameOfFuel;
     public Animator animator;
     int currentFuelLoad = 0;
 
     //Temporary bool key
     bool key1 = true;
+
+    void Awake()
+    {
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+    }
 
     void Update()
     {

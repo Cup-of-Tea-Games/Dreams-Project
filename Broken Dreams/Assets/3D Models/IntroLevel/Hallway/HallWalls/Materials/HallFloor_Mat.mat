@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: HallFloor_Mat
-  m_Shader: {fileID: 4800000, guid: fd1b0c2328cad6942aa89eb15af421f0, type: 3}
-  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _WETNESS_NONE
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _EMISSION_TEXTURED _METALLICGLOSSMAP _NORMALMAP _WETNESS_NONE
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -252,8 +252,8 @@ Material:
     - _UVSecOcclusion: 0
     - _UVSecOcclusionLightmapPacked: 0
     - _UV_Clip: 0
-    - _WetDroplets: 0
-    - _WetRipples: 0
+    - _WetDroplets: 1
+    - _WetRipples: 1
     - _Wetness: 0
     - _WetnessConst: 0
     - _WetnessConstFromGlobal: 0

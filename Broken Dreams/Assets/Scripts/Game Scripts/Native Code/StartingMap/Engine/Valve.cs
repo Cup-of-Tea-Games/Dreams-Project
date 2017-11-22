@@ -7,10 +7,15 @@ public class Valve : MonoBehaviour {
     public Animator animator;
     public Collider col;
     public Toggle toggle;
-    public TipsGenerator tips;
+    TipsGenerator tips;
 
     bool key1 = true;
     bool active = false;
+
+    void Awake()
+    {
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+    }
 
     void Update()
     {
