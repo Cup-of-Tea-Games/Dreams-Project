@@ -35,6 +35,7 @@ public class Antagonist : MonoBehaviour
         public Camera eyes;
         public DamageSystem damageSystem;
         public float health;
+        public float runMultiplier = 1.5f;
 
 
         private void Start()
@@ -61,7 +62,7 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator chaseTarget()
     {
-        agent.speed = originalSpeed * 1.5f;
+        agent.speed = originalSpeed * runMultiplier;
 
 
         yield return new WaitForSeconds(0.1f);
