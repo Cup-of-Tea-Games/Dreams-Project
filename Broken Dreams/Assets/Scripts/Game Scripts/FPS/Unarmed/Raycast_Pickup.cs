@@ -113,6 +113,8 @@ public class Raycast_Pickup : MonoBehaviour
                     else if (hit.collider.gameObject.tag == "Switch")
                         toggleswitch.SetActive(true);
 
+                   // Debug.Log("HITTING : " + hit.collider.gameObject.name);
+
                     if (!FirstPersonController.isClimbing)
                     {
                         if (hit.collider.gameObject.tag == "Ladder")
@@ -393,7 +395,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         else if (hit.collider.gameObject.tag == "Item")
         {
-            Debug.Log("APAPAPAPAPAPAP");
+         //   Debug.Log("APAPAPAPAPAPAP");
             objectInstance.GetComponent<PickItem>().pickUpItem();
         }
 

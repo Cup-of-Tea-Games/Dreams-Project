@@ -218,7 +218,7 @@ public class Antagonist : MonoBehaviour
         void AINavigationManager()
     {
         distance = Vector3.Distance(agent.transform.position, target.transform.position);
-        Debug.Log(roomWaypointDestinationCount);
+    //    Debug.Log(roomWaypointDestinationCount);
         if (distance < 2)
             lostValue = 0;
         else
