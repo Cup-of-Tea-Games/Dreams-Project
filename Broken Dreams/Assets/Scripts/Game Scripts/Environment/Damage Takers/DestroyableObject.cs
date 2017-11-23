@@ -28,6 +28,6 @@ public class DestroyableObject : MonoBehaviour {
     {
         Destroy(gameObject);
         Instantiate(destroyedVersion, transform.position,transform.rotation);
-        destroyedVersion.transform.localScale = transform.localScale;
+      //  destroyedVersion.transform.localScale = transform.localScale;
     }
 }
