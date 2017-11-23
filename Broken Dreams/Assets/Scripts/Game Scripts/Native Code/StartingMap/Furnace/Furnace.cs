@@ -10,6 +10,7 @@ public class Furnace : MonoBehaviour {
     public string nameOfFuel;
     public Animator animator;
     int currentFuelLoad = 0;
+    public Pilars pilars;
 
     //Temporary bool key
     bool key1 = true;
@@ -27,6 +28,7 @@ public class Furnace : MonoBehaviour {
             engine.engineActive = true;
             animator.Play("Close");
             tips.Show("Burner fuel full");
+            pilars.rise();
         }
     }
 

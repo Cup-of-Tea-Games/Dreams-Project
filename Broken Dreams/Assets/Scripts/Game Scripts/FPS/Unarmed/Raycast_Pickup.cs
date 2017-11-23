@@ -58,6 +58,11 @@ public class Raycast_Pickup : MonoBehaviour
     void Update()
     {
 
+        if(objectInstance != null)
+        {
+            Debug.Log("HITTING : " + hit.collider.gameObject.name);
+        }
+
         if (Input.GetMouseButtonDown(0) && itemInRange())
         {
             mouseClickToggle = !mouseClickToggle;
@@ -112,8 +117,6 @@ public class Raycast_Pickup : MonoBehaviour
                         hint.SetActive(true);
                     else if (hit.collider.gameObject.tag == "Switch")
                         toggleswitch.SetActive(true);
-
-                   // Debug.Log("HITTING : " + hit.collider.gameObject.name);
 
                     if (!FirstPersonController.isClimbing)
                     {
@@ -314,10 +317,15 @@ public class Raycast_Pickup : MonoBehaviour
         {
             isGrabbing = true;
             if (!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
-                objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime);
+            {
+                objectInstance.transform.position = Vector3.Lerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime);
+              //  Debug.Log("NOT COLLIDING");
+            }
             else
+            {
                 objectInstance.transform.position = Vector3.Slerp(objectInstance.transform.position, transformBall.transform.position, speed * Time.deltaTime / 12f);
-            //    objectInstance.transform.rotation = new Quaternion(transformBall.transform.rotation.x, transformBall.transform.rotation.y, objectInstance.transform.rotation.z, objectInstance.transform.rotation.w);
+              //  Debug.Log("COLLIDING");
+            }                //    objectInstance.transform.rotation = new Quaternion(transformBall.transform.rotation.x, transformBall.transform.rotation.y, objectInstance.transform.rotation.z, objectInstance.transform.rotation.w);
             objectInstance.GetComponent<Rigidbody>().freezeRotation = true;
             objectInstance.GetComponent<Rigidbody>().useGravity = false;
         }
@@ -496,7 +504,7 @@ public class Raycast_Pickup : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R))
         {
             rotateTimeSet = Time.time;
-            Debug.Log(rotateTimeSet);
+//Debug.Log(rotateTimeSet);
         }
     }
 

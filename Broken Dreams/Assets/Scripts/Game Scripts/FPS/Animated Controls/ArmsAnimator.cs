@@ -39,7 +39,14 @@ public class ArmsAnimator : MonoBehaviour {
             leftShoulder.GetComponent<FollowTarget>().enabled = true;
         }
 
-        Debug.Log(WeaponWheel.numSwitch);
+        if (WeaponWheel.isShowing)
+        {
+            m_Animator.updateMode = AnimatorUpdateMode.Normal;
+        }
+        else
+        {
+            m_Animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        }
 
     }
 }

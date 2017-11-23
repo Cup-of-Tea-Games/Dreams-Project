@@ -23,7 +23,7 @@ public class Basement : MonoBehaviour {
 
     void Update()
     {
-        if (engine.isOnline())
+        if (engine.isOnline() || !engine.isOnline())
         {
             //Sets the lights
             for(int i = 0;i < pointlights.Length; i++)

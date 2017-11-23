@@ -23,11 +23,13 @@ public class WeaponWheel : MonoBehaviour {
         {
             weaponSelector.SetActive(true);
             isShowing = true;
+            Time.timeScale = 0.2f;
         }
         else
         {
             weaponSelector.SetActive(false);
             isShowing = false;
+            Time.timeScale = 1f;
         }
 
         if (Input.GetKeyDown(KeyCode.Q))

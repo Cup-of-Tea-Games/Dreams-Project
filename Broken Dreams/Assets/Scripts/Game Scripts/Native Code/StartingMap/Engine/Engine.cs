@@ -9,6 +9,7 @@ public class Engine : MonoBehaviour {
     bool online = false;
 
     public Animator spinner;
+    public Basement basement;
     public Light pointlight;
     public Button[] hyperDoorButtons;
     TipsGenerator tips;
@@ -43,8 +44,8 @@ public class Engine : MonoBehaviour {
         waterActive = waterValve.isActive();
         heatActive = heatValve.isActive();
 
-        if(waterValve.col != null)
-        waterValve.col.enabled = engineActive;
+        if (waterValve.col != null)
+            waterValve.col.enabled = basement.isOnline(); ;
         if (heatValve.col != null)
             heatValve.col.enabled = engineActive;
 
@@ -59,18 +60,18 @@ public class Engine : MonoBehaviour {
             {
                 key[0] = false;
                 spinner.Play("Slow");
-                Debug.Log("FUEL READY");
+            //    Debug.Log("FUEL READY");
             }
             StartCoroutine(flickerLight(0.1f));
         }
         else if (engineActive && heatActive && !waterActive)
         {
-            Debug.Log("TURN THE WHEEEL");
+         //Debug.Log("TURN THE WHEEEL");
             StartCoroutine(flickerLight(0.5f));
         }
         else if (engineActive && !heatActive && waterActive)
         {
-            Debug.Log("TURN THE WHEEEL");
+         //   Debug.Log("TURN THE WHEEEL");
             StartCoroutine(flickerLight(0.5f));
         }
         else if (isAssembled())
