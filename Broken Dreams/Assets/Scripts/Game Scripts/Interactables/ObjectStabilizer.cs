@@ -45,7 +45,7 @@ public class ObjectStabilizer : MonoBehaviour {
             gameObject.GetComponent<Rigidbody>().freezeRotation = false;
         }
 
-        if (Raycast_Pickup.isGrabbing && gameObject == Raycast_Pickup.objectInstance)
+        if (Raycast_Pickup.isGrabbing && gameObject == Raycast_Pickup.pickUpInstance)
         {
             gameObject.GetComponent<SphereCollider>().enabled = true;
             GetComponent<SphereCollider>().radius = increasedRadius;
