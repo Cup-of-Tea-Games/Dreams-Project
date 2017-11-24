@@ -182,7 +182,6 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
         //Grabs Item
-
         if (itemInRange() && mouseClickToggle)
         {
             if (delayTime == true)
@@ -192,18 +191,19 @@ public class Raycast_Pickup : MonoBehaviour
 
         }
 
-        if (itemInRange() && Input.GetMouseButton(0))
+        if (itemInRange() && Input.GetMouseButton(0) && !mouseClickToggle)
         {
             if (delayTime == true)
                 PickUpItemClick();
             hand.SetActive(false);
             pickUp.SetActive(false);
         }
-        if (mouseClickToggle && pickUpInstance != null)
+
+      if (mouseClickToggle && pickUpInstance != null)
         {
             if (delayTime == true)
-                PickUpToggle();
-            hand.SetActive(false);
+               PickUpToggle();
+           hand.SetActive(false);
             pickUp.SetActive(false);
 
         }
@@ -265,19 +265,23 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (itemInRange() && objectInstance.GetComponent<KeyReciever>() != null)
         {
+            Debug.Log("MOUSffdfdfdE");
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-
             if (Input.GetMouseButton(0))
             {
+                Debug.Log("MOUSE");
                 if (itemInMyHand.isEmpty())
                 {
+                    Debug.Log("IF");
                     objectInstance.GetComponent<KeyReciever>().investigate();
                 }
                 else
                 {
+                    Debug.Log("ELSE");
                     objectInstance.GetComponent<KeyReciever>().insertKey(itemInMyHand.getTag());
                     if(objectInstance.GetComponent<KeyReciever>().isRecieved())
                     itemInMyHand.delete();
+
                 }
             }
         }
@@ -337,7 +341,7 @@ public class Raycast_Pickup : MonoBehaviour
 
     void PickUpItemToggle()
     {
-        if (hit.collider.gameObject.tag != "pickUpHeavyObject")
+        if (hit.collider.gameObject.tag == "pickUpObject")
         {
             isGrabbing = true;
             if (!objectInstance.GetComponent<ObjectStabilizer>().isOnCollision())
