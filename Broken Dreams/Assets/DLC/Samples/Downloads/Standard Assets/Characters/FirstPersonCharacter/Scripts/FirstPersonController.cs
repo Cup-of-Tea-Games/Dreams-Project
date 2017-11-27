@@ -120,6 +120,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            Debug.Log("Crouching " + isCrouching);
             //Animation Handler
             performAnimation();
 
@@ -587,7 +588,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             yield return new WaitForSeconds(0.25f);
             vaultUpActivator = false;
 
-            if(vaultForwardActivator && Vaulter.isVaulting)
+            if (vaultForwardActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Horizontal_Destination.transform.position, ladderDampening * Time.deltaTime);
             yield return new WaitForSeconds(0.2f);
             vaultForwardActivator = false;

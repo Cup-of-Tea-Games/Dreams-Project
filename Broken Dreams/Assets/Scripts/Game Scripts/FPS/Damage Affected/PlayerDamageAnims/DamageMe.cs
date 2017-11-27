@@ -63,7 +63,7 @@ public class DamageMe : MonoBehaviour {
 
     public IEnumerator DamageDelay()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(1f);
         canBeDamaged = true;
         StopCoroutine(DamageDelay());
         PlayerHealth.InDanger = false;

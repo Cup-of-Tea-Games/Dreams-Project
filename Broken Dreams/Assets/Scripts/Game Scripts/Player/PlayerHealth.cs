@@ -4,6 +4,7 @@ using ProgressBar;
 using UnityEngine.UI;
 using UnityStandardAssets.ImageEffects;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.Utility;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -15,7 +16,13 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject healthIcon2;
     Color32 currentColor;
     public static float health;
+    public float initialHealth;
     public bool constantDepletion;
+
+    //Ragdoll Damage
+    public GameObject Rig;
+    public GameObject Arms;
+    public GameObject CameraAxis;
 
     //Colors shining
     public Color32[] c;
@@ -49,10 +56,19 @@ public class PlayerHealth : MonoBehaviour {
     {
         filter = player.GetComponent<AudioLowPassFilter>();
         visionColor = player.GetComponent<ColorCorrectionCurves>();
-        health = 100;
+        health = initialHealth;
 
         //Damage System - Death
         body = playerBody.GetComponent<CharacterController>();
+
+
+        foreach (Collider col in Rig.GetComponentsInChildren<Collider>())
+            if (GetComponentsInChildren<Collider>() != null)
+                col.enabled = false;
+
+        foreach (Collider col in Arms.GetComponentsInChildren<Collider>())
+            if (GetComponentsInChildren<Collider>() != null)
+                col.enabled = false;
     }
 
     void HealthBarMonitor()
@@ -158,12 +174,53 @@ public class PlayerHealth : MonoBehaviour {
     {
         playerBody.GetComponent<FirstPersonController>().enabled = false;
         playerBody.GetComponent<Rigidbody>().isKinematic = false;
-        playerBody.GetComponent<Rigidbody>().freezeRotation = true;
-        playerCamera.transform.Rotate(0, 0, 45, 0);
         body.enabled = false;
         if (!isDead)
             SFX_deathSound.Play();
         isDead = true;
+
+        CameraAxis.GetComponent<FollowTarget>().copyRotation = true;
+
+        playerBody.transform.DetachChildren();
+        Arms.transform.parent = Rig.transform;
+        // CameraAxis.transform.parent = Rig.transform;
+
+        //Ragdoll
+        foreach (Collider col in Rig.GetComponentsInChildren<Collider>())
+            if (GetComponentsInChildren<Collider>() != null)
+                col.enabled = true;
+
+        foreach (Collider col in Arms.GetComponentsInChildren<Collider>())
+            if (GetComponentsInChildren<Collider>() != null)
+                col.enabled = true;
+
+        foreach (Rigidbody rb in Rig.GetComponentsInChildren<Rigidbody>())
+            if (GetComponentsInChildren<Rigidbody>() != null)
+                rb.isKinematic = false;
+
+        foreach (Animator an in Rig.GetComponentsInChildren<Animator>())
+            if (GetComponentsInChildren<Animator>() != null)
+                an.enabled = false;
+
+        foreach (Rigidbody rb in Arms.GetComponentsInChildren<Rigidbody>())
+            if (GetComponentsInChildren<Rigidbody>() != null)
+                rb.isKinematic = false;
+
+        foreach (Animator an in Arms.GetComponentsInChildren<Animator>())
+            if (GetComponentsInChildren<Animator>() != null)
+                an.enabled = false;
+
+        foreach (FollowTarget ft in Arms.GetComponentsInChildren<FollowTarget>())
+                 if (GetComponentsInChildren<FollowTarget>() != null)
+                     ft.enabled = false;
+
+        foreach (ArmsAnimator am in Arms.GetComponentsInChildren<ArmsAnimator>())
+            if (GetComponentsInChildren<ArmsAnimator>() != null)
+                am.enabled = false;
+
+        //  animator.enabled = false;
+        //  transform.DetachChildren();
+        //  Destroy(gameObject, 0.2f);
     }
 
     void OnTriggerEnter(Collider col)

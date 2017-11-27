@@ -192,7 +192,7 @@ public class Antagonist : MonoBehaviour
                 }
                 else
                 {
-                    if (lostValue > 1)
+                    if (lostValue > 2)
                     {
                         lostPlayer = true;
                         //Debug.Log("LOST YOU");

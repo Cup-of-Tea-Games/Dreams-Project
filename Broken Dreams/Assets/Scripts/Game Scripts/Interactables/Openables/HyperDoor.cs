@@ -3,13 +3,16 @@ using System.Collections;
 
 public class HyperDoor : MonoBehaviour {
 
-    public Button button;
+    public Button button1;
+    public Button button2;
     public Animator animator;
     bool isClosed = true;
 
     void Update()
     {
-        if (button.active)
+        bool buttonPressed = button1.active = button2.active;
+
+        if (buttonPressed)
         {
             if (!isClosed)
             {

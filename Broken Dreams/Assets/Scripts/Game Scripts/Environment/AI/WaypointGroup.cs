@@ -15,7 +15,7 @@ public class WaypointGroup : MonoBehaviour {
             waypoints = temp; 
             for (int i = 0; i<gameObject.GetComponentsInChildren<Transform>().Length;i++)
             {
-                waypoints[i] = gameObject.GetComponentsInChildren<Transform>()[i + 1];
+                waypoints[i] = gameObject.GetComponentsInChildren<Transform>()[i];
             }
         }
     }
