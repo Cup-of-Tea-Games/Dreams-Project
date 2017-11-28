@@ -58,18 +58,21 @@ public class Antagonist : MonoBehaviour
         {
         AINavigationManager();
         AIHealthManager();
+      //  Debug.Log(lostValue);
         }
 
         IEnumerator chaseTarget()
     {
+        Debug.Log("isChasing :" + Time.deltaTime);
+
         agent.speed = originalSpeed * runMultiplier;
 
 
         yield return new WaitForSeconds(0.1f);
-        if (distance > 2)
+        if (distance > 1)
             agent.SetDestination(target.position);
-        else
-            agent.SetDestination(agent.transform.position);
+     //   else
+       //     agent.SetDestination(agent.transform.position);
         // active = true;
         StopCoroutine(chaseTarget());
     }
@@ -92,14 +95,14 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator attack()
     {
-        agent.Stop();
+      //  agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
         yield return new WaitForSeconds(0.1f);
         hitBox.enabled = true;
         yield return new WaitForSeconds(0.1f);
         hitBox.enabled = false;
-        agent.Resume();
+     //   agent.Resume();
         yield return new WaitForSeconds(1f);
         active = true;
         StopCoroutine(attack());
@@ -109,6 +112,7 @@ public class Antagonist : MonoBehaviour
     {
 
         agent.speed = originalSpeed;
+        Debug.Log(lostValue + "This is the value");
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
@@ -138,10 +142,10 @@ public class Antagonist : MonoBehaviour
         if (distance < 0.02f)
         {
             active = false;
-            agent.Stop();
+            agent.isStopped = true;
             agent.SetDestination(roomWaypoints.waypoints[roomWaypointDestinationCount].position);
             yield return new WaitForSeconds(2f);
-            agent.Resume();
+            agent.isStopped = false;
             yield return new WaitForSeconds(4f);
             active = true;
             roomWaypointDestinationCount++;
@@ -184,18 +188,22 @@ public class Antagonist : MonoBehaviour
             {
                 if (hit.transform.tag == "Player")
                 {
+
+                    StopCoroutine(patrolRoom());
+                    StopCoroutine(patrolArea());
+
                     chase = true;
                     patrol = false;
                     lostPlayer = false;
                     lostValue = 0;
-                    //Debug.Log("FOUND YOU");
+               //     Debug.Log("FOUND YOU" + lostValue);
                 }
                 else
                 {
-                    if (lostValue > 2)
+                    if (lostValue > 5)
                     {
                         lostPlayer = true;
-                        //Debug.Log("LOST YOU");
+                  //      Debug.Log("LOST YOU" + lostValue);
                     }
                 }
             }

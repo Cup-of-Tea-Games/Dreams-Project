@@ -120,7 +120,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            Debug.Log("Crouching " + isCrouching);
+          //  Debug.Log("Crouching " + isCrouching);
             //Animation Handler
             performAnimation();
 

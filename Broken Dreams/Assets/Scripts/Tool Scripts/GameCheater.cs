@@ -5,6 +5,8 @@ public class GameCheater : MonoBehaviour {
 
     public string generatorOnline;
     public static string generatorOnlinetatic;
+    public string instaDeath;
+    public string regenHealth;
 
     void Awake()
     {
@@ -17,6 +19,15 @@ public class GameCheater : MonoBehaviour {
             return true;
         else
             return false;
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(instaDeath))
+            PlayerHealth.health = 0;
+
+        if (Input.GetKey(regenHealth))
+            PlayerHealth.health = 100;
     }
 	
 }

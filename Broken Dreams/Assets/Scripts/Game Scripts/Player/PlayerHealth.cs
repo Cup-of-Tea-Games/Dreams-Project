@@ -174,6 +174,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         playerBody.GetComponent<FirstPersonController>().enabled = false;
         playerBody.GetComponent<Rigidbody>().isKinematic = false;
+        player.GetComponent<Camera>().nearClipPlane = 0.01f;
         body.enabled = false;
         if (!isDead)
             SFX_deathSound.Play();
