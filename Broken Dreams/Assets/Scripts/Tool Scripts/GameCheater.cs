@@ -7,10 +7,12 @@ public class GameCheater : MonoBehaviour {
     public static string generatorOnlinetatic;
     public string instaDeath;
     public string regenHealth;
+    DamageMe damageSystem;
 
     void Awake()
     {
         generatorOnlinetatic = generatorOnline;
+        damageSystem = GameObject.Find("Health&Damage").GetComponent<DamageMe>();
     }
 
     public static bool isGeneratorOnline()
@@ -24,7 +26,7 @@ public class GameCheater : MonoBehaviour {
     void Update()
     {
         if (Input.GetKey(instaDeath))
-            PlayerHealth.health = 0;
+            damageSystem.takeDamage(100);
 
         if (Input.GetKey(regenHealth))
             PlayerHealth.health = 100;
