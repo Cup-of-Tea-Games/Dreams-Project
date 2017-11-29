@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Button : MonoBehaviour {
 
-    public GameObject buttonLight; 
+    public GameObject buttonLight;
     public bool hasPower = true;
     public bool isLocked = false;
     public bool active = false;
@@ -12,15 +12,17 @@ public class Button : MonoBehaviour {
     public Material noPowerMaterial;
     public Material lockedMaterial;
     public float buttonWaitTime = 2f;
-    public TipsGenerator tips;
+    TipsGenerator tips;
 
     public void activate()
     {
         StartCoroutine(activate(buttonWaitTime));
+        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
     }
 
     void Update()
     {
+
         if (hasPower)
         {
             if (isLocked)

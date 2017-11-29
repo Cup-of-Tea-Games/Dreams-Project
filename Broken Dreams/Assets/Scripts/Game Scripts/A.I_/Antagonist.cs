@@ -112,7 +112,7 @@ public class Antagonist : MonoBehaviour
     {
 
         agent.speed = originalSpeed;
-        Debug.Log(lostValue + "This is the value");
+//Debug.Log(lostValue + "This is the value");
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
 
@@ -312,6 +312,22 @@ public class Antagonist : MonoBehaviour
         public void SetTarget(Transform target)
         {
             this.target = target;
+        }
+
+        public bool isNearPlayer(int x)
+        {
+        float distance = Vector3.Distance(agent.transform.position, target.transform.position);
+        return distance < x;
+        }
+
+        public bool isChasing()
+        {
+        return chase;
+        }
+
+        public bool isSearching()
+        {
+        return !chase && !patrol;
         }
 
         private void OnTriggerEnter(Collider other)

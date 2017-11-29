@@ -165,6 +165,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health <= 0 && health > -100)
         {
             Die();
+            visionColor.saturation = 0.0f;
             health = -100;
         }
 
@@ -251,6 +252,11 @@ public class PlayerHealth : MonoBehaviour {
         else if (col.tag == "Progressive Danger")
         {
             damageSystem.exitProgressiveDamageArea();
+        }
+
+        else if (col.tag == "Instant Death")
+        {
+            Die();
         }
     }
 
