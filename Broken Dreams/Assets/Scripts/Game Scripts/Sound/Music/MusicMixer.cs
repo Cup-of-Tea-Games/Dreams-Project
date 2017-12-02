@@ -92,7 +92,7 @@ public class MusicMixer : MonoBehaviour {
     void Update()
     {
 
-        Debug.Log(source.isPlaying);
+   //     Debug.Log(source.isPlaying);
         if (hasMainEnemy)
             handleMainEnemy();
     }

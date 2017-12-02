@@ -11,7 +11,6 @@ public class AnimationTrigger : MonoBehaviour {
     {
         if(col.tag == tagName)
         {
-            Debug.Log("PLAYER IS DEAD");
             animator.Play(animationName);
         }
     }

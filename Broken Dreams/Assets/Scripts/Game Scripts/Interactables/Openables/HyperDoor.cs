@@ -7,10 +7,23 @@ public class HyperDoor : MonoBehaviour {
     public Button button2;
     public Animator animator;
     bool isClosed = true;
+    public bool initialState = false;
+    bool buttonState = false;
+
+    void Awake()
+    {
+        if (initialState)
+        {
+            animator.Play("Open");
+            isClosed = false;
+        }
+    }
 
     void Update()
     {
-        bool buttonPressed = button1.active = button2.active;
+        bool buttonPressed = button1.active;
+
+        button2.active = button1.active;
 
         if (buttonPressed)
         {
