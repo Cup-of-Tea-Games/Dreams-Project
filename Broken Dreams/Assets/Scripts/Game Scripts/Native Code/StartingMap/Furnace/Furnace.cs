@@ -10,6 +10,9 @@ public class Furnace : MonoBehaviour {
     public string nameOfFuel;
     public Animator animator;
     int currentFuelLoad = 0;
+    public Lever lever;
+    public GameObject fireObject;
+    bool burnerOn = false;
     public Pilars pilars;
 
     //Temporary bool key
@@ -22,13 +25,19 @@ public class Furnace : MonoBehaviour {
 
     void Update()
     {
-        if(currentFuelLoad >= maxFuelLoad && key1)
+        burnerOn = lever.isActivated();
+
+        if (burnerOn)
         {
-            key1 = false;
-            engine.engineActive = true;
-            animator.Play("Close");
-            tips.Show("Burner fuel full");
-            pilars.rise();
+            fireObject.SetActive(true);
+            if (currentFuelLoad >= maxFuelLoad && key1)
+            {
+                key1 = false;
+                engine.engineActive = true;
+                animator.Play("Close");
+                tips.Show("Burner fuel full");
+                pilars.rise();
+            }
         }
     }
 
