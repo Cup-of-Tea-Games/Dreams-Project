@@ -3,6 +3,7 @@ using System.Collections;
 
 public class KeyReciever : MonoBehaviour {
 
+    public bool isAnimationBased = false;
     public GameObject spawnPlacementObject;
     public string tagName;
     bool active = false;
@@ -27,7 +28,13 @@ public class KeyReciever : MonoBehaviour {
         if (s == tagName)
         {
             active = true;
+            if(!isAnimationBased)
             spawnPlacementObject.SetActive(true);
+            else
+            {
+              Animator anim = GetComponent<Animator>();
+                anim.Play("Active");
+            }
             tips.Show(successMessage);
           //  Destroy(GetComponent<Collider>());
         }

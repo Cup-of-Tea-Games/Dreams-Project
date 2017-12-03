@@ -265,19 +265,19 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (itemInRange() && objectInstance.GetComponent<KeyReciever>() != null)
         {
-            Debug.Log("MOUSffdfdfdE");
+      //      Debug.Log("MOUSffdfdfdE");
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             if (Input.GetMouseButton(0))
             {
-                Debug.Log("MOUSE");
+           //     Debug.Log("MOUSE");
                 if (itemInMyHand.isEmpty())
                 {
-                    Debug.Log("IF");
+              //      Debug.Log("IF");
                     objectInstance.GetComponent<KeyReciever>().investigate();
                 }
                 else
                 {
-                    Debug.Log("ELSE");
+                //    Debug.Log("ELSE");
                     objectInstance.GetComponent<KeyReciever>().insertKey(itemInMyHand.getTag());
                     if(objectInstance.GetComponent<KeyReciever>().isRecieved())
                     itemInMyHand.delete();
