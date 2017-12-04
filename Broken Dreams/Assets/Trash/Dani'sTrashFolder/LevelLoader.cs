@@ -10,6 +10,7 @@ public class LevelLoader : MonoBehaviour {
 
     public void goToLevel(string s)
     {
+        InventoryMenu.inventroyIsUp = false;
         Application.LoadLevel(s);
 
     }

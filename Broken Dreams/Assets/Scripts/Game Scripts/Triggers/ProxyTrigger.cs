@@ -17,7 +17,8 @@ public class ProxyTrigger : MonoBehaviour {
             }
             else
             {
-                gameThing.SetActive(false);
+                // gameThing.SetActive(false);
+                Destroy(gameThing);
             }
             Destroy(gameObject);
         }

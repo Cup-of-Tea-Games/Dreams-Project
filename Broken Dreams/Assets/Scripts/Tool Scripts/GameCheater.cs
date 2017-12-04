@@ -7,6 +7,8 @@ public class GameCheater : MonoBehaviour {
     public static string generatorOnlinetatic;
     public string instaDeath;
     public string regenHealth;
+    public string instaInsanity;
+    public string regenSanity;
     DamageMe damageSystem;
 
     void Awake()
@@ -30,6 +32,13 @@ public class GameCheater : MonoBehaviour {
 
         if (Input.GetKey(regenHealth))
             PlayerHealth.health = 100;
+
+        if (Input.GetKey(instaInsanity))
+            PlayerSanity.sanity = 0;
+
+        if (Input.GetKey(regenSanity))
+            PlayerSanity.sanity = 100;
+
     }
 	
 }
