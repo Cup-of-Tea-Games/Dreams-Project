@@ -18,6 +18,7 @@ public class MeleeWeapon : MonoBehaviour {
     public float AttackRateDelay = 0.35f;
     public bool isAnimationBased = false;
     public HitPoint hitPoint;
+    public ParticleHitManager particleManager;
 
     //VIsuals
 
@@ -87,6 +88,56 @@ public class MeleeWeapon : MonoBehaviour {
 
     }
 
+    void manageEffects()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
+        {
+            //Declares Components
+
+            GameObject impactEffect = null;
+            GameObject impactDecal = null;
+            AudioClip impactSound = null;
+
+            //Find out what type of material we're dealing with
+
+            string tag; //Tag of object you're hitting
+
+            if (hit.collider.gameObject.GetComponent<MaterialInfo>() != null)
+                tag = hit.collider.gameObject.GetComponent<MaterialInfo>().materialTag;
+            else
+                tag = "Generic";
+
+            MaterialObject curentObject = particleManager.getMaterialObject(tag);
+            impactEffect = curentObject.particleEffect;
+            impactDecal = curentObject.decal;
+
+
+
+            //Make Sure the components aren't missing
+
+            if (impactEffect != null)
+            {
+                GameObject effectParticle = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
+                Destroy(effectParticle, 2f);
+            }
+
+            if (impactDecal != null)
+            {
+                GameObject effectDecal = Instantiate(impactDecal, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
+                Destroy(impactDecal, 20f);
+            }
+
+            if (impactSound != null)
+            {
+                //   AudioSource audioSrc = 
+                GetComponent<AudioSource>().clip = impactSound;
+                GetComponent<AudioSource>().Play();
+            }
+        }
+    }
+
     void Reload()
     {
         animator.Play("Reload");
@@ -116,8 +167,7 @@ public class MeleeWeapon : MonoBehaviour {
                 hit.rigidbody.AddForce(-hit.normal * 1000 * force);
             }
 
-            GameObject effectParticle = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
-            Destroy(effectParticle, 2f);
+            manageEffects();
         }
     }
 }
