@@ -24,10 +24,20 @@ public class MeshOccluder : MonoBehaviour {
 
         if (distance > distanceOcclude)
         {
-            gameObject.GetComponent<Renderer>().enabled = false;
+            Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
+            for (int i = 0; i < gameObject.GetComponentsInChildren<Transform>().Length; i++)
+            {
+                gameObject.GetComponentsInChildren<Renderer>()[i].enabled = false;
+            }
         }
         else
-            gameObject.GetComponent<Renderer>().enabled = true;
+        {
+            Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
+            for (int i = 0; i < gameObject.GetComponentsInChildren<Transform>().Length; i++)
+            {
+                gameObject.GetComponentsInChildren<Renderer>()[i].enabled = false;
+            }
+        }
 
     }
 }
