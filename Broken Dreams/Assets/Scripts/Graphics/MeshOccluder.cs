@@ -35,7 +35,7 @@ public class MeshOccluder : MonoBehaviour {
             Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
             for (int i = 0; i < gameObject.GetComponentsInChildren<Transform>().Length; i++)
             {
-                gameObject.GetComponentsInChildren<Renderer>()[i].enabled = false;
+                gameObject.GetComponentsInChildren<Renderer>()[i].enabled = true;
             }
         }
 
