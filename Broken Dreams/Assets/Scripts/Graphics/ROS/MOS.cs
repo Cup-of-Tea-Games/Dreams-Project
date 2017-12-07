@@ -22,7 +22,6 @@ public class MOS : MonoBehaviour
                 if (GetComponentsInChildren<Renderer>() != null)
                 {
                     gb.GetComponent<Renderer>().enabled = false;
-                    gb.GetComponent<Collider>().enabled = false;
                 }
         }
         else
@@ -31,7 +30,6 @@ public class MOS : MonoBehaviour
                 if (GetComponentsInChildren<Renderer>() != null)
                 {
                     gb.GetComponent<Renderer>().enabled = true;
-                    gb.GetComponent<Collider>().enabled = true;
                 }
         }
 

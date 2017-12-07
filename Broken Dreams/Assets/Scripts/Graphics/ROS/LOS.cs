@@ -6,49 +6,23 @@ public class LOS : MonoBehaviour {
 
     GameObject player;
     public Room[] rooms;
-    public bool bakeMode;
+    public bool resMode;
+    int qualitylevel;
+    public bool parentMode = false;
 
     void Awake()
     {
         player = GameObject.Find("Player");
+        qualitylevel = QualitySettings.GetQualityLevel();
     }
 
     void Update()
     {
-
-        float distance = Vector3.Distance(gameObject.transform.position, player.transform.position);
-
-        if (!isInArea())
-        {
-            Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
-            for (int i = 0; i < gameObject.GetComponentsInChildren<Transform>().Length; i++)
-            {
-                if (!bakeMode)
-                    gameObject.GetComponentsInChildren<Light>()[i].enabled = false;
-                else
-                {
-                    gameObject.GetComponentsInChildren<Light>()[i].shadows = LightShadows.None;
-                }
-            }
-        }
+        if (parentMode)
+            parentfunc();
         else
-        {
-            Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
-            for (int i = 0; i < gameObject.GetComponentsInChildren<Transform>().Length; i++)
-            {
-                if (!bakeMode)
-                    gameObject.GetComponentsInChildren<Light>()[i].enabled = true;
-                else
-                {
-                    gameObject.GetComponentsInChildren<Light>()[i].shadows = LightShadows.Soft;
-                }
-            }
-        }
-
-
-
+            solofunc();
     }
-
 
     bool isInArea()
     {
@@ -63,6 +37,58 @@ public class LOS : MonoBehaviour {
 
         }
         return temp;
+    }
+
+    void parentfunc()
+    {
+        if (!isInArea())
+        {
+            for (int i = 0; (i < gameObject.GetComponentsInChildren<Transform>().Length) && (gameObject.GetComponentsInChildren<Light>() != null); i++)
+            {
+                if (!resMode)
+                    gameObject.GetComponentsInChildren<Light>()[i].enabled = false;
+                else
+                {
+                    gameObject.GetComponentsInChildren<Light>()[i].shadowResolution = UnityEngine.Rendering.LightShadowResolution.Low;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; (i < gameObject.GetComponentsInChildren<Transform>().Length) && (gameObject.GetComponentsInChildren<Light>() != null); i++)
+            {
+                if (!resMode)
+                    gameObject.GetComponentsInChildren<Light>()[i].enabled = true;
+                else
+                {
+                    gameObject.GetComponentsInChildren<Light>()[i].shadowResolution = UnityEngine.Rendering.LightShadowResolution.FromQualitySettings;
+                }
+            }
+        }
+    }
+
+    void solofunc()
+    {
+        if (!isInArea())
+        {
+                if (!resMode)
+                    gameObject.GetComponent<Light>().enabled = false;
+                else
+                {
+                    gameObject.GetComponent<Light>().shadowResolution = UnityEngine.Rendering.LightShadowResolution.Low;
+                //    gameObject.GetComponent<Light>().shadows = LightShadows.None;
+            }          
+        }
+        else
+        {
+            if (!resMode)
+                gameObject.GetComponent<Light>().enabled = true;
+            else
+            {
+                gameObject.GetComponent<Light>().shadowResolution = UnityEngine.Rendering.LightShadowResolution.FromQualitySettings;
+             //   gameObject.GetComponent<Light>().shadows = LightShadows.Soft;
+            }
+        }
     }
 
 }

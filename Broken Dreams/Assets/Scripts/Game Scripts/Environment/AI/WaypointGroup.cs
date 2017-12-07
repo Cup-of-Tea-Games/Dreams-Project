@@ -8,7 +8,7 @@ public class WaypointGroup : MonoBehaviour {
 
     void Awake()
     {
-        if (autoAssignWaypoints)
+        if (autoAssignWaypoints && waypoints.Length > 0)
         {
             Transform[] temp = new Transform[gameObject.GetComponentsInChildren<Transform>().Length - 1];
             waypoints.CopyTo(temp, 0);

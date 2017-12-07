@@ -31,9 +31,6 @@ public class LightOccluder : MonoBehaviour
             {
                 if (!bakeMode)
                     gameObject.GetComponentsInChildren<Light>()[i].enabled = false;
-                else
-                    gameObject.GetComponentsInChildren<Light>()[i].lightmapBakeType = LightmapBakeType.Baked;
-
             }
         }
         else
@@ -43,8 +40,6 @@ public class LightOccluder : MonoBehaviour
             {
                 if (!bakeMode)
                     gameObject.GetComponentsInChildren<Light>()[i].enabled = true;
-                else
-                    gameObject.GetComponentsInChildren<Light>()[i].lightmapBakeType = LightmapBakeType.Mixed;
             }
         }
 

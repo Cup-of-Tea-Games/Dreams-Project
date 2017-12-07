@@ -4,7 +4,7 @@
 QualitySettings:
   m_ObjectHideFlags: 0
   serializedVersion: 5
-  m_CurrentQuality: 5
+  m_CurrentQuality: 6
   m_QualitySettings:
   - serializedVersion: 2
     name: Fastest
@@ -155,7 +155,35 @@ QualitySettings:
     shadowCascades: 2
     shadowDistance: 40
     shadowNearPlaneOffset: 2
-    shadowCascade2Split: 0.14190443
+    shadowCascade2Split: 0.190984
+    shadowCascade4Split: {x: 0.40277314, y: 0.5860233, z: 0.92590034}
+    shadowmaskMode: 1
+    blendWeights: 4
+    textureQuality: 0
+    anisotropicTextures: 2
+    antiAliasing: 0
+    softParticles: 1
+    softVegetation: 1
+    realtimeReflectionProbes: 1
+    billboardsFaceCameraPosition: 1
+    vSyncCount: 0
+    lodBias: 2
+    maximumLODLevel: 0
+    particleRaycastBudget: 4096
+    asyncUploadTimeSlice: 2
+    asyncUploadBufferSize: 4
+    resolutionScalingFixedDPIFactor: 1
+    excludedTargetPlatforms: []
+  - serializedVersion: 2
+    name: Experiment
+    pixelLightCount: 25
+    shadows: 2
+    shadowResolution: 2
+    shadowProjection: 1
+    shadowCascades: 2
+    shadowDistance: 20
+    shadowNearPlaneOffset: 2
+    shadowCascade2Split: 0.190984
     shadowCascade4Split: {x: 0.40277314, y: 0.5860233, z: 0.92590034}
     shadowmaskMode: 1
     blendWeights: 4

@@ -19,7 +19,7 @@ public class Room : MonoBehaviour {
         if (col.gameObject == Player)
         {
             colliding = true;
-            Debug.Log("PLAYER IS HERE");
+           // Debug.Log("PLAYER IS HERE");
         }
     }
 
@@ -28,7 +28,7 @@ public class Room : MonoBehaviour {
         if (col.gameObject == Player)
         {
             colliding = false;
-            Debug.Log("PLAYER IS NOT HERE");
+         //   Debug.Log("PLAYER IS NOT HERE");
         }
     }
 
