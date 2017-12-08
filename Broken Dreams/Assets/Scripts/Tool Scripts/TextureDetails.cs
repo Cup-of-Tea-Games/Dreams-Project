@@ -5,11 +5,17 @@
 // This comes with no warranty, use at your own risk!
 // https://github.com/handcircus/Unity-Resource-Checker
 
+
+
+/*
+
 using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.Collections.Generic;
 using System.Reflection;
 using Object = UnityEngine.Object;
@@ -270,7 +276,7 @@ public class ResourceChecker : EditorWindow
 			case TextureFormat.WiiRGBA8:	// Wii texture format. RGBA 32 bit (8888).
 			case TextureFormat.WiiCMPR:	//	 Compressed Wii texture format. 4 bits/texel, ~RGB8A1 (Outline alpha is not currently supported).
 				return 0;  //Not supported yet
-			*/
+			/
             case TextureFormat.PVRTC_RGB2://	 PowerVR (iOS) 2 bits/pixel compressed color texture format.
                 return 2;
             case TextureFormat.PVRTC_RGBA2://	 PowerVR (iOS) 2 bits/pixel compressed with alpha channel texture format
@@ -1074,3 +1080,5 @@ public class ResourceChecker : EditorWindow
     }
 
 }
+
+*/
