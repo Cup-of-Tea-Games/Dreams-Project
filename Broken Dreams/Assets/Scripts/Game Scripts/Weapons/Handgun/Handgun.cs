@@ -21,7 +21,9 @@ public class Handgun : MonoBehaviour {
     protected int reserveAmmo = 0;
 
     //VIsuals
-    // public ParticleSystem muzzleFlash;
+    public bool hasEffect = false;
+    public GameObject muzzleFlash;
+    public GameObject muzzleGlashLocation;
     public ParticleHitManager particleManager;
 
     void Awake()
@@ -158,8 +160,14 @@ public class Handgun : MonoBehaviour {
 
             if (impactDecal != null)
             {
-                GameObject effectDecal = Instantiate(impactDecal, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
-                Destroy(impactDecal, 20f);
+                GameObject effectDecal = GameObject.Instantiate(impactDecal, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(effectDecal, 10f);
+            }
+
+            if (hasEffect)
+            {
+                GameObject effectMuzzle = GameObject.Instantiate(muzzleFlash, muzzleGlashLocation.transform);
+                Destroy(effectMuzzle, 2f);
             }
 
             if (impactSound != null)
