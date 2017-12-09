@@ -19,6 +19,7 @@ public class KeyReciever : MonoBehaviour {
 
     void Update()
     {
+        if(spawnPlacementObject != null)
         active = spawnPlacementObject.activeSelf;
         GetComponent<Collider>().enabled = !active;
     }

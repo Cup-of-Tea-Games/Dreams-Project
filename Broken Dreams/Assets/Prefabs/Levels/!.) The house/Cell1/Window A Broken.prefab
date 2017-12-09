@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23658400387502006}
   - component: {fileID: 64494930646081058}
   - component: {fileID: 54377042122229334}
+  - component: {fileID: 114094728957324550}
   m_Layer: 0
   m_Name: Window_BrokenPeiceC
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   - component: {fileID: 23438241408429642}
   - component: {fileID: 64951609891364328}
   - component: {fileID: 54811776275999852}
+  - component: {fileID: 114236520544673166}
   m_Layer: 0
   m_Name: Window_BrokenPeiceG
   m_TagString: Untagged
@@ -61,6 +63,7 @@ GameObject:
   - component: {fileID: 23758060441874244}
   - component: {fileID: 64057354027141574}
   - component: {fileID: 54277946015513838}
+  - component: {fileID: 114836084440681508}
   m_Layer: 0
   m_Name: Window_BrokenPeiceA
   m_TagString: Untagged
@@ -80,6 +83,7 @@ GameObject:
   - component: {fileID: 23195924719393902}
   - component: {fileID: 64399778636574394}
   - component: {fileID: 54800523330141766}
+  - component: {fileID: 114178933437448060}
   m_Layer: 0
   m_Name: Window_BrokenPeiceB
   m_TagString: Untagged
@@ -99,6 +103,7 @@ GameObject:
   - component: {fileID: 23694651018585676}
   - component: {fileID: 64517173971752184}
   - component: {fileID: 54492556088501858}
+  - component: {fileID: 114363505918216616}
   m_Layer: 0
   m_Name: Window_BrokenPeiceE
   m_TagString: Untagged
@@ -118,6 +123,7 @@ GameObject:
   - component: {fileID: 23971861442832724}
   - component: {fileID: 64762244204280566}
   - component: {fileID: 54604130217080500}
+  - component: {fileID: 114069165971830160}
   m_Layer: 0
   m_Name: Window_BrokenPeiceD
   m_TagString: Untagged
@@ -152,6 +158,7 @@ GameObject:
   - component: {fileID: 23455404417732326}
   - component: {fileID: 64129153870966308}
   - component: {fileID: 54029446221767640}
+  - component: {fileID: 114173495999322524}
   m_Layer: 0
   m_Name: Window_BrokenPeiceJ
   m_TagString: Untagged
@@ -171,6 +178,7 @@ GameObject:
   - component: {fileID: 23350924638528148}
   - component: {fileID: 64582799540881494}
   - component: {fileID: 54263224339502416}
+  - component: {fileID: 114531763535961434}
   m_Layer: 0
   m_Name: Window_BrokenPeiceF
   m_TagString: Untagged
@@ -190,6 +198,7 @@ GameObject:
   - component: {fileID: 23244289916912660}
   - component: {fileID: 64551807698213592}
   - component: {fileID: 54518948314517534}
+  - component: {fileID: 114887928521067078}
   m_Layer: 0
   m_Name: Window_BrokenPeiceH
   m_TagString: Untagged
@@ -209,6 +218,7 @@ GameObject:
   - component: {fileID: 23596896552859556}
   - component: {fileID: 64808458114392850}
   - component: {fileID: 54596637873941818}
+  - component: {fileID: 114379962837688862}
   m_Layer: 0
   m_Name: Window_BrokenPeiceK
   m_TagString: Untagged
@@ -228,6 +238,7 @@ GameObject:
   - component: {fileID: 23340576893466624}
   - component: {fileID: 64465621466229206}
   - component: {fileID: 54761740666817930}
+  - component: {fileID: 114595006423615096}
   m_Layer: 0
   m_Name: Window_BrokenPeiceI
   m_TagString: Untagged
@@ -247,6 +258,7 @@ GameObject:
   - component: {fileID: 23232015627118562}
   - component: {fileID: 64568217092056554}
   - component: {fileID: 54381262300436708}
+  - component: {fileID: 114626772893287556}
   m_Layer: 0
   m_Name: Window_BrokenPeiceL
   m_TagString: Untagged
@@ -1275,3 +1287,147 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: eaae0ba7c63e41f4e8906d05dda3d244, type: 3}
+--- !u!114 &114069165971830160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317584739633888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114094728957324550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062673749583480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114173495999322524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592585977607526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114178933437448060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1179718623933140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114236520544673166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1170509755721816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114363505918216616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206226756523230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114379962837688862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1653002177236460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114531763535961434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1611148001579866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114595006423615096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1661990797915194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114626772893287556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1868587567278842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114836084440681508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1177764461254894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
+--- !u!114 &114887928521067078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1642789641928288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f642956489e56084fac2a67d7fbaded7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialTag: Glass
