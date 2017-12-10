@@ -25,7 +25,6 @@ public class BodyShreder : MonoBehaviour {
 
     void activateButton()
     {
-        Debug.Log("ACTIVATED");
         active = true;
         anim.Play("Activate");
     }
@@ -43,6 +42,14 @@ public class BodyShreder : MonoBehaviour {
     public bool finishedShreding()
     {
         return hasShreded;
+    }
+
+    public float finishedValue()
+    {
+        if (finishedShreding())
+            return 0.25f;
+        else
+            return 0;
     }
 
     void OnTriggerEnter(Collider col)
