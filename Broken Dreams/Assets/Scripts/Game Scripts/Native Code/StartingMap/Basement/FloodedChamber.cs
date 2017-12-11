@@ -19,13 +19,21 @@ public class FloodedChamber : MonoBehaviour {
     void Update()
     {
         planeMoveValue = shreders[0].finishedValue() + shreders[1].finishedValue() + shreders[2].finishedValue() + shreders[3].finishedValue();
-        Debug.Log(planeMoveValue);
         movePlane(planeMoveValue);
     }
 
     void movePlane(float x)
     {
         bloodPlane.transform.localPosition = Vector3.Slerp(bloodPlane.transform.localPosition, new Vector3(0, x, 0), riseSpeed * Time.deltaTime);
+    }
+
+    public float getPlaneValue()
+    {
+        return planeMoveValue;
+    }
+    public bool isPipesActive()
+    {
+        return (pipes[0].isRecieved() && pipes[1].isRecieved() && pipes[2].isRecieved());       
     }
 
 }

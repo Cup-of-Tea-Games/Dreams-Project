@@ -7,6 +7,7 @@ public class ButtonSimple : MonoBehaviour
     public bool isLocked = false;
     public bool active = false;
     public float buttonWaitTime = 2f;
+    public bool instantMode = false;
 
     public void activate()
     {
@@ -17,7 +18,14 @@ public class ButtonSimple : MonoBehaviour
     {
         if (!isLocked)
         {
+            if(!instantMode)
             active = !active;
+            else
+            {
+                active = true;
+                yield return new WaitForSeconds(0.1f);
+                active = false;
+            }
         }
         else if (isLocked)
         {
