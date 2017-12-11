@@ -36,6 +36,7 @@ public class Wanderer : MonoBehaviour
     public DamageSystem damageSystem;
     public float health;
     public float runMultiplier = 1.5f;
+    public float attackDistance = 2f;
 
 
     private void Start()
@@ -97,10 +98,10 @@ public class Wanderer : MonoBehaviour
     {
         agent.Stop();
         active = false;
-        animator.CrossFade("Attack", 0.3f);
-        yield return new WaitForSeconds(0.1f);
+        animator.CrossFade("Attack", 0.2f);
+        yield return new WaitForSeconds(0.05f);
         hitBox.enabled = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         hitBox.enabled = false;
         agent.Resume();
         yield return new WaitForSeconds(1f);
@@ -241,7 +242,7 @@ public class Wanderer : MonoBehaviour
         if (chase && !patrol && active)
         {
             // Debug.Log("IS CHASING");
-            if (distance > 3f)
+            if (distance > attackDistance)
                 StartCoroutine(chaseTarget());
             else
                 StartCoroutine(attack());

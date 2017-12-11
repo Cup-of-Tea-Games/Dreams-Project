@@ -170,12 +170,6 @@ public class Handgun : MonoBehaviour {
                 Destroy(effectMuzzle, 2f);
             }
 
-            if (impactSound != null)
-            {
-             //   AudioSource audioSrc = 
-                GetComponent<AudioSource>().clip = impactSound;
-                GetComponent<AudioSource>().Play();
-            }
         }
     }
 

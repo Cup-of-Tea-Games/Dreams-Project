@@ -21,7 +21,7 @@ public class MeleeWeapon : MonoBehaviour {
     public ParticleHitManager particleManager;
 
     //VIsuals
-
+    public bool hasEffect = false;
     public GameObject impactEffect;
 
     void Awake()
@@ -125,14 +125,12 @@ public class MeleeWeapon : MonoBehaviour {
 
             if (impactDecal != null)
             {
-                GameObject effectDecal = Instantiate(impactDecal, hit.point, Quaternion.LookRotation(hit.normal)) as GameObject;
-                Destroy(impactDecal, 20f);
+                GameObject effectDecal = GameObject.Instantiate(impactDecal, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(effectDecal, 10f);
             }
 
-            if (impactSound != null)
+            if (hasEffect)
             {
-                //   AudioSource audioSrc = 
-                GetComponent<AudioSource>().clip = impactSound;
                 GetComponent<AudioSource>().Play();
             }
         }
