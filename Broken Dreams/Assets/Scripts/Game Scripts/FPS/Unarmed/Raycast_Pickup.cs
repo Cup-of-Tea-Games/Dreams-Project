@@ -61,6 +61,9 @@ public class Raycast_Pickup : MonoBehaviour
     void Update()
     {
 
+        if (objectInstance == null)
+            isGrabbing = false;
+
         if (Input.GetMouseButtonDown(0) && itemInRange())
         {
             mouseClickToggle = !mouseClickToggle;
@@ -265,11 +268,7 @@ public class Raycast_Pickup : MonoBehaviour
 
         if (itemInRange() && objectInstance.GetComponent<KeyReciever>() != null)
         {
-            if (itemInMyHand.isEmpty())
-            {
-                itemInMyHand.delete();
-            }
-            //      Debug.Log("MOUSffdfdfdE");
+      //      Debug.Log("MOUSffdfdfdE");
             ItemInHand.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
             if (Input.GetMouseButton(0))
             {
@@ -278,7 +277,6 @@ public class Raycast_Pickup : MonoBehaviour
                 {
               //      Debug.Log("IF");
                     objectInstance.GetComponent<KeyReciever>().investigate();
-                    itemInMyHand.delete();
                 }
                 else
                 {
