@@ -9,6 +9,11 @@ public class ExtractionMachine : MonoBehaviour {
     public Basement basement;
     TipsGenerator tips;
     bool key1 = true;
+    public Pilars bioPilars;
+    public ExtractionDoor doorA;
+    public ExtractionDoor doorB;
+    public Button electricityButon;
+    public GameObject electricity;
 
     void Awake()
     {
@@ -17,15 +22,21 @@ public class ExtractionMachine : MonoBehaviour {
 
     void Update()
     {
-        if(key1 && isOnline())
+        if(key1 && lever.isActivated() && gear.isRecieved())
         {
             key1 = false;
-            tips.Show("Comenza Festivale di Morte");
+            doorA.open();
+            doorB.open();
+        }
+
+        if (electricityButon.active && bioPilars.isActive())
+        {
+            electricity.SetActive(true);
         }
     }
 
     public bool isOnline()
     {
-        return lever.isActivated() && gear.isRecieved() && engine.isOnline() && basement.isOnline();
+        return electricity.activeSelf && lever.isActivated() && gear.isRecieved();
     }
 }

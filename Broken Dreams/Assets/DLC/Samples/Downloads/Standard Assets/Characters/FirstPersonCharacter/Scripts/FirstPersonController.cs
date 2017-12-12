@@ -51,6 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public static bool isClimbing;
         public static Ladder ladder;
         private bool climbActivation = false;
+        public FollowTarget cameraAxis;
 
         //Ladder
         public float ladderClimbSpeed = 0.05f;
@@ -304,6 +305,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //Crouching Technical
             if (isCrouching)
             {
+                cameraAxis.offset.y = -0.15f;
                 //Adjust Camera Center
                 if (GetComponent<CharacterController>().center.y < -1f)
                     GetComponent<CharacterController>().center += new Vector3(0, 0.1f, 0);
@@ -315,6 +317,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
+                cameraAxis.offset.y = 0;
                 //Adjust Camera Center
                 if (GetComponent<CharacterController>().center.y > 0)
                     GetComponent<CharacterController>().center -= new Vector3(0, 0.1f, 0);

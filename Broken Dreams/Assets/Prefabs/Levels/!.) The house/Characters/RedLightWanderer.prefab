@@ -105,6 +105,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1196632488613338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4250824706716690}
+  m_Layer: 2
+  m_Name: Generate Arm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1200342994321574
 GameObject:
   m_ObjectHideFlags: 1
@@ -1279,6 +1294,19 @@ Transform:
   m_Father: {fileID: 4459350021217582}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4250824706716690
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1196632488613338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0124, y: 0.0475, z: -0.0022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4552277669534858}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4266927646719306
 Transform:
   m_ObjectHideFlags: 1
@@ -1470,14 +1498,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208277006289452}
-  m_LocalRotation: {x: -0, y: 0.04575619, z: -0, w: 0.9989527}
-  m_LocalPosition: {x: -0.64, y: -4.26, z: 26.02}
-  m_LocalScale: {x: 13.690519, y: 13.69052, z: 13.690517}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -1.5, y: -4.18, z: 28.545}
+  m_LocalScale: {x: 13.690516, y: 13.69052, z: 13.690515}
   m_Children:
   - {fileID: 4309499411635966}
+  - {fileID: 4250824706716690}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!4 &4566401449296884
 Transform:
   m_ObjectHideFlags: 1
@@ -2240,13 +2269,17 @@ MonoBehaviour:
   target: {fileID: 0}
   animator: {fileID: 95995651917197710}
   waypoints: {fileID: 0}
-  destinationResetTime: 1
+  destinationResetTime: 2
   hitBox: {fileID: 65441674984080640}
   eyes: {fileID: 20223203581003204}
   damageSystem: {fileID: 114402043757844044}
-  health: 100
+  health: 75
   runMultiplier: 2
   attackDistance: 1.5
+  generateSomethingOnDeath: 1
+  generateLocation: {fileID: 4250824706716690}
+  generatedItem: {fileID: 1613870124353218, guid: 72ae6b722ac78104f958760daa44ad5b,
+    type: 2}
 --- !u!114 &114057473974294082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2820,7 +2853,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3206387, y: 0.0000033974648, z: -0.008365829}
+  m_ConnectedAnchor: {x: -0.3206412, y: 0.0000067949295, z: -0.008361354}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2864,7 +2897,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.58658224, y: -0.27225465, z: 0.044777304}
+  m_ConnectedAnchor: {x: -0.5865712, y: -0.2722644, z: 0.04477006}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2908,7 +2941,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.46736696, y: 0.00534907, z: -0.0000047162175}
+  m_ConnectedAnchor: {x: -0.46736473, y: 0.0053391457, z: 0.000016912818}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2952,7 +2985,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14058058, y: -0.175708, z: 0.000026848174}
+  m_ConnectedAnchor: {x: -0.14058106, y: -0.17570968, z: 0.000027917333}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -2996,7 +3029,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.045224156, y: 0.012382824, z: -0.002603824}
+  m_ConnectedAnchor: {x: 0.045229778, y: 0.012368271, z: -0.0025899468}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3040,7 +3073,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.6617289, y: -0.1926208, z: 0.038372844}
+  m_ConnectedAnchor: {x: -0.6617312, y: -0.19261035, z: 0.03838083}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3084,7 +3117,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1682328, y: 0.27505523, z: 0.060408004}
+  m_ConnectedAnchor: {x: 0.16822825, y: 0.27505794, z: 0.060410645}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3128,7 +3161,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.37194344, y: -0.001392588, z: 0.000033989556}
+  m_ConnectedAnchor: {x: -0.37194443, y: -0.0013715755, z: 0.0000360217}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3172,7 +3205,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.05034189, y: -0.13128728, z: -0.000014945865}
+  m_ConnectedAnchor: {x: 0.050384663, y: -0.13131288, z: 0.0000018551946}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3216,7 +3249,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.15497178, y: -0.0000056773424, z: -0.000015348196}
+  m_ConnectedAnchor: {x: -0.1549669, y: -0.000008307397, z: -0.0000073313713}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3260,7 +3293,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1499268, y: 0.17731704, z: -0.0014217573}
+  m_ConnectedAnchor: {x: -0.14992097, y: 0.17726736, z: -0.0014372033}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3304,7 +3337,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.33667755, y: 0.0059577227, z: 0.0000014454126}
+  m_ConnectedAnchor: {x: -0.33669245, y: 0.0059717596, z: -0.000005543232}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3348,7 +3381,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.03164258, y: 0.0027680038, z: -0.00026043056}
+  m_ConnectedAnchor: {x: -0.031633455, y: 0.0027396074, z: -0.00024602478}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3392,7 +3425,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.44550946, y: 0.0046780705, z: 0.06114088}
+  m_ConnectedAnchor: {x: -0.44550997, y: 0.004682958, z: 0.06113155}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3434,7 +3467,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1208277006289452}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.03
+  m_Radius: 0.02
   m_Speed: 0.5
   m_Acceleration: 120
   avoidancePriority: 50

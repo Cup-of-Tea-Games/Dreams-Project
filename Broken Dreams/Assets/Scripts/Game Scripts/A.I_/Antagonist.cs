@@ -37,6 +37,10 @@ public class Antagonist : MonoBehaviour
         public float health;
         public float runMultiplier = 1.5f;
 
+    // Native bools for hit
+    bool isInjured1 = false;
+    bool isInjured2 = false;
+    bool isInjured3 = false;
 
         private void Start()
         {
@@ -63,7 +67,7 @@ public class Antagonist : MonoBehaviour
 
         IEnumerator chaseTarget()
     {
-        Debug.Log("isChasing :" + Time.deltaTime);
+      //  Debug.Log("isChasing :" + Time.deltaTime);
 
         agent.speed = originalSpeed * runMultiplier;
 
@@ -106,6 +110,19 @@ public class Antagonist : MonoBehaviour
         yield return new WaitForSeconds(1f);
         active = true;
         StopCoroutine(attack());
+    }
+
+        IEnumerator isHit()
+    {
+   //     Debug.Log("OUCH");
+        active = false;
+        animator.CrossFade("Is Hit", 0.3f);
+        yield return new WaitForSeconds(0.2f);
+        agent.Stop();
+        yield return new WaitForSeconds(1.5f);
+        agent.Resume();
+        active = true;
+        StopCoroutine(isHit());
     }
 
         IEnumerator patrolArea()
@@ -245,6 +262,27 @@ public class Antagonist : MonoBehaviour
                 StartCoroutine(chaseTarget());
             else
                 StartCoroutine(attack());
+
+            if(damageSystem.isHit())
+            if(!isInjured1 && health < (750))
+            {
+               //     Debug.Log("750");
+                isInjured1 = true;
+                StartCoroutine(isHit());
+            }
+            else if (!isInjured2 && health < (500))
+            {
+             //       Debug.Log("500");
+                    isInjured2 = true;
+                StartCoroutine(isHit());
+            }
+            else if (!isInjured3 && health < (250))
+            {
+           //         Debug.Log("250");
+                    isInjured3 = true;
+                StartCoroutine(isHit());
+            }
+
         }
 
         else if (patrol && !chase && active)
