@@ -15,6 +15,7 @@ public class HyperDoor : MonoBehaviour {
         if (initialState)
         {
             animator.Play("Open");
+            button1.active = true;
             isClosed = false;
         }
     }

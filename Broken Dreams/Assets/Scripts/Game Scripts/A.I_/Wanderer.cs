@@ -37,6 +37,10 @@ public class Wanderer : MonoBehaviour
     public float health;
     public float runMultiplier = 1.5f;
     public float attackDistance = 2f;
+    public bool generateSomethingOnDeath = false;
+    public Transform generateLocation;
+    public GameObject generatedItem;
+    bool activeDeath = true;
 
 
     private void Start()
@@ -294,6 +298,14 @@ public class Wanderer : MonoBehaviour
 
     void die()
     {
+        if (generateSomethingOnDeath && activeDeath)
+        {
+            activeDeath = false;
+            GameObject newgenItem = GameObject.Instantiate(generatedItem);
+            newgenItem.transform.position = generateLocation.position;
+          //  Destroy(generateLocation);
+        }
+
         if (GetComponent<CharacterController>() != null)
             GetComponent<CharacterController>().enabled = false;
         if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
