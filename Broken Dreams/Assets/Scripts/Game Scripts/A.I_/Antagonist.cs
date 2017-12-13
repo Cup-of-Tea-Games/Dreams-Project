@@ -42,7 +42,13 @@ public class Antagonist : MonoBehaviour
     bool isInjured2 = false;
     bool isInjured3 = false;
 
-        private void Start()
+    //Death
+    public bool generateSomethingOnDeath = false;
+    public Transform generateLocation;
+    public GameObject generatedItem;
+    bool activeDeath = true;
+
+    private void Start()
         {
             // get the components on the object we need ( should not be null due to require component so no need to check )
             agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
@@ -331,6 +337,16 @@ public class Antagonist : MonoBehaviour
   
         void die()
     {
+
+        if (generateSomethingOnDeath && activeDeath)
+        {
+            activeDeath = false;
+            GameObject newgenItem = GameObject.Instantiate(generatedItem);
+            newgenItem.transform.position = generateLocation.position;
+            //  Destroy(generateLocation);
+        }
+
+
         if (GetComponent<CharacterController>() != null)
         GetComponent<CharacterController>().enabled = false;
         if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
