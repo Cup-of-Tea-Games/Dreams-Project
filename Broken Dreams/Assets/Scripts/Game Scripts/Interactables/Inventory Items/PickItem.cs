@@ -33,6 +33,11 @@ public class PickItem : MonoBehaviour {
 
     public void pickUpItem()
     {
+        if(GetComponent<TextClamp>() != null)
+        {
+            GetComponent<TextClamp>().disable();
+        }
+
         itemShack.add(new Item(itemImage, itemTag, itemName, itemDesc));
         //tips.Show(messageOnPickUp);
         if (destroyOnPickUp)
