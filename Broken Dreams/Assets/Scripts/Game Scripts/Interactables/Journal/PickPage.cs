@@ -7,6 +7,7 @@ public class PickPage : MonoBehaviour {
     public Sprite displayImage;
     public Sprite pageImage;
     public PageViewer pageViewer;
+    public string title;
     Page thisPage;
     Page displayPage;
 
