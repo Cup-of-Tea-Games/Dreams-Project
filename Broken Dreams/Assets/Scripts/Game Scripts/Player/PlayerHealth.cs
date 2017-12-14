@@ -277,7 +277,10 @@ public class PlayerHealth : MonoBehaviour {
         if (health > 100)
             health = 100;
 
-       if (playerBody.GetComponent<Rigidbody>().velocity.y < - 7 && playerBody.GetComponent<CharacterController>().isGrounded && FirstPersonController.airTime > 0.65f )
+        if (health <= 100)
+            health += Time.deltaTime / 2;
+
+        if (playerBody.GetComponent<Rigidbody>().velocity.y < - 7 && playerBody.GetComponent<CharacterController>().isGrounded && FirstPersonController.airTime > 0.65f )
        {
             playerBody.GetComponent<Rigidbody>().isKinematic = true;
             if(!WaterInteraction.isOnWater)

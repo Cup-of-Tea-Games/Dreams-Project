@@ -11,9 +11,18 @@ public class Pilars : MonoBehaviour {
     public Material emptyMat;
     public Material RecievedMat;
     bool active = false;
+    bool key1 = true;
+    public bool hasFInalTrigger = false;
+    public GameObject finalTrigger;
 
     void Update()
     {
+        if (hasFInalTrigger && isActive())
+        {
+            if(finalTrigger != null)
+            finalTrigger.SetActive(true);
+        }
+
         if (pilar1.isRecieved())
             pilar1.gameObject.GetComponent<Renderer>().materials[1] = RecievedMat;
         else
@@ -28,6 +37,13 @@ public class Pilars : MonoBehaviour {
             pilar3.gameObject.GetComponent<Renderer>().materials[1] = RecievedMat;
         else
             pilar3.gameObject.GetComponent<Renderer>().materials[1] = emptyMat;
+
+
+        if(key1 && isActive())
+        {
+            key1 = false;
+            fall(); 
+        }
 
     }
 
@@ -49,5 +65,10 @@ public class Pilars : MonoBehaviour {
     public void rise()
     {
         anim.Play("Pilars Rise");
+    }
+
+    public void fall()
+    {
+        anim.Play("Pilars Fall");
     }
 }

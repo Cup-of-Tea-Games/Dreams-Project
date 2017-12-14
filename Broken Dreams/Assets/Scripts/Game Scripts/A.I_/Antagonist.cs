@@ -47,6 +47,8 @@ public class Antagonist : MonoBehaviour
     public Transform generateLocation;
     public GameObject generatedItem;
     bool activeDeath = true;
+    public bool hasEffects = false;
+    public GameObject[] effects;
 
     private void Start()
         {
@@ -338,11 +340,20 @@ public class Antagonist : MonoBehaviour
         void die()
     {
 
+        if (hasEffects)
+        {
+            for(int i = 0;i < effects.Length; i++)
+            {
+                Destroy(effects[i]);
+            }
+        }
+
         if (generateSomethingOnDeath && activeDeath)
         {
             activeDeath = false;
-            GameObject newgenItem = GameObject.Instantiate(generatedItem);
-            newgenItem.transform.position = generateLocation.position;
+            generatedItem.SetActive(true);
+            //GameObject newgenItem = GameObject.Instantiate(generatedItem);
+           // newgenItem.transform.position = generateLocation.position;
             //  Destroy(generateLocation);
         }
 

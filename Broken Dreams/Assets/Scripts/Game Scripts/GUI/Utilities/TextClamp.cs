@@ -12,9 +12,16 @@ public class TextClamp : MonoBehaviour {
     public Vector3 offset = new Vector3(0f, 1f, 0f);
     public MeshRenderer mesh;
     public float offsetFloat = 0;
+    public bool autoFindName = false;
 
     void Awake()
     {
+        if (autoFindName)
+        {
+            image = GameObject.Find("ItemNameDisplay A").GetComponent<Image>();
+            itext = GameObject.Find("ItemTextDisplay A").GetComponent<Text>();
+            cam = GameObject.Find("FirstPersonCharacter").GetComponent<Camera>();
+        }
         pickItem = GetComponent<PickItem>();
     }
 

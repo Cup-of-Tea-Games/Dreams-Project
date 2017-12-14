@@ -37,6 +37,7 @@ public class BodyShreder : MonoBehaviour {
         Destroy(bloodEnter);
         bloodExit.SetActive(true);
         hasShreded = true;
+        col.enabled = false;
     }
 
     public bool finishedShreding()

@@ -8,7 +8,7 @@ public class PickItem : MonoBehaviour {
    public string itemTag;
    public  string itemName;
    public  string itemDesc;
-   ItemShack itemShack;
+   public ItemShack itemShack;
    TipsGenerator tips;
    public string messageOnPickUp;
    public bool autoFindItemShack = true;
@@ -33,9 +33,9 @@ public class PickItem : MonoBehaviour {
 
     public void pickUpItem()
     {
-        if(GetComponent<TextClamp>() != null)
+        if(gameObject.GetComponent<TextClamp>() != null && GetComponent<TextClamp>().enabled)
         {
-            GetComponent<TextClamp>().disable();
+            gameObject.GetComponent<TextClamp>().disable();
         }
 
         itemShack.add(new Item(itemImage, itemTag, itemName, itemDesc));
