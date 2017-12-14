@@ -9,7 +9,6 @@ public class Engine : MonoBehaviour {
     bool online = false;
 
     public Animator spinner;
-    public Basement basement;
     public Light pointlight;
     public Button[] hyperDoorButtons;
     TipsGenerator tips;
@@ -20,6 +19,9 @@ public class Engine : MonoBehaviour {
 
     //Visuals 
     public Material[] floorLights;
+
+    public LightController lightControl;
+    public ERPC ExperimentRoom;
     
 
 
@@ -41,20 +43,18 @@ public class Engine : MonoBehaviour {
 
     void Update()
     {
+        if(ExperimentRoom.reroutedPower())
+            lightControl.isInGenerator = false;
+
         waterActive = waterValve.isActive();
         heatActive = heatValve.isActive();
 
         if (waterValve.col != null)
-            waterValve.col.enabled = basement.isOnline(); ;
+            waterValve.col.enabled = ExperimentRoom.reroutedPower();
         if (heatValve.col != null)
             heatValve.col.enabled = engineActive;
 
-        if (CoolantReciever.isRecieved())
-        {
-            StartCoroutine(flickerLight(0.5f));
-        }
-
-        if (engineActive && !heatActive)
+        if (engineActive && !heatActive && !waterActive)
         {
             if (key[0])
             {
@@ -83,7 +83,7 @@ public class Engine : MonoBehaviour {
             online = true;
             for(int i = 0; i < hyperDoorButtons.Length; i++)
             {
-                hyperDoorButtons[i].hasPower = true;
+                hyperDoorButtons[i].isLocked = false;
             }
 
             if (key[2])
