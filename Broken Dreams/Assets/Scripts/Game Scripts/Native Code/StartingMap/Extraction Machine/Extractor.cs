@@ -17,7 +17,7 @@ public class Extractor : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player" && machine.isOnline())
+        if(col.gameObject.tag == "Player")
         {
             playerInPos = true;
             playerPos.enabled = true;

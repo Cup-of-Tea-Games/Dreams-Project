@@ -10,6 +10,7 @@ public class Pilars : MonoBehaviour {
     public KeyReciever pilar3;
     public Material emptyMat;
     public Material RecievedMat;
+    bool active = false;
 
     void Update()
     {
@@ -34,7 +35,15 @@ public class Pilars : MonoBehaviour {
 
     public bool isActive()
     {
-        return pilar1.isRecieved() && pilar2.isRecieved() && pilar3.isRecieved();
+        if (pilar1.isRecieved() && pilar2.isRecieved() && pilar3.isRecieved())
+            active = true;
+
+        return active;
+    }
+
+    public void setActive(bool x)
+    {
+        active = x;
     }
 
     public void rise()

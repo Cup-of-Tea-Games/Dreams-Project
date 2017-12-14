@@ -10,17 +10,21 @@ public class GameCheater : MonoBehaviour {
     public string instaInsanity;
     public string regenSanity;
     DamageMe damageSystem;
+    Pilars biopilars;
 
     void Awake()
     {
         generatorOnlinetatic = generatorOnline;
         damageSystem = GameObject.Find("Health&Damage").GetComponent<DamageMe>();
+        biopilars = GameObject.Find("Bio Pilars").GetComponent<Pilars>();
     }
 
     public static bool isGeneratorOnline()
     {
         if (Input.GetKey(generatorOnlinetatic))
+        {
             return true;
+        }
         else
             return false;
     }
@@ -38,6 +42,11 @@ public class GameCheater : MonoBehaviour {
 
         if (Input.GetKey(regenSanity))
             PlayerSanity.sanity = 100;
+
+        if (Input.GetKey(generatorOnlinetatic))
+        {
+            biopilars.setActive(true);
+        }
 
     }
 	
