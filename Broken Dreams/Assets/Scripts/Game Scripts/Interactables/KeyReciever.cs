@@ -4,6 +4,7 @@ using System.Collections;
 public class KeyReciever : MonoBehaviour {
 
     public bool isAnimationBased = false;
+    public bool isColliderBased = false;
     public GameObject spawnPlacementObject;
     public string tagName;
     bool active = false;
@@ -21,6 +22,7 @@ public class KeyReciever : MonoBehaviour {
     {
         if(spawnPlacementObject != null)
         active = spawnPlacementObject.activeSelf;
+        if(!isColliderBased)
         GetComponent<Collider>().enabled = !active;
     }
 
@@ -29,12 +31,18 @@ public class KeyReciever : MonoBehaviour {
         if (s == tagName)
         {
             active = true;
-            if(!isAnimationBased)
+            if(!isAnimationBased && !isColliderBased)
             spawnPlacementObject.SetActive(true);
-            else
+            else if (isAnimationBased)
             {
               Animator anim = GetComponent<Animator>();
                 anim.Play("Active");
+            }
+            else if (isColliderBased)
+            {
+                spawnPlacementObject.GetComponent<Collider>().enabled = true;
+                DestroyComponent.Destroy(this.GetComponent<KeyReciever>());
+                GetComponent<Collider>().enabled = false;
             }
             tips.Show(successMessage);
           //  Destroy(GetComponent<Collider>());
