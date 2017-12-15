@@ -9,4 +9,17 @@ public class SceneChanger : MonoBehaviour {
         SceneManager.UnloadScene(SceneManager.GetActiveScene());
         SceneManager.LoadScene(s);
     }
+
+    public void goToScene(string s)
+    {
+        SceneManager.UnloadScene(SceneManager.GetActiveScene());
+        SceneManager.LoadScene(s);
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
+
+
 }
