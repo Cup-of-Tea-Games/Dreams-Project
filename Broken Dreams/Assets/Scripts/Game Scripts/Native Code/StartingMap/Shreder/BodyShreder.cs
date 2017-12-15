@@ -55,9 +55,10 @@ public class BodyShreder : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.name.Contains("Limb") && active)
+        if(col.gameObject.name.Contains("Limb"))
         {
             Destroy(col.gameObject);
+            Destroy(GetComponent<Collider>());
             StartCoroutine(shred());
         }
     }
