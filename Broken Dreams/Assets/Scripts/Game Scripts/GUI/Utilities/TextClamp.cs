@@ -15,6 +15,7 @@ public class TextClamp : MonoBehaviour {
     public float offsetFloat = 0;
     public bool autoFindName = false;
     string name;
+    public Drawer drawer;
 
     void Awake()
     {
@@ -39,9 +40,11 @@ public class TextClamp : MonoBehaviour {
 	void Update () {
         float distance = Vector3.Distance(gameObject.transform.position, cam.transform.position);
 
+        if(drawer == null)
         if (!PageViewer.PageViewerIsUp && !InventoryMenu.inventroyIsUp) {
-            if (distance < 2 + offsetFloat && mesh.isVisible)
+            if (distance < 2 + offsetFloat)
             {
+
                 Vector3 imagePos = cam.WorldToScreenPoint(this.transform.position);
                 //    image.transform.position = Vector2.Lerp(image.transform.position,imagePos,100*Time.deltaTime);
                 image.transform.position = imagePos + offset;
@@ -55,6 +58,34 @@ public class TextClamp : MonoBehaviour {
         }
         else
             disable();
+        else
+        {
+            if (!PageViewer.PageViewerIsUp && !InventoryMenu.inventroyIsUp)
+            {
+                if (drawer.toggle && distance < 2 + offsetFloat)
+                {
+                    if (distance < 2 + offsetFloat)
+                    {
+
+                        Vector3 imagePos = cam.WorldToScreenPoint(this.transform.position);
+                        //    image.transform.position = Vector2.Lerp(image.transform.position,imagePos,100*Time.deltaTime);
+                        image.transform.position = imagePos + offset;
+                        image.gameObject.SetActive(true);
+                        itext.text = name;
+                    }
+                    else if (distance >= 2 + offsetFloat && distance <= 3 + offsetFloat && !drawer.toggle)
+                    {
+                        image.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    image.gameObject.SetActive(false);
+                }
+            }
+            else
+                disable();
+        }
     }
 
     public void disable()

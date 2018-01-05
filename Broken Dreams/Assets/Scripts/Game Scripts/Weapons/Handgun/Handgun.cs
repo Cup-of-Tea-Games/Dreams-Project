@@ -26,6 +26,9 @@ public class Handgun : MonoBehaviour {
     public GameObject muzzleGlashLocation;
     public ParticleHitManager particleManager;
 
+    //Mouse counter
+    int fireAmount = 0;
+
     void Awake()
     {
         if (startingAmmo > 0)
@@ -46,12 +49,21 @@ public class Handgun : MonoBehaviour {
    
     void Update()
     {
+        if(fireAmount > 3)
+        {
+            fireAmount = 0;
+       //     canShoot = true;
+        }
+
+
         if (!WeaponWheel.isShowing)
         {
             if (Input.GetMouseButton(0))
             {
                 if (canShoot && ammo > 0)
                     StartCoroutine(Shoot(fireRateDelay));
+
+                fireAmount++;
             }
             if (Input.GetKeyDown(KeyCode.R))
                 StartCoroutine(Reload(2f));

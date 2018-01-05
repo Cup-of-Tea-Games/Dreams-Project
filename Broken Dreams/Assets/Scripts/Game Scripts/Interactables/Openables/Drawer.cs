@@ -7,7 +7,7 @@ public class Drawer : MonoBehaviour {
     public Transform nextPos;
     public bool DoesItHaveSound;
     public AudioClip clip;
-    bool toggle = false;
+    public bool toggle = false;
     AudioSource audio;
     public float pitchMultiplier = 1;
 
