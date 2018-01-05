@@ -381,8 +381,13 @@ public class Antagonist : MonoBehaviour
 
         public bool isNearPlayer(int x)
         {
-        float distance = Vector3.Distance(agent.transform.position, target.transform.position);
-        return distance < x;
+        if (agent != null && target != null)
+        {
+            float distance = Vector3.Distance(agent.transform.position, target.transform.position);
+            return distance < x;
+        }
+        else
+            return false;
         }
 
         public bool isChasing()

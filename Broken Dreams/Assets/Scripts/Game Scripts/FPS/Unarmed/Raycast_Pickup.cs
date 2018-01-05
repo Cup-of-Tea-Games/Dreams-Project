@@ -61,10 +61,10 @@ public class Raycast_Pickup : MonoBehaviour
     void Update()
     {
 
-        if (objectInstance == null)
+        if (objectInstance == null || (isGrabbing && pickUpInstance != objectInstance))
             isGrabbing = false;
 
-        if (Input.GetMouseButtonDown(0) && itemInRange())
+        if (Input.GetMouseButtonDown(0) && itemInRange() && !isGrabbing)
         {
             mouseClickToggle = !mouseClickToggle;
             PickUpItemClick();
@@ -86,7 +86,7 @@ public class Raycast_Pickup : MonoBehaviour
         }
 
         //Checks if the Object is in Range to grab
-        if (itemInRange())
+        if (itemInRange() && !isGrabbing)
         {
 
          //   LetGoItem();

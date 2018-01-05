@@ -17,10 +17,12 @@ public class LightController : MonoBehaviour {
             lightMat.SetColor("_EmissionColor", new Color(255, 0, 0, 255));
 
             for (int i = 0; i < lightsOnGenerator.Length; i++)
+                if(lightsOnGenerator[i] != null)
                 lightsOnGenerator[i].color = Color.red;
 
             for (int i = 0; i < lightsNotOnGenerator.Length; i++)
-                lightsNotOnGenerator[i].enabled = false;
+                if (lightsOnGenerator[i] != null)
+                    lightsNotOnGenerator[i].enabled = false;
 
         }
         else

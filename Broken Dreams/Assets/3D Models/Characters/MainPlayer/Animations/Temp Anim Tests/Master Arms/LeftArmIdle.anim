@@ -28,7 +28,23 @@ AnimationClip:
     path: 
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: canSwitch
+    path: RShoulderJoint/joint18/joint19/RWristJoint/Flashlight
+    classID: 114
+    script: {fileID: 11500000, guid: 820bad763b0eb5042ade9918715bbcc3, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -37,6 +53,13 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
+    - serializedVersion: 2
+      path: 3241869876
+      attribute: 2645086687
+      script: {fileID: 11500000, guid: 820bad763b0eb5042ade9918715bbcc3, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
       attribute: 4
@@ -114,6 +137,22 @@ AnimationClip:
     path: 
     classID: 4
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: canSwitch
+    path: RShoulderJoint/joint18/joint19/RWristJoint/Flashlight
+    classID: 114
+    script: {fileID: 11500000, guid: 820bad763b0eb5042ade9918715bbcc3, type: 3}
   m_EulerEditorCurves:
   - curve:
       serializedVersion: 2

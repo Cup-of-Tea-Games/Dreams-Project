@@ -39,22 +39,26 @@ public class ObjectStabilizer : MonoBehaviour {
 
     void Update()
     {
+
+
         //Stabilizing Object during pick up
         if (!Raycast_Pickup.isLooking)
         {
             gameObject.GetComponent<Rigidbody>().freezeRotation = false;
         }
 
-        if (Raycast_Pickup.isGrabbing && gameObject == Raycast_Pickup.pickUpInstance)
+        if (Raycast_Pickup.isGrabbing && Raycast_Pickup.objectInstance == Raycast_Pickup.pickUpInstance)
         {
             gameObject.GetComponent<SphereCollider>().enabled = true;
             GetComponent<SphereCollider>().radius = increasedRadius;
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+            Debug.Log("TRUEEEEEEEEEEEEE");
         }
         else
         {
             gameObject.GetComponent<SphereCollider>().enabled = false;
             GetComponent<SphereCollider>().radius = defaultRadius;
+            Debug.Log("FALSEEEEEEEEEE");
         }
 
     }
