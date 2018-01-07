@@ -4,6 +4,15 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 using System.Collections;
+using System.Collections.Generic;
+
+[System.Serializable]
+public struct MaterialSound
+{
+    public string materialTagName;
+    public AudioClip[] materialHitSounds;
+
+}
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -25,9 +34,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+        public List<AudioClip> m_FootstepSounds; // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        //SoundManager
+        public MaterialSound[] materialSounds;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -451,22 +463,66 @@ namespace UnityStandardAssets.Characters.FirstPerson
             PlayFootStepAudio();
         }
 
+        bool checker = true;
+        void manageGroundSFX()
+        {
+            //SoundManagement
+            RaycastHit hitInfo;
+            if (Physics.Raycast(transform.position, -transform.up, out hitInfo, 10))
+            {
+                    for (int i = 0; i < materialSounds.Length; i++)
+                    {
+                    if(hitInfo.collider.gameObject.GetComponent<MaterialInfo>() != null)
+                        if (hitInfo.collider.gameObject.GetComponent<MaterialInfo>().materialTag == materialSounds[i].materialTagName)
+                        {
+
+                            //Change Capacity
+                            if(checker)
+                            if (m_FootstepSounds.Count != materialSounds[i].materialHitSounds.Length)
+                            {
+                                for (int k = 0; k < materialSounds[i].materialHitSounds.Length; k++)
+                                    m_FootstepSounds.Add(new AudioClip());
+                            }
+
+                            //Pass on Audio Files
+                            if (checker)
+                                for (int j = 0; j < m_FootstepSounds.Count; j++)
+                                {
+                                    if (m_FootstepSounds[j] != materialSounds[i].materialHitSounds[j])
+                                    {
+                                        m_FootstepSounds[j] = materialSounds[i].materialHitSounds[j];
+                                        checker = false;
+                                    }
+                                } //mini for
+                        }
+                    else
+                    {
+                        checker = true;
+                    }
+                    } //for
+            }
+        }
+
         private void PlayFootStepAudio()
         {
+            manageGroundSFX();
+
             if (!m_CharacterController.isGrounded)
             {
                 return;
             }
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            float m = Random.Range(0.8f, 2f);
+            int n = Random.Range(1, m_FootstepSounds.Count);
+         //   float m = Random.Range(0.8f, 2f);
             m_AudioSource.clip = m_FootstepSounds[n];
+            if(!m_AudioSource.isPlaying)
             m_AudioSource.PlayOneShot(m_AudioSource.clip);
-            m_AudioSource.pitch = m;
+          //  m_AudioSource.pitch = m;
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
+
         }
 
         private void UpdateCameraPosition(float speed)
@@ -702,6 +758,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_GroundNormal = Vector3.up;
                 m_Animator.applyRootMotion = false;
             }
+
+
         }
 
         void monitorMovement()

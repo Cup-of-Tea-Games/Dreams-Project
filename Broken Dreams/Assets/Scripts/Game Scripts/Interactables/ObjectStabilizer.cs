@@ -52,13 +52,13 @@ public class ObjectStabilizer : MonoBehaviour {
             gameObject.GetComponent<SphereCollider>().enabled = true;
             GetComponent<SphereCollider>().radius = increasedRadius;
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-            Debug.Log("TRUEEEEEEEEEEEEE");
+     //       Debug.Log("TRUEEEEEEEEEEEEE");
         }
         else
         {
             gameObject.GetComponent<SphereCollider>().enabled = false;
             GetComponent<SphereCollider>().radius = defaultRadius;
-            Debug.Log("FALSEEEEEEEEEE");
+        //    Debug.Log("FALSEEEEEEEEEE");
         }
 
     }

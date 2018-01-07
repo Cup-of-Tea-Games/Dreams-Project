@@ -20,9 +20,9 @@ public class LightController : MonoBehaviour {
                 if(lightsOnGenerator[i] != null)
                 lightsOnGenerator[i].color = Color.red;
 
-            for (int i = 0; i < lightsNotOnGenerator.Length; i++)
-                if (lightsOnGenerator[i] != null)
-                    lightsNotOnGenerator[i].enabled = false;
+      //      for (int i = 0; i < lightsNotOnGenerator.Length; i++)
+        //        if (lightsOnGenerator[i + 1] != null && lightsOnGenerator[i] != null)
+          //          lightsNotOnGenerator[i].enabled = false;
 
         }
         else
