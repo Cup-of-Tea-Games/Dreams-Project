@@ -27,7 +27,11 @@ public class RandomNoiseGenerator : MonoBehaviour {
         int x = Random.RandomRange(0, clips.Length);
 
         yield return new WaitForSeconds(2);
-        source.PlayOneShot(clips[x]);
+        source.clip = clips[x];
+        if (!source.isPlaying)
+        {
+            source.Play();
+        }
         StopCoroutine(switchTrack());
     }
 
