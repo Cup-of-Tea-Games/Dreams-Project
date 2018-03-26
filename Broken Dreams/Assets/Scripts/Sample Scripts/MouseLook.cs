@@ -15,12 +15,11 @@ public class MouseLook : MonoBehaviour
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
         rotX = rot.x;
-        
     }
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse Y");
+        float mouseX = Input.GetAxis("Mouse X");
         float mouseY = -Input.GetAxis("Mouse Y");
 
         rotY += mouseX * mouseSensitivity * Time.deltaTime;
