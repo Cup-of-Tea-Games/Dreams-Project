@@ -33,7 +33,7 @@ public class MusicMixer : MonoBehaviour {
 
     void handleMainEnemy()
     {
-        if (enemy.health > 0 && PlayerHealth.health > 0)
+        if (enemy != null && enemy.health > 0 && PlayerHealth.health > 0)
         {
             if (!enemy.isChasing() && !enemy.isSearching() && enemy.isNearPlayer(10) && source.clip != enemyNear)
             {
@@ -41,19 +41,19 @@ public class MusicMixer : MonoBehaviour {
                 play();
             }
 
-            else if (enemy.isChasing() && source.clip != enemyChase)
+            else if (enemy != null && enemy.isChasing() && source.clip != enemyChase)
             {
                 source.clip = enemyChase;
                 play();
             }
 
-            else if (enemy.isSearching() && source.clip != enemySearch)
+            else if (enemy != null && enemy.isSearching() && source.clip != enemySearch)
             {
                 source.clip = enemySearch;
                 play();
             }
 
-            else if (isPlayingRandomTrack())
+            else if (!isPlayingRandomTrack())
             {
                 playRandomRegularTrack();
                 play();
@@ -93,7 +93,7 @@ public class MusicMixer : MonoBehaviour {
     {
 
    //     Debug.Log(source.isPlaying);
-        if (hasMainEnemy)
+        if (enemy != null && hasMainEnemy)
             handleMainEnemy();
     }
 }

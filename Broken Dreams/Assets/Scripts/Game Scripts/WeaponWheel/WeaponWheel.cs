@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 public class WeaponWheel : MonoBehaviour {
 
@@ -17,15 +18,21 @@ public class WeaponWheel : MonoBehaviour {
     public static bool activeExternal = false;
     public static Item currentWeapon;
 
+    List<int> slots = new List<int>();
+    int slotNumber = 0;
+
     void Update()
     {
+
+        slotNumber = Mathf.Clamp(slotNumber, 0, slots.Count);
+
         if (Input.GetKey(KeyCode.E))
         {
             weaponSelector.SetActive(true);
             isShowing = true;
             Time.timeScale = 0.2f;
         }
-        else
+        else if (!InventoryMenu.PauseIsUp)
         {
             weaponSelector.SetActive(false);
             isShowing = false;
@@ -43,6 +50,10 @@ public class WeaponWheel : MonoBehaviour {
             selectItem(numSwitch);
             activeExternal = false;
         }
+
+        //Functionality
+        quickSelectItem();
+        calculateNextAvailableSlot();
     }
 
     public void selectItem(int x)
@@ -56,6 +67,55 @@ public class WeaponWheel : MonoBehaviour {
         }
         weapons[x].SetActive(true);
         handsAnimator.runtimeAnimatorController = weaponAnimationControllers[x];
+    }
+
+    void quickSelectItem()
+    {
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            if (slotNumber < slots.Count)
+            {
+                slotNumber++;
+                selectItemExternal(slots[slotNumber]);
+            }
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            if (slotNumber > 0)
+            {
+                slotNumber--;
+                selectItemExternal(slots[slotNumber]);
+            }
+            else
+                selectItem(0);
+        }
+
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if(slots[i] != null)
+            Debug.Log(slots[i]);
+        }
+
+
+      //  weapons[x].SetActive(true);
+    //    handsAnimator.runtimeAnimatorController = weaponAnimationControllers[x];
+    }
+
+    public void calculateNextAvailableSlot()
+    {
+        slots.Clear();
+
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            for (int k = 0; k < weaponShack.items.Length; k++)
+            {
+                if(weaponShack.get(k).getitemName() == weapons[i].name)
+                {
+                    slots.Add(i);
+                }
+            }
+        } //For
     }
 
     public static void selectItemExternal(int x)

@@ -140,7 +140,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //Grounded Checker
             isGrounded = m_CharacterController.isGrounded;
 
-            if (!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
+            if (!InventoryMenu.PauseIsUp && !InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp)
             {
                 if (m_CharacterController.isGrounded || Input.GetKey(KeyCode.Space))
                 {
@@ -297,7 +297,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 inCrouchZone = false;
 
             //Crouching Command
-            if (Input.GetKey(KeyCode.LeftControl))
+            if (Input.GetKey(KeyCode.C))
             {
                 if (delayCrouch == true)
                 {
@@ -372,7 +372,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-            if(!InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp && !Computer.isOnPC)
+            if(!InventoryMenu.PauseIsUp && !InventoryMenu.inventroyIsUp && !PageViewer.PageViewerIsUp && !Computer.isOnPC)
             { 
             float speed;
 
