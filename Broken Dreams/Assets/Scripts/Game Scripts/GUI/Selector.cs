@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Selector : MonoBehaviour {
 
     public ItemShack itemShack;
+    public InventoryMenu InventoryMenu;
     public static Item selectedItem;
     public static Main_Item selectedMain;
 
@@ -143,6 +144,7 @@ public class Selector : MonoBehaviour {
 
             //Resets Buttons
             resetSelection();
+            InventoryMenu.objectsFadeOut();
             //End of Statement
         }
     }

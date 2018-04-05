@@ -105,7 +105,7 @@ public class InventoryMenu : MonoBehaviour {
         GetComponent<AudioSource>().PlayOneShot(inventoryAppearSFX);
     }
 
-    void objectsFadeOut()
+    public void objectsFadeOut()
     {
         Inventory.SetActive(false);
         GetComponent<AudioSource>().pitch = 0.75f;
