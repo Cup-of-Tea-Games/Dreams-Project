@@ -11,6 +11,7 @@ public class SelectorWeapons : MonoBehaviour
 
     //ToolTip
     public Text tipName;
+    public Text tipDesc;
 
     void Update()
     {
@@ -24,6 +25,7 @@ public class SelectorWeapons : MonoBehaviour
         {
             tipName.enabled = true;
             tipName.text = selectedItem.getitemName();
+            tipDesc.text = selectedItem.getDesc();
             // colorManager();
         }
     }
@@ -32,6 +34,7 @@ public class SelectorWeapons : MonoBehaviour
     {
         tipName.enabled = false;
         tipName.text = "";
+        tipDesc.text = "";
         selectedItem = new Item();
     }
 
