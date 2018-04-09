@@ -9,7 +9,7 @@ public class PickItem : MonoBehaviour {
    public  string itemName;
    public  string itemDesc;
    public ItemShack itemShack;
-   TipsGenerator tips;
+   public TipsGenerator tips;
    public string messageOnPickUp;
    public bool autoFindItemShack = true;
    public bool autoFindWeaponShack = false;
@@ -17,7 +17,7 @@ public class PickItem : MonoBehaviour {
 
     void Awake()
     {
-        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+     //   tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
 
         if (autoFindItemShack)
         {
