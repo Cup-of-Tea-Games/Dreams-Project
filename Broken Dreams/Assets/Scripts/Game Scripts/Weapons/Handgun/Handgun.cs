@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Handgun : MonoBehaviour {
 
@@ -25,6 +26,7 @@ public class Handgun : MonoBehaviour {
     public GameObject muzzleFlash;
     public GameObject muzzleGlashLocation;
     public ParticleHitManager particleManager;
+    public Image crosshair;
 
     //Mouse counter
     int fireAmount = 0;
@@ -68,6 +70,9 @@ public class Handgun : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.R))
                 StartCoroutine(Reload(2f));
         }
+
+        //Check the rang eof enemies
+        rangeCheck();
 
     }
 
@@ -131,7 +136,28 @@ public class Handgun : MonoBehaviour {
                 hit.rigidbody.AddForce(-hit.normal * 1000 * force);
             }
 
-            manageEffects();
+        }
+
+
+        manageEffects();
+    }
+
+    void rangeCheck()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
+        {
+            if(crosshair != null)
+            {
+                if (hit.collider.GetComponent<DamageSystem>() != null || hit.collider.GetComponent<DamagePoint>() != null)
+                {
+                    crosshair.color = Color.red;
+                }
+                else
+                {
+                    crosshair.color = Color.white;
+                }
+            }
         }
     }
 

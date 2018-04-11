@@ -31,7 +31,6 @@ public class Raycast_Pickup : MonoBehaviour
     private float mouseWheelAmount; //Records the amount of scrolls in the mouse wheel
     public static bool mouseClickToggle = false; //Toggles on or off on mouse click
 
-
     //GUI PROCESSING
     public TipsGenerator tips; //Tips Generator
     //Item in your hand
@@ -41,13 +40,10 @@ public class Raycast_Pickup : MonoBehaviour
     bool delayTime = true; //Creates Time Delays when necesary
     float defaultValue; //Saves saved value for speed
     float rotateTimeSet = 2f; // This is specifically used for resetting object's rotation
-
     public static GameObject pickUpInstance;
-
 
     //Apartment
     public static GameObject chairInstance;
-
     int layerMask = ~(2 << 9);
 
 

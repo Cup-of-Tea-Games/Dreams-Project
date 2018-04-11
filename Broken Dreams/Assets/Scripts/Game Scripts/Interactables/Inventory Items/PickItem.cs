@@ -14,6 +14,7 @@ public class PickItem : MonoBehaviour {
    public bool autoFindItemShack = true;
    public bool autoFindWeaponShack = false;
    public bool destroyOnPickUp = true;
+    public AudioSource pickUpSound;
 
     void Awake()
     {
@@ -33,6 +34,7 @@ public class PickItem : MonoBehaviour {
 
     public void pickUpItem()
     {
+
         if(gameObject.GetComponent<TextClamp>() != null && GetComponent<TextClamp>().enabled)
         {
             gameObject.GetComponent<TextClamp>().disable();
@@ -44,5 +46,11 @@ public class PickItem : MonoBehaviour {
             Destroy(gameObject);
         else
             gameObject.SetActive(false);
+
+        //SFX
+        if (pickUpSound != null)
+        {
+            pickUpSound.Play();
+        }
     }
 }
