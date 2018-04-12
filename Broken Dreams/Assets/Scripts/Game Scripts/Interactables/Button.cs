@@ -13,6 +13,10 @@ public class Button : MonoBehaviour {
     public Material lockedMaterial;
     public float buttonWaitTime = 2f;
     TipsGenerator tips;
+    public bool hasSounds = false;
+    public AudioClip toggleON;
+    public AudioClip toggleOFF;
+    public AudioClip toggleFail;
 
     public void activate()
     {
@@ -22,7 +26,6 @@ public class Button : MonoBehaviour {
 
     void Update()
     {
-
         if (hasPower)
         {
             if (isLocked)
@@ -48,11 +51,24 @@ public class Button : MonoBehaviour {
     {
         if (hasPower && !isLocked)
         {
-            active = !active;
+            if(active == false)
+                {
+                    active = true;
+                if (GetComponent<AudioSource>() != null)
+                    GetComponent<AudioSource>().PlayOneShot(toggleON);
+                }
+                else
+                {
+                    active = false;
+                if (GetComponent<AudioSource>() != null)
+                    GetComponent<AudioSource>().PlayOneShot(toggleOFF);
+                }
         }
         else if (hasPower && isLocked)
         {
             tips.Show("It appears to be locked");
+            if (GetComponent<AudioSource>() != null)
+                GetComponent<AudioSource>().PlayOneShot(toggleFail);
         }
         else if (!hasPower)
         {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MeleeWeapon : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class MeleeWeapon : MonoBehaviour {
     public bool isAnimationBased = false;
     public HitPoint hitPoint;
     public ParticleHitManager particleManager;
+    public Image crosshair;
 
     //VIsuals
     public bool hasEffect = false;
@@ -52,7 +54,26 @@ public class MeleeWeapon : MonoBehaviour {
                 if (hitPoint.acitve)
                     Attack();
         }
+        rangeCheck();
+    }
 
+    void rangeCheck()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(player.transform.position, player.transform.forward, out hit, range, 1 << LayerMask.NameToLayer("Default")))
+        {
+            if (crosshair != null)
+            {
+                if (hit.collider.GetComponent<DamageSystem>() != null || hit.collider.GetComponent<DamagePoint>() != null)
+                {
+                    crosshair.color = Color.red;
+                }
+                else
+                {
+                    crosshair.color = Color.white;
+                }
+            }
+        }
     }
 
     //Animations
