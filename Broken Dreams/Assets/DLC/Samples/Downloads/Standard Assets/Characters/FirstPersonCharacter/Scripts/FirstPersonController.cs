@@ -104,6 +104,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         Vector3 m_GroundNormal;
         float m_AnimSpeedMultiplier = 1f;
 
+        //SFX
+        public AudioSource crouchSFX;
+
         void Awake()
         {
             m_MouseLook = GetComponent<MouseLook>();
@@ -304,6 +307,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     delayCrouch = false;
                     isCrouching = !isCrouching;
                     StartCoroutine(delay(1f));
+                }
+
+                //Sounds
+                if (!isCrouching)
+                {
+                    crouchSFX.pitch = 1;
+                    crouchSFX.Play();
+                }
+                else
+                {
+                    crouchSFX.pitch = 0.8f;
+                    crouchSFX.Play();
                 }
 
             }
