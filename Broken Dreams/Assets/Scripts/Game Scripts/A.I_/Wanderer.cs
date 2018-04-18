@@ -42,12 +42,20 @@ public class Wanderer : MonoBehaviour
     public GameObject generatedItem;
     bool activeDeath = true;
 
+    //SFX
+    private AudioSource source;
+    public AudioClip hit_SFX; //
+    public AudioClip normal_SFX;
+    public AudioClip chase_SFX; //
+    public AudioClip death_SFX; //
+    public AudioClip attack_SFX; //
 
     private void Start()
     {
         // get the components on the object we need ( should not be null due to require component so no need to check )
         agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
         character = GetComponent<ThirdPersonCharacter>();
+        source = GetComponent<AudioSource>();
 
         agent.updateRotation = false;
         agent.updatePosition = true;
@@ -72,6 +80,8 @@ public class Wanderer : MonoBehaviour
 
         agent.speed = originalSpeed * runMultiplier;
 
+        if (!source.isPlaying)
+            source.PlayOneShot(chase_SFX);
 
         yield return new WaitForSeconds(0.1f);
         if (distance > 1)
@@ -103,6 +113,7 @@ public class Wanderer : MonoBehaviour
         agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.2f);
+        source.PlayOneShot(attack_SFX);
         yield return new WaitForSeconds(0.05f);
         hitBox.enabled = true;
         yield return new WaitForSeconds(0.2f);
@@ -120,6 +131,9 @@ public class Wanderer : MonoBehaviour
         //Debug.Log(lostValue + "This is the value");
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
+
+        if (!source.isPlaying)
+            source.PlayOneShot(normal_SFX);
 
         if (distance < 0.02f)
         {
@@ -284,6 +298,7 @@ public class Wanderer : MonoBehaviour
     {
         if (damageSystem.isHit())
         {
+            source.PlayOneShot(hit_SFX);
             health -= damageSystem.damageTaken();
             chase = true;
             patrol = false;
@@ -298,28 +313,31 @@ public class Wanderer : MonoBehaviour
 
     void die()
     {
-        if (generateSomethingOnDeath && activeDeath)
-        {
-            activeDeath = false;
-            GameObject newgenItem = GameObject.Instantiate(generatedItem);
-            newgenItem.transform.position = generateLocation.position;
-          //  Destroy(generateLocation);
-        }
 
-        if (GetComponent<CharacterController>() != null)
-            GetComponent<CharacterController>().enabled = false;
-        if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
-            GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-        if (GetComponent<ThirdPersonCharacter>() != null)
-            GetComponent<ThirdPersonCharacter>().enabled = false;
+            if (generateSomethingOnDeath && activeDeath)
+            {
+                source.PlayOneShot(death_SFX);
+                activeDeath = false;
+                GameObject newgenItem = GameObject.Instantiate(generatedItem);
+                newgenItem.transform.position = generateLocation.position;
+                //  Destroy(generateLocation);
+            }
 
-        foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>())
-            if (GetComponentsInChildren<Rigidbody>() != null)
-                rb.isKinematic = false;
+            if (GetComponent<CharacterController>() != null)
+                GetComponent<CharacterController>().enabled = false;
+            if (GetComponent<UnityEngine.AI.NavMeshAgent>() != null)
+                GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
+            if (GetComponent<ThirdPersonCharacter>() != null)
+                GetComponent<ThirdPersonCharacter>().enabled = false;
 
-        animator.enabled = false;
-        transform.DetachChildren();
-        Destroy(gameObject, 0.2f);
+            foreach (Rigidbody rb in GetComponentsInChildren<Rigidbody>())
+                if (GetComponentsInChildren<Rigidbody>() != null)
+                    rb.isKinematic = false;
+
+            animator.enabled = false;
+            transform.DetachChildren();
+            Destroy(gameObject, 1.2f);
+        
     }
 
     public void SetTarget(Transform target)
