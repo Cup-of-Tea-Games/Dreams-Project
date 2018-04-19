@@ -18,6 +18,16 @@ public class Button : MonoBehaviour {
     public AudioClip toggleOFF;
     public AudioClip toggleFail;
 
+    //SFX
+    private AudioSource source;
+    public AudioClip hit;
+
+
+    void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     public void activate()
     {
         StartCoroutine(activate(buttonWaitTime));

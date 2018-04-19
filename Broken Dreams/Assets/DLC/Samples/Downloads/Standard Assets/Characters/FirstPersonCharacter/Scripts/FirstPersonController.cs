@@ -518,7 +518,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        private void PlayFootStepAudio()
+        public void PlayFootStepAudio()
         {
             manageGroundSFX();
 
