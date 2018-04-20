@@ -84,7 +84,7 @@ public class PlayerHealth : MonoBehaviour {
         if (health >= 90)
         {
             currentColor = c[0];
-            visionColor.saturation = 1.4f;
+        //    visionColor.saturation = 1.4f;
             SFX_heartBeatSound.mute = true;
             filter.enabled = false;
 
@@ -92,28 +92,28 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 90 && health >= 80)
         {
             currentColor = c[1];
-            visionColor.saturation = 1.4f;
+       //     visionColor.saturation = 1.4f;
             SFX_heartBeatSound.mute = true;
             filter.enabled = false;
         }
         else if (health < 80 && health >= 70)
         {
             currentColor = c[2];
-            visionColor.saturation = 1.4f;
+       //     visionColor.saturation = 1.4f;
             SFX_heartBeatSound.mute = true;
             filter.enabled = false;
         }
         else if (health < 70 && health >= 60)
         {
             currentColor = c[3];
-            visionColor.saturation = 1.0f;
+       //     visionColor.saturation = 1.0f;
             SFX_heartBeatSound.mute = true;
             filter.enabled = false;
         }
         else if (health < 60 && health >= 50)
         {
             currentColor = c[4];
-            visionColor.saturation = 1.0f;
+       //     visionColor.saturation = 1.0f;
             SFX_heartBeatSound.mute = true;
             filter.enabled = false;
             if (isGettingHurt)
@@ -122,7 +122,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 50 && health >= 40)
         {
             currentColor = c[5];
-            visionColor.saturation = 0.5f;
+       //     visionColor.saturation = 0.5f;
             SFX_heartBeatSound.mute = false;
             filter.enabled = true;
             InDanger = true;
@@ -130,7 +130,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 40 && health >= 30)
         {
             currentColor = c[6];
-            visionColor.saturation = 0.5f;
+        //    visionColor.saturation = 0.5f;
             SFX_heartBeatSound.mute = false;
             filter.enabled = true;
             InDanger = true;
@@ -138,7 +138,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 30 && health >= 20)
         {
             currentColor = c[7];
-            visionColor.saturation = 0.0f;
+         //   visionColor.saturation = 0.0f;
             SFX_heartBeatSound.mute = false;
             filter.enabled = true;
             if (isGettingHurt)
@@ -148,7 +148,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 20 && health >= 10)
         {
             currentColor = c[8];
-            visionColor.saturation = 0.0f;
+      //      visionColor.saturation = 0.0f;
             SFX_heartBeatSound.mute = false;
             filter.enabled = true;
             InDanger = true;
@@ -156,7 +156,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health < 10 && health > 0)
         {
             currentColor = c[9];
-            visionColor.saturation = 0.0f;
+       //     visionColor.saturation = 0.0f;
             SFX_heartBeatSound.mute = false;
             filter.enabled = true;
             InDanger = true;
@@ -165,7 +165,7 @@ public class PlayerHealth : MonoBehaviour {
         else if (health <= 0 && health > -100)
         {
             Die();
-            visionColor.saturation = 0.0f;
+        //    visionColor.saturation = 0.0f;
             health = -100;
         }
 

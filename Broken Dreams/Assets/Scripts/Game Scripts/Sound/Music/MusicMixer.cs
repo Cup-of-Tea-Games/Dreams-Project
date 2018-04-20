@@ -69,7 +69,7 @@ public class MusicMixer : MonoBehaviour {
 
     void playRandomRegularTrack()
     {
-        int rand = Random.Range(0,mainSongs.Length + 1);
+        int rand = Random.Range(0,mainSongs.Length);
         source.clip = mainSongs[rand];
     }
 

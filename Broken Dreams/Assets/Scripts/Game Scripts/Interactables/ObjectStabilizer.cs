@@ -26,7 +26,7 @@ public class ObjectStabilizer : MonoBehaviour {
 
         if (DoesItHaveSound)
                 sound = GetComponent<AudioSource>();
-
+        if(GetComponent<SphereCollider>() != null)
         defaultRadius = GetComponent<SphereCollider>().radius;
         increasedRadius = defaultRadius * radiusMultiplier;
 
@@ -56,8 +56,11 @@ public class ObjectStabilizer : MonoBehaviour {
         }
         else
         {
-            gameObject.GetComponent<SphereCollider>().enabled = false;
-            GetComponent<SphereCollider>().radius = defaultRadius;
+            if (gameObject.GetComponent<SphereCollider>() != null)
+            {
+                gameObject.GetComponent<SphereCollider>().enabled = false;
+                GetComponent<SphereCollider>().radius = defaultRadius;
+            }
         //    Debug.Log("FALSEEEEEEEEEE");
         }
 

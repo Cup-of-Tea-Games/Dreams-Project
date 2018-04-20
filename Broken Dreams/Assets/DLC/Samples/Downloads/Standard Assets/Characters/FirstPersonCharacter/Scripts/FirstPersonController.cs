@@ -666,7 +666,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (vaultForwardActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Horizontal_Destination.transform.position, ladderDampening * Time.deltaTime);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.25f);
             vaultForwardActivator = false;
             Vaulter.isVaulting = false;
             vaulter.recoverHook();
