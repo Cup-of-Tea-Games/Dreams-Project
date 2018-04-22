@@ -16,6 +16,7 @@ public class MOS : MonoBehaviour
     {
         player = GameObject.Find("Player");
         qualitylevel = QualitySettings.GetQualityLevel();
+        if(gameObject.GetComponent<Material>() != null)
         originalScale = gameObject.GetComponent<Material>().mainTextureScale;
     }
 

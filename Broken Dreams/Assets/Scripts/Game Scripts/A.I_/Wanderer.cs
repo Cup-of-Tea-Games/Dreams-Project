@@ -43,7 +43,7 @@ public class Wanderer : MonoBehaviour
     bool activeDeath = true;
 
     //SFX
-    private AudioSource source;
+    public AudioSource source;
     public AudioClip hit_SFX; //
     public AudioClip normal_SFX;
     public AudioClip chase_SFX; //
@@ -55,7 +55,6 @@ public class Wanderer : MonoBehaviour
         // get the components on the object we need ( should not be null due to require component so no need to check )
         agent = GetComponentInChildren<UnityEngine.AI.NavMeshAgent>();
         character = GetComponent<ThirdPersonCharacter>();
-        source = GetComponent<AudioSource>();
 
         agent.updateRotation = false;
         agent.updatePosition = true;
@@ -305,7 +304,7 @@ public class Wanderer : MonoBehaviour
             agent.SetDestination(target.transform.position);
             //Debug.Log("DAMAGE HIT : " + health);
         }
-        if (health <= 0)
+        if (health <= 0 || PlayerHealth.health <= 0)
         {
             die();
         }

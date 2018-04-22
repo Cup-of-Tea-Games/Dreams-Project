@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class InventoryMenu : MonoBehaviour {
 
     //public GameObject inventoryMenu;
-    public static bool inventroyIsUp;
+    public static bool inventroyIsUp = false;
     public static bool PauseIsUp = false;
     bool canTrigger = true;
 
@@ -23,8 +23,13 @@ public class InventoryMenu : MonoBehaviour {
     public AudioClip inventoryAppearSFX;
     public AudioClip pauseAppearSFX;
 
+    void Awake()
+    {
+        Inventory.SetActive(false);
+    }
+
     void FixedUpdate () {
-        if (Input.GetKey(KeyCode.Tab) && inventroyIsUp && canTrigger && !PauseIsUp)
+        if (Input.GetKey(KeyCode.Tab) && inventroyIsUp && canTrigger && !PauseIsUp && PlayerHealth.health > 0)
         {
             objectsFadeOut();
             canTrigger = false;
@@ -32,7 +37,7 @@ public class InventoryMenu : MonoBehaviour {
             LockMouse.lockMouse = true;
             StartCoroutine(waitTime());
         }
-        else if (Input.GetKey(KeyCode.Tab) && !inventroyIsUp && canTrigger && !PauseIsUp)
+        else if (Input.GetKey(KeyCode.Tab) && !inventroyIsUp && canTrigger && !PauseIsUp && PlayerHealth.health > 0)
         {
             objectsFadeIn();
             canTrigger = false;
@@ -40,7 +45,7 @@ public class InventoryMenu : MonoBehaviour {
                 LockMouse.lockMouse = false;
             StartCoroutine(waitTime());
         }
-        else if (Input.GetKey(KeyCode.Escape) && !inventroyIsUp && canTrigger && !PauseIsUp)
+        else if (Input.GetKey(KeyCode.Escape) && !inventroyIsUp && canTrigger && !PauseIsUp && PlayerHealth.health > 0)
         {
             pauseObjectsFadeIn();
             canTrigger = false;
@@ -49,7 +54,7 @@ public class InventoryMenu : MonoBehaviour {
             LockMouse.lockMouse = false;
             StartCoroutine(waitTime());
         }
-        else if (Input.GetKey(KeyCode.Escape) && !inventroyIsUp && canTrigger && PauseIsUp)
+        else if (Input.GetKey(KeyCode.Escape) && !inventroyIsUp && canTrigger && PauseIsUp && PlayerHealth.health > 0)
         {
             pauseObjectsFadeOut();
             canTrigger = false;
@@ -66,6 +71,10 @@ public class InventoryMenu : MonoBehaviour {
             LockMouse.lockMouse = false;
         }
         else if (PauseIsUp)
+        {
+            LockMouse.lockMouse = false;
+        }
+        else if (PlayerHealth.health < 1)
         {
             LockMouse.lockMouse = false;
         }

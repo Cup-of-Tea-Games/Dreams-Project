@@ -5,14 +5,16 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class FootstepTrigger : MonoBehaviour {
 
-    public FirstPersonController FPSController;
     public bool playSFX = false;
+    public AudioSource footStepSource;
+    public AudioClip[] clips;
 
    void Update()
     {
         if (playSFX)
         {
-            FPSController.PlayFootStepAudio();
+            int x = Random.Range(0, clips.Length);
+            footStepSource.PlayOneShot(clips[x]);
             playSFX = false;
         }
     }

@@ -35,6 +35,10 @@ public class PlayerHealth : MonoBehaviour {
     //Tips
     public TipsGenerator Tip;
 
+
+    //VFX
+    public GameObject deathMenu;
+
     //Damage System
     public DamageMe damageSystem;
     //Damage System - Death
@@ -173,6 +177,9 @@ public class PlayerHealth : MonoBehaviour {
 
     void Die()
     {
+        WeaponWheel.selectItemExternal(0);
+        deathMenu.SetActive(true);
+
         playerBody.GetComponent<FirstPersonController>().enabled = false;
         playerBody.GetComponent<Rigidbody>().isKinematic = false;
         player.GetComponent<Camera>().nearClipPlane = 0.01f;
