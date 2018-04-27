@@ -7,17 +7,15 @@ public class MusicMixer : MonoBehaviour {
     private AudioSource source;
     public AudioClip[] mainSongs;
     public bool playOnAwake;
-    public bool hasMainEnemy;
-    public Antagonist enemy;
-    public AudioClip enemyNear;
     public AudioClip enemyChase;
-    public AudioClip enemySearch;
+    public AudioClip enemyLost;
+    public AudioClip enemyCaught;
 
     void Awake()
     {
         source = GetComponent<AudioSource>();
         if (playOnAwake)
-            play();
+            playRandomRegularTrack();
     }
 
     public void pause()
@@ -31,7 +29,7 @@ public class MusicMixer : MonoBehaviour {
         source.Play();
     }
 
-    void handleMainEnemy()
+    /* void handleMainEnemy()
     {
         if (enemy != null && enemy.health > 0 && PlayerHealth.health > 0)
         {
@@ -65,9 +63,9 @@ public class MusicMixer : MonoBehaviour {
             pause();
         }
 
-    }
+    } */
 
-    void playRandomRegularTrack()
+    public void playRandomRegularTrack()
     {
         int rand = Random.Range(0,mainSongs.Length);
         source.clip = mainSongs[rand];
@@ -91,9 +89,28 @@ public class MusicMixer : MonoBehaviour {
 
     void Update()
     {
+        if (!source.isPlaying)
+            playRandomRegularTrack();
+    }
 
-   //     Debug.Log(source.isPlaying);
-        if (enemy != null && hasMainEnemy)
-            handleMainEnemy();
+    public void chaseScore()
+    {
+        source.Stop();
+        source.clip = enemyChase;
+        source.Play();
+    }
+
+    public void lostScore()
+    {
+        source.Stop();
+        source.clip = enemyLost;
+        source.Play();
+    }
+
+    public void caughtScore()
+    {
+        source.Stop();
+        source.clip = enemyCaught;
+        source.Play();
     }
 }

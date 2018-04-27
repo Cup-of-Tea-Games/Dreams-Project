@@ -272,19 +272,19 @@ public class Antagonist : MonoBehaviour
                 StartCoroutine(attack());
 
             if(damageSystem.isHit())
-            if(!isInjured1 && health < (750))
+            if(!isInjured1 && health < (175))
             {
                //     Debug.Log("750");
                 isInjured1 = true;
                 StartCoroutine(isHit());
             }
-            else if (!isInjured2 && health < (500))
+            else if (!isInjured2 && health < (125))
             {
              //       Debug.Log("500");
                     isInjured2 = true;
                 StartCoroutine(isHit());
             }
-            else if (!isInjured3 && health < (250))
+            else if (!isInjured3 && health < (75))
             {
            //         Debug.Log("250");
                     isInjured3 = true;
