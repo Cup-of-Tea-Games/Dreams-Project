@@ -50,6 +50,13 @@ public class Wanderer : MonoBehaviour
     public AudioClip death_SFX; //
     public AudioClip attack_SFX; //
 
+    private MusicMixer mixer;
+
+    void Awake()
+    {
+        mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
+    }
+
     private void Start()
     {
         // get the components on the object we need ( should not be null due to require component so no need to check )
@@ -75,7 +82,7 @@ public class Wanderer : MonoBehaviour
 
     IEnumerator chaseTarget()
     {
-        Debug.Log("isChasing :" + Time.deltaTime);
+        //Debug.Log("isChasing :" + Time.deltaTime);
 
         agent.speed = originalSpeed * runMultiplier;
 
@@ -210,6 +217,11 @@ public class Wanderer : MonoBehaviour
                     StopCoroutine(patrolRoom());
                     StopCoroutine(patrolArea());
 
+                    if(chase == false)
+                    {
+                        MusicMixer.enemiesChasing++;
+                    }
+
                     chase = true;
                     patrol = false;
                     lostPlayer = false;
@@ -252,6 +264,7 @@ public class Wanderer : MonoBehaviour
 
         if (lostPlayer && chase)
         {
+            MusicMixer.enemiesChasing--;
             chase = false;
             patrol = false;
         }
@@ -312,8 +325,13 @@ public class Wanderer : MonoBehaviour
 
     void die()
     {
+        //Music Effect
+        if(chase == true)
+        MusicMixer.enemiesChasing--;
 
-            if (generateSomethingOnDeath && activeDeath)
+        //Drop Items
+
+        if (generateSomethingOnDeath && activeDeath)
             {
                 source.PlayOneShot(death_SFX);
                 activeDeath = false;
@@ -321,6 +339,8 @@ public class Wanderer : MonoBehaviour
                 newgenItem.transform.position = generateLocation.position;
                 //  Destroy(generateLocation);
             }
+
+        //Death Procedure
 
             if (GetComponent<CharacterController>() != null)
                 GetComponent<CharacterController>().enabled = false;

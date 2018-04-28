@@ -50,6 +50,14 @@ public class Antagonist : MonoBehaviour
     public bool hasEffects = false;
     public GameObject[] effects;
 
+    //SFX
+    private MusicMixer mixer;
+
+    void Awake()
+    {
+        mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
+    }
+
     private void Start()
         {
             // get the components on the object we need ( should not be null due to require component so no need to check )
@@ -217,6 +225,11 @@ public class Antagonist : MonoBehaviour
                     StopCoroutine(patrolRoom());
                     StopCoroutine(patrolArea());
 
+                    if (chase == false)
+                    {
+                        MusicMixer.enemiesChasing++;
+                    }
+
                     chase = true;
                     patrol = false;
                     lostPlayer = false;
@@ -227,8 +240,13 @@ public class Antagonist : MonoBehaviour
                 {
                     if (lostValue > 5)
                     {
+                        if (chase == true)
+                        {
+                            MusicMixer.enemiesChasing--;
+                        }
+
                         lostPlayer = true;
-                  //      Debug.Log("LOST YOU" + lostValue);
+                        //      Debug.Log("LOST YOU" + lostValue);
                     }
                 }
             }
@@ -340,6 +358,8 @@ public class Antagonist : MonoBehaviour
         void die()
     {
 
+        //Has Dying VFX
+
         if (hasEffects)
         {
             for(int i = 0;i < effects.Length; i++)
@@ -347,6 +367,15 @@ public class Antagonist : MonoBehaviour
                 Destroy(effects[i]);
             }
         }
+
+        //Music Effect
+
+        if (chase == true)
+        {
+            MusicMixer.enemiesChasing--;
+        }
+
+        //Drop Items
 
         if (generateSomethingOnDeath && activeDeath)
         {
@@ -357,6 +386,7 @@ public class Antagonist : MonoBehaviour
             //  Destroy(generateLocation);
         }
 
+        //Death Procedure
 
         if (GetComponent<CharacterController>() != null)
         GetComponent<CharacterController>().enabled = false;

@@ -8,8 +8,14 @@ public class MusicMixer : MonoBehaviour {
     public AudioClip[] mainSongs;
     public bool playOnAwake;
     public AudioClip enemyChase;
-    public AudioClip enemyLost;
-    public AudioClip enemyCaught;
+ //   public AudioClip enemyLost;
+ //   public AudioClip enemyCaught;
+
+    //Enemies
+    public static int enemiesChasing = 0;
+
+    //Info
+    int rand;
 
     void Awake()
     {
@@ -67,30 +73,50 @@ public class MusicMixer : MonoBehaviour {
 
     public void playRandomRegularTrack()
     {
-        int rand = Random.Range(0,mainSongs.Length);
+        if (source.clip == enemyChase)
+        {
+            source.Stop();
+            source.clip = null;
+        }
+        rand = Random.Range(0,mainSongs.Length);
+        //Debug.Log(rand);
         source.clip = mainSongs[rand];
+        source.Play();
     }
 
     bool isPlayingRandomTrack()
     {
-        bool temp = false;
-
         for(int i = 0; i < mainSongs.Length; i++)
         {
             if (source.clip == mainSongs[i])
             {
-                temp = true;
-                break;
+                return true;
             }
         }
 
-        return temp;
+        return false;
     }
 
     void Update()
     {
-        if (!source.isPlaying)
+        Debug.Log("ENEMIES CHASING : " + enemiesChasing);
+
+        if (!isPlayingRandomTrack() && enemiesChasing == 0)
             playRandomRegularTrack();
+
+        else if(source.clip != enemyChase && enemiesChasing > 0)
+        {
+            chaseScore();
+        }
+        else if(PlayerHealth.health <= 0)
+        {
+            source.Stop();
+            enemiesChasing = 0;
+        }
+
+        //Error Fix
+        if (enemiesChasing < 0)
+            enemiesChasing = 0;
     }
 
     public void chaseScore()
@@ -99,6 +125,8 @@ public class MusicMixer : MonoBehaviour {
         source.clip = enemyChase;
         source.Play();
     }
+
+    /*
 
     public void lostScore()
     {
@@ -113,4 +141,6 @@ public class MusicMixer : MonoBehaviour {
         source.clip = enemyCaught;
         source.Play();
     }
+
+    */
 }
