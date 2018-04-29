@@ -52,6 +52,12 @@ public class Antagonist : MonoBehaviour
 
     //SFX
     private MusicMixer mixer;
+    public AudioSource source;
+    public AudioClip hit_SFX; //
+    public AudioClip normal_SFX;
+    public AudioClip chase_SFX; //
+    public AudioClip death_SFX; //
+    public AudioClip attack_SFX; //
 
     void Awake()
     {
@@ -87,6 +93,14 @@ public class Antagonist : MonoBehaviour
 
         agent.speed = originalSpeed * runMultiplier;
 
+        if (!source.clip != chase_SFX)
+        {
+            source.Stop();
+            source.clip = chase_SFX;
+        }
+
+        if (!source.isPlaying)
+            source.PlayOneShot(chase_SFX);
 
         yield return new WaitForSeconds(0.1f);
         if (distance > 1)
@@ -118,6 +132,7 @@ public class Antagonist : MonoBehaviour
       //  agent.Stop();
         active = false;
         animator.CrossFade("Attack", 0.3f);
+        source.PlayOneShot(attack_SFX);
         yield return new WaitForSeconds(0.1f);
         hitBox.enabled = true;
         yield return new WaitForSeconds(0.1f);
@@ -148,6 +163,9 @@ public class Antagonist : MonoBehaviour
 //Debug.Log(lostValue + "This is the value");
 
         float distance = Vector3.Distance(agent.transform.position, agent.destination);
+
+        if (!source.isPlaying)
+            source.PlayOneShot(normal_SFX);
 
         if (distance < 0.02f)
         {
@@ -343,13 +361,14 @@ public class Antagonist : MonoBehaviour
     {
         if (damageSystem.isHit())
         {
+            source.PlayOneShot(hit_SFX);
             health -= damageSystem.damageTaken();
             chase = true;
             patrol = false;
             agent.SetDestination(target.transform.position);
             //Debug.Log("DAMAGE HIT : " + health);
         }
-        if (health <= 0)
+        if (health <= 0 || PlayerHealth.health <= 0)
         {
             die();
         }
@@ -379,6 +398,7 @@ public class Antagonist : MonoBehaviour
 
         if (generateSomethingOnDeath && activeDeath)
         {
+            source.PlayOneShot(death_SFX);
             activeDeath = false;
             generatedItem.SetActive(true);
             //GameObject newgenItem = GameObject.Instantiate(generatedItem);

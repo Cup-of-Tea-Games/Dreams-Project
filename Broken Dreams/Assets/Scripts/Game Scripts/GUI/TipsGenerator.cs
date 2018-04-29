@@ -11,6 +11,8 @@ public class TipsGenerator : MonoBehaviour
     Color cl;
     string currentText;
     public float TipCooldownTime;
+    public bool hasSFX;
+    public AudioSource tipsSFX;
 
     void Awake()
     {
@@ -24,7 +26,10 @@ public class TipsGenerator : MonoBehaviour
         {
             isDisplayed = true;
             //Fades In
+            anim.StopPlayback();
             anim.Play("Tips");
+            if (hasSFX)
+                tipsSFX.Play();
             StartCoroutine(disable(TipCooldownTime));
         }
 

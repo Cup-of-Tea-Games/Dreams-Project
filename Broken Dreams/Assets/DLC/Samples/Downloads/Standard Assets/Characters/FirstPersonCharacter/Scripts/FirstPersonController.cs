@@ -106,6 +106,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         //SFX
         public AudioSource crouchSFX;
+        public AudioSource vaultSFX;
 
         void Awake()
         {
@@ -659,10 +660,31 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private IEnumerator Vault()
         {
+
+            //SFX
+
+            if (!vaultSFX.isPlaying)
+            {
+                vaultSFX.pitch = 0.8f;
+                vaultSFX.Play();
+            }
+
+            //Step 1
+
             if(vaultUpActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Vertical_Destination.transform.position, ladderDampening * Time.deltaTime);
             yield return new WaitForSeconds(0.25f);
             vaultUpActivator = false;
+
+            //SFX
+
+            if (!vaultSFX.isPlaying)
+            {
+                vaultSFX.pitch = 1.2f;
+                vaultSFX.Play();
+            }
+
+            //Step 2
 
             if (vaultForwardActivator && Vaulter.isVaulting)
             transform.position = Vector3.Lerp(transform.position, vaulter.Horizontal_Destination.transform.position, ladderDampening * Time.deltaTime);
@@ -670,6 +692,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             vaultForwardActivator = false;
             Vaulter.isVaulting = false;
             vaulter.recoverHook();
+
+            //Step 3
 
             yield return new WaitForSeconds(0.2f);
             vaultForwardActivator = true;

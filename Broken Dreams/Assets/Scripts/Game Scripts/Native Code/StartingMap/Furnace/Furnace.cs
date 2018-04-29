@@ -11,9 +11,14 @@ public class Furnace : MonoBehaviour {
     public Animator animator;
     int currentFuelLoad = 0;
     public Lever lever;
-    public GameObject fireObject;
+    public GameObject fireObject1;
+    public GameObject fireObject2;
     bool burnerOn = false;
     public Pilars pilars;
+
+    //SFX
+    public AudioSource furnaceBurnSFX;
+    public AudioSource pilarsRiseSFX;
 
     //Temporary bool key
     bool key1 = true;
@@ -29,14 +34,19 @@ public class Furnace : MonoBehaviour {
 
         if (burnerOn)
         {
-            fireObject.SetActive(true);
-            if (currentFuelLoad >= maxFuelLoad && key1)
+            fireObject1.SetActive(true);
+            if (currentFuelLoad >= maxFuelLoad)
             {
-                key1 = false;
-                engine.engineActive = true;
-                animator.Play("Close");
-                tips.Show("Burner fuel full");
-                pilars.rise();
+                fireObject2.SetActive(true);
+                if (key1)
+                {
+                    key1 = false;
+                    engine.engineActive = true;
+                    animator.Play("Close");
+                    tips.Show("Engine Fueled");
+                    pilarsRiseSFX.Play();
+                    pilars.rise();
+                }
             }
         }
     }
@@ -47,6 +57,7 @@ public class Furnace : MonoBehaviour {
         {
             Destroy(other,0f);
             currentFuelLoad++;
+            furnaceBurnSFX.Play();
         }
     }
 

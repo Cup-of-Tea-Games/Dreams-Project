@@ -13,9 +13,12 @@ public class KeyReciever : MonoBehaviour {
     public string failedMessage;
     public string investigateMessage;
 
+    //SFX
+    public AudioSource recieveSFX;
+
     void Awake()
     {
-        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
+        tips = GameObject.Find("ItemTips").GetComponent<TipsGenerator>();
     }
 
     void Update()
@@ -44,6 +47,7 @@ public class KeyReciever : MonoBehaviour {
                 DestroyComponent.Destroy(this.GetComponent<KeyReciever>());
                 GetComponent<Collider>().enabled = false;
             }
+            recieveSFX.Play();
             tips.Show(successMessage);
           //  Destroy(GetComponent<Collider>());
         }

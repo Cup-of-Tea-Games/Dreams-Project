@@ -86,6 +86,12 @@ public class Wanderer : MonoBehaviour
 
         agent.speed = originalSpeed * runMultiplier;
 
+        if (!source.clip != chase_SFX)
+        {
+            source.Stop();
+            source.clip = chase_SFX;
+        }
+
         if (!source.isPlaying)
             source.PlayOneShot(chase_SFX);
 

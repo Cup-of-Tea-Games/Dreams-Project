@@ -263,7 +263,7 @@ public class PlayerHealth : MonoBehaviour {
 
         else if (col.tag == "Instant Death")
         {
-            Die();
+            damageSystem.takeDamage(200);
         }
     }
 
