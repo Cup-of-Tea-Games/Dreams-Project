@@ -9,6 +9,19 @@ public class ButtonSimple : MonoBehaviour
     public float buttonWaitTime = 2f;
     public bool instantMode = false;
 
+    //SFX
+    public bool hasSounds;
+    private AudioSource source;
+    public AudioClip clip;
+
+    void Awake()
+    {
+        if (hasSounds)
+        {
+            source = GetComponent<AudioSource>();
+        }
+    }
+
     public void activate()
     {
         StartCoroutine(activate(buttonWaitTime));
@@ -25,6 +38,12 @@ public class ButtonSimple : MonoBehaviour
                 active = true;
                 yield return new WaitForSeconds(0.1f);
                 active = false;
+            }
+
+            //SFX
+            if (hasSounds)
+            {
+                source.PlayOneShot(clip);
             }
         }
         else if (isLocked)

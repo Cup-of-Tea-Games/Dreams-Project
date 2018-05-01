@@ -11,9 +11,15 @@ public class BodyShreder : MonoBehaviour {
     bool hasShreded = false;
     Animator anim;
     Collider col;
+    AudioSource source;
+
+    //SFX
+    public AudioClip shredderShred;
+    public AudioClip shredderOn;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
@@ -26,11 +32,18 @@ public class BodyShreder : MonoBehaviour {
     void activateButton()
     {
         active = true;
+
+        //SFX
+        source.clip = shredderOn;
+        source.Play();
+
         anim.Play("Activate");
     }
 
     public IEnumerator shred()
     {
+        source.Stop();
+        source.PlayOneShot(shredderShred);
         anim.Play("Shred");
         bloodEnter.SetActive(true);
         yield return new WaitForSeconds(4f);
