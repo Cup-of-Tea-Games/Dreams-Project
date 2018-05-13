@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1BF84385-3FDD-DA78-7E00-13241D106136}</ProjectGuid>
+    <ProjectGuid>{5CD004C4-6A92-D7EC-577C-F1DA4B1B0FB7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -51,607 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\3D Models\TheAbyss\DisableRenderTexture\DisablePortal.cs" />
-     <Compile Include="Assets\3D Models\TheAbyss\Test 1\MessengerScript.cs" />
-     <Compile Include="Assets\3D Models\TheAbyss\Test 1\RandomValueReceiver.cs" />
-     <Compile Include="Assets\3D Models\TheAbyss\Test\AreaParticle.cs" />
-     <Compile Include="Assets\3D Models\TheAbyss\Test\PlayParticle.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineConfiner.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineDollyCart.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineExternalCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineMixingCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachinePath.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachinePipeline.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoother.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoothPath.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineTargetGroup.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineFramingTransposer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineHardLockToTarget.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineHardLookAt.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineOrbitalTransposer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineSameAsFollowObject.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\AxisState.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CameraState.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineBlenderSettings.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineComponentBase.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineDebugLogger.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineExtension.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachinePropertyAttribute.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\CinemachineVirtualCameraBase.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\ICinemachineComponent.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\LensSettings.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\Predictor.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\ReflectionHelpers.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Base\Runtime\Core\UnityVectorExtensions.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\PostFX\CinemachinePostFX.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\PostFX\CinemachinePostProcessing.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Timeline\CinemachineMixer.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Timeline\CinemachineShot.cs" />
-     <Compile Include="Assets\DLC\Cinemachine\Timeline\CinemachineTrack.cs" />
-     <Compile Include="Assets\DLC\Dynamic Color Curves\Scripts\ColorCurvesManager.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\AdvancedBulletHoles.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\BasicBulletHoles.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\BezierUtil.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\InfoBubble.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\LineUtil.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\PathAgent.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\ProxyRegister.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\Sinoid.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Scripts\SparksExecutioner.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\FP Character\CurveCtrlBob.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\FP Character\FOVZoom.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\FP Character\FPCtrl.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\FP Character\LerpCtrlBob.cs" />
-     <Compile Include="Assets\DLC\EASY DECAL\nu Assets\Easy Decal\Demo\Unity SA\FP Character\MLook.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\EasyRoads3DTerrainID.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\MarkerScript.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\RoadObjectScript.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\SideObjectInit.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\sideObjectScript.cs" />
-     <Compile Include="Assets\DLC\EasyRoads3D Free\scripts\SurfaceScript.cs" />
-     <Compile Include="Assets\DLC\FenceWizard\Fence.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\EFogVolumeLightType.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolume.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeCamera.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeCreator.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeData.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeDirectionalLight.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeGaiaIntegration.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeLight.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeLightManager.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumePrimitive.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumePrimitiveCreator.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeRenderer.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeRenderManager.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeScreen.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\FogVolumeTAA.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\ColorAnimation.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\EnableDepthInForwardCamera.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\ExplorationCamera.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\FogVolumePriority.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\FPS counter\FPSCounter.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\RenderPriority.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\Rotator.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\TAA\Scripts\EffectBase.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\TAA\Scripts\Extensions.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\TAA\Scripts\FrustumJitter.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\TAA\Scripts\VelocityBuffer.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Other\ToggleChildren.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\ShadowCamera.cs" />
-     <Compile Include="Assets\DLC\FogVolume\Scripts\Utilities.cs" />
-     <Compile Include="Assets\DLC\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
-     <Compile Include="Assets\DLC\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Examples\Scripts\DisplayTextureName.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Examples\Scripts\FlyCamera.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Examples\Scripts\RuntimePainting.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Examples\Scripts\SnowAnimation.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Examples\Scripts\TessellationPhysicsFloor.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\MegaSplatCollisionInfo.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\MegaSplatTerrainManager.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\MegaSplatTextureList.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\Noise.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\NoiseParams.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\Scripts\TextureCluster.cs" />
-     <Compile Include="Assets\DLC\MegaSplat\VertexPaint\VertexInstanceStream.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Aim IK\Scripts\AimBoxing.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Aim IK\Scripts\SimpleAimingSystem.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Aim IK\Scripts\TerrainOffset.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Biped IK\Scripts\BipedIKvsAnimatorIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\CCD IK\Scripts\MechSpider.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\CCD IK\Scripts\MechSpiderController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\CCD IK\Scripts\MechSpiderLeg.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\CCD IK\Scripts\MechSpiderParticles.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\AnimationWarping.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\AnimatorController3rdPerson.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\AnimatorController3rdPersonIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\CharacterAnimationThirdPersonIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\CharacterController3rdPerson.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\EffectorOffset.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\ExplosionDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FBBIKSettings.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FBIKBendGoal.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FBIKBoxing.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FBIKHandsOnProp.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FPSAiming.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\FPSCharacter.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\HitReactionTrigger.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\HoldingHands.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\InteractionC2CDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\InteractionDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\InteractionSystemTestGUI.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\KissingRig.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\MotionAbsorb.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\MotionAbsorbCharacter.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\OffsetEffector.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\PendulumExample.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\PickUp2Handed.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\PickUpBox.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\PickUpSphere.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\RagdollUtilityDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\RecoilTest.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\ResetInteractionObject.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\ShoulderRotator.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\SoccerDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\TouchWalls.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\TransferMotion.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\FBBIK\Scripts\UserControlInteractions.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Grounder\Scripts\GrounderDemo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Grounder\Scripts\PlatformRotator.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Limb IK\Scripts\BendGoal.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Rotation Limits\Scripts\Turret.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\BulletHole.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\FixFeet.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\Mirror.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\Phone.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRAimingController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRAnimatorController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRCharacterController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRInteractionController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRInteractionUI.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\VRSetup.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\WeaponBase.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\_DEMOS\Virtual Reality\Scripts\WeaponRifle.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\BipedIK\BipedIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\BipedIK\BipedIKSolvers.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\Constraint.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\ConstraintPosition.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\ConstraintPositionOffset.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\ConstraintRotation.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\ConstraintRotationOffset.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Constraints\Constraints.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\DoxygenManualFinalIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Finger Rig\FingerRig.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\Grounder.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GrounderBipedIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GrounderFBBIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GrounderIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GrounderQuadruped.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\Grounding.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GroundingLeg.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Grounder\GroundingPelvis.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\AimIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\CCDIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\FABRIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\FABRIKRoot.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\FullBodyBipedIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\IK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\IKExecutionOrder.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\LimbIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\LookAtIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Components\TrigonometricIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\FABRIKChain.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\FBBIKHeadEffector.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\FBIKChain.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKConstraintBend.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKEffector.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKMapping.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKMappingBone.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKMappingLimb.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKMappingSpine.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolver.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverAim.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverCCD.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverFABRIK.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverFABRIKRoot.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverFullBody.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverFullBodyBiped.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverHeuristic.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverLimb.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverLookAt.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\IKSolverTrigonometric.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\IK Solvers\SolverManager.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionEffector.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionLookAt.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionObject.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionSystem.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionTarget.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\InteractionSystem\InteractionTrigger.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Posers\GenericPoser.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Posers\HandPoser.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Posers\Poser.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Ragdoll Utility\RagdollUtility.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Rotation Limits\RotationLimit.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Rotation Limits\RotationLimitAngle.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Rotation Limits\RotationLimitHinge.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Rotation Limits\RotationLimitPolygonal.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Rotation Limits\RotationLimitSpline.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\AimPoser.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\Amplifier.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\BodyTilt.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\HitReaction.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\Inertia.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\OffsetModifier.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\OffsetPose.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\FinalIK\Tools\Recoil.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraController.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Camera Controllers\CameraControllerFPS.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\CharacterAnimationBase.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\CharacterAnimationSimple.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\CharacterAnimationThirdPerson.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\CharacterBase.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\CharacterThirdPerson.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\SimpleLocomotion.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\UserControlAI.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Character Controllers\UserControlThirdPerson.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Demo Assets\Scripts\Misc\SlowMo.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\AxisTools.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\BipedLimbOrientations.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\BipedNaming.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\BipedReferences.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\Comments.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\Hierarchy.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\Interp.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\LayerMaskExtensions.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\QuaTools.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\Singleton.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\TriggerEventBroadcaster.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\V3Tools.cs" />
-     <Compile Include="Assets\DLC\Plugins\RootMotion\Shared Scripts\Warning.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\BloomComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\DitheringComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\FogComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\FxaaComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\GrainComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\TaaComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\UserLutComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Components\VignetteComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\BloomModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\DitheringModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\FogModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\GrainModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\UserLutModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Models\VignetteModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\PostProcessingComponent.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\PostProcessingContext.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\PostProcessingModel.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\PostProcessingProfile.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
-     <Compile Include="Assets\DLC\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProGrids\Classes\pg_Constant.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProGrids\Classes\pg_Enum.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
-     <Compile Include="Assets\DLC\ProCore\ProGrids\Classes\pg_Util.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\ActivateTrigger.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\AutoMoveAndRotate.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\CameraRefocus.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\CurveControlledBob.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\DragRigidbody.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\DynamicShadowSettings.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\EventSystemChecker.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\FollowTarget.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\FOVKick.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\LerpControlledBob.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\ObjectResetter.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\PlatformSpecificContent.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\SimpleActivatorMenu.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\SimpleMouseRotator.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\SmoothFollow.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\TimedObjectDestructor.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\WaypointCircuit.cs" />
-     <Compile Include="Assets\DLC\Samples\Downloads\Standard Assets\Utility\WaypointProgressTracker.cs" />
-     <Compile Include="Assets\DLC\Samples\ProgressBar\Script\ProgressBarBehaviour.cs" />
-     <Compile Include="Assets\DLC\Samples\ProgressBar\Script\ProgressRadialBehaviour.cs" />
-     <Compile Include="Assets\DLC\Samples\ProgressBar\Script\Utils.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Blur.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\CameraMotionBlur.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ContrastStretch.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\CreaseShading.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\DepthOfField.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Fisheye.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\GlobalFog.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Grayscale.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ImageEffectBase.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ImageEffects.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\MotionBlur.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\SepiaTone.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Tonemapping.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
-     <Compile Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-     <Compile Include="Assets\DLC\SEGI\Demo Scene\Scripts\FirstPersonFlyingController.cs" />
-     <Compile Include="Assets\DLC\SEGI\Demo Scene\Scripts\SEGIDemo.cs" />
-     <Compile Include="Assets\DLC\SEGI\Demo Scene\Scripts\SEGIThrowObject.cs" />
-     <Compile Include="Assets\DLC\SEGI\Demo Scene\Scripts\SEGIWaterDisplacement.cs" />
-     <Compile Include="Assets\DLC\SEGI\Resources\SEGIPreset.cs" />
-     <Compile Include="Assets\DLC\SEGI\SEGI.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\FireLight.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\SmokeParticles.cs" />
-     <Compile Include="Assets\DLC\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
-     <Compile Include="Assets\DLC\UBER\_Examples\ExamplesController.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_applyLightForDeferred.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_DeferredParams.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_GlobalParams.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_MaterialPreset.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_MaterialPresetCollection.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_MaterialPresetCollectionReference.cs" />
-     <Compile Include="Assets\DLC\UBER\Scripts\UBER_MouseOrbit_DynamicDistance.cs" />
-     <Compile Include="Assets\Scripts\Cup of Tea Games\TeaClasses\TimeMan.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\A.I_\Antagonist.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\A.I_\ExampleAI1.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\A.I_\Looker.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\A.I_\Wanderer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\AI\Director.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\AI\Room.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\AI\SpawnGroup.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\AI\WaypointGroup.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\AudioVariator.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\Damage Givers\Damager.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\Damage Takers\DamagePoint.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\Damage Takers\DestroyableObject.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Environment\ParticleHitManager.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Animated Controls\ArmsAnimator.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Animated Controls\Leaner.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Animated Controls\Peeking.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Bullet.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\CameraAxis.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Damage Affected\ObjRecieveDamage.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Damage Affected\PlayerDamageAnims\DamageMe.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Effects\HeadBobber.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Effects\MaterialInfo.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Effects\Sway.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\LockMouse.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\MouseLock.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Rotate Follow.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\RotateFollow.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Shotgun\FireRound.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Shotgun\Shotgun.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Unarmed\Raycast_Pickup.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\FPS\Unarmed\Vaulter.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Game\SceneChanger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GameplayStandards\ExitGame.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Effects\Fader.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Elements_HUD.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\FaderGUI.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Main_Item.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Map\Map_Navigation.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\PerlinNoise.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Selector.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\TipsGenerator.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\ToolTipMover.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Utilities\CopyElement.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Utilities\TextClamp.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\WeaponCrosshairHudSelector.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Weapons\AmmoGUI.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\GUI\Weapons\BatteryGUI.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Button.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\ButtonSimple.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Environmental\Break.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Environmental\IgnoreCollision.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Environmental\MeshBreak.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Environmental\Pop.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Environmental\WaterInteraction.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Inventory Items\PickItem.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\Book.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\Face.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\Journal.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\Page.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\PageViewer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Journal\PickPage.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\KeyReciever.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Ladder.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Lever.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\ObjectStabilizer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Openables\Door.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Openables\DoorStabilizer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Openables\Drawer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Openables\HyperDoor.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Outer Screen\MouseChaser.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Outer Screen\ScreenPortalInteract.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\SpecialDoor.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\TipsArea.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Interactables\Toggle.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Inventory\Hand.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Inventory\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Inventory\InventoryMenu.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Inventory\Item.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Inventory\ItemShack.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Ambiance\BackgroundMusic.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Exit\Exit.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Interactability\Bed.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Interactability\SitDown.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Interactability\SitDownPC.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Journal\PhysicalJournal.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\PC\Computer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\PC\PCSFX.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\PC\Wallpaper.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\Radio\Radio.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\TV\Commercials.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\TV\Movie.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Apartment\TV\Television.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Buildings Revival\AnimatorTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Buildings Revival\DoorWithTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\Buildings Revival\InstantLevelTransfer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Antagonist\AntagonistSpawner.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Basement\Basement.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Basement\FloodedChamber.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Bio Pilars\Pilars.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Cell Door\CellDoor.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Characters\Antagonist\AntagonistSpawnManager.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Engine\Engine.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Engine\Valve.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Experiment Room\Computer\ERPC.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Experiment Room\ERCHAMBER.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Extraction Machine\ExtractionDoor.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Extraction Machine\ExtractionMachine.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Extraction Machine\Extractor.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Furnace\Furnace.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\LightController.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Native Code\StartingMap\Shreder\BodyShreder.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerAmmo.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Player\PlayerSanity.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Sound\Music\MusicMixer.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Sound\SFX\RandomNoiseGenerator.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Systems\Damage\DamageSystem.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Systems\SFX Handlers\FootstepTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\AnimationTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\DestroyComponent.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\DestroyTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\IgnoreCol.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\ProxyActivator.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\ProxyTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Triggers\SpawnerTrigger.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Utilities\HitPoint.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Utilities\WeaponInteraction.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Utilities\WeaponKey.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Flashlight\Flashlight.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Flashlight\FlashlightSimple.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Handgun\Handgun.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Melee\MeleeWeapon.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\Weapons\Unarmed\Unarmed.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\WeaponWheel\SelectorWeapons.cs" />
-     <Compile Include="Assets\Scripts\Game Scripts\WeaponWheel\WeaponWheel.cs" />
-     <Compile Include="Assets\Scripts\Graphics\LightOccluder.cs" />
-     <Compile Include="Assets\Scripts\Graphics\MeshOccluder.cs" />
-     <Compile Include="Assets\Scripts\Graphics\ROS\ColliderDetector.cs" />
-     <Compile Include="Assets\Scripts\Graphics\ROS\LOS.cs" />
-     <Compile Include="Assets\Scripts\Graphics\ROS\MOS.cs" />
-     <Compile Include="Assets\Scripts\PORTAL\PortalCamera.cs" />
-     <Compile Include="Assets\Scripts\PORTAL\Sender.cs" />
-     <Compile Include="Assets\Scripts\PORTAL\TextureSetup.cs" />
-     <Compile Include="Assets\Scripts\Sample Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Scripts\Sample Scripts\MouseLookX.cs" />
-     <Compile Include="Assets\Scripts\Sample Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\CinematicCamera.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\CinematicToggler.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\GameCheater.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\MeshCounter.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\SplashScene.cs" />
-     <Compile Include="Assets\Scripts\Tool Scripts\TextureDetails.cs" />
-     <Compile Include="Assets\ToolTextures\TextureClipCode.cs" />
-     <Compile Include="Assets\Trash\Dani&apos;sTrashFolder\ExitApplication.cs" />
-     <Compile Include="Assets\Trash\Dani&apos;sTrashFolder\LevelLoader.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\AmbientOcclusion\Editor\AmbientOcclusionEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\Editor\AntiAliasingEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\Editor\IAntiAliasingEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\FXAA\Editor\FXAAEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\AntiAliasing\SMAA\Editor\SMAAEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\Bloom\Editor\BloomEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\Bloom\Editor\BloomGraphDrawer.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\Common\Editor\EditorGUIHelper.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\Common\Editor\FieldFinder.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\Common\Editor\MinDrawer.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\DepthOfField\Editor\DepthOfFieldEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\LensAberrations\Editor\LensAberrationsEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\ScreenSpaceReflection\Editor\ScreenSpaceReflectionEditor.cs" />
+     <Compile Include="Assets\Standard Assets\Effects\TonemappingColorGrading\Editor\TonemappingColorGradingEditor.cs" />
      <None Include="Assets\DLC\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\DLC\FogVolume\Resources\Depth.shader" />
      <None Include="Assets\DLC\Samples\Titan Town\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -1123,8 +536,17 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
@@ -1135,20 +557,50 @@
  <Reference Include="UnityEngine.Timeline">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Timeline">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UIAutomation">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.GoogleAudioSpatializer">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.GoogleAudioSpatializer">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Users/dashd/OneDrive/Desktop/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="ch.sycoforge.Decal">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Easy Decal/Scripts/ch.sycoforge.Decal.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.sycoforge.Decal.Editor">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Easy Decal/Scripts/Editor/ch.sycoforge.Decal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="ch.sycoforge.Device">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/ch.sycoforge.Device.dll</HintPath>
@@ -1174,8 +626,26 @@
  <Reference Include="ch.sycoforge.Util.Attributes">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/ch.sycoforge.Util.Attributes.dll</HintPath>
  </Reference>
+ <Reference Include="ch.nu.sycoforge.Shared">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/Editor/ch.nu.sycoforge.Shared.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.sycoforge.Unity.Editor">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/Editor/ch.sycoforge.Unity.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.sycoforge.Unity.Editor.Workspace">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/Editor/ch.sycoforge.Unity.Editor.Workspace.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.sycoforge.Unity.Util">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EASY DECAL/nu Assets/Shared/Scripts/Editor/ch.sycoforge.Unity.Util.dll</HintPath>
+ </Reference>
+ <Reference Include="EasyRoads3DEditor">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EasyRoads3D Free/Editor/EasyRoads3DEditor.dll</HintPath>
+ </Reference>
  <Reference Include="EasyRoads3D">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/EasyRoads3D Free/lib/EasyRoads3D.dll</HintPath>
+ </Reference>
+ <Reference Include="JMOAssets">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/JMO Assets/Editor/JMOAssets.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore-Unity5">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
@@ -1192,11 +662,26 @@
  <Reference Include="Triangle">
  <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/ProCore/ProBuilder/Classes/ClassesLib/Triangle.dll</HintPath>
  </Reference>
+ <Reference Include="ProBuilderEditor-Unity5">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/ProCore/ProBuilder/Editor/ProBuilderEditor-Unity5.dll</HintPath>
+ </Reference>
+ <Reference Include="SimpleMatrixLibrary">
+ <HintPath>C:/Users/dashd/OneDrive/Documents/GitHub/Dreams-Project/Broken Dreams/Assets/DLC/UBER/Editor/SimpleMatrixLibrary.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Users/dashd/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@1.0.7/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/dashd/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>C:/Users/dashd/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/dashd/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>C:/Users/dashd/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
