@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 246afdf1ea73ace4b956c0b0bf4c55a0
-timeCreated: 1511845855
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -10,12 +8,18 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: AntagNightstandB
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: AntagRoomFurn_Mat
     second: {fileID: 2100000, guid: 7b01cd1825d690e45a696634eca73468, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AntagnitestandsMat
+    second: {fileID: 2100000, guid: ef69e478a2f5bf64da998cee2523e125, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -34,6 +38,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -58,6 +63,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

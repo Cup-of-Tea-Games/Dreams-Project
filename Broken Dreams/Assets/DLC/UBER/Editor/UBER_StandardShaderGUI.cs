@@ -3156,7 +3156,7 @@ namespace UnityEditor
 				if (bumpMap.textureValue.texelSize.x == 1 && bumpMap.textureValue.texelSize.x == 1) {
 					// bug in substances...
 					Material material = m_MaterialEditor.target as Material;
-					if (material is ProceduralMaterial) {
+				/*	if (material is ProceduralMaterial) {
 						ProceduralMaterial pmaterial = material as ProceduralMaterial;
 						Vector4 size = pmaterial.GetProceduralVector ("$outputsize");
 						substanceTexelSize.z = Mathf.Pow (2, size.x);
@@ -3164,7 +3164,7 @@ namespace UnityEditor
 						substanceTexelSize.x = 1.0f / substanceTexelSize.z;
 						substanceTexelSize.y = 1.0f / substanceTexelSize.w;
 						bumpMapTexelSize = substanceTexelSize;
-					}
+					} */
 				} else {
 					bumpMapTexelSize.x = bumpMap.textureValue.texelSize.x;
 					bumpMapTexelSize.y = bumpMap.textureValue.texelSize.y;

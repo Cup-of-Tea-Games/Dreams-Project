@@ -496,8 +496,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                             if(checker)
                             if (m_FootstepSounds.Count != materialSounds[i].materialHitSounds.Length)
                             {
-                                for (int k = 0; k < materialSounds[i].materialHitSounds.Length; k++)
-                                    m_FootstepSounds.Add(new AudioClip());
+                                    for (int k = 0; k < materialSounds[i].materialHitSounds.Length; k++)
+                                    {
+                                        AudioClip x = m_JumpSound;
+                                        m_FootstepSounds.Add(x);
+                                    }
                             }
 
                             //Pass on Audio Files

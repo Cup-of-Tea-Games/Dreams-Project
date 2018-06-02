@@ -106,9 +106,9 @@ public class ExamplesController : MonoBehaviour {
 			Material[] mats=currentRenderer.sharedMaterials;
 			mats[ objectsParams[currentTargetIndex].submeshIndex ] = originalMaterial;
 			currentRenderer.sharedMaterials=mats;
-			if (!(originalMaterial is ProceduralMaterial)) {
-				Object.DestroyObject (currentMaterial);
-			}
+	//		if (!(originalMaterial is ProceduralMaterial)) {
+	//			Object.DestroyObject (currentMaterial);
+	//		}
 		}
 		
 		if (rightFlag) {
@@ -305,9 +305,9 @@ public class ExamplesController : MonoBehaviour {
 		currentRenderer = objectsParams[currentTargetIndex].renderer;
 		if (currentRenderer) {
 			originalMaterial=currentRenderer.sharedMaterials[ objectsParams[currentTargetIndex].submeshIndex ];
-			if (!(originalMaterial is ProceduralMaterial)) {
-				currentMaterial=Object.Instantiate<Material>(originalMaterial);
-			} else {
+			if (true) {
+                currentMaterial = originalMaterial;
+            } else {
 				currentMaterial=originalMaterial;
 			}
 			Material[] mats=currentRenderer.sharedMaterials;

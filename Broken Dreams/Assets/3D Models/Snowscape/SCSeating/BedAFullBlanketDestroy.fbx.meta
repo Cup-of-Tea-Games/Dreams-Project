@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: 7d273e4f8d21159418948b98c3042337
-timeCreated: 1507945979
-licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
@@ -11,10 +9,58 @@ ModelImporter:
     3300000: //RootNode
     4300000: BedAFullBlanketDestroy
     9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricARip_Map
+    second: {fileID: 2100000, guid: a7f27e2cc8690f045bf81b6564b6ebb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricB_Mat
+    second: {fileID: 2100000, guid: 943d302439e9e36419394a3ea984f13c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricC_Mat
+    second: {fileID: 2100000, guid: 9c09e71619548bc47b91c500a5172670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricD_Mat
+    second: {fileID: 2100000, guid: 44e5f8ed51dca84428bbdd2e9587f877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FabricFolded_Mat
+    second: {fileID: 2100000, guid: d182a64776599df4c83fd06938544422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodADestroy_Mat
+    second: {fileID: 2100000, guid: 26c8521fda64f794ab091f21afa42b55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodC_Mat
+    second: {fileID: 2100000, guid: 61fb8c3f347858649b69ad3eff34af83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodE_Mat
+    second: {fileID: 2100000, guid: 2fb0f25d3da97e94abd4711c112112f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodSolidA_Mat
+    second: {fileID: 2100000, guid: d25b84c30a96d8a4697431676e0ea8fd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -27,6 +73,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -51,6 +99,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
