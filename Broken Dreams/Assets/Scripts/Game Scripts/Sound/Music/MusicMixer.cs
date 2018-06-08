@@ -8,6 +8,7 @@ public class MusicMixer : MonoBehaviour {
     public AudioClip[] mainSongs;
     public bool playOnAwake;
     public AudioClip enemyChase;
+    float initialVolume;
  //   public AudioClip enemyLost;
  //   public AudioClip enemyCaught;
 
@@ -22,6 +23,7 @@ public class MusicMixer : MonoBehaviour {
         source = GetComponent<AudioSource>();
         if (playOnAwake)
             playRandomRegularTrack();
+        initialVolume = source.volume;
     }
 
     public void pause()
@@ -73,15 +75,20 @@ public class MusicMixer : MonoBehaviour {
 
     public void playRandomRegularTrack()
     {
+        rand = Random.Range(0, mainSongs.Length);
+
         if (source.clip == enemyChase)
         {
-            source.Stop();
-            source.clip = null;
+            fadeOutTrack(mainSongs[rand]);
+            if(source.volume == initialVolume)
+            source.Play();
         }
-        rand = Random.Range(0,mainSongs.Length);
-        //Debug.Log(rand);
-        source.clip = mainSongs[rand];
-        source.Play();
+        else
+        {
+            //Debug.Log(rand);
+            source.clip = mainSongs[rand];
+            source.Play();
+        }
     }
 
     bool isPlayingRandomTrack()
@@ -124,6 +131,18 @@ public class MusicMixer : MonoBehaviour {
         source.Stop();
         source.clip = enemyChase;
         source.Play();
+    }
+
+    void fadeOutTrack(AudioClip c)
+    {
+        if (source.volume > 0)
+        source.volume -= 0.2f * Time.deltaTime;
+
+        if (source.volume <= 0)
+        {
+            source.volume = initialVolume;
+            source.clip = c;
+        }
     }
 
     /*

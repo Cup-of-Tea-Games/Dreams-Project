@@ -5,6 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class FootstepTrigger : MonoBehaviour {
 
+    public bool isPlayer = false;
     public bool playSFX = false;
     public AudioSource footStepSource;
     public AudioClip[] clips;
@@ -14,7 +15,11 @@ public class FootstepTrigger : MonoBehaviour {
         if (playSFX)
         {
             int x = Random.Range(0, clips.Length);
-            footStepSource.PlayOneShot(clips[x]);
+            if (isPlayer)
+            {
+                footStepSource.GetComponent<FirstPersonController>().PlayFootStepAudio();
+            }
+          //  footStepSource.PlayOneShot(clips[x]);
             playSFX = false;
         }
     }
