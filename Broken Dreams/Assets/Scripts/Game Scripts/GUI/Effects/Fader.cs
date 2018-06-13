@@ -11,10 +11,10 @@ public class Fader : MonoBehaviour {
 
     void OnGUI()
     {
-        alpha += fadeDir * fadeSpeed * Time.deltaTime;
+        alpha -= fadeDir * fadeSpeed * Time.deltaTime;
         alpha = Mathf.Clamp01(alpha);
 
-        fadeImage.color = new Color(GUI.color.r, GUI.color.g,GUI.color.b,alpha);
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g,fadeImage.color.b,alpha);
     }
 
     public float BeginFade(int direction)
