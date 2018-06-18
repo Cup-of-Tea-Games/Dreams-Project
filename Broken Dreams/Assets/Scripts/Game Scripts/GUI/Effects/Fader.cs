@@ -15,6 +15,11 @@ public class Fader : MonoBehaviour {
         alpha = Mathf.Clamp01(alpha);
 
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g,fadeImage.color.b,alpha);
+
+        if(fadeImage.color.a == 0)
+        {
+            GetComponent<Image>().enabled = false;
+        }
     }
 
     public float BeginFade(int direction)
