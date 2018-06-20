@@ -9,6 +9,11 @@ public class Fader : MonoBehaviour {
     public int fadeDir = 0;
     private float alpha = 1.0f;
 
+    private void Awake()
+    {
+        GetComponent<Image>().enabled = true;
+    }
+
     void OnGUI()
     {
         alpha -= fadeDir * fadeSpeed * Time.deltaTime;
