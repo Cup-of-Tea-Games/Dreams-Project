@@ -24,6 +24,8 @@ public class ObjectStabilizer : MonoBehaviour {
     void Awake()
     {
 
+        StartCoroutine(muteAwake(3));
+
         if (DoesItHaveSound)
                 sound = GetComponent<AudioSource>();
         if(GetComponent<SphereCollider>() != null)
@@ -128,7 +130,6 @@ public class ObjectStabilizer : MonoBehaviour {
 
     }
 
-
     public bool isOnCollision()
     {
         return isColliding;
@@ -138,6 +139,14 @@ public class ObjectStabilizer : MonoBehaviour {
     {
         float[] pitchValue = {1.0f,1.1f,0.9f,1.15f,0.95f};
         pitchVar = pitchValue[Random.RandomRange(0,5)];
+    }
+
+    private IEnumerator muteAwake(int x)
+    {
+        sound.mute = true;
+        yield return new WaitForSeconds(x);
+        sound.mute = false;
+        StopCoroutine(muteAwake(x));
     }
 
 }
