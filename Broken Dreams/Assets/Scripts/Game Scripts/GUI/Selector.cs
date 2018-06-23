@@ -69,7 +69,8 @@ public class Selector : MonoBehaviour {
         }
         else if (selectedMain.getTag() == "Health_MAIN")
         {
-            tipDesc.text =  "Vital Level " + PlayerHealth.health + "%";
+            int healthLevel = (int) PlayerHealth.health;
+            tipDesc.text =  "Vital Level " + healthLevel + "%";
             tipName.text = "Health";
         }
         else
