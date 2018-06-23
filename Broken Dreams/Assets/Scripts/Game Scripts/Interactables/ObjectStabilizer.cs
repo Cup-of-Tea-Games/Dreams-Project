@@ -23,12 +23,14 @@ public class ObjectStabilizer : MonoBehaviour {
 
     void Awake()
     {
+        if (DoesItHaveSound)
+                sound = GetComponent<AudioSource>();
+
+        sound.mute = true;
 
         StartCoroutine(muteAwake(3));
 
-        if (DoesItHaveSound)
-                sound = GetComponent<AudioSource>();
-        if(GetComponent<SphereCollider>() != null)
+        if (GetComponent<SphereCollider>() != null)
         defaultRadius = GetComponent<SphereCollider>().radius;
         increasedRadius = defaultRadius * radiusMultiplier;
 
