@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.Characters.ThirdPerson;
 
-public class Antagonist : MonoBehaviour
+public class Antagonist : Monster
     {
         public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling

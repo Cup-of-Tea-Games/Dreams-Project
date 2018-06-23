@@ -2,12 +2,13 @@
 using System.Collections;
 using UnityStandardAssets.Characters.ThirdPerson;
 
-public class Wanderer : MonoBehaviour
+public class Wanderer : Monster
 {
-    public UnityEngine.AI.NavMeshAgent agent { get; private set; }             // the navmesh agent required for the path finding
-    public ThirdPersonCharacter character { get; private set; } // the character we are controlling
-    public Transform target;                                    // target to aim for
+    public UnityEngine.AI.NavMeshAgent agent { get; private set; }  // the navmesh agent required for the path finding
+    public ThirdPersonCharacter character { get; private set; }     // the character we are controlling
+    public Transform target;                                        // target to aim for
 
+    public bool isBlind = false;
     private float distance;
     private bool chase = false;
     private bool patrol = true;
@@ -213,6 +214,7 @@ public class Wanderer : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 screenPoint = eyes.WorldToViewportPoint(target.position);
+        if(!isBlind)
         if (screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1)
         {
             if (Physics.Linecast(eyes.transform.position, target.GetComponentInChildren<Renderer>().bounds.center, out hit))
@@ -225,6 +227,7 @@ public class Wanderer : MonoBehaviour
 
                     if(chase == false)
                     {
+
                         MusicMixer.enemiesChasing++;
                     }
 
@@ -236,7 +239,7 @@ public class Wanderer : MonoBehaviour
                 }
                 else
                 {
-                    if (lostValue > 5)
+                    if (lostValue > 2)
                     {
                         lostPlayer = true;
                         //      Debug.Log("LOST YOU" + lostValue);

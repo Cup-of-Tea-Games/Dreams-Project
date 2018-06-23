@@ -106,8 +106,6 @@ public class MusicMixer : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("ENEMIES CHASING : " + enemiesChasing);
-
         if (!isPlayingRandomTrack() && enemiesChasing == 0)
             playRandomRegularTrack();
 
