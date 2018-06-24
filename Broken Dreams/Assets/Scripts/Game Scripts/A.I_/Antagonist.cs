@@ -93,9 +93,9 @@ public class Antagonist : Monster
 
         agent.speed = originalSpeed * runMultiplier;
 
-        if (!source.clip != chase_SFX)
+        if (!source.clip != chase_SFX && distance > 3)
         {
-            source.Stop();
+            //source.Stop();
             source.clip = chase_SFX;
         }
 

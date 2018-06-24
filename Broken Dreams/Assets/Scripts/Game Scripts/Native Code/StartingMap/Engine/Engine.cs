@@ -20,6 +20,8 @@ public class Engine : MonoBehaviour {
     //Visuals 
     public Material[] floorLights;
 
+    public GameObject[] objectsToEnable;
+
     public LightController lightControl;
     public ERPC ExperimentRoom;
     
@@ -84,6 +86,11 @@ public class Engine : MonoBehaviour {
             for(int i = 0; i < hyperDoorButtons.Length; i++)
             {
                 hyperDoorButtons[i].isLocked = false;
+            }
+
+            for (int i = 0; i < objectsToEnable.Length; i++)
+            {
+                objectsToEnable[i].SetActive(true);
             }
 
             if (key[2])
