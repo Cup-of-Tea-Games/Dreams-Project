@@ -9,9 +9,14 @@ public class HyperDoor : MonoBehaviour {
     bool isClosed = true;
     public bool initialState = false;
     bool buttonState = false;
+    private AudioSource source;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
+
+        StartCoroutine(muteAwake(3));
+
         if (initialState)
         {
             animator.Play("Open");
@@ -30,6 +35,9 @@ public class HyperDoor : MonoBehaviour {
         {
             if (!isClosed)
             {
+                source.pitch = 1.5f;
+                source.Play();
+
                 animator.Play("Open");
                 isClosed = true;
             }
@@ -38,9 +46,20 @@ public class HyperDoor : MonoBehaviour {
         {
             if (isClosed)
             {
+                source.pitch = 1.2f;
+                source.Play();
+
                 animator.Play("Close");
                 isClosed = false;
             }
         }
+    }
+
+    private IEnumerator muteAwake(int x)
+    {
+        source.mute = true;
+        yield return new WaitForSeconds(x);
+        source.mute = false;
+        StopCoroutine(muteAwake(x));
     }
 }

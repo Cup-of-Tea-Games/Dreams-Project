@@ -29,6 +29,11 @@ public class Valve : MonoBehaviour {
             animator.Play("Spin");
             tips.Show(tag + " Pressure stabalized");
             active = true;
+
+            if(GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 

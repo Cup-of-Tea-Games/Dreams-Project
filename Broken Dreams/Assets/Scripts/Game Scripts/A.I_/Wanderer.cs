@@ -239,10 +239,15 @@ public class Wanderer : Monster
                 }
                 else
                 {
-                    if (lostValue > 2)
+                    if (lostValue > 2 && lostValue < 5)
                     {
                         lostPlayer = true;
-                        //      Debug.Log("LOST YOU" + lostValue);
+                        MusicMixer.enemiesChasing--;
+                            //      Debug.Log("LOST YOU" + lostValue);
+                    }
+                    else if (lostValue > 10)
+                    {
+                        MusicMixer.enemiesChasing = 0;
                     }
                 }
             }

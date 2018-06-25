@@ -9,6 +9,7 @@ public class MonsterProximityTrigger : MonoBehaviour {
     public bool includePerlinNoise = false;
     public PerlinNoise perlinNoise;
     private float originalShakeAmount;
+    public MusicMixer mixer;
 
 	// Use this for initialization
 	void Awake ()
@@ -47,21 +48,25 @@ public class MonsterProximityTrigger : MonoBehaviour {
                     {
                         perlinNoise.enabled = true;
                         perlinNoise.shakeAmount = originalShakeAmount * 1.1f;
+                        mixer.GetComponent<AudioSource>().volume = 0.7f;
                     }
                     else if (distance <= 3)
                     {
                         perlinNoise.enabled = true;
                         perlinNoise.shakeAmount = originalShakeAmount * 1.2f;
+                        mixer.GetComponent<AudioSource>().volume = 0.9f;
                     }
                     else if (distance <= 2)
                     {
                         perlinNoise.enabled = true;
                         perlinNoise.shakeAmount = originalShakeAmount * 2f;
+                        mixer.GetComponent<AudioSource>().volume = 1.0f;
                     }
                     else if (distance <= 1)
                     {
                         perlinNoise.enabled = true;
                         perlinNoise.shakeAmount = originalShakeAmount * 3f;
+                        mixer.GetComponent<AudioSource>().volume = 1.2f;
                     }
                 }
 
@@ -71,6 +76,7 @@ public class MonsterProximityTrigger : MonoBehaviour {
         else
         {
             perlinNoise.enabled = false;
+            mixer.GetComponent<AudioSource>().volume = 0.5f;
         }
 		
 	}

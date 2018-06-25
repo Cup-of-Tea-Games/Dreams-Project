@@ -22,6 +22,7 @@ public class ERPC : MonoBehaviour {
 
     public Text bloodFlowStat;
     public Text bloodPressureStat;
+
     bool active = false;
 
     int state = 1;
@@ -76,7 +77,12 @@ public class ERPC : MonoBehaviour {
             state = 4;
 
         if (reroute_BTN.active)
+        {
+            if (!active)
+                GetComponent<AudioSource>().Play();
+
             active = true;
+        }
 
         bloodFlowStat.text = "" + chamber.getPlaneValue()*100 + "%";
 

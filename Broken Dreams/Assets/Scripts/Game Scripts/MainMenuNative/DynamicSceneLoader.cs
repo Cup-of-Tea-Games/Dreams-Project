@@ -26,6 +26,8 @@ public class DynamicSceneLoader : MonoBehaviour {
 
     public void switchScene()
     {
+        Time.timeScale = 1;
+        if(anim != null)
         anim.Play(animClipName);
         StartCoroutine(startTimer(secondsDelay));
     }

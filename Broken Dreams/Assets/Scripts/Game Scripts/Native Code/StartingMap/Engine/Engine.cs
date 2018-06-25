@@ -24,6 +24,8 @@ public class Engine : MonoBehaviour {
 
     public LightController lightControl;
     public ERPC ExperimentRoom;
+
+    public GameObject soundObject;
     
 
 
@@ -78,6 +80,8 @@ public class Engine : MonoBehaviour {
         }
         else if (isAssembled())
         {
+            GetComponent<AudioSource>().Play();
+            soundObject.SetActive(true);
             //Debug.Log("IT IS OOOOOOOOOOOONNNNNNNNNN");
             key[1] = false;
             pointlight.enabled = true;
