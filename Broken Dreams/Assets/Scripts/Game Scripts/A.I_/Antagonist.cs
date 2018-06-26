@@ -59,6 +59,10 @@ public class Antagonist : Monster
     public AudioClip death_SFX; //
     public AudioClip attack_SFX; //
 
+    //Extra Parameters
+
+    public bool alwaysAgro;
+
     void Awake()
     {
         mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
@@ -299,7 +303,7 @@ public class Antagonist : Monster
             patrol = false;
         }
 
-        if (chase && !patrol && active)
+        if (chase && !patrol && active && !alwaysAgro)
         {
             // Debug.Log("IS CHASING");
             if (distance > 3f)
@@ -329,17 +333,45 @@ public class Antagonist : Monster
 
         }
 
-        else if (patrol && !chase && active)
+        if (alwaysAgro)
+        {
+            if (distance > 3f)
+                StartCoroutine(chaseTarget());
+            else
+                StartCoroutine(attack());
+
+            if (damageSystem.isHit())
+                if (!isInjured1 && health < (175))
+                {
+                    //     Debug.Log("750");
+                    isInjured1 = true;
+                    StartCoroutine(isHit());
+                }
+                else if (!isInjured2 && health < (125))
+                {
+                    //       Debug.Log("500");
+                    isInjured2 = true;
+                    StartCoroutine(isHit());
+                }
+                else if (!isInjured3 && health < (75))
+                {
+                    //         Debug.Log("250");
+                    isInjured3 = true;
+                    StartCoroutine(isHit());
+                }
+        }
+
+        else if (patrol && !chase && active && !alwaysAgro)
         {
             StartCoroutine(patrolArea());
         }
 
-        else if (!patrol && !chase && active && !isInRoom)
+        else if (!patrol && !chase && active && !isInRoom && !alwaysAgro)
         {
             StartCoroutine(chaseLastLocationTarget());
         }
 
-        else if (!patrol && !chase && active && isInRoom)
+        else if (!patrol && !chase && active && isInRoom && !alwaysAgro)
         {
             StartCoroutine(patrolRoom());
         }
