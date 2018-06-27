@@ -13,6 +13,9 @@ public class RandomPositioner : MonoBehaviour {
         GetComponent<Transform>().position = positions[x].position;
         GetComponent<Transform>().rotation = positions[x].rotation;
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
     }
 	
 }

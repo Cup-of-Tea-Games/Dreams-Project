@@ -13,6 +13,9 @@ public class QualityLevel : MonoBehaviour {
     public Image onPostButton;
     public Image offPostButton;
 
+    public Image onFullButton;
+    public Image offFullButton;
+
     private int status;
 
     private int postStatus;
@@ -21,8 +24,10 @@ public class QualityLevel : MonoBehaviour {
 
     void Awake()
     {
-        selectPostLevel(1);
-        selectQualityLevel(3);
+
+            selectPostLevel(1);
+            selectQualityLevel(3);
+            selectFullscreenLevel(1);
     }
 
     void Update()
@@ -68,7 +73,9 @@ public class QualityLevel : MonoBehaviour {
             if (offPostButton != null)
                 offPostButton.color = Color.red;
 
-            postPros.enabled = false;
+
+            if(postPros != null)
+                postPros.enabled = false;
         }
         else
         {
@@ -81,12 +88,41 @@ public class QualityLevel : MonoBehaviour {
             if (onPostButton != null)
                 onPostButton.color = Color.red;
 
-            postPros.enabled = true;
+            if (postPros != null)
+                postPros.enabled = true;
         }
         else
         {
             if (onPostButton != null)
                 onPostButton.color = Color.white;
+        }
+
+        //Full Screen
+
+        if (PlayerPrefs.GetInt("fullscreen") == 0)
+        {
+            if (offFullButton != null)
+                offFullButton.color = Color.red;
+
+            Screen.fullScreen = false;
+        }
+        else
+        {
+            if (offFullButton != null)
+                offFullButton.color = Color.white;
+        }
+
+        if (PlayerPrefs.GetInt("fullscreen") == 1)
+        {
+            if (onFullButton != null)
+                onFullButton.color = Color.red;
+
+            Screen.fullScreen = true;
+        }
+        else
+        {
+            if (onFullButton != null)
+                onFullButton.color = Color.white;
         }
 
     }
@@ -117,6 +153,23 @@ public class QualityLevel : MonoBehaviour {
     public void selectPostLevel(int x)
     {
         PlayerPrefs.SetInt("poststatus", x);
+
+    }
+
+    public void selectFullscreenLevel(int x)
+    {
+        PlayerPrefs.SetInt("fullscreen", x);
+
+        if(x == 0)
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+            selectQualityLevel(PlayerPrefs.GetInt("status"));
+        }
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+            selectQualityLevel(PlayerPrefs.GetInt("status"));
+        }
 
     }
 

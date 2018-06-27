@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 1929268504}
   - component: {fileID: 1929268505}
   - component: {fileID: 1929268506}
+  - component: {fileID: 1929268507}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -636,3 +637,22 @@ MonoBehaviour:
   scenename: Game Scene
   hasSceneLoader: 1
   loader: {fileID: 0}
+--- !u!114 &1929268507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929268503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1135e66d9dafb54c821dfaa8483348b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lowButton: {fileID: 0}
+  mediumButton: {fileID: 0}
+  highButton: {fileID: 0}
+  onPostButton: {fileID: 0}
+  offPostButton: {fileID: 0}
+  onFullButton: {fileID: 0}
+  offFullButton: {fileID: 0}
+  postPros: {fileID: 0}
