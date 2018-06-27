@@ -160,7 +160,7 @@ public class QualityLevel : MonoBehaviour {
     {
         PlayerPrefs.SetInt("fullscreen", x);
 
-        if(x == 0)
+        if(x == 1)
         {
             Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
             selectQualityLevel(PlayerPrefs.GetInt("status"));
