@@ -51,11 +51,11 @@ public class Wanderer : Monster
     public AudioClip death_SFX; //
     public AudioClip attack_SFX; //
 
-    private MusicMixer mixer;
+    //private MusicMixer mixer;
 
     void Awake()
     {
-        mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
+       // mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
     }
 
     private void Start()
@@ -239,16 +239,17 @@ public class Wanderer : Monster
                 }
                 else
                 {
-                    if (lostValue > 2 && lostValue < 5)
+                    if (lostValue > 5)
                     {
-                        lostPlayer = true;
-                        MusicMixer.enemiesChasing--;
+                            if (chase == true)
+                            {
+                                chase = false;
+                                MusicMixer.enemiesChasing--;
+                            }
+
+                            lostPlayer = true;
                             //      Debug.Log("LOST YOU" + lostValue);
-                    }
-                    else if (lostValue > 10)
-                    {
-                        MusicMixer.enemiesChasing = 0;
-                    }
+                        }
                 }
             }
         }

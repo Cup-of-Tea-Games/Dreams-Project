@@ -124,6 +124,7 @@ public class Selector : MonoBehaviour {
             {
                 Raycast_Pickup.itemInMyHand = selectedItem;
                 InventoryMenu.inventroyIsUp = false;
+                WeaponWheel.selectItemExternal(0);
                 hideToolTip();
             }
 

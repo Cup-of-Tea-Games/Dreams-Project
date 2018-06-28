@@ -31,4 +31,15 @@ public class DynamicSceneLoader : MonoBehaviour {
         anim.Play(animClipName);
         StartCoroutine(startTimer(secondsDelay));
     }
+
+    public void restart()
+    {
+        SceneManager.UnloadScene(Application.loadedLevelName);
+        SceneManager.LoadScene(Application.loadedLevelName);
+    }
+
+    public void resetTimeScale()
+    {
+        Time.timeScale = 1;
+    }
 }

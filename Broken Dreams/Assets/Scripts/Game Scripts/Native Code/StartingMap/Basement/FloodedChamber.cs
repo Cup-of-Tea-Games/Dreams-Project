@@ -9,6 +9,10 @@ public class FloodedChamber : MonoBehaviour {
     public GameObject bloodPlane;
     float planeMoveValue = 0;
     public float riseSpeed;
+    public AudioSource readySFX;
+    bool active = true;
+    public TipsGenerator tips;
+
 
     public bool isActive()
     {
@@ -20,6 +24,13 @@ public class FloodedChamber : MonoBehaviour {
     {
         planeMoveValue = shreders[0].finishedValue() + shreders[1].finishedValue() + shreders[2].finishedValue() + shreders[3].finishedValue();
         movePlane(planeMoveValue);
+
+        if (isActive() && active)
+        {
+            active = false;
+            readySFX.Play();
+            tips.Show("Bloodflow Restablished");
+        }
     }
 
     void movePlane(float x)

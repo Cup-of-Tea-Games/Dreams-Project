@@ -9,17 +9,13 @@ public class MonsterProximityTrigger : MonoBehaviour {
     public bool includePerlinNoise = false;
     public PerlinNoise perlinNoise;
     private float originalShakeAmount;
+
     public MusicMixer mixer;
+
 
 	// Use this for initialization
 	void Awake ()
     {
-
-      //  foreach (GameObject monster in FindObjectsOfType(typeof(Monster)) as GameObject[])
-     //   {
-     //       monsters.Add(monster.GetComponent<Monster>());
-    //        Debug.Log("MONSTERS ADDED");
-     //   }
 
         if (perlinNoise != null)
             originalShakeAmount = perlinNoise.shakeAmount;
@@ -30,7 +26,7 @@ public class MonsterProximityTrigger : MonoBehaviour {
 	void Update () {
 
 
-        if (MusicMixer.enemiesChasing != 0)
+        if (MusicMixer.enemiesChasing > 0)
         {
             perlinNoise.enabled = true;
             for (int i = 0; i < monsters.Count; i++)
@@ -76,8 +72,23 @@ public class MonsterProximityTrigger : MonoBehaviour {
         else
         {
             perlinNoise.enabled = false;
-            mixer.GetComponent<AudioSource>().volume = 0.5f;
+            //mixer.GetComponent<AudioSource>().volume = 0.5f;
         }
 		
 	}
+
+    public bool isInChase()
+    {
+        bool x = false;
+        for (int i = 0;i<monsters.Count;i++)
+        {
+            if(monsters[i].GetComponent<Wanderer>().health > 0 || monsters[i].GetComponent<Antagonist>().health > 0)
+            if (monsters[i].GetComponent<Wanderer>().isChasing() || monsters[i].GetComponent<Antagonist>().isChasing())
+            {
+                x = true;
+                //break;
+            }
+        }
+        return x;
+    }
 }

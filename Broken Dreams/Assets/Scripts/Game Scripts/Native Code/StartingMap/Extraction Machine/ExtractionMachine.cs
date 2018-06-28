@@ -7,7 +7,7 @@ public class ExtractionMachine : MonoBehaviour {
     public KeyReciever gear;
     public Engine engine;
     public Basement basement;
-    TipsGenerator tips;
+    public TipsGenerator tips;
     bool key1 = true;
     bool key2 = true;
     public Pilars bioPilars;
@@ -18,10 +18,6 @@ public class ExtractionMachine : MonoBehaviour {
 
     public AudioSource audioObject;
 
-    void Awake()
-    {
-        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
-    }
 
     void Update()
     {
@@ -30,6 +26,7 @@ public class ExtractionMachine : MonoBehaviour {
             key1 = false;
             doorA.open();
             doorB.open();
+            tips.Show("Machine Repaired");
         }
 
         if (electricityButon.active && bioPilars.isActive())

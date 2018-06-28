@@ -304,4 +304,10 @@ public class PlayerHealth : MonoBehaviour {
 
     }
 
+    public void commitSuicide()
+    {
+        health = 0;
+        Die();
+    }
+
 }

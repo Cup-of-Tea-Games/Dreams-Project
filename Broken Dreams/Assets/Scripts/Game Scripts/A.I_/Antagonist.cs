@@ -65,7 +65,7 @@ public class Antagonist : Monster
 
     void Awake()
     {
-        mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
+        //mixer = GameObject.Find("MusicMixer").GetComponent<MusicMixer>();
     }
 
     private void Start()
@@ -264,6 +264,7 @@ public class Antagonist : Monster
                     {
                         if (chase == true)
                         {
+                            chase = false;
                             MusicMixer.enemiesChasing--;
                         }
 
@@ -408,6 +409,8 @@ public class Antagonist : Monster
   
         void die()
     {
+        if (chase == true)
+            MusicMixer.enemiesChasing--;
 
         //Has Dying VFX
 

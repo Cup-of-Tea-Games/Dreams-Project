@@ -93,8 +93,8 @@ public class WeaponWheel : MonoBehaviour {
 
         for (int i = 0; i < slots.Count; i++)
         {
-            if(slots[i] != null)
-            Debug.Log(slots[i]);
+            //if(slots[i] != null)
+            //Debug.Log(slots[i]);
         }
 
 

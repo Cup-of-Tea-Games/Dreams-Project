@@ -16,7 +16,7 @@ public class Fader : MonoBehaviour {
 
     void OnGUI()
     {
-        alpha -= fadeDir * fadeSpeed * Time.deltaTime;
+        alpha -= fadeDir * fadeSpeed * Time.unscaledDeltaTime;
         alpha = Mathf.Clamp01(alpha);
 
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g,fadeImage.color.b,alpha);

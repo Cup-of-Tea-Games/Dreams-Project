@@ -31,7 +31,7 @@ public class Flashlight : MonoBehaviour {
 
     void Update()
     {
-        if (!WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing && !InventoryMenu.inventroyIsUp)
         {
             if (Input.GetMouseButtonDown(0))
             {

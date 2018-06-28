@@ -25,41 +25,53 @@ public class WeaponInteraction : MonoBehaviour
         {
             //  Debug.Log(tag + " " + hit.transform.GetComponent<KeyReciever>().tag);
 
-            if (hit.transform.GetComponent<Door>() != null)
-            {
-                disableComponents();
-                animator.Play("Lower");
-                crosshair.sprite = door;
-                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+            /*    if (hit.transform.GetComponent<Door>() != null)
                 {
-                    hit.transform.GetComponent<Door>().toggle();
-                    animator.Play("Door");
-                    enableComponents();
+                    disableComponents();
+                    animator.Play("Lower");
+                    crosshair.sprite = door;
+                    if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+                    {
+                        hit.transform.GetComponent<Door>().toggle();
+                        animator.Play("Door");
+                        enableComponents();
+                    } 
+
+                } */
+                if (hit.transform.GetComponent<Toggle>() != null)
+                {
+                    disableComponents();
+                    animator.Play("Lower");
+                    crosshair.sprite = toggle;
+                    if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+                    {
+                        hit.transform.GetComponent<Toggle>().toggle();
+                        animator.Play("Toggle");
+                        enableComponents();
+                    }
+                }
+                else if (hit.transform.GetComponent<Button>() != null)
+                {
+                    disableComponents();
+                    animator.Play("Lower");
+                    crosshair.sprite = toggle;
+                    if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+                    {
+                        hit.transform.GetComponent<Button>().activate();
+                        animator.Play("Toggle");
+                        enableComponents();
+                    }
                 }
 
-            }
-            else if (hit.transform.GetComponent<Toggle>() != null)
-            {
-                disableComponents();
-                animator.Play("Lower");
-                crosshair.sprite = toggle;
-                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
+                else
                 {
-                    hit.transform.GetComponent<Toggle>().toggle();
-                    animator.Play("Toggle");
-                    enableComponents();
-                }
-            }
-            else if (hit.transform.GetComponent<Button>() != null)
-            {
-                disableComponents();
-                animator.Play("Lower");
-                crosshair.sprite = toggle;
-                if (Input.GetMouseButtonUp(0) && !WeaponWheel.isShowing)
-                {
-                    hit.transform.GetComponent<Button>().activate();
-                    animator.Play("Toggle");
-                    enableComponents();
+                    if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Lower"))
+                    {
+                        enableComponents();
+                        animator.Play("Idle");
+                    }
+                    if (GetComponent<WeaponKey>() != null)
+                        crosshair.sprite = originalSprite;
                 }
             }
 
@@ -69,22 +81,11 @@ public class WeaponInteraction : MonoBehaviour
                 {
                     enableComponents();
                     animator.Play("Idle");
+
                 }
-                if(GetComponent<WeaponKey>() != null)
                 crosshair.sprite = originalSprite;
             }
-        }
-
-        else
-        {
-            if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Lower"))
-            {
-                enableComponents();
-                animator.Play("Idle");
-
-            }
-            crosshair.sprite = originalSprite;
-        }
+        
     }
 
     void disableComponents()

@@ -12,7 +12,7 @@ public class FootstepTrigger : MonoBehaviour {
 
    void Update()
     {
-        if (playSFX)
+        if (playSFX && !InventoryMenu.inventroyIsUp)
         {
             int x = Random.Range(0, clips.Length);
             if (isPlayer)

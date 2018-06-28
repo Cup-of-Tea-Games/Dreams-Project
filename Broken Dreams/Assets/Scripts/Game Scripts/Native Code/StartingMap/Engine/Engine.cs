@@ -11,7 +11,7 @@ public class Engine : MonoBehaviour {
     public Animator spinner;
     public Light pointlight;
     public Button[] hyperDoorButtons;
-    TipsGenerator tips;
+    public TipsGenerator tips;
 
     public Valve waterValve;
     public Valve heatValve;         
@@ -39,8 +39,6 @@ public class Engine : MonoBehaviour {
         floorLights[i].SetColor("_EmissionColor", new Color(0, 0, 0, 0));
         pointlight.enabled = false;
         spinner.Play("Idle");
-
-        tips = GameObject.Find("Tips").GetComponent<TipsGenerator>();
 
     }
 

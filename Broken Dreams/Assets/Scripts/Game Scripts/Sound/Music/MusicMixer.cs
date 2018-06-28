@@ -79,7 +79,7 @@ public class MusicMixer : MonoBehaviour {
 
         if (source.clip == enemyChase)
         {
-            fadeOutTrack(mainSongs[rand]);
+            fadeOutTrack(mainSongs[0]);
             if(source.volume == initialVolume)
             source.Play();
         }
@@ -133,8 +133,10 @@ public class MusicMixer : MonoBehaviour {
 
     void fadeOutTrack(AudioClip c)
     {
+
+
         if (source.volume > 0)
-        source.volume -= 0.2f * Time.deltaTime;
+        source.volume -= 0.2f * Time.unscaledDeltaTime;
 
         if (source.volume <= 0)
         {

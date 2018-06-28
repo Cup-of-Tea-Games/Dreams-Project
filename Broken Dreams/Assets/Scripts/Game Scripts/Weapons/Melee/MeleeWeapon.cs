@@ -36,7 +36,7 @@ public class MeleeWeapon : MonoBehaviour {
         //Animations
 
         //Attack
-        if (!WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing && !InventoryMenu.inventroyIsUp)
         {
             if (Input.GetMouseButton(0))
             {

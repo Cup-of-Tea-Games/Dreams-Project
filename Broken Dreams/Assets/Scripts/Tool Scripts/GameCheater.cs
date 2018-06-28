@@ -9,6 +9,7 @@ public class GameCheater : MonoBehaviour {
     public string regenHealth;
     public string instaInsanity;
     public string regenSanity;
+    public string instagun;
     DamageMe damageSystem;
     Pilars biopilars;
 
@@ -35,13 +36,16 @@ public class GameCheater : MonoBehaviour {
             damageSystem.takeDamage(100);
 
         if (Input.GetKey(regenHealth))
-            PlayerHealth.health = 100;
+            PlayerHealth.health = 1000;
 
         if (Input.GetKey(instaInsanity))
             PlayerSanity.sanity = 0;
 
         if (Input.GetKey(regenSanity))
             PlayerSanity.sanity = 100;
+
+        if (Input.GetKey(instagun))
+            WeaponWheel.selectItemExternal(3);
 
         if (Input.GetKey(generatorOnlinetatic))
         {

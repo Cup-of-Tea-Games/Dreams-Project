@@ -58,7 +58,7 @@ public class Handgun : MonoBehaviour {
         }
 
 
-        if (!WeaponWheel.isShowing)
+        if (!WeaponWheel.isShowing && !InventoryMenu.inventroyIsUp)
         {
             if (Input.GetMouseButton(0))
             {
