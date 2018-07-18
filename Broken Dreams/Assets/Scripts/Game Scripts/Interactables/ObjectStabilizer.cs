@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ObjectStabilizer : MonoBehaviour {
@@ -41,7 +41,7 @@ public class ObjectStabilizer : MonoBehaviour {
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
 
@@ -56,7 +56,6 @@ public class ObjectStabilizer : MonoBehaviour {
             gameObject.GetComponent<SphereCollider>().enabled = true;
             GetComponent<SphereCollider>().radius = increasedRadius;
             GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
-     //       Debug.Log("TRUEEEEEEEEEEEEE");
         }
         else
         {
@@ -65,7 +64,7 @@ public class ObjectStabilizer : MonoBehaviour {
                 gameObject.GetComponent<SphereCollider>().enabled = false;
                 GetComponent<SphereCollider>().radius = defaultRadius;
             }
-        //    Debug.Log("FALSEEEEEEEEEE");
+
         }
 
     }
