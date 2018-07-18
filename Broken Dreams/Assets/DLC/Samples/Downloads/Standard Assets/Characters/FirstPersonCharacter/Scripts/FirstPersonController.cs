@@ -193,102 +193,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     }
                 }
 
-                // Swimming & Water Walking
-                if (WaterInteraction.isOnWater)
-                {
-                    m_WalkSpeed = 3;
-                    m_RunSpeed = 5;
-                    m_JumpSpeed = 6;
-
-                    if (WaterInteraction.isOnDeepWater)
-                    {
-                        isSwimming = true;
-
-                        if (WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
-                        {
-                            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.z / 6, GetComponent<Rigidbody>().velocity.y / 6, GetComponent<Rigidbody>().velocity.z / 6);
-
-
-                            m_Jump = false;
-                            m_JumpSpeed = 0;
-                            m_GravityMultiplier = 0.2f;
-                            if(canSwim)
-                            if (Input.GetKey(KeyCode.Space))
-                                m_MoveDir.y = 1.8f;
-                            else if (Input.GetKey(KeyCode.LeftControl))
-                                m_MoveDir.y = -1.8f;
-                        }
-                        else if(!WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
-                        {
-                            m_Jump = false;
-                            m_JumpSpeed = 0;
-                            if (canSwim)
-                                if (Input.GetKey(KeyCode.Space))
-                                {
-                                    if (transform.position.y + 3 < WaterInteraction.waterInstance.transform.position.y)
-                                        m_MoveDir.y = 1f;
-                                    else
-                                    {
-                                        m_MoveDir.y = 0;
-                                        m_GravityMultiplier = 0f;
-                                    }
-                                     //   transform.position = new Vector3(transform.position.x, WaterInteraction.waterInstance.transform.position.y + 3, transform.position.z);
-                                }
-                                else if (Input.GetKey(KeyCode.LeftControl))
-                                    m_MoveDir.y = -1f;
-                            else
-                                    m_GravityMultiplier = 0.03f;
-
-                        }
-                    }
-                    else
-                        if(m_CharacterController.isGrounded)
-                        m_GravityMultiplier = 4;
-                        m_JumpSpeed = 6;
-                }
-                else
-                {
-                    m_JumpSpeed = 8;
-                        m_GravityMultiplier = 4;
-                    isSwimming = false;
-                }
-
-
-                //Crouching
-                if (!WaterInteraction.isOnDeepWater && !SitDown.isSatDown)
-                CrouchAbility();
-
-                if (Input.GetKey(KeyCode.LeftShift))
-                    isCrouching = false;
-
-                //Climb Ladders
-                LadderClimber();
-
-                //Peeking
-                //  Peeker();
-
-                VaultMechanic();
-                if(Raycast_Pickup.chairInstance != null && Raycast_Pickup.chairInstance.GetComponent<SitDown>() != null)
-                if (Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
-                {
-                    ChairSitter();
-                }
-                if(SitDown.isSatDown)
-                    m_UseHeadBob = false;
-
-                if (mouseLookResetter)
-                {
-                    mouseLookResetter = false;
-                    Destroy(m_MouseLook);
-                    m_MouseLook = gameObject.AddComponent<MouseLook>();
-                    m_MouseLook.Init(transform, cameraHolder);
-                    Debug.Log("Resetted Mouse Look");
-                }
-
-                if (GetComponent<Rigidbody>().detectCollisions == true)
-                    m_UseHeadBob = true;
-
-
             }// SUPER IF
         }
 
@@ -428,8 +332,107 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_MoveDir.z = 0;
                 }
 
+                //Update Crouching and Vaulting Functions 
+                {
+                    // Swimming & Water Walking
+                    if (WaterInteraction.isOnWater)
+                    {
+                        m_WalkSpeed = 3;
+                        m_RunSpeed = 5;
+                        m_JumpSpeed = 6;
 
-            if (!isInHub && (m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
+                        if (WaterInteraction.isOnDeepWater)
+                        {
+                            isSwimming = true;
+
+                            if (WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
+                            {
+                                GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.z / 6, GetComponent<Rigidbody>().velocity.y / 6, GetComponent<Rigidbody>().velocity.z / 6);
+
+
+                                m_Jump = false;
+                                m_JumpSpeed = 0;
+                                m_GravityMultiplier = 0.2f;
+                                if (canSwim)
+                                    if (Input.GetKey(KeyCode.Space))
+                                        m_MoveDir.y = 1.8f;
+                                    else if (Input.GetKey(KeyCode.LeftControl))
+                                        m_MoveDir.y = -1.8f;
+                            }
+                            else if (!WaterInteraction.isUnderWater && WaterInteraction.isSemiUnderWater)
+                            {
+                                m_Jump = false;
+                                m_JumpSpeed = 0;
+                                if (canSwim)
+                                    if (Input.GetKey(KeyCode.Space))
+                                    {
+                                        if (transform.position.y + 3 < WaterInteraction.waterInstance.transform.position.y)
+                                            m_MoveDir.y = 1f;
+                                        else
+                                        {
+                                            m_MoveDir.y = 0;
+                                            m_GravityMultiplier = 0f;
+                                        }
+                                        //   transform.position = new Vector3(transform.position.x, WaterInteraction.waterInstance.transform.position.y + 3, transform.position.z);
+                                    }
+                                    else if (Input.GetKey(KeyCode.LeftControl))
+                                        m_MoveDir.y = -1f;
+                                    else
+                                        m_GravityMultiplier = 0.03f;
+
+                            }
+                        }
+                        else
+                            if (m_CharacterController.isGrounded)
+                            m_GravityMultiplier = 4;
+                        m_JumpSpeed = 6;
+                    }
+                    else
+                    {
+                        m_JumpSpeed = 8;
+                        m_GravityMultiplier = 4;
+                        isSwimming = false;
+                    }
+
+
+                    //Crouching
+                    if (!WaterInteraction.isOnDeepWater && !SitDown.isSatDown)
+                        CrouchAbility();
+
+                    if (Input.GetKey(KeyCode.LeftShift))
+                        isCrouching = false;
+
+                    //Climb Ladders
+                    LadderClimber();
+
+                    //Peeking
+                    //  Peeker();
+
+                    VaultMechanic();
+                    if (Raycast_Pickup.chairInstance != null && Raycast_Pickup.chairInstance.GetComponent<SitDown>() != null)
+                        if (Raycast_Pickup.chairInstance.GetComponent<SitDown>().canSitDown)
+                        {
+                            ChairSitter();
+                        }
+                    if (SitDown.isSatDown)
+                        m_UseHeadBob = false;
+
+                    if (mouseLookResetter)
+                    {
+                        mouseLookResetter = false;
+                        Destroy(m_MouseLook);
+                        m_MouseLook = gameObject.AddComponent<MouseLook>();
+                        m_MouseLook.Init(transform, cameraHolder);
+                        Debug.Log("Resetted Mouse Look");
+                    }
+
+                    if (GetComponent<Rigidbody>().detectCollisions == true)
+                        m_UseHeadBob = true;
+
+                }
+
+
+                if (!isInHub && (m_CharacterController.isGrounded || isClimbing) && !(WaterInteraction.isSemiUnderWater && WaterInteraction.isOnDeepWater) &&!Vaulter.isVaulting)
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
@@ -665,6 +668,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private IEnumerator Vault()
         {
 
+            GetComponent<Rigidbody>().useGravity = false;
+
             //SFX
 
             if (!vaultSFX.isPlaying)
@@ -679,14 +684,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             transform.position = Vector3.Lerp(transform.position, vaulter.Vertical_Destination.transform.position, ladderDampening * Time.deltaTime);
             yield return new WaitForSeconds(0.25f);
             vaultUpActivator = false;
-
-            //SFX
-
-            if (!vaultSFX.isPlaying)
-            {
-                vaultSFX.pitch = 1.2f;
-                vaultSFX.Play();
-            }
 
             //Step 2
 
