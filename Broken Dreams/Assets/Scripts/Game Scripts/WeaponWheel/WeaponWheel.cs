@@ -129,7 +129,7 @@ public class WeaponWheel : MonoBehaviour {
         GameObject clone = new GameObject();
         clone = Instantiate(weaponPrefabs[numSwitch]);
         clone.transform.position = transformBall.transform.position;
-        clone.GetComponent<Rigidbody>().AddForce(transformBall.transform.forward * 2000);
+        clone.GetComponent<Rigidbody>().AddForce(transformBall.transform.forward * 500);
         if(currentWeapon.getTag() != "Hand")
         weaponShack.remove(currentWeapon);
         selectItemExternal(0);
