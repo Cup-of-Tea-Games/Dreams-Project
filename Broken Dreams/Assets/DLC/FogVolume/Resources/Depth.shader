@@ -1,4 +1,6 @@
-﻿Shader "Hidden/Fog Volume/Depth" 
+﻿// Upgrade NOTE: removed variant '__' where variant LOD_FADE_PERCENTAGE is used.
+
+Shader "Hidden/Fog Volume/Depth" 
 {
 	Properties
 	{
@@ -125,7 +127,7 @@ half4 fragTransparentCutout(v2f i) : COLOR{
 
 			#pragma surface surf Lambert vertex:SpeedTreeVert nolightmap
 			#pragma target 3.0
-			#pragma multi_compile __ LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
+			#pragma multi_compile  LOD_FADE_PERCENTAGE LOD_FADE_CROSSFADE
 			#pragma shader_feature GEOM_TYPE_BRANCH GEOM_TYPE_BRANCH_DETAIL GEOM_TYPE_FROND GEOM_TYPE_LEAF GEOM_TYPE_MESH
 			#define ENABLE_WIND
 			#define SPEEDTREE_ALPHATEST
